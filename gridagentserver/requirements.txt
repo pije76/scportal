@@ -15,6 +15,6 @@ Twisted==13.0.0 # cooperative multithreading/network server
 txAMQP==0.6.1 # async message queue client integrating with Twisted
 django-model-utils==2.0.2 # utilities for models and managers
 celery==3.1.8  # Python background task queue/runner
-Pillow==2.4.0  # Python Image Library distribution; may require libjpeg-dev for JPEG support
+Pillow==6.2.0  # Python Image Library distribution; may require libjpeg-dev for JPEG support
 pilkit==1.1.6  # dependency of django-imagekit
 django-imagekit==3.0.1 # ProcessedImageField for Django
