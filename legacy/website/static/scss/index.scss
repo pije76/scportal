@@ -1,0 +1,48 @@
+#indexsettings-page {
+    .value_at_hour input {
+        width: 3em;
+    }
+    .value_at_hour td {
+        padding: 2px;
+    }
+    .value_at_hour .error input {
+        background-color: red;
+    }
+}
+#index {
+    ul {
+        list-style: none;
+
+        li {
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+    }
+
+    ul.horizontal {
+        li {
+            width: 150px;
+            float: left;
+            margin-left: 5px;
+        }
+    }
+
+    .errorlist {
+        li {
+            border: none;
+            padding: auto;
+            margin: 0;
+        }
+    }
+}
+
+#indexes-page {
+    .menu-content ul {
+        margin: 3px;
+    }
+    .graph-text {
+        text-align: center;
+    }
+}

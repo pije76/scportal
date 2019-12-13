@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:49
+msgid "unit"
+msgstr "enhed"
+
+#: models.py:51
+msgid "hardware id"
+msgstr "hardware-id"
+
+#: models.py:106
+msgid "value"
+msgstr "værdi"
+
+#: models.py:107
+msgid "timestamp"
+msgstr "tidsstempel"
+
+#: models.py:143 models.py:163
+msgid "data source"
+msgstr "datakilde"
+
+#: models.py:144
+msgid "data sources"
+msgstr "datakilder"
+
+#: models.py:168 models.py:169
+msgid "raw data"
+msgstr "rådata"
+
+#: models.py:183
+msgid "Must be clock hour."
+msgstr "Skal pass med hele timer"
+
+#: models.py:191
+msgid "Must be five-minute multiplum."
+msgstr "Skal pass med fem-minut-intervaller"
+
+#~ msgid "name"
+#~ msgstr "navn"

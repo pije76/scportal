@@ -1,0 +1,9 @@
+{% load i18n %}
+{% load tabs %}
+
+{% trans 'Meters' as meters %}
+{% trans 'Agents' as agents %}
+<ul class="tabs">
+  {% tab_li agents 'manage_devices-list' %}
+  {% tab_li meters 'manage_devices-meter-list' %}
+</ul>

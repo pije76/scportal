@@ -1,0 +1,20 @@
+Django==1.6.5 # high-level Python Web framework
+django-configurations==0.1 # more flexible settings.py configuration
+django-durationfield==0.4.0 # field type representing datetime.timedelta
+django-historicalrecords==1.0 # generic history for Django models.
+django-mptt==0.5.5 # implementing Modified Preorder Tree Traversal with Django Models
+django-timezones2==1.0.4 # helper for pytz
+isoweek==1.2.0 # translating ISO week numbers to datetime dates
+pika==0.9.13 # AMQP (message queue) client library
+psycopg2==2.5 # PostgreSQL driver
+pycrypto==2.6 # cryptography toolkit
+python-dateutil==2.1 # real month deltas
+pytz==2013b # brings the Olson timezone database into Python
+south==0.8.4 # database migrations
+Twisted==13.0.0 # cooperative multithreading/network server
+txAMQP==0.6.1 # async message queue client integrating with Twisted
+django-model-utils==2.0.2 # utilities for models and managers
+celery==3.1.8  # Python background task queue/runner
+Pillow==2.4.0  # Python Image Library distribution; may require libjpeg-dev for JPEG support
+pilkit==1.1.6  # dependency of django-imagekit
+django-imagekit==3.0.1 # ProcessedImageField for Django

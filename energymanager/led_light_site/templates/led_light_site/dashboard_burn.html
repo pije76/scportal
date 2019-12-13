@@ -1,0 +1,77 @@
+{% extends "led_light_site/base.html" %}
+{% load i18n %}
+{% load l10n %}
+
+{% load bootstrap_tags %}
+{% load utils %}
+
+{% block content %}
+<div class="light-dashboard">
+{% panel _("Total") %}
+
+<div class="dropdown pull-right">
+  <a href="#" title="{% trans 'Add' %}" class="btn-add" data-toggle="dropdown">
+    <span>{% trans 'Month' %}: {{ month }}</span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=0">...</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=1">{% trans 'January' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=2">{% trans 'February' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=3">{% trans 'March' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=4">{% trans 'April' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=5">{% trans 'May' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=6">{% trans 'June' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=7">{% trans 'Juli' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=8">{% trans 'August' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=9">{% trans 'September' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=10">{% trans 'October' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=11">{% trans 'November' %}</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year={{ year|unlocalize }}&month_number=12">{% trans 'December' %}</a></li>
+  </ul>
+</div>
+<div class="dropdown pull-right">
+  <a href="#" title="{% trans 'Add' %}" class="btn-add" data-toggle="dropdown">
+    <span>{% trans 'Year' %}: {{ year|unlocalize }}</span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year=2015&month_number={{ month_number|unlocalize }}">2015</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year=2016&month_number={{ month_number|unlocalize }}">2016</a></li>
+    <li><a href="{% url 'led_light_site_projects:dashboard_burn' customer_id=view.kwargs.customer_id %}?year=2017&month_number={{ month_number|unlocalize }}">2017</a></li>
+  </ul>
+</div>
+{% endpanelbuttons %}
+<h1>
+  <div class="pull-left">
+  {% trans 'Burned' %}
+  </div>
+  <div class="pull-right">
+    {% if total_burned %}
+    	{{ total_burned|floatformat:2 }}
+    {% else %}
+    	-
+    {% endif %}  {% trans 'Hours' %}
+  </div>
+</h1>
+<div class="clearfix"></div>
+{% endpanel %}
+
+<div class="info-boxes">
+  {% for project in projects %}
+
+  <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+    <div class="box info-box">
+      <div class="backgroundColor darkgreen">
+       <div class="clearfix">
+          <span class="title">{{ project.name }}</span>
+        </div>
+        <div class="clearfix">
+          <span class="title">{% trans 'Burned' %}</span>
+          <span class="value">{{ project.burned|floatformat:2 }} {% trans 'Hours' %}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}

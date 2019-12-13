@@ -1,0 +1,21 @@
+{% spaceless %}
+{% load i18n %}
+{% load l10n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix indented" data-url="{% url 'manage-locations-form' pk=location.id %}" data-id="{{ location.id|unlocalize }}">
+  <a href="{% url 'manage-locations-details' pk=location.id %}">
+    <img src="{% static 'images/detail.png' %}" class="left detail-icon">
+      {# layout hack; float header left to allow 'open'-link to float to the right of it #}
+    <h3 class="left">{{ location.name_plain }}</h3>
+  </a>
+  <span class="right">
+    {% if user.is_customer_superuser or user.is_admin %}
+    <a class="open" href="#">
+      <img src="{% static 'images/arrow-left.png' %}" alt="{% trans "Edit" %}">
+    </a>
+    {% endif %}
+  </span>
+</div>
+{% endspaceless %}

@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: static/website.js:16
+msgid "Can't display graph, please upgrade your browser"
+msgstr ""
+"Grafen kan ikke vises i denne browser-version. Venligst opgradér din browser."
+
+#: static/website.js:191
+msgid "Server error."
+msgstr "Serverfejl."
+
+#: static/website.js:194
+msgid "Error."
+msgstr "Fejl."
+
+#: static/website.js:197
+msgid "Could not contact server."
+msgstr "Kunne ikke forbinde til serveren."
+
+#: static/website.js:344 static/website.js.c:437
+msgid "Another form is currently open.<br> Do you want to discard this?"
+msgstr ""
+"En anden formular er allerede åbnet.<br>Ønsker du at lukke denne anden "
+"formular?"
+
+#: static/website.js:346 static/website.js.c:439
+msgid "Information"
+msgstr "Information"
+
+#: static/website.js:351 static/website.js.c:444
+msgid "Discard"
+msgstr "Luk"
+
+#: static/website.js:375 static/website.js.c:465
+msgid "Jump to form"
+msgstr "Gå til form"
+
+#: static/website.js:385 static/website.js.c:475
+msgid "Abort"
+msgstr "Annullér"
+
+#: static/website.js:534
+msgid "An error accurred while saving. Please try again."
+msgstr "Der opstod en fejl, prøv venligst igen."
+
+#: static/website.js:672
+msgid "Are you sure you want to delete?"
+msgstr "Er du sikker på at du vil slette?"
+
+#: static/website.js:677 static/website.js.c:765 static/website.js.c:802
+msgid "Ok"
+msgstr "Ok"
+
+#: static/website.js:691 static/website.js.c:774
+msgid "Cancel"
+msgstr "Fortryd"
+
+#: static/website.js:696 static/website.js.c:721 static/website.js.c:761
+#: static/website.js:798
+msgid "Delete"
+msgstr "Slet"
+
+#: static/website.js:754
+msgid "Are you sure you want to delete this?"
+msgstr "Er du sikker på at du vil slette dette?"
+
+#: static/website.js:1007
+msgid "Done"
+msgstr "Færdig"
+
+#: static/website.js:1008
+msgid "Prev"
+msgstr "Forrige"
+
+#: static/website.js:1009
+msgid "Next"
+msgstr "Næste"
+
+#: static/website.js:1010
+msgid "Today"
+msgstr "I dag"
+
+#: static/website.js:1012
+msgid "January"
+msgstr "Januar"
+
+#: static/website.js:1013
+msgid "February"
+msgstr "Februar"
+
+#: static/website.js:1014
+msgid "March"
+msgstr "Marts"
+
+#: static/website.js:1015
+msgid "April"
+msgstr "April"
+
+#: static/website.js:1016
+msgid "May"
+msgstr "Maj"
+
+#: static/website.js:1017
+msgid "June"
+msgstr "Juni"
+
+#: static/website.js:1018
+msgid "July"
+msgstr "Juli"
+
+#: static/website.js:1019
+msgid "August"
+msgstr "August"
+
+#: static/website.js:1020
+msgid "September"
+msgstr "September"
+
+#: static/website.js:1021
+msgid "October"
+msgstr "Oktober"
+
+#: static/website.js:1022
+msgid "November"
+msgstr "November"
+
+#: static/website.js:1023
+msgid "December"
+msgstr "December"
+
+#: static/website.js:1026
+msgid "jan"
+msgstr "jan"
+
+#: static/website.js:1027
+msgid "feb"
+msgstr "feb"
+
+#: static/website.js:1028
+msgid "mar"
+msgstr "mar"
+
+#: static/website.js:1029
+msgid "apr"
+msgstr "apr"
+
+#: static/website.js:1030
+msgid "may"
+msgstr "maj"
+
+#: static/website.js:1031
+msgid "jun"
+msgstr "jun"
+
+#: static/website.js:1032
+msgid "jul"
+msgstr "jul"
+
+#: static/website.js:1033
+msgid "aug"
+msgstr "aug"
+
+#: static/website.js:1034
+msgid "sep"
+msgstr "sep"
+
+#: static/website.js:1035
+msgid "oct"
+msgstr "okt"
+
+#: static/website.js:1036
+msgid "nov"
+msgstr "nov"
+
+#: static/website.js:1037
+msgid "dec"
+msgstr "dec"
+
+#: static/website.js:1040 static/website.js.c:1047
+msgid "Sunday"
+msgstr "Søndag"
+
+#: static/website.js:1041
+msgid "Monday"
+msgstr "Mandag"
+
+#: static/website.js:1042
+msgid "Tuesday"
+msgstr "Tirsdag"
+
+#: static/website.js:1043
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: static/website.js:1044
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: static/website.js:1045
+msgid "Friday"
+msgstr "Fredag"
+
+#: static/website.js:1046
+msgid "Saturday"
+msgstr "Lørdag"
+
+#: static/website.js:1050 static/website.js.c:1057
+msgid "Sun"
+msgstr "Søn"
+
+#: static/website.js:1051
+msgid "Mon"
+msgstr "Man"
+
+#: static/website.js:1052
+msgid "Tue"
+msgstr "Tir"
+
+#: static/website.js:1053
+msgid "Wed"
+msgstr "Ons"
+
+#: static/website.js:1054
+msgid "Thu"
+msgstr "Tor"
+
+#: static/website.js:1055
+msgid "Fri"
+msgstr "Fre"
+
+#: static/website.js:1056
+msgid "Sat"
+msgstr "Sat"
+
+#: static/website.js:1060 static/website.js.c:1067
+msgctxt "weekday"
+msgid "Su"
+msgstr "Sø"
+
+#: static/website.js:1061
+msgctxt "weekday"
+msgid "Mo"
+msgstr "Ma"
+
+#: static/website.js:1062
+msgctxt "weekday"
+msgid "Tu"
+msgstr "Ti"
+
+#: static/website.js:1063
+msgctxt "weekday"
+msgid "We"
+msgstr "On"
+
+#: static/website.js:1064
+msgctxt "weekday"
+msgid "Th"
+msgstr "To"
+
+#: static/website.js:1065
+msgctxt "weekday"
+msgid "Fr"
+msgstr "Fr"
+
+#: static/website.js:1066
+msgctxt "weekday"
+msgid "Sa"
+msgstr "Lø"
+
+#: static/website.js:1069
+msgctxt "week-header"
+msgid "Wk"
+msgstr "Uge"
+
+#: static/website.js:1198
+msgid "Failed to construct output files"
+msgstr "Fejl under oprettelse af fil"
+
+#: static/website.js:1203
+msgid "Report created"
+msgstr "Rapport genereret"
+
+#: static/website.js:1219 static/website.js.c:1333
+msgid "Lost contact to the server. Please check your internet connetion."
+msgstr ""
+"Har mistet kontakt til serveren. Kontroller venligst din internetforbindelse."
+
+#: static/website.js:1221
+msgid "Failed to collect data"
+msgstr "Dataindsamling mislykkedes"
+
+#: static/website.js:1295
+msgid "Failed to start background task"
+msgstr "Fejl under oprettelse af baggrundsopgave"
+
+#: static/website.js:1335
+msgid "Background task failed"
+msgstr "Baggrundsopgaven fejlede"
+
+#~ msgid "Collecting data"
+#~ msgstr "Indsamler data"
+
+#~ msgid "Constructing output files"
+#~ msgstr "Genererer filer"
+
+#~ msgid "Download PDF"
+#~ msgstr "Hent PDF"
+
+#~ msgid "Download CSV"
+#~ msgstr "Hent CSV"
+
+#~ msgid "Requesting report"
+#~ msgstr "Sender rapportanmodning"

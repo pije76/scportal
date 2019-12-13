@@ -1,0 +1,25 @@
+{% spaceless %}
+{% load static from staticfiles %}
+{% load i18n %}
+
+<div class="clearfix slide-in slide-in-overlay">
+    <form {% if form.is_multipart %} enctype="multipart/form-data" {% endif %} method="POST" action="{% block action %}{% endblock %}">
+    <div class="overlay-header clearfix">
+      <div class="left"><h4>{% block title %}{% endblock %}</h4></div>
+      <div class="right">
+        {% block buttons %}
+            <input type="submit" value="{% trans "Save" %}" />
+        {% endblock buttons %}
+      </div>
+    </div>
+    <span class="left">
+      <a class="close" href="#">
+        <img src="{% static 'images/arrow-right.png' %}" alt="{% trans 'Close' %}">
+      </a>
+    </span>
+    {% block content %}{% endblock %}
+  </form>
+  {% block extra_content %}{% endblock extra_content %}
+</div>
+
+{% endspaceless %}

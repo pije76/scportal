@@ -1,0 +1,25 @@
+/* The @each-loop is an improvement, but the output is still messy; the icons
+   to set on the .icon-elements is based on the class of their container and ID
+   of the page... */
+
+@each $page in dashboard, mp, devices, rules, users, userprofile, indexes, customers, mps, locations, groups, indexsettings, reports, projects {
+    .menu-item.#{$page} .icon {
+        background-image: url(images/menu-#{$page}-icon.png);
+    }
+    .menu-item.#{$page}.active .icon {
+        background-image: url(images/menu-#{$page}-icon-active.png);
+    }
+    ##{$page}-page .menu-item.#{$page} {
+        .icon {
+            background-image: url(images/menu-#{$page}-icon-active.png);
+        }
+        a {
+            color: #FFF;
+        }
+    }
+}
+
+#agents-page .menu-item.devices {
+    .icon{background-image: url(images/menu-devices-icon-active.png);}
+    a {color: #FFF;}
+}

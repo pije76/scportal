@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: static/bootstrap/base.js:91 static/bootstrap/base.js.c:98
+msgid "Sunday"
+msgstr "Søndag"
+
+#: static/bootstrap/base.js:92
+msgid "Monday"
+msgstr "Mandag"
+
+#: static/bootstrap/base.js:93
+msgid "Tuesday"
+msgstr "Tirsdag"
+
+#: static/bootstrap/base.js:94
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: static/bootstrap/base.js:95
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: static/bootstrap/base.js:96
+msgid "Friday"
+msgstr "Fredag"
+
+#: static/bootstrap/base.js:97
+msgid "Saturday"
+msgstr "Lørdag"
+
+#: static/bootstrap/base.js:101 static/bootstrap/base.js.c:108
+msgid "Sun"
+msgstr "Søn"
+
+#: static/bootstrap/base.js:102
+msgid "Mon"
+msgstr "Man"
+
+#: static/bootstrap/base.js:103
+msgid "Tue"
+msgstr "Tir"
+
+#: static/bootstrap/base.js:104
+msgid "Wed"
+msgstr "Ons"
+
+#: static/bootstrap/base.js:105
+msgid "Thu"
+msgstr "Tor"
+
+#: static/bootstrap/base.js:106
+msgid "Fri"
+msgstr "Fre"
+
+#: static/bootstrap/base.js:107
+msgid "Sat"
+msgstr "Lør"
+
+#: static/bootstrap/base.js:111 static/bootstrap/base.js.c:118
+msgctxt "weekday"
+msgid "Su"
+msgstr "Sø"
+
+#: static/bootstrap/base.js:112
+msgctxt "weekday"
+msgid "Mo"
+msgstr "Ma"
+
+#: static/bootstrap/base.js:113
+msgctxt "weekday"
+msgid "Tu"
+msgstr "Ti"
+
+#: static/bootstrap/base.js:114
+msgctxt "weekday"
+msgid "We"
+msgstr "On"
+
+#: static/bootstrap/base.js:115
+msgctxt "weekday"
+msgid "Th"
+msgstr "To"
+
+#: static/bootstrap/base.js:116
+msgctxt "weekday"
+msgid "Fr"
+msgstr "Fr"
+
+#: static/bootstrap/base.js:117
+msgctxt "weekday"
+msgid "Sa"
+msgstr "Lø"
+
+#: static/bootstrap/base.js:121
+msgid "January"
+msgstr "Januar"
+
+#: static/bootstrap/base.js:122
+msgid "February"
+msgstr "Februar"
+
+#: static/bootstrap/base.js:123
+msgid "March"
+msgstr "Marts"
+
+#: static/bootstrap/base.js:124
+msgid "April"
+msgstr "April"
+
+#: static/bootstrap/base.js:125
+msgid "May"
+msgstr "Maj"
+
+#: static/bootstrap/base.js:126
+msgid "June"
+msgstr "Juni"
+
+#: static/bootstrap/base.js:127
+msgid "July"
+msgstr "Juli"
+
+#: static/bootstrap/base.js:128
+msgid "August"
+msgstr "August"
+
+#: static/bootstrap/base.js:129
+msgid "September"
+msgstr "Septemeber"
+
+#: static/bootstrap/base.js:130
+msgid "October"
+msgstr "Oktober"
+
+#: static/bootstrap/base.js:131
+msgid "November"
+msgstr "November"
+
+#: static/bootstrap/base.js:132
+msgid "December"
+msgstr "December"
+
+#: static/bootstrap/base.js:135
+msgid "jan"
+msgstr "jan"
+
+#: static/bootstrap/base.js:136
+msgid "feb"
+msgstr "feb"
+
+#: static/bootstrap/base.js:137
+msgid "mar"
+msgstr "mar"
+
+#: static/bootstrap/base.js:138
+msgid "apr"
+msgstr "apr"
+
+#: static/bootstrap/base.js:139
+msgid "may"
+msgstr "maj"
+
+#: static/bootstrap/base.js:140
+msgid "jun"
+msgstr "jun"
+
+#: static/bootstrap/base.js:141
+msgid "jul"
+msgstr "jul"
+
+#: static/bootstrap/base.js:142
+msgid "aug"
+msgstr "aug"
+
+#: static/bootstrap/base.js:143
+msgid "sep"
+msgstr "sep"
+
+#: static/bootstrap/base.js:144
+msgid "oct"
+msgstr "okt"
+
+#: static/bootstrap/base.js:145
+msgid "nov"
+msgstr "nov"
+
+#: static/bootstrap/base.js:146
+msgid "dec"
+msgstr "dec"
+
+#: static/bootstrap/base.js:148
+msgid "Today"
+msgstr "I dag"
+
+#: static/bootstrap/base.js:580
+msgid "Your changes are not saved"
+msgstr "Dine ændringer er ikke gemt"

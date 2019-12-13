@@ -1,0 +1,49 @@
+{% extends 'overlay_base.html' %}
+{% load i18n %}
+{% load l10n %}
+{% load url from future %}
+{% load static from staticfiles %}
+{% load action %}
+
+{% block title %}
+  {% if form.instance.id %}
+    {% trans "Edit" %} {{ form.instance }}
+  {% else %}
+    {% trans "New Location" %}
+  {% endif %}
+{% endblock title %}
+
+{% block action %}
+  {% action 'manage-locations-update' form.instance pk=form.instance.id %}
+{% endblock %}
+
+
+{% block content %}
+<div class="clearfix">
+  {% if location.id %}
+    <input type="hidden" name="item_id" value="{{ location.id|unlocalize }}">
+  {% endif %}
+    {% csrf_token %}
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'Name:' %}</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+      </fieldset>
+    </div>
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'Parent:' %}</label>
+        {{ form.parent }}
+        {{ form.parent.errors }}
+      </fieldset>
+    </div>
+</div>
+{% endblock %}
+
+{% block buttons %}
+  <input type="submit" value="{% trans "Save" %}" />
+  {% if form.instance.id %}
+   <button class="delete btn" data-reason="{{ delete.reason }}" title="" data-deleteurl="{% url 'manage-locations-delete' %}">{% trans 'Delete' %}</button>
+  {% endif %}
+{% endblock buttons %}

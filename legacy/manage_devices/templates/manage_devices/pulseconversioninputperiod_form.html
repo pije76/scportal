@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load static from staticfiles %}
+
+{% block title %}{% trans "Settings: Devices" %}{% endblock title %}
+{% block page_id %}devices-page{% endblock %}
+
+{% block content_heading %}{% trans "Settings: Devices" %}{% endblock %}
+
+{% block left_content %}
+<div class="clearfix">
+  <form method="post" action="{{ request.path }}">
+    <div class="overlay-header clearfix">
+      <div class="left"><h4></h4></div>
+      <div class="right">
+        {% block buttons %}
+          <input type="submit" value="{% trans "Save" %}" />
+        {% endblock buttons %}
+      </div>
+    </div>
+    {% csrf_token %}
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'From:' %}</label>
+        {{ form.from_timestamp }}
+        {{ form.from_timestamp.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'To:' %}</label>
+        {{ form.to_timestamp }}
+        {{ form.to_timestamp.errors }}
+      </fieldset>
+      {{ form.non_field_errors }}
+    </div>
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'Pulse quantity:' %}</label>
+        {{ form.pulse_quantity }}
+        {{ form.pulse_quantity.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Output quantity:' %}</label>
+        {{ form.output_quantity }}
+        {{ form.output_quantity.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Output unit:' %}</label>
+        {{ form.output_unit }}
+        {{ form.output_unit.errors }}
+      </fieldset>
+    </div>
+  </form>
+</div>
+{% endblock left_content %}

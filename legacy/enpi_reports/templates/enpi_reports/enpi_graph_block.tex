@@ -1,0 +1,23 @@
+{% load reports %}
+\input{{ '{' }}{{ data_dict.graph_name }}{{ '}' }}
+\begin{tabular*}{\textwidth}{| @{\extracolsep{\fill} } l|{% for _ in data_dict.table_data %}r|{% endfor %}{{ '}' }}
+\hline
+\textbf{ {% trans 'Period' context 'table row header in enpi report' %} }
+{% for data in data_dict.table_data %}
+& \textbf{ {{ data.label|texescape }} } %
+{% endfor %}\\
+\hline
+\hline
+\textbf{ {% blocktrans context 'table row header in enpi report' with unit=enpi_report.enpi_unit_converter.get_display_unit %}EnPI ({{ unit }}){% endblocktrans %} }
+{% for data in data_dict.table_data %}
+& {{ data.enpi|floatformat:2 }}
+{% endfor %}\\
+{% if data_dict.table_data.0.enpi %}
+\hline
+\textbf{ {% trans 'Savings (%)' context 'table row header in enpi report' %} }
+{% for data in data_dict.table_data %}
+& {{ data.saved_pct|floatformat:2 }}
+{% endfor %}\\
+{% endif %}
+\hline
+\end{tabular*}

@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-20 20:07+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:37
+msgid "energy"
+msgstr "energía"
+
+#: models.py:38
+msgid "volume"
+msgstr "volumen"
+
+#: models.py:42
+msgid "unit"
+msgstr "unidad"
+
+#: models.py:48
+msgid "volume to energy conversion"
+msgstr "conversión de volumen a energía"
+
+#: models.py:52
+msgid "consumption data sequence"
+msgstr "secuencia de datos de consumo"
+
+#: models.py:53
+msgid "consumption data sequences"
+msgstr "secuencias de datos de consumo"
+
+#: models.py:61
+msgid "Must not be changed"
+msgstr "No debe ser cambiado"
+
+#: models.py:69
+msgid "Should only be set for volumeric consumptions."
+msgstr "Unicamente debería configurarse para consumos volumétricos"
+
+#: models.py:117
+msgid "name"
+msgstr "nombre"
+
+#: models.py:118
+msgid "description"
+msgstr "descripción"
+
+#: models.py:122
+msgid "consumptions"
+msgstr "consumos"
+
+#: models.py:126
+msgid "cost compensation"
+msgstr "compensación de costes"
+
+#: models.py:146
+msgid "Cost compensation cannot be cleared once selected"
+msgstr "Compensación de costes no puede ser borrada una vez seleccionada"
+
+#: models.py:149
+msgid "Cost compensation cannot be changed once selected"
+msgstr "Compensación de costes no puede ser cambiada una vez seleccionada"
+
+#: models.py:274
+msgid "utility type"
+msgstr "tipo de uso"
+
+#: models.py:278
+msgid "tariff"
+msgstr "tarifa"
+
+#: models.py:285
+#: models.py:404
+msgid "main consumption"
+msgstr "consumo principal"
+
+#: models.py:286
+msgid "main consumptions"
+msgstr "consumos principales"
+
+#: models.py:312
+msgid "Tariff cannot be cleared once selected."
+msgstr "La tarifa no puede ser borrada una vez que ha sido seleccionada"
+
+#: models.py:315
+msgid "Tariff cannot be changed once selected."
+msgstr "La tarifa no puede ser cambiada una vez que ha sido seleccionada"
+
+#: models.py:323
+msgid "Tariff unit incompatible with utility unit."
+msgstr "La unidad de la tarifa no es compatible con la unidad de uso"
+
+#: models.py:412
+msgid "consumption group"
+msgstr "grupo de consumo"
+
+#: models.py:413
+msgid "consumption groups"
+msgstr "grupos de consumos"
+
+#: models.py:478
+msgid "data sequence"
+msgstr "secuencia de datos"
+
+#: models.py:482
+msgid "consumption period"
+msgstr "periodo de consumo"
+
+#: models.py:483
+msgid "consumption periods"
+msgstr "periodos de consumo"
+
+#: models.py:491
+msgid "non-pulse consumption period"
+msgstr "periodo de consumo sin pulsos"
+
+#: models.py:492
+msgid "non-pulse consumption periods"
+msgstr "periodos de consumo sin pulsos"
+
+#: models.py:500
+msgid "pulse consumption period"
+msgstr "periodo de consumo con pulsos"
+
+#: models.py:501
+msgid "pulse consumption periods"
+msgstr "periodos de consumo con pulsos"
+
+#: models.py:509
+msgid "single value consumption period"
+msgstr "periodo de consumo de valor simple"
+
+#: models.py:510
+msgid "single value consumption periods"
+msgstr "periodos de consumo de valor simple"
+

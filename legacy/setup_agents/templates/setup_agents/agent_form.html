@@ -1,0 +1,64 @@
+{% extends 'overlay_base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+{% load action %}
+
+{% block title %}
+  {% if agent.id %}
+    {% trans "Edit" %} {{ agent }}
+  {% else %}
+    {% trans "New Agent" %}
+  {% endif %}
+{% endblock title %}
+
+{% block action %}
+  {% action 'setup_agents-update' form.instance pk=agent.id %}
+{% endblock %}
+
+{% block content %}
+<div class="clearfix">
+    {% csrf_token %}
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'Customer:' %}</label>
+        {{ form.customer }}
+        {{ form.customer.errors }}
+      </fieldset>
+    </div>
+    <div class="left">
+      <fieldset>
+        {% if agent.id %}
+          <span>{% trans "MAC:" %}</span>
+          <span>{{ agent.mac }}</span>
+          {{ form.mac.as_hidden }}
+          {{ form.mac.errors }}
+        {% else %}
+          <label>{% trans 'MAC:' %}</label>
+          {{ form.mac }}
+          {{ form.mac.errors }}
+        {% endif %}
+      </fieldset>
+    </div>
+</div>
+{% endblock %}
+{% block extra_content %}
+  {% if upgrade_form %}
+  <form method="POST" action="{% url 'setup_agents-swupgrade' pk=agent.id %}">
+  {% csrf_token %}
+  <h2>{% trans "Software upgrade" %}</h2>
+    <div class="wrapper">
+      <div class="left">
+        <div class="form-item">
+          <label>{% trans 'Software version:' %}</label>
+          {{ upgrade_form.software_image }}
+          {{ upgrade_form.errors }}
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <input type="submit" value="{% trans "Send image" %}" />
+    </div>
+  </form>
+  {% endif %}
+{% endblock extra_content %}

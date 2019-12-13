@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+
+{% block page_id %}customers-page{% endblock %}
+
+{% block page_js %}
+{% endblock page_js %}
+
+{% block title %}
+  {% trans "Customer Administration" %}
+{% endblock %}
+{% block content_heading %}
+  {% trans "Customer Administration" %}
+{% endblock %}
+
+{% block tabs %}
+    {% include "manage_customers/customer_detail_tabs.html" with overview="selected"%}
+{% endblock %}
+
+{% block left_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{{ customer.name_plain }} - {% trans "Overview" %}</h3>
+  </div>
+  <dl>
+    <dt>{% trans "ID:" %}</dt><dd>{{ customer.id|unlocalize }}</dd>
+    <dt>{% trans "Meters:" %}</dt><dd>{{ customer.meter_set.count }}</dd>
+    <dt>{% trans "Agents:" %}</dt><dd>{{ customer.agent_set.count }}</dd>
+    <dt>{% trans "Locations:" %}</dt><dd>{{ customer.location_set.count }}</dd>
+    <dt>{% trans "Groups:" %}</dt><dd>{{ customer.count_collections }}</dd>
+    <dt>{% trans "Measurement Points:" %}</dt><dd>{{ customer.count_measurementpoints }}</dd>
+  </dl>
+  <dl>
+    <dt>{% trans "Users:" %}</dt><dd>{{ customer.user_set.count }}</dd>
+    <dt>{% trans "Address:" %}</dt><dd>{{ customer.address_plain }}</dd>
+    <dt>{% trans "Postal code:" %}</dt><dd>{{ customer.postal_code_plain }}</dd>
+    <dt>{% trans "Country code:" %}</dt><dd>{{ customer.country_code_plain }}</dd>
+  </dl>
+  <a href="{% url 'manage_customers-as_customer' pk=customer.id %}">{% trans 'Log in as customer' %}</a>
+</div>
+{% endblock left_content %}
+

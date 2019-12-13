@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load webdesign %}
+{% load i18n %}
+
+{% block title %}{% trans "Login" %}{% endblock %}
+{% block content_heading %}{% trans "Login" %}{% endblock %}
+{% block content %}
+<div class="loginform">
+
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset>
+      {{ form.username.label_tag }}
+      {{ form.username }}
+      {{ form.username.errors }}
+    </fieldset>
+    <fieldset>
+      {{ form.password.label_tag }}
+      {{ form.password }}
+      {{ form.username.errors }}
+    </fieldset>
+    {{ form.non_field_errors }}
+    <input type="submit" value="{% trans "Login" %}" />
+  </form>
+</div>
+{% endblock %}

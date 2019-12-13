@@ -1,0 +1,13 @@
+{
+    "name": "Bootstrap",
+    "extra_urls": {"js": [
+      "/static/bootstrap/jquery-2.0.3.min.js",
+      "/static/bootstrap/lodash-2.4.1.min.js",
+      "/static/bootstrap/bootstrap-datepicker/bootstrap-datepicker.js",
+      "/static/bootstrap/genius/js/jquery.chosen.min.js",
+      "/static/bootstrap/multiselect/js/jquery.multi-select.js",
+      "/static/bootstrap/quicksearch/dist/jquery.quicksearch.js",
+      "/jsi18n/",
+      "/static/bootstrap/base.js"
+    ]}
+}

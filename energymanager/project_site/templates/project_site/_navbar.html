@@ -1,0 +1,11 @@
+{% extends "bootstrap/_navbar_base.html" %}
+
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% block home_url %}{% url 'project_site:home' %}{% endblock home_url %}
+{% block title %}{% trans 'ESCo Lite' %}{% endblock title %}
+
+{% block menu_extra %}
+{% include "utils/customer_selection_nav.html" %}
+{% endblock menu_extra %}

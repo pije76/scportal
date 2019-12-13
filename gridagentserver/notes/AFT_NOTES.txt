@@ -1,0 +1,4 @@
+
+- README
+
+- Short design document. A full document will be required once we got to GridPlatform 2.0.0

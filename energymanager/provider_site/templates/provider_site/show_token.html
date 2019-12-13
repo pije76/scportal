@@ -1,0 +1,19 @@
+{% extends "provider_site/base.html" %}
+{% load i18n %}
+{% load bootstrap_tags %}
+
+
+{% block content %}
+<ul class="breadcrumb">
+  <li><a href="{% url "provider_site:apiuser-list" %}">{% trans "API Users" %}</a></li>
+  <li class="active">{% trans "User Created" %}</li>
+</ul>
+
+{% panel _("User created") %}
+<h3>{% trans "Username:" %}</h3>
+{{ username }}
+<h3>{% trans "Token:" %}</h3>
+{{ token }}
+
+{% endpanel %}
+{% endblock content %}

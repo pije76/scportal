@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load widget_tweaks %}
+
+<h6>{% trans "Tariffs:" %}</h6>
+<p>
+{% trans "When attaching tariffs to this measurement point the consumption costs will be calculated" %}
+</p>
+{{ inlines.0.management_form }}
+{{ inlines.0.non_form_errors }}
+<table class="data-period">
+  <tr>
+    <th>{% trans "Valid from:" %}</th>
+    <th>{% trans "Tariff:" %}</th>
+    <th>{% trans "Delete:" %}</th>
+  </tr>
+  {% for tariff_period_form in inlines.0 %}
+    <tr>
+      <td>
+        {{ tariff_period_form.hidden_fields|join:"" }}
+	{% if not forloop.first %}
+	  {{ tariff_period_form.valid_from }}
+	  {{ tariff_period_form.valid_from.errors }}
+	{% endif %}
+      </td>
+      <td style="width:300px">
+        {{ tariff_period_form.data_series }}
+	{{ tariff_period_form.data_series.errors }}
+      </td>
+      <td>
+        {% if not forloop.last %}
+          {{ tariff_period_form.DELETE }}
+        {% endif %}
+      </td>
+    </tr>
+    {% if tariff_period_form.non_field_errors %}
+    <tr>
+      <td colspan="3">
+	{{ tariff_period_form.non_field_errors }}
+      </td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>

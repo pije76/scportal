@@ -1,0 +1,42 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix">
+  <h3>
+    <a href="{% url 'manage_devices-meter-update' pk=meter.id %}">
+      <img src="{% static 'images/detail.png' %}" class="left detail-icon">
+      <span>
+      {% if meter.name_plain %}
+        {{ meter.name_plain }}
+      {% else %}
+        {% trans "No name" %}
+      {% endif %}
+      </span>
+    </a>
+  </h3>
+  <dl>
+    <dt>{% trans "Location:" %}</dt>
+    <dd>{{ meter.location }}</dd>
+    <dt>{% trans "Agent:" %}</dt>
+    <dd>{{ meter.agent }}</dd>
+    <dt>{% trans "ID:" %}</dt>
+    <dd>{{ meter.get_manufactoring_id_display }}</dd>
+    <dt>{% trans "Control mode:" %}</dt>
+    <dd>{{ meter.get_control_mode_display }}</dd>
+  </dl>
+  <dl>
+    <dt>{% trans "Relay state:" %}</dt>
+    <dd>{{meter.get_relay_state_display}}</dd>
+    <dt>{% trans "Connection state:" %}</dt>
+    <dd>{{meter.connection_state}}</dd>
+    <dt>{% trans "Last measurement update:" %}</dt>
+    {% if meter.latest_update %}
+    <dd>{{meter.latest_update}}</dd>
+    {% else %}
+    <dd>{% trans "No data" %}</dd>
+    {% endif %}
+  </dl>
+</div>
+{% endspaceless %}

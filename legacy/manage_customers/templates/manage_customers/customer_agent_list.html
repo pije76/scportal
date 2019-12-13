@@ -1,0 +1,24 @@
+{% extends "list_page.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+
+{% block page_id %}customers-page{% endblock %}
+{% block list_url %}{% url 'manage_customers-agent-list-json' customer=customer.pk %}{% endblock %}
+{% block default_sort_by %}location{% endblock %}
+
+{% block title %}{{ customer.name_plain }} {% trans "agents" %}{% endblock title %}
+{% block content_heading %}{{ customer.name_plain }} {% trans "agents" %}{% endblock content_heading %}
+{% block list_title %}{% trans "Agents" %}{% endblock %}
+
+{% block add_button %}
+{% endblock %}
+
+{% block tabs %}
+{% include "manage_customers/customer_detail_tabs.html" %}
+{% endblock tabs %}
+
+{% block sort_by %}
+<span class="sort" data-sort="location">{% trans "Location" %}</span>
+<span class="sort" data-sort="mac">{% trans "MAC" %}</span>
+{% endblock %}

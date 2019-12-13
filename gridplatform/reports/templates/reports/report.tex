@@ -1,0 +1,89 @@
+{% load version %}
+{% load i18n %}
+{% load reports %}
+
+{% block documentclass %}
+\documentclass[paper=a4,pagesize,11pt,headlines=3,headinclude,parskip=half]{scrartcl}
+{% endblock %}
+% paper/pagesize sets page size for output
+% absolute positioning in TikZ works, and the page size is specified correctly
+% in the PDF
+%\usepackage{typearea}
+\usepackage[top=3.8cm,left=1.8cm,right=1.8cm,bottom=3.2cm]{geometry}
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+{% block fonts %}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Mapping=tex-text]{Linux Libertine O}
+\setromanfont[Mapping=tex-text]{Linux Libertine O}
+\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+\setmonofont[Mapping=tex-text, Scale=0.9]{Courier New}
+{% endblock %}
+
+\usepackage[xetex,
+  pdfcreator={GridPlatform {% gridplatform_version_tex %}},
+  pdfborder={0 0 0}]{hyperref}
+
+% \usepackage{prettyref}
+
+\usepackage{graphicx}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{gmdarkgreen}{HTML}{0E3112}
+
+\definecolor{gmheader}{HTML}{679D4F}
+\definecolor{fillergray}{HTML}{868685}
+\definecolor{gmorange}{HTML}{FF9900}
+
+
+\addtokomafont{sectioning}{\color{gmheader}}
+\addtokomafont{section}{\LARGE}
+% \colorlet{foo}{red}
+% \definecolor{foo}{named}{red}
+
+
+\usepackage{tikz}
+
+{% block headfoot %}
+\usepackage{lastpage}
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\renewcommand{\headfont}{\normalfont\sffamily}
+\renewcommand{\pnumfont}{\normalfont\rmfamily\slshape}
+% \setheadtopline{.4pt}
+% \setheadsepline{.4pt}
+% \setfootbotline{.4pt}
+% \setfootsepline{.4pt}
+
+% NOTE: use \linebreak rather than \\ --- with (tabu-) multipage-tables, the
+% table variant of \\ will be in scope...
+{% comment %}
+% \ihead{\includegraphics[width=0.3\textwidth]{logo.png}}
+\ihead{\relax {{ meta.customer|texescape }}}
+\ohead{\relax {% block report_title %}{{ meta.title|texescape }}{% endblock %}}
+\ifoot{\bfseries {% trans "Page" %} \thepage{} {% trans 'of' context "page # of #" %} \pageref{LastPage}\normalfont\linebreak GridPlatform {% gridplatform_version_tex %}; {{ meta.type|texescape }}\linebreak {{ meta.generation_time|date:'Y-m-d\TH:iO' }}}
+{% endcomment %}
+\ihead{{ '{' }}{{ meta.customer|texescape }}}
+\ohead{{ '{' }}{% block report_title %}{{ meta.title|texescape }}{% endblock %}}
+\ifoot{\bfseries {% blocktrans notexescape with "\thepage{}"|safe as page and "\pageref{LastPage}"|safe as page_count %}Page {{ page }} of {{ page_count }}{% endblocktrans %}\normalfont\linebreak {% gridplatform_version_tex %}\linebreak {% blocktrans with date=meta.generation_time|date:'SHORT_DATETIME_FORMAT' %}Generated: {{ date }}{% endblocktrans %} }
+\cfoot{}
+{% if object.customer.provider.logo %}
+\ofoot{\includegraphics[totalheight=1.5cm]{{ '{' }}{{ object.customer.provider.pdf_logo.path }}{{ '}' }}}
+{% else %}
+\ofoot{\includegraphics[totalheight=1.5cm]{{ '{' }}{% static_file 'gm_logo.pdf' %}}}
+{% endif %}
+
+{% endblock headfoot %}
+
+{% block preamble_extra %}
+{% endblock %}
+
+\begin{document}
+{% block content %}
+{% load webdesign %}
+{% lorem 3 %}
+{% endblock %}
+\end{document}

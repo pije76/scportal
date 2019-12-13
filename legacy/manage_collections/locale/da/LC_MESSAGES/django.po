@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: views.py:41
+msgid "The group has been deleted"
+msgstr "Gruppen er blevet slettet"
+
+#: views.py:137
+msgid "The group has been saved"
+msgstr "Gruppen er gemt"
+
+#: views.py:200
+msgid "Browse and select an image first"
+msgstr "Klik browse og vælg et billede først"
+
+#: templates/manage_collections/group_block.html:22
+#: templates/manage_collections/group_form.html:10
+#: templates/manage_collections/group_normal_block.html:16
+msgid "Edit"
+msgstr "Redigér"
+
+#: templates/manage_collections/group_details.html:13
+#: templates/manage_collections/group_details.html:14
+#: templates/manage_collections/group_floorplan.html:149
+#: templates/manage_collections/group_floorplan.html:150
+msgid "Details"
+msgstr "Detaljer"
+
+#: templates/manage_collections/group_details.html:18
+#: templates/manage_collections/group_details_tabs.html:4
+#: templates/manage_collections/group_floorplan.html:233
+msgid "Measurement Points"
+msgstr "Målepunkter"
+
+#: templates/manage_collections/group_details.html:26
+msgid "Sort by"
+msgstr "Sortér efter"
+
+#: templates/manage_collections/group_details.html:27
+#: templates/manage_collections/group_list.html:23
+msgid "Name"
+msgstr "Navn"
+
+#: templates/manage_collections/group_details.html:28
+msgid "Group"
+msgstr "Gruppe"
+
+#: templates/manage_collections/group_details.html:31
+msgid "Filter"
+msgstr "Filter"
+
+#: templates/manage_collections/group_details_tabs.html:5
+#: templates/manage_collections/group_floorplan.html:155
+msgid "Overview"
+msgstr "Oversigt"
+
+#: templates/manage_collections/group_floorplan.html:178
+#: templates/manage_collections/group_floorplan.html:222
+#: templates/manage_collections/group_form.html:44
+msgid "Save"
+msgstr "Gem"
+
+#: templates/manage_collections/group_floorplan.html:189
+msgid "Upload"
+msgstr "Upload"
+
+#: templates/manage_collections/group_floorplan.html:218
+msgid "New text box"
+msgstr "Ny tekstboks"
+
+#: templates/manage_collections/group_form.html:12
+msgid "New Group"
+msgstr "Ny Gruppe"
+
+#: templates/manage_collections/group_form.html:28
+msgid "Name:"
+msgstr "Navn:"
+
+#: templates/manage_collections/group_form.html:35
+msgid "Parent:"
+msgstr "Forælder:"
+
+#: templates/manage_collections/group_form.html:46
+msgid "Delete"
+msgstr "Slet"
+
+#: templates/manage_collections/group_list.html:9
+#: templates/manage_collections/group_list.html:10
+msgid "Settings: Groups"
+msgstr "Indstillinger: Grupper"
+
+#: templates/manage_collections/group_list.html:11
+msgid "Groups"
+msgstr "Grupper"
+
+#: templates/manage_collections/group_list.html:16
+#: templates/manage_collections/group_list.html:17
+msgid "Add group"
+msgstr "Tilføj gruppe"
+
+#~ msgid "Measurement Points:"
+#~ msgstr "Målepunkter:"
+
+#~ msgid "Collections:"
+#~ msgstr "Grupper:"
+
+#~ msgid "This group cannot be deleted because the following depends on it:"
+#~ msgstr "Denne gruppe kan ikke slettes da den indeholder følgende:"
+
+#~ msgid "Measurement Point"
+#~ msgstr "Målepunkt"
+
+#~ msgid "Floorplan"
+#~ msgstr "Plantegning"
+
+#~ msgid "Collection"
+#~ msgstr "Gruppe"
+
+#~ msgid "Collections"
+#~ msgstr "Grupper"
+
+#~ msgid "Add collection"
+#~ msgstr "Tilføj gruppe"

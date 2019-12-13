@@ -1,0 +1,595 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-20 20:26+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: mixins.py:15
+#: models.py:182
+msgid "customer"
+msgstr "cliente"
+
+#: models.py:75
+#: models.py:406
+msgid "name"
+msgstr "Nombre"
+
+#: models.py:77
+msgid "VAT no."
+msgstr "NIF"
+
+#: models.py:79
+msgid "address"
+msgstr "dirección"
+
+#: models.py:81
+msgid "postal code"
+msgstr "código postal"
+
+#: models.py:83
+msgid "city"
+msgstr "ciudad"
+
+#: models.py:85
+#: models.py:95
+msgid "phone"
+msgstr "teléfono"
+
+#: models.py:87
+msgid "country code"
+msgstr "código de país"
+
+#: models.py:91
+msgid "contact person"
+msgstr "persona de contacto"
+
+#: models.py:93
+msgid "e-mail"
+msgstr "e-mail"
+
+#: models.py:98
+msgid "Electricity instantaneous unit"
+msgstr "Unidad instantánea eléctrica"
+
+#: models.py:101
+msgid "Electricity consumption unit"
+msgstr "Unidad consumo eléctrico"
+
+#: models.py:104
+msgid "Gas instantaneous unit"
+msgstr "Unidad instantánea gas"
+
+#: models.py:107
+msgid "Gas consumption unit"
+msgstr "Unidad consumo gas"
+
+#: models.py:110
+msgid "Water instantaneous unit"
+msgstr "Unidad instantáneo agua"
+
+#: models.py:113
+msgid "Water consumption unit"
+msgstr "Unidad consumo agua"
+
+#: models.py:116
+msgid "Heat instantaneous unit"
+msgstr "Unidad calor instantáneo"
+
+#: models.py:119
+msgid "Heat consumption unit"
+msgstr "Unidad consumo calor"
+
+#: models.py:122
+msgid "Temperature unit"
+msgstr "Unidad temperatura"
+
+#: models.py:125
+msgid "Oil instantaneous unit"
+msgstr "Unidad instantánea gasoil"
+
+#: models.py:128
+msgid "Oil consumption unit"
+msgstr "Unidad consumo gasoil"
+
+#: models.py:130
+#, fuzzy
+msgid "currency"
+msgstr "Moneda"
+
+#: models.py:149
+msgid "is active"
+msgstr "está activo"
+
+#: models.py:152
+#, fuzzy
+msgid "production A unit"
+msgstr "Unidad consumo agua"
+
+#: models.py:155
+#, fuzzy
+msgid "production B unit"
+msgstr "Unidad consumo agua"
+
+#: models.py:158
+#, fuzzy
+msgid "production C unit"
+msgstr "Unidad consumo agua"
+
+#: models.py:161
+#, fuzzy
+msgid "production D unit"
+msgstr "Unidad consumo agua"
+
+#: models.py:164
+#, fuzzy
+msgid "production E unit"
+msgstr "Unidad consumo agua"
+
+#: models.py:168
+msgid "industry types"
+msgstr "Tipos de industrias"
+
+#: models.py:177
+#, fuzzy
+msgid "installation notes"
+msgstr "número de instalación"
+
+#: models.py:183
+msgid "customers"
+msgstr "clientes"
+
+#: models.py:203
+#, python-brace-format
+msgid "Production unit {production_unit_letter} is in use and cannot be empty"
+msgstr "Unidad de producción {production_unit_letter} está en uso y no puede estar vacia"
+
+#: models.py:411
+msgid "location"
+msgstr "localización"
+
+#: models.py:412
+msgid "locations"
+msgstr "localizaciones"
+
+#: models.py:494
+msgid "Name"
+msgstr "Nombre"
+
+#: models.py:497
+msgid "meter number"
+msgstr "número de medidor"
+
+#: models.py:500
+msgid "installation number"
+msgstr "número de instalación"
+
+#: models.py:532
+#: models.py:778
+msgid "Group"
+msgstr "Grupo"
+
+#: models.py:533
+#: models.py:780
+msgid "Consumption group"
+msgstr "Grupo de consumo"
+
+#: models.py:534
+#: models.py:784
+#: proxies/temperaturemeasurementpoint.py:32
+msgid "Temperature measurement point"
+msgstr "Punto de medida de temperatura"
+
+#: models.py:535
+#: proxies/productionmeasurementpoint.py:28
+#, fuzzy
+msgid "Production measurement point"
+msgstr "Punto de medida de consumo"
+
+#: models.py:536
+#: proxies/voltagemeasurementpoint.py:24
+#, fuzzy
+msgid "Voltage measurement point"
+msgstr "punto de medida de impulsos"
+
+#: models.py:537
+#: proxies/currentmeasurementpoint.py:24
+#, fuzzy
+msgid "Current measurement point"
+msgstr "punto de medida de impulsos"
+
+#: models.py:538
+#: proxies/powermeasurementpoint.py:24
+#, fuzzy
+msgid "Power measurement point"
+msgstr "punto de medida de impulsos"
+
+#: models.py:539
+#: models.py:782
+#: proxies/consumptionmeasurementpoint.py:132
+msgid "Consumption measurement point"
+msgstr "Punto de medida de consumo"
+
+#: models.py:540
+#: models.py:785
+msgid "Calculation"
+msgstr "Cálculo"
+
+#: models.py:543
+msgid "Role"
+msgstr "Rol"
+
+#: models.py:545
+#, fuzzy
+msgid "utility type"
+msgstr "Tipo de industria"
+
+#: models.py:565
+msgid "green-yellow-red"
+msgstr "verde-amarillo-rojo"
+
+#: models.py:566
+msgid "red-green-red"
+msgstr "rojo-verde-rojo"
+
+#: models.py:567
+msgid "yellow-green-yellow"
+msgstr "amarillo-verde-amarillo"
+
+#: models.py:568
+msgid "red-yellow-green"
+msgstr "rojo-amarillo-verde"
+
+#: models.py:571
+msgid "Gauge colours"
+msgstr "Colores Medidor"
+
+#: models.py:608
+msgid "collection"
+msgstr "colección"
+
+#: models.py:609
+msgid "collections"
+msgstr "colecciones"
+
+#: models.py:786
+#, fuzzy
+msgid "Current"
+msgstr "Moneda"
+
+#: models.py:787
+msgid "Voltage"
+msgstr "Tensión"
+
+#: models.py:788
+msgid "Power"
+msgstr "Potencia"
+
+#: models.py:806
+msgid "Measurement Points:"
+msgstr "Puntos de Medición:"
+
+#: models.py:812
+msgid "Collections:"
+msgstr "Colecciones:"
+
+#: models.py:818
+msgid "This group cannot be deleted because the following                      depends on it:"
+msgstr "Este grupo no puede ser borrado por que los siguientes                      dependen de él:"
+
+#: models.py:867
+msgid "user profile"
+msgstr "perfil de usuario"
+
+#: models.py:868
+msgid "user profiles"
+msgstr "perfiles de usuario"
+
+#: proxies/consumptionmeasurementpoint.py:133
+msgid "Consumption measurement points"
+msgstr "puntos de medida de consumo"
+
+#: proxies/consumptionmeasurementpoint.py:303
+msgid "You are not allowed to to hide this measurement point from reports while it is used in a report"
+msgstr "No está autorizado ocultar este punto de medida de los informes mientras está en uso un informe"
+
+#: proxies/consumptionmeasurementpoint.py:312
+msgid "Both standard heating degree days and heating degree days must be set for heating degree days corrected consumption to be enabled.  To disable, deselect both."
+msgstr "Los grados día estándar para calefacción y grados día calor, deben ser fijados para que la corrección del consumo por grados día calefacción pueda ser habilitada. Para deshabilitarla, deseleccionar ambas."
+
+#: proxies/consumptionmeasurementpointsummation.py:39
+msgid "Summation measurement point"
+msgstr "Punto de medición sumario"
+
+#: proxies/consumptionmeasurementpointsummation.py:40
+msgid "Summation measurement points"
+msgstr "Punto de medición sumarios"
+
+#: proxies/consumptionmeasurementpointsummation.py:48
+msgid "At least one measurement point must be selected."
+msgstr "al menos un punto de medición debe ser seleccionado."
+
+#: proxies/consumptionmeasurementpointsummation.py:55
+#, python-brace-format
+msgid "{measurement_point} cannot be included in the summation, as it would form circular dependencies."
+msgstr "{measurement_point} no puede ser incluido en la suma, referencia circular."
+
+#: proxies/consumptionmultiplicationpoint.py:26
+msgid "Multiplication measurement point"
+msgstr "Punto de medida multiplicación"
+
+#: proxies/consumptionmultiplicationpoint.py:27
+msgid "Multiplication measurement points"
+msgstr "Puntos de medida multiplicación"
+
+#: proxies/consumptionmultiplicationpoint.py:69
+#, python-brace-format
+msgid "{measurement_point} cannot be used in the multiplication, as it would form a circular dependency."
+msgstr "{measurement_point} no puede ser usado en la multiplicación, referencia circular."
+
+#: proxies/currentmeasurementpoint.py:25
+#, fuzzy
+msgid "Current measurement points"
+msgstr "puntos de medida de impulsos"
+
+#: proxies/districtheatingmeasurementpoint.py:51
+msgid "district heating measurement point"
+msgstr "punto de medida district heating"
+
+#: proxies/districtheatingmeasurementpoint.py:52
+msgid "district heating measurement points"
+msgstr "puntos de medida district heating"
+
+#: proxies/importedmeasurementpoint.py:69
+msgid "Imported measurement point"
+msgstr "Punto de medida importado"
+
+#: proxies/importedmeasurementpoint.py:70
+msgid "Imported measurement points"
+msgstr "Puntos de medida importados"
+
+#: proxies/importedmeasurementpoint.py:132
+#, python-brace-format
+msgid "{filename} contains no consumption data"
+msgstr "{filename} no contiene datos de consumo"
+
+#: proxies/importedmeasurementpoint.py:170
+#, python-brace-format
+msgid "Time value {time_value} did not parse"
+msgstr "El valor temporal {time_value} no ha sido analizado"
+
+#: proxies/importedmeasurementpoint.py:178
+#, python-brace-format
+msgid "Time stamps are not sequential ({time_value}), check timezone"
+msgstr "Las marcas de tiempo no son secuenciales ({time_value}), comprobar zona horaria"
+
+#: proxies/importedmeasurementpoint.py:199
+#, python-brace-format
+msgid "Column {consumption_column} does not exist"
+msgstr "La columna {consumption_column} no existe"
+
+#: proxies/importedmeasurementpoint.py:220
+#, python-brace-format
+msgid "Consumption value ({value_cell}) did not parse"
+msgstr "El valor de consumo ({value_cell}) no ha sido analizado"
+
+#: proxies/measurementpoint.py:33
+msgid "Measurement point"
+msgstr "Punto de medida"
+
+#: proxies/measurementpoint.py:34
+msgid "Measurement points"
+msgstr "Puntos de medida"
+
+#: proxies/measurementpoint.py:71
+msgid "Gauge widget is present on the dashboard;                         corrupting these values are not allowed"
+msgstr "Widget Medidor está en el dashboard;                         corromper estos valores no está permitido"
+
+#: proxies/measurementpoint.py:78
+msgid "Maximum value must be above minumum value"
+msgstr "Valor máximo debe estar por encima del valor mínimo"
+
+#: proxies/measurementpoint.py:83
+msgid "Lower threshold must be above minumum value"
+msgstr "Umbral inferior debe estar por encima del valor mínimo"
+
+#: proxies/measurementpoint.py:88
+msgid "Upper threshold must be below maximum value"
+msgstr "Umbral superior debe estar por debajo del valor máximo"
+
+#: proxies/measurementpoint.py:94
+msgid "Upper threshold must be above lower threshold"
+msgstr "Umbral superior debe estar por encía del umbral inferior"
+
+#: proxies/measurementpoint.py:237
+msgid "Projects:"
+msgstr "Proyectos:"
+
+#: proxies/measurementpoint.py:247
+msgid "Summation Measurement Points:"
+msgstr "Puntos de medición sumarios"
+
+#: proxies/measurementpoint.py:259
+msgid "Multiplication Measurement Points:"
+msgstr "Puntos de medida multiplicación"
+
+#: proxies/measurementpoint.py:272
+msgid "District Heating Measurement Points:"
+msgstr "Puntos de medida district heating"
+
+#: proxies/measurementpoint.py:282
+msgid "Energy Use Reports:"
+msgstr "Informe de Uso de la Energía:"
+
+#: proxies/measurementpoint.py:291
+msgid "Users:"
+msgstr "Usuarios"
+
+#: proxies/measurementpoint.py:300
+#, fuzzy
+msgid "This measurement point cannot be deleted because the following depends on it:"
+msgstr "Esta tarifa no puede ser borrada dado que los siguientes          dependen de ella: <br /> "
+
+#: proxies/powermeasurementpoint.py:25
+#, fuzzy
+msgid "Power measurement points"
+msgstr "puntos de medida de impulsos"
+
+#: proxies/productionmeasurementpoint.py:29
+#, fuzzy
+msgid "Production measurement points"
+msgstr "puntos de medida de consumo"
+
+#: proxies/temperaturemeasurementpoint.py:33
+msgid "Temperature measurement points"
+msgstr "Puntos de medida de temperatura"
+
+#: proxies/temperaturemeasurementpoint.py:60
+#, python-brace-format
+msgid "Heating degree days of this temperature measurement point cannot be disabled because they are used by the measurement points {measurement_points}"
+msgstr "los grados día de calefacción de este punto de medida de temperatura no pueden ser deshabitados por que están siendo usados por los puntos de medida {measurement_points}"
+
+#: proxies/temperaturemeasurementpoint.py:66
+msgid "Heating degree days cannot be specified in terms of relative temperatures."
+msgstr "Los grados día de calefacción no pueden ser especificados en términos de temperaturas relativas."
+
+#: proxies/temperaturemeasurementpoint.py:184
+msgid "This index cannot be deleted because the following          depends on it: <br /> "
+msgstr "Esta tarifa no puede ser borrada dado que los siguientes          dependen de ella: <br /> "
+
+#: proxies/voltagemeasurementpoint.py:25
+#, fuzzy
+msgid "Voltage measurement points"
+msgstr "puntos de medida de impulsos"
+
+#~ msgid "Resource type"
+#~ msgstr "Tipo de recurso"
+
+#~ msgid "EUR (€)"
+#~ msgstr "EUR (€)"
+
+#~ msgid "DKK (kr)"
+#~ msgstr "DKK (kr)"
+
+#~ msgid "UAH (₴)"
+#~ msgstr "UAH (₴)"
+
+#~ msgid "{preferred_consumption_unit}/person"
+#~ msgstr "{preferred_consumption_unit}/person"
+
+#~ msgid "{preferred_consumption_unit}/m²"
+#~ msgstr "{preferred_consumption_unit}/m²"
+
+#~ msgid ""
+#~ "Depending on the selected heat consumption measurement point forms a "
+#~ "circular dependency.  Choose another."
+#~ msgstr ""
+#~ "El punto de consumo de calefacción elegido tiene una referencia circular. "
+#~ "Elija otro."
+
+#~ msgid ""
+#~ "Depending on the selected heat distribution medium measurement point "
+#~ "forms a circular dependency.  Choose another."
+#~ msgstr ""
+#~ "El punto de distribución de calefacción elegido tiene una referencia "
+#~ "circular. Elija otro."
+
+#~ msgid "This measurement point cannot be deleted "
+#~ msgstr "Al menos un punto de medición debe ser seleccionado."
+
+#~ msgid "Electricity: Possible savings (%)"
+#~ msgstr "Electricidad: Posibles ahorros(%)"
+
+#~ msgid "Electricity: Expected savings (%)"
+#~ msgstr "Electricidad: Ahorros esperados (%)"
+
+#~ msgid "Water: Possible savings (%)"
+#~ msgstr "Agua: Ahorros posibles (%)"
+
+#~ msgid "Water: Expected savings (%)"
+#~ msgstr "Agua: Ahorros esperados (%)"
+
+#~ msgid "Heating: Possible savings (%)"
+#~ msgstr "Calefacción: Ahorros Posibles (%)"
+
+#~ msgid "Heating: Expected savings (%)"
+#~ msgstr "Calefacción: Ahorros esperados (%)"
+
+#~ msgid "Gas: Possible savings (%)"
+#~ msgstr "Gas: Ahorros Posibles (%)"
+
+#~ msgid "Gas: Expected savings (%)"
+#~ msgstr "Gas: Ahorros esperados (%)"
+
+#~ msgid "Oil: Possible savings (%)"
+#~ msgstr "Gasoil: Ahorros posibles (%)"
+
+#~ msgid "Oil: Expected savings (%)"
+#~ msgstr "Gasoil: Ahorros esperados (%)"
+
+#~ msgid "description"
+#~ msgstr "descripción"
+
+#~ msgid "project lifespan in months"
+#~ msgstr "vida del proyecto en meses"
+
+#~ msgid "Electricity: Yearly consumption (price)"
+#~ msgstr "Electricidad: Consumo anual (precio)"
+
+#~ msgid "Water: Yearly consumption (price)"
+#~ msgstr "Agua: Consumo anual (precio)"
+
+#~ msgid "Heating: Yearly consumption (price)"
+#~ msgstr "Calefacción: Consumo anual (precio)"
+
+#~ msgid "Gas: Yearly consumption (price)"
+#~ msgstr "Gas: Consumo anual (precio)"
+
+#~ msgid "Oil: Yearly consumption (price)"
+#~ msgstr "Gasoil: Consumo anual (precio)"
+
+#~ msgid "guaranteed savings (%)"
+#~ msgstr "Ahorros garantizados (%)"
+
+#~ msgid "interest rate"
+#~ msgstr "tasa de interes"
+
+#~ msgid "delivery date"
+#~ msgstr "fecha de entrega"
+
+#~ msgid "screening date"
+#~ msgstr "fecha de toma de datos"
+
+#~ msgid "GridManager installs"
+#~ msgstr "GridManager instala"
+
+#~ msgid "sales opportunity"
+#~ msgstr "oportunidad de ventas"
+
+#~ msgid "sales opportunities"
+#~ msgstr "oportunidades de ventas"
+
+#~ msgid "title"
+#~ msgstr "titulo"
+
+#~ msgid "comment"
+#~ msgstr "comentario"
+
+#~ msgid "activity log entry"
+#~ msgstr "registro de entrada"
+
+#~ msgid "activity log entries"
+#~ msgstr "registro de entradas"

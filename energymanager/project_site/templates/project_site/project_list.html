@@ -1,0 +1,15 @@
+{% extends "project_site/base.html" %}
+{% load i18n %}
+{% load pagination %}
+{% load bootstrap_tags %}
+
+{% block content %}
+{% panel _("ESCo Projects") search=True %}
+<a href="{% url "project_site:project-create" customer_id=customer.id %}" title="{% trans 'Add' %}">
+  {% icon "plus" %}
+</a>
+{% endpanelbuttons %}
+<div class="content-loader" data-url="{% url "project_site:project-list-content" customer_id=customer.id %}" data-orderby="name_plain"></div>
+{% endpanel %}
+
+{% endblock %}

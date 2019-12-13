@@ -1,0 +1,354 @@
+{% extends "display_measurementpoints/index.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load static from staticfiles %}
+{% load dropdown %}
+{% load display_measurementpoints %}
+{% load compress %}
+
+
+{% block detail_js %}
+{% compress js %}
+<script type="text/javascript" src="{% static 'manage_reports.js' %}"></script>
+<script type="text/javascript" src="{% static 'floorplan.js' %}"></script>
+{% endcompress %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, Flotr, gridportal, gettext */
+
+$(document).ready(function () {
+    'use strict';
+    {% if floorplan %}
+    gridportal.floorplan.show('{% url 'display_measurementpoints-floorplan-values' pk=group.pk %}');
+    {% endif %}
+
+    // Tick gauge and graph checkboxes if widgets exists
+    {% for widget in widgets %}
+    {% if widget.widget_type == 0  %}
+    $("#graph-checkbox").prop("checked", true);
+    {% elif widget.widget_type == 1  %}
+    $("#gauge-checkbox").prop("checked", true);
+    {% elif widget.widget_type == 3  %}
+    $("#rate-checkbox").prop("checked", true);
+    {% elif widget.widget_type == 4  %}
+    $("#cooldown-checkbox").prop("checked", true);
+    {% elif widget.widget_type == 5  %}
+    $("#production-checkbox").prop("checked", true);
+    {% endif %}
+    {% endfor %}
+
+    // Assign On/Off methods to gauge and graph checkboxes.
+    // This also initializes the checkboxes to slickswitces.
+    $('.dashboard-switch').slickswitch({
+        toggledOn : function (self) {
+            jQuery.post(self.data('addurl'));
+        },
+        toggledOff : function (self) {
+            jQuery.post(self.data('removeurl'));
+        }
+    });
+
+    {% if relay %}
+    var timeout;
+    function checkStatus(state, dialog) {
+        jQuery.getJSON('{% url 'manage_devices-meter-relay-state' pk=relay.id %}', function (data) {
+            if (data.state === state) {
+                dialog.dialog('close');
+            } else {
+                if (timeout < 10) {
+                    setTimeout(function () { checkStatus(state, dialog); }, 1000);
+                    timeout++;
+                } else {
+                    $('#relay-dialog').html('{% trans "The operation recieved a timeout" %}');
+                    $('#relay-dialog').dialog({
+                        buttons: {
+                            '{% trans "Ok" %}': function () {
+                                $('#relay-switch').prop('checked', state === 'on' ? false : true);
+                                $('#relay-switch').slickswitch('update');
+                                dialog.dialog('close');
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    function switchRelay(url, title, errorMessage, dialog, state) {
+        jQuery.post(url, function (data) {
+            if (data.success) {
+                $('#relay-dialog').html(title);
+                timeout = 0;
+                checkStatus(state, dialog);
+            } else {
+                var type = data.success ? 'success' : 'error',
+                    msg = data.statusText || errorMessage;
+                gridportal.website.notify(type, msg);
+                $('#relay-switch').prop('checked', false);
+                $(this).dialog('close');
+            }
+        });
+    }
+
+    function showRelayDialog(url, title, subtitle, errorMessage, state) {
+        $('#relay-dialog').html(title).dialog({
+            open: function () {
+                $("a.ui-dialog-titlebar-close").remove();
+            },
+            resizable: false,
+            closeOnEscape: false,
+            modal: true,
+            buttons: {
+                '{% trans "Yes" %}': function () {
+                    switchRelay(url, subtitle, errorMessage, $(this), state);
+                },
+                '{% trans "No" %}': function () {
+                    $('#relay-switch').prop('checked', state === 'on' ? false : true);
+                    $('#relay-switch').slickswitch('update');
+                    $(this).dialog('close');
+                }
+            }
+        });
+    }
+
+
+    $('#relay-switch').slickswitch({
+        toggledOn : function () {
+            showRelayDialog(
+                '{% url 'manage_devices-meter-relay-toggle' pk=relay.id action='on' %}',
+                '{% trans "Switch relay to: On?" %}',
+                '{% trans "Switching relay on..." %}',
+                '{% trans "Switching relay on failed" %}',
+                'on'
+            );
+        },
+        toggledOff : function () {
+            showRelayDialog(
+                '{% url 'manage_devices-meter-relay-toggle' pk=relay.id action='off' %}',
+                '{% trans "Switch relay to: Off?" %}',
+                '{% trans "Switching relay off..." %}',
+                '{% trans "Switching relay off failed" %}',
+                'off'
+            );
+        }
+    });
+    {% endif %}
+
+    var period = $('#period-selection').serialize();
+    function gridportal_draw_graph(element) {
+        var container = element,
+            spinnerUrl = '{% static 'images/ajax-loader.gif' %}',
+            statusUrl = '{% url "website-task_status" %}',
+            requestUrl = $(container).data("src"),
+            jsonResultUrl = '{% url "website-json_task_result" %}',
+            drawGraph = function (graphData) {
+                var options = graphData.options;
+                $(container).empty();
+                options.mouse = {
+                    track: true,
+                    relative: true,
+                    sensibility: 5,
+                    container: document.body,
+                    trackY: false,
+                    trackFormatter: function (obj) {
+                        var labelData = obj.series.data[obj.index][2],
+                            val,
+                            date,
+                            time;
+                        if (labelData) {
+                            val = labelData[0];
+                            date = labelData[1];
+                            time = labelData[2];
+                            return '<div class="hitValue">' + val + ' ' + options.yaxis.title + '</div><div>' + date + '</div><div>' + time + '</div>';
+                        }
+                        return '<div class="hitValue">' + gettext('No data') + '</div>';
+                    }
+                };
+                Flotr.draw(container, graphData.data, options);
+            };
+        gridportal.website.startAsyncTask(requestUrl, statusUrl, jsonResultUrl,
+            drawGraph, $(container), spinnerUrl)(period);
+    }
+
+
+    gridportal.website.generateGraphs($(".graph:not(.collapsed)"), function (graphs) {
+        graphs.each(function () {
+            gridportal_draw_graph(this);
+        });
+    });
+
+    $('.expand').click(function () {
+        var container = $(this).closest('.collapsed_graph');
+        if (container.length > 0) {
+            gridportal.website.generateGraphs(container.find('.graph'), function (graphs) {
+                container.find('.buttons').show();
+                container.find('.expand').remove();
+                graphs.css('height', '380px');
+                gridportal_draw_graph(graphs[0]);
+            });
+        }
+    });
+
+    $('.download-csv').click(function (event) {
+        var button = $(event.target),
+            data = $('#period-selection').serialize() + '&graph=' + button.data('graphId'),
+            container = $('.dummy-container'),
+            startUrl = '{% url "manage_reports-startgraphdatadownload" %}',
+            finalizeUrl = '{% url "manage_reports-finalizegraphdatadownload" %}',
+            resultElem = button.next(),
+            statusUrl = '{% url "reports-status" %}',
+            spinnerUrl = '{% static "images/ajax-loader.gif" %}',
+            progressBar = $('.dummy-progressbar');
+        event.preventDefault();
+        event.stopPropagation();
+        gridportal.manageReports.requestReport(data, container, startUrl, finalizeUrl, resultElem, statusUrl, spinnerUrl, progressBar);
+    });
+});
+</script>
+{% endblock detail_js %}
+
+{% block content %}
+<div id="measurementpoints" class="grid_23 prefix_1">
+  <div class="content-element">
+    <div class="header clearfix">
+      <h3 class="left">{{ group.name_plain }} ({{ group.get_role_display }})
+        {% if group.billing_meter_number %}
+          , {% trans "Meter no.: " %}{{ group.billing_meter_number }}
+        {% endif %}
+        {% if group.billing_installation_number %}
+          , {% trans "Installation no.: " %}{{ group.billing_installation_number }}
+        {% endif %}
+      </h3>
+      {% if not is_group and group.has_widgets %}
+      <div class="right dashboard-link">
+        {% dropdown %}
+          {% anchor %}
+            {% trans 'Show on dashboard' %} <img src="{% static 'images/add-icon.png' %}" alt="{% trans 'Add' %}">
+          {% endanchor %}
+          {% body %}
+              <ul>
+                {% if group.has_gauge %}
+                  <li>
+                    <div class="left">{% trans "Gauge" %}</div>
+                    <div class="right"> <input id="gauge-checkbox" class="switch dashboard-switch" type="checkbox" data-addurl="{% url "display_widgets-add-to-dashboard" pk=group.pk widget_type=1 %}" data-removeurl="{% url "display_widgets-remove-specific-widget" pk=group.pk widget_type=1 %}"> </div>
+                    <div class="clearfix"></div>
+                  </li>
+                {% endif %}
+                {% if group.has_consumption %}
+                  <li>
+                    <div class="left">{% trans "Consumption Graph" %}</div>
+                    <div class="right"> <input id="graph-checkbox" class="switch dashboard-switch" type="checkbox" data-addurl="{% url "display_widgets-add-to-dashboard" pk=group.pk widget_type=0 %}" data-removeurl="{% url "display_widgets-remove-specific-widget" pk=group.pk widget_type=0 %}"> </div>
+                    <div class="clearfix"></div>
+                  </li>
+                {% endif %}
+                {% if group.has_rate %}
+                  <li>
+                    <div class="left">{% trans "Rate Graph" %}</div>
+                    <div class="right"> <input id="rate-checkbox" class="switch dashboard-switch" type="checkbox" data-addurl="{% url "display_widgets-add-to-dashboard" pk=group.pk widget_type=3 %}" data-removeurl="{% url "display_widgets-remove-specific-widget" pk=group.pk widget_type=3 %}"> </div>
+                    <div class="clearfix"></div>
+                  </li>
+                {% endif %}
+                {% if group.has_cooldown %}
+                  <li>
+                    <div class="left">{% trans "Mean Cool-down Temperature Graph" %}</div>
+                    <div class="right"> <input id="cooldown-checkbox" class="switch dashboard-switch" type="checkbox" data-addurl="{% url "display_widgets-add-to-dashboard" pk=group.pk widget_type=4 %}" data-removeurl="{% url "display_widgets-remove-specific-widget" pk=group.pk widget_type=4 %}"> </div>
+                    <div class="clearfix"></div>
+                  </li>
+                {% endif %}
+                {% if group.has_production %}
+                  <li>
+                    <div class="left">{% trans "Production Graph" %}</div>
+                    <div class="right"> <input id="production-checkbox" class="switch dashboard-switch" type="checkbox" data-addurl="{% url "display_widgets-add-to-dashboard" pk=group.pk widget_type=5 %}" data-removeurl="{% url "display_widgets-remove-specific-widget" pk=group.pk widget_type=5 %}"> </div>
+                    <div class="clearfix"></div>
+                  </li>
+                {% endif %}
+              </ul>
+          {% endbody %}
+        {% enddropdown %}
+      </div>
+    {% else %}
+    {% if floorplan %}
+    <a href="{% url 'display_measurementpoints-fullscreen_floorplan' pk=group.id %}" target="_blank" class="right fullscreen-link"> {% trans "Fullscreen" %} <img src="{% static 'images/fullscreen.png' %}"></a>
+    {% endif %}
+    {% endif %}
+    </div>
+    {% if not is_group %}
+    <span class="left">
+      {% include "display_measurementpoints/period_selection.html" %}
+    </span>
+    {% endif %}
+
+
+    {% if relay %}
+    <div class="right">
+        <span>{% trans 'Relay' %}</span>
+        <input id="relay-switch" class="switch" type="checkbox" {% if relay.relay_on %}checked="checked"{% endif %}>
+    </div>
+    {% endif %}
+    <div class="clearfix"></div>
+    {% if floorplan %}
+    <div class="clearfix"></div>
+    <div id="floorplan">
+      <div class="map">
+        <img src="{% url 'manage-groups-floorplan_image' pk=group.floorplan.id %}" width="{{ group.floorplan.image.width }}" height="{{ group.floorplan.image.height }}" class="floorplan-image">
+
+        <div class="item-overlay">
+          {% for item in placed_items %}
+            <div class="item{% if not item.collection.is_online and item.has_collection %} offline{% endif %}{% if not item.has_collection %} infoitem{% endif %}" style="position: absolute; top: {{ item.y }}px; left: {{ item.x }}px; z-index: {{ item.z }};" data-id="{{ item.id|unlocalize }}" data-group="{{ item.collection.id|unlocalize }}">
+              <div class="arrow"><img src="{% static 'images/arrow.png' %}"></div>
+              <div class="border">
+              {% if item.has_collection %}
+              <span class="icon left"><img src="{% static 'images/mpicons/small.'|add:item.collection.get_icon|add:'.png' %}" height="16" width="16"></span><div class="name left"><a href="{% url 'display_measurementpoints-group' pk=item.collection.id %}">{{ item.collection }}</a>
+                <span class="right item_value">{% with item.collection.get_last_rate as last_rate %}
+                  {% if last_rate %}
+                    {{ last_rate.0|floatformat:1 }} {{ last_rate.1|default:'' }}
+                  {% endif %}
+                {% endwith %}</span>
+              </div>
+              {% else %}
+              <span class="infotext">{{ item.info_plain|linebreaks }}</span>
+              {% endif %}
+              <div class="clearfix"></div></div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <div class="clearfix"></div>
+
+    {% if main_graph %}
+      <h2 class="left">{{ main_graph.get_role_display }}</h2>
+      <a href="#" data-graph-id="{{ main_graph.id|unlocalize }}" class="download-csv right">{% trans 'Download as CSV' %}</a><span class="right"></span>
+      <div class="clearfix"></div>
+      <div class="graph" style="width: 100%; height: 380px;" data-src="{% url 'display_measurementpoints-async_graph' pk=main_graph.id %}"></div>
+      <a href="#" class="period-previous btn left">{% trans "Previous" %}</a>
+      <a href="#" class="period-next btn right">{% trans "Next" %}</a>
+      <div class="clearfix"></div>
+    {% endif %}
+    {% for graph in graphs %}
+      <div class="collapsed_graph">
+        <h2 class="left">{{ graph.get_role_display }}</h2>
+        {% if not graph.HIDE_HACK %}
+        <span class="left expand" style="margin-top:10px">{% trans "Expand" %}<img src="{% static "images/expand.png" %}"></span>
+        <a href="#" data-graph-id="{{ graph.id|unlocalize }}" class="download-csv right">{% trans 'Download as CSV' %}</a><span class="right"></span>
+        {% endif %}
+        <div class="clearfix"></div>
+        <div class="graph collapsed" style="width: 100%;" data-src="{% url 'display_measurementpoints-async_graph' pk=graph.id %}"></div>
+        {% if graph.HIDE_HACK %}
+        <span>{% trans 'Not supported for this period.' %}</span>
+        {% endif %}
+        <div class="buttons" style="display:none;">
+          <a href="#" class="period-previous btn left">{% trans "Previous" %}</a>
+          <a href="#" class="period-next btn right">{% trans "Next" %}</a>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    {% endfor %}
+    <div class="dummy-progressbar" style="width:0px; height:0px"></div>
+    <div class="dummy-container" style="width:0px; height:0px"></div>
+  </div>
+</div>
+<div id="relay-dialog" title="Switch relay?"></div>
+{% endblock content %}

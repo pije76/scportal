@@ -1,0 +1,9 @@
+# Wifi Agent Software Setup
+
+## Database
+
+### User
+`sudo -u postgres createuser --superuser $USER`
+
+`createdb --encoding=utf-8 agent`
+

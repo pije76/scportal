@@ -1,0 +1,484 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-23 23:07+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: models.py:56
+#: models.py:266
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: models.py:57
+msgid "GridAgent"
+msgstr "GridAgent"
+
+#: models.py:58
+msgid "1 phase GridPoint"
+msgstr "Punto de medida monofásico"
+
+#: models.py:59
+msgid "3 phase GridPoint"
+msgstr "Punto de medida trifásico"
+
+#: models.py:60
+#: models.py:269
+msgid "GridLink"
+msgstr "GridLink"
+
+#: models.py:61
+#: models.py:268
+msgid "GridPoint S01 Legacy"
+msgstr "GridPoint S01 Legacy"
+
+#: models.py:62
+msgid "Kamstrup 382"
+msgstr "Kamstrup 382"
+
+#: models.py:63
+msgid "Kamstrup 602"
+msgstr "Kamstrup 602"
+
+#: models.py:64
+msgid "DEIF 4002"
+msgstr "DEIF 4002"
+
+#: models.py:65
+msgid "Schneider PM9C"
+msgstr "Schneider PM9C"
+
+#: models.py:66
+#: models.py:270
+#, fuzzy
+msgid "Mitsubishi FX1S"
+msgstr "PLC Mitsubishi Fx1s"
+
+#: models.py:67
+#, fuzzy
+msgid "Temperature Sensor"
+msgstr "temperatura"
+
+#: models.py:68
+#: models.py:273
+msgid "Modbus"
+msgstr "Modbus"
+
+#: models.py:69
+#: models.py:272
+msgid "MBus"
+msgstr "MBus"
+
+#: models.py:70
+#: models.py:276
+msgid "GridRepeater"
+msgstr "GridRepeater"
+
+#: models.py:80
+#: models.py:663
+msgid "Device type"
+msgstr "Tipo de dispositivo"
+
+#: models.py:83
+msgid "Device serial number"
+msgstr "Número de serie del dispositivo"
+
+#: models.py:85
+#: models.py:664
+msgid "Hardware major version"
+msgstr "Versión de Hardware mayor"
+
+#: models.py:87
+#: models.py:665
+msgid "Hardware minor version"
+msgstr "Versión de Hardware menor"
+
+#: models.py:89
+#: models.py:666
+msgid "Hardware revision"
+msgstr "Revisión Hardware"
+
+#: models.py:91
+#: models.py:668
+msgid "Hardware extra revision string"
+msgstr "Cadena revisión extra Hardware"
+
+#: models.py:93
+#: models.py:669
+msgid "Software major version"
+msgstr "Versión Software mayor"
+
+#: models.py:95
+#: models.py:670
+msgid "Software minor version"
+msgstr "Versión Software menor"
+
+#: models.py:97
+#: models.py:671
+msgid "Software revision"
+msgstr "Revisión Software"
+
+#: models.py:99
+#: models.py:673
+msgid "Software extra revision string"
+msgstr "Cadena de revisión Software extra"
+
+#: models.py:150
+msgid "MAC address"
+msgstr "Dirección MAC"
+
+#: models.py:152
+#: models.py:230
+#: models.py:308
+#: models.py:498
+msgid "online"
+msgstr "online"
+
+#: models.py:154
+#: models.py:310
+msgid "online since"
+msgstr "online desde"
+
+#: models.py:157
+#: models.py:232
+msgid "in add mode"
+msgstr "en modo añadir"
+
+#: models.py:160
+msgid "no longer in use"
+msgstr "fuera de uso"
+
+#: models.py:165
+msgid "agent"
+msgstr "agent"
+
+#: models.py:166
+msgid "agents"
+msgstr "agents"
+
+#: models.py:218
+msgid "Online"
+msgstr "Online"
+
+#: models.py:220
+msgid "Offline"
+msgstr "Offline"
+
+#: models.py:228
+#: models.py:492
+msgid "timestamp"
+msgstr "timestamp"
+
+#: models.py:267
+#, fuzzy
+msgid "GridPoint"
+msgstr "GridLink"
+
+#: models.py:271
+msgid "Reserved"
+msgstr "Reservado"
+
+#: models.py:274
+msgid "Modbus via Z-wave"
+msgstr "Modbus via Z-wave"
+
+#: models.py:275
+#, fuzzy
+msgid "Temperature sensor"
+msgstr "temperatura"
+
+#: models.py:277
+msgid "GridPoint Level 2"
+msgstr "GridPoint Level 2"
+
+#: models.py:281
+msgid "No measurements ever."
+msgstr "Medidas nunca registradas"
+
+#: models.py:283
+#, fuzzy
+msgid "No measurements within the last 24 hours or more."
+msgstr "Alerta: No hay medidas en los últimos 15 minutos"
+
+#: models.py:284
+#, fuzzy
+msgid "Measurements for last 24 hours are all equal."
+msgstr "Alerta: Las medidas en las últimas 24 horas son iguales"
+
+#: models.py:287
+#, fuzzy
+msgid "Agent offline."
+msgstr "Error: Agent offline"
+
+#: models.py:288
+#, fuzzy
+msgid "Agent online."
+msgstr "Error: Agent offline"
+
+#: models.py:300
+msgid "connection type"
+msgstr "tipo de conexión"
+
+#: models.py:304
+#: models.py:494
+msgid "in manual mode"
+msgstr "en modo manual"
+
+#: models.py:306
+msgid "relay on"
+msgstr "relé activo"
+
+#: models.py:311
+msgid "joined"
+msgstr "enlazado"
+
+#: models.py:315
+msgid "name"
+msgstr "nombre"
+
+#: models.py:320
+msgid "meter"
+msgstr "medidor"
+
+#: models.py:321
+msgid "meters"
+msgstr "medidores"
+
+#: models.py:381
+msgid "Manual"
+msgstr "Manual"
+
+#: models.py:383
+msgid "Automatic"
+msgstr "Automático"
+
+#: models.py:387
+msgid "On"
+msgstr "On"
+
+#: models.py:389
+msgid "Off"
+msgstr "Off"
+
+#: models.py:470
+#, python-format
+msgid "Error: %s %s"
+msgstr "Error: %s %s"
+
+#: models.py:474
+#, python-format
+msgid "Warning: %s %s"
+msgstr "Alerta: %s %s"
+
+#: models.py:496
+msgid "relay"
+msgstr "relé"
+
+#: models.py:532
+msgid "unknown type"
+msgstr "tipo desconocido"
+
+#: models.py:533
+msgid "electricity"
+msgstr "electricidad"
+
+#: models.py:534
+msgid "water"
+msgstr "agua"
+
+#: models.py:535
+msgid "gas"
+msgstr "gas"
+
+#: models.py:536
+msgid "heat"
+msgstr "calor"
+
+#: models.py:537
+msgid "temperature"
+msgstr "temperatura"
+
+#: models.py:538
+msgid "input states"
+msgstr "estados de entrada"
+
+#: models.py:539
+msgid "output states"
+msgstr "estados de salida"
+
+#: models.py:553
+msgid "physical input"
+msgstr "entrada física"
+
+#: models.py:554
+msgid "physical inputs"
+msgstr "entradas físicas"
+
+#: models.py:579
+msgid "Consumption all phases"
+msgstr "Consumo en todas las fases"
+
+#: models.py:580
+msgid "Consumption phase 1"
+msgstr "Consumo fase 1"
+
+#: models.py:581
+msgid "Consumption phase 2"
+msgstr "Consumo fase 2"
+
+#: models.py:582
+msgid "Consumption phase 3"
+msgstr "Consumo fase 3"
+
+#: models.py:583
+msgid "Power phase 1"
+msgstr "Factor de potencia 1"
+
+#: models.py:584
+msgid "Power phase 2"
+msgstr "Factor de potencia 2"
+
+#: models.py:585
+msgid "Power phase 3"
+msgstr "Factor de potencia 3"
+
+#: models.py:586
+msgid "Voltage phase 1"
+msgstr "Voltage fase 1"
+
+#: models.py:587
+msgid "Voltage phase 2"
+msgstr "Voltage fase 2"
+
+#: models.py:588
+msgid "Voltage phase 3"
+msgstr "Voltage fase 3"
+
+#: models.py:589
+msgid "Current phase 1"
+msgstr "Corriente fase 1"
+
+#: models.py:590
+msgid "Current phase 2"
+msgstr "Corriente fase 2"
+
+#: models.py:591
+msgid "Current phase 3"
+msgstr "Corriente fase 3"
+
+#: models.py:594
+#, python-format
+msgid "%(meter_name)s: %(input_name)s"
+msgstr "%(meter_name)s: %(input_name)s"
+
+#: models.py:603
+#, fuzzy, python-format
+msgid "%(meter_name)s: (%(unit)s #%(order)s)"
+msgstr "%(meter_name)s (%(unit)s %(type)s #%(order)s)"
+
+#: models.py:676
+msgid "software image"
+msgstr "imagen software"
+
+#: models.py:677
+msgid "software images"
+msgstr "imágenes software"
+
+#, fuzzy
+#~ msgid "Meter offline on agent."
+#~ msgstr "Error: no hay línea en el Agent "
+
+#, fuzzy
+#~ msgid "Meter online on agent."
+#~ msgstr "Error: no hay línea en el Agent "
+
+#~ msgid "unknown unit"
+#~ msgstr "unidad desconocida"
+
+#~ msgid "mWh"
+#~ msgstr "mWh"
+
+#~ msgid "mW"
+#~ msgstr "mW"
+
+#, fuzzy
+#~ msgid "impulse count"
+#~ msgstr "contador de pulsos"
+
+#~ msgid "mL"
+#~ msgstr "mL"
+
+#~ msgid "mL/h"
+#~ msgstr "mL/h"
+
+#, fuzzy
+#~ msgid "m°K"
+#~ msgstr "m°C"
+
+#~ msgid "mV"
+#~ msgstr "mV"
+
+#~ msgid "mA"
+#~ msgstr "mA"
+
+#~ msgid "mHz"
+#~ msgstr "mHz"
+
+#~ msgid "g"
+#~ msgstr "g"
+
+#~ msgid "mBar"
+#~ msgstr "mBar"
+
+#~ msgid "s"
+#~ msgstr "s"
+
+#~ msgid "binary"
+#~ msgstr "binario"
+
+#~ msgid "Unit"
+#~ msgstr "Unidad"
+
+#~ msgid "raw data"
+#~ msgstr "datos brutos"
+
+#~ msgid "ZigBee"
+#~ msgstr "ZigBee"
+
+#~ msgid "ModBus basic"
+#~ msgstr "ModBus básico"
+
+#~ msgid "ModBus enhanced"
+#~ msgstr "ModBus mejorado"
+
+#~ msgid "Kamstrup UtiliDriver"
+#~ msgstr "Kamstrup UtiliDriver"
+
+#~ msgid "ModBus"
+#~ msgstr "Modbus"
+
+#~ msgid "Aux Seriel"
+#~ msgstr "Serie aux"
+
+#~ msgid "No data received within last seven days"
+#~ msgstr "No se ha recibido datos en los últimos siete días"
+
+#~ msgid "No data ever received"
+#~ msgstr "Nunca se han recibido datos"
+
+#~ msgid "This meter cannot be deleted because the following depends on it:"
+#~ msgstr ""
+#~ "Este medidor no puede ser borrado porque los siguientes dependen de él:"

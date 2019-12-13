@@ -1,0 +1,19 @@
+{% load reports %}
+\begin{tikzpicture}[scale=2]
+{% if savings_pct >= 100 %}
+\setcounter{savings}{100}
+{% else %}
+{% if savings_pct < 0 %}
+\setcounter{savings}{0}
+{% else %}
+\setcounter{savings}{{ '{' }}{{savings_pct|floatformat:0}}}
+{% endif %}
+{% endif %}
+\setcounter{rest}{100}\addtocounter{rest}{-\value{savings}}
+\ifthenelse{\thesavings > 0}{
+  \slice{0}{\thesavings/100*360}{\thesavings\%}{}{piegreen}
+  \slice{\thesavings/100*360}{360}{\therest\%}{}{pieblue}
+}{
+  \slice{0}{360}{\therest\%}{}{piered}
+}
+\end{tikzpicture}

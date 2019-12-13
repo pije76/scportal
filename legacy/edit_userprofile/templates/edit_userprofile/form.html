@@ -1,0 +1,44 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load widget_tweaks %}
+
+<form method="POST" action="{% url 'edit_userprofile-update' pk=user.id %}">
+  {% csrf_token %}
+  <div class="clearfix">
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'Name:' %}</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Old password:' %}</label>
+        {{ password_form.old_password }}
+        {{ password_form.old_password.errors }}
+    </fieldset>
+    <fieldset>
+      <label>{% trans 'New password:' %}</label>
+      {{ password_form.password|attr:"data-typetoggle : #checkbox" }}
+      {{ password_form.password.errors }}
+    </fieldset>
+    </div>
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'Phone:' %}</label>
+        {{ form.phone }}
+        {{ form.phone.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Mobile:' %}</label>
+        {{ form.mobile }}
+        {{ form.mobile.errors }}
+      </fieldset>
+      <fieldset class="show-password">
+        <label><input id="checkbox" type="checkbox" />{% trans 'Show password' %}</label>
+      </fieldset>
+    </div>
+  </div>
+  <input type="submit" value="{% trans "Save" %}" />
+</form>
+{% endspaceless %}

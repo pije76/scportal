@@ -1,0 +1,14 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix">
+  <h3>
+    <a href="{% url 'manage_rules-form' pk=object.id %}">
+      <img src="{% static 'images/detail.png' %}" class="left detail-icon">
+      <span>{{ object.name_plain }}</span>
+    </a>
+  </h3>
+</div>
+{% endspaceless %}

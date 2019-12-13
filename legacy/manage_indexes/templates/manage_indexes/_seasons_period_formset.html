@@ -1,0 +1,71 @@
+{% load l10n %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+<div align="right">{% trans "Delete:" %}{{ period_form.DELETE }}</div>
+{{ period_form.id|unlocalize }}
+{{ period_form.index }}
+<fieldset>
+  <label>{% trans 'From date:' %}</label>
+  {{ period_form.from_date|add_class:"date" }}
+  {{ period_form.from_date.errors }}
+</fieldset>
+<table class="value_at_hour editable_input">
+  <tr>
+    <th>{% trans "00-01:" %}</th>
+    <th>{% trans "01-02:" %}</th>
+    <th>{% trans "02-03:" %}</th>
+    <th>{% trans "03-04:" %}</th>
+    <th>{% trans "04-05:" %}</th>
+    <th>{% trans "05-06:" %}</th>
+    <th>{% trans "06-07:" %}</th>
+    <th>{% trans "07-08:" %}</th>
+    <th>{% trans "08-09:" %}</th>
+    <th>{% trans "09-10:" %}</th>
+    <th>{% trans "10-11:" %}</th>
+    <th>{% trans "11-12:" %}</th>
+  </tr>
+  <tr>
+    {% for value_at_hour in period_form %}
+    {# Poor man slicing.  We just need the first 12 hours here #}
+    {% if forloop.counter0 >= 1 and forloop.counter0 < 13 %}
+    <td{% if value_at_hour.errors %} class="error"{% endif %}>{{ value_at_hour }}</td>
+    {% endif %}
+    {% endfor %}
+  </tr>
+  <tr>
+    <th>{% trans "12-13:" %}</th>
+    <th>{% trans "13-14:" %}</th>
+    <th>{% trans "14-15:" %}</th>
+    <th>{% trans "15-16:" %}</th>
+    <th>{% trans "16-17:" %}</th>
+    <th>{% trans "17-18:" %}</th>
+    <th>{% trans "18-19:" %}</th>
+    <th>{% trans "19-20:" %}</th>
+    <th>{% trans "20-21:" %}</th>
+    <th>{% trans "21-22:" %}</th>
+    <th>{% trans "22-23:" %}</th>
+    <th>{% trans "23-24:" %}</th>
+  </tr>
+  <tr>
+    {% for value_at_hour in period_form %}
+    {% comment %}Poor man slicing.  We just need the last 12 hours here{% endcomment %}
+    {% if forloop.counter0 >= 13 and forloop.counter0 < 25 %}
+    <td{% if value_at_hour.errors %} class="error"{% endif %}>{{ value_at_hour }}</td>
+    {% endif %}
+    {% endfor %}
+  </tr>
+
+</table>
+{% if period_form.errors %}
+<span class="error">{% trans "All fields must be filled out with intergers and only 5 digits per field" %}</span>
+{% endif %}
+<div class="right">
+  <span class="value_at_hour"><input type="text" class="default_value_at_hour value_at_hour"></span>
+  <input type="button" class="populate_default_values" value="{% trans 'Populate empty hours' %}">
+</div>
+<div class="clearfix"></div>
+<div class="right">
+  <input type="button" class="clear_values" value="{% trans 'Clear period' %}">
+</div>
+<div class="clearfix"></div>

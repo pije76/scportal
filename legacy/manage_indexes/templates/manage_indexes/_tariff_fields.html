@@ -1,0 +1,21 @@
+{% load i18n %}
+<fieldset>
+  <label>{% trans 'Name:' %}</label>
+  {{ form.name }}
+  {{ form.name.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Group:' %}</label>
+  {{ form.collection }}
+  {{ form.collection.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Unit:' %}</label>
+  {{ form.unit }}
+  {{ form.unit.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Timezone:' %}</label>
+  {{ form.timezone }}
+  {{ form.timezone.errors }}
+</fieldset>

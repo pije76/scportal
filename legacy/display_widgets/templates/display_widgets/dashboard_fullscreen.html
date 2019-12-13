@@ -1,0 +1,148 @@
+{% spaceless %}
+{% load url from future %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>GridPortal - {% block title %}{% endblock %}</title>
+    {% compress css %}
+    <link rel="stylesheet" href="{% static '960gs/min/reset.css' %}">
+    <link rel="stylesheet" href="{% static '960gs/min/text.css' %}">
+    <link rel="stylesheet" href="{% static '960gs/min/960_24_col.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery/smoothness/jquery-ui-1.9.2.custom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery-dropdown/jquery.dropdown.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery-timepicker/jquery-ui-timepicker-addon.css' %}">
+    <link rel="stylesheet" href="{% static 'chosen/chosen.css' %}">
+    <link rel="stylesheet" href="{% static 'slickswitch/css/slickswitch.css' %}">
+    <link rel="stylesheet" href="{% static 'custom-scrollbar-plugin/jquery.mCustomScrollbar.css' %}">
+    {% endcompress %}
+    {% if request.get_host == "portal.smartflex.dk" %}
+      <link rel="stylesheet" href="{% static 'style-smartflex.css' %}" />
+    {% elif request.get_host == "endesa.grid-manager.com" %}
+      <link rel="stylesheet" href="{% static 'style-endesa.css' %}" />
+    {% else %}
+      <link rel="stylesheet" href="{% static 'style.css' %}" />
+    {% endif %}
+    <!--[if IE]>
+    <style type="text/css">
+      .btn {
+        margin-left: 2px;
+        margin-top: 0px;
+      }
+      .loginform {
+        margin: 5px;
+      }
+    </style>
+    <![endif]-->
+
+    {# Hack to rotate text in ie 8 #}
+    <!--[if lt IE 9]>
+    <style type="text/css">
+      .rotate {
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+
+        top: 1px!important;
+        left: 2px!important;
+      }
+    </style>
+    <![endif]-->
+    {# translations just before our code... #}
+    <script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'jquery/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery/jquery-ui-1.9.2.custom.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'chosen/chosen.jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'custom-scrollbar-plugin/minified/jquery.mousewheel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'custom-scrollbar-plugin/minified/jquery.mCustomScrollbar.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.labelify.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.scrollTo-1.4.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.ui.touch-punch.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.showpassword.js' %}"></script>
+    <script type="text/javascript" src="{% static 'noty/jquery.noty.js' %}"></script>
+    <script type="text/javascript" src="{% static 'noty/layouts/topCenter.js' %}"></script>
+    <script type="text/javascript" src="{% static 'noty/themes/gridmanager.js' %}"></script>
+    <script type="text/javascript" src="{% static 'flotr2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery-dropdown/jquery.dropdown.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jstree/jquery.jstree.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery-timepicker/jquery-ui-sliderAccess.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery-timepicker/jquery-ui-timepicker-addon.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jsgauge/gauge.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jsgauge/jquery.gauge.js' %}"></script>
+    <script type="text/javascript" src="{% static 'slickswitch/js/jquery.slickswitch.js' %}"></script>
+    <script type="text/javascript" src="{% static 'website.js' %}"></script>
+    <script type="text/javascript" src="{% static 'dashboard.js' %}"></script>
+    {% endcompress %}
+
+    <script type="text/javascript">
+    /*jslint browser: true, devel: true, nomen: true */
+    /*global gridportal, $, jQuery */
+    jQuery(function() {
+      gridportal.widgets.dashboard('{% url 'display_widgets-update-order' %}', true);
+      if ($('.widget-graph').length > 0 ) {
+        $('.dashboardempty').remove();
+      }
+
+        gridportal.widgets.drawGraphs();
+
+      $('.remove-btn').click(function() {
+        var widget = $(this).closest('.widget'),
+          removeButton = $(this);
+        $( "#dialog-confirm" ).dialog({
+          resizable: false,
+          modal: true,
+          buttons: {
+            "{% trans "Remove widget" %}": function() {
+              removeButton.replaceWith("<img src={% static 'images/ajax-loader.gif' %}>");
+              removeButton.removeClass('remove-btn');
+              jQuery.getJSON('{% url 'display_widgets-remove-from-dashboard' %}',{id:widget.data('id')},function(data) {
+                    widget.remove()
+              });
+              $( this ).dialog( "close" );
+            },
+            "{% trans "Cancel" %}": function() {
+              $( this ).dialog( "close" );
+            }
+          }
+        });
+      });
+    });
+    </script>
+
+  </head>
+  <body class="blank">
+    <input type="hidden" id="spinnerUrl" value="{% static 'images/ajax-loader.gif' %}">
+    <input type="hidden" id="statusUrl" value="{% url "website-task_status" %}">
+    <input type="hidden" id="jsonResultUrl" value="{% url "website-json_task_result" %}">
+    <div id="dashboard" class="fullscreen">
+      <ul id="left_column" class="column">
+        <span class="dashboardempty">{% trans "Your dashboard is empty. To add widgets, go to Details, choose a measurement point and then click the Add to Dashboard button" %} </span>
+        {% for widget in left_widgets %}
+          <li>{{ widget.widget }}</li>
+        {% endfor %}
+      </ul>
+      <ul id="right_column" class="column">
+        {% for widget in right_widgets %}
+          <li>{{ widget.widget }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div id="dialog-confirm" title="Remove widget?" style="display:none;">
+      <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>{% trans "Are you sure that you want to remove this widget?" %}</p>
+    </div>
+  </body>
+</html>
+{% endspaceless %}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:49+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: forms.py:83
+msgid "Include at least one area of energy use"
+msgstr "Incluya al menos un área de uso de energía"
+
+#: forms.py:132
+msgid "The start date must be before the end date."
+msgstr "La fecha de inicio debe ser anterior a la fecha de finalización."
+
+#: forms.py:142
+msgid ""
+"From date must be the first day of the year when selecting more than two "
+"years"
+msgstr ""
+"Desde la fecha debe ser el primer día del año si selecciona más de dos años"
+
+#: forms.py:146
+msgid ""
+"To date must be the last day of the year when selecting more than two years"
+msgstr ""
+"Hasta la fecha debe ser el último día del año si selecciona más de dos años"
+
+#: forms.py:152
+msgid ""
+"From date must be the first day in a quarter when selecting more than one "
+"year"
+msgstr ""
+"Desde la fecha debe ser el primer día del trimestre si selecciona más de un "
+"año"
+
+#: forms.py:159
+msgid ""
+"To date must be the last day in a quarter when selecting more than one year"
+msgstr ""
+"Hasta la fecha debe ser el último día del trimestre si selecciona más de un "
+"año"
+
+#: forms.py:165
+msgid "From date must be the first day in a month"
+msgstr "Desde la fecha debe ser el primer día del mes"
+
+#: forms.py:170
+msgid "To date must be the last day in a month"
+msgstr "Hasta la fecha debe ser el último día del mes"
+
+#: forms.py:175
+#, fuzzy
+msgid "This EnPI report does not cover any area of energy use."
+msgstr "Incluya al menos un área de uso de energía"
+
+#: models.py:35
+msgid "title"
+msgstr ""
+
+#: models.py:38 models.py:154
+msgid "person"
+msgstr ""
+
+#: models.py:39 models.py:156
+msgid "m²"
+msgstr ""
+
+#: models.py:40
+msgid "W/K"
+msgstr ""
+
+#: models.py:48
+msgid "energy driver type"
+msgstr ""
+
+#: models.py:159
+msgid "degree days"
+msgstr ""
+
+#: models.py:181
+#, python-format
+msgid ""
+"Energy driver with unit \"%s\" is invalid for this ENPI report with unit \"%s"
+"\"."
+msgstr ""
+
+#: tasks.py:171
+msgid "No total EnPI data available."
+msgstr ""
+
+#: tasks.py:176
+msgid ""
+"EnPI for first period in total EnPI is zero.  Savings in percent cannot be "
+"calculated"
+msgstr ""
+
+#: tasks.py:185
+#, python-brace-format
+msgid "No EnPI data available for {use_area_name}"
+msgstr ""
+
+#: tasks.py:197
+#, python-brace-format
+msgid ""
+"EnPI for first period in {use_area_name} is zero.  Savings in percent cannot "
+"be calculated"
+msgstr ""
+
+#: views.py:96
+#, fuzzy
+msgid "Energy Performance Indicator Report"
+msgstr "Informe indicador del rendimiento de la energía"
+
+#: templates/enpi_reports/enpi_graph_block.tex:5
+msgctxt "table row header in enpi report"
+msgid "Period"
+msgstr ""
+
+#: templates/enpi_reports/enpi_graph_block.tex:11
+#, python-format
+msgctxt "table row header in enpi report"
+msgid "EnPI (%(unit)s)"
+msgstr ""
+
+#: templates/enpi_reports/enpi_graph_block.tex:17
+#, python-format
+msgctxt "table row header in enpi report"
+msgid "Savings (%%)"
+msgstr ""
+
+#: templates/enpi_reports/enpi_report.tex:7
+msgid "Total EnPI"
+msgstr ""
+
+#: templates/enpi_reports/enpi_report.tex:22
+msgctxt "section headline in enpi report"
+msgid "Errors and Warnings"
+msgstr ""

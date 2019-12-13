@@ -1,0 +1,32 @@
+{% extends 'manage_measurementpoints/base_form.html' %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+{% load widget_tweaks %}
+
+{% block form_content_left %}
+{{block.super}}
+<div>
+  <h6>{% trans "Data import:" %}</h6>
+	<fieldset>
+	  <label>{% trans 'File:' %}</label>
+	  {{ form.upload_file }}
+	  {{ form.upload_file.errors }}
+	</fieldset>
+	<fieldset>
+	  <label>{% trans 'Consumption column:' %}</label>
+	  {{ form.consumption_column }}
+	  {{ form.consumption_column.errors }}
+	</fieldset>
+	<fieldset>
+	  <label>{% trans 'Timezone:' %}</label>
+	  {{ form.timezone }}
+	  {{ form.timezone.errors }}
+	</fieldset>
+	<fieldset>
+	  <label>{% trans 'Unit:' %}</label>
+	  {{ form.unit }}
+	  {{ form.unit.errors }}
+	</fieldset>
+</div>
+{% endblock form_content_left %}

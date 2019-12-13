@@ -1,0 +1,158 @@
+{% extends 'overlay_base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+{% load action %}
+
+{% block title %}
+  {% if form.instance.id %}
+    {% trans "Edit" %} {{ form.instance }}
+  {% else %}
+    {% trans "New Customer" %}
+  {% endif %}
+{% endblock title %}
+
+{% block action %}
+  {% action 'manage_customers-update' form.instance pk=customer.id %}
+{% endblock %}
+
+{% block content %}
+<div class="clearfix">
+    {% csrf_token %}
+    <div class="form-content-left">
+      <fieldset>
+        <label>{% trans 'Company name:' %}</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Address:' %}</label>
+        {{ form.address }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Timezone:' %}</label>
+        {{ form.timezone }}
+        {{ form.timezone.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Currency:' %}</label>
+        {{ form.currency_unit }}
+        {{ form.currency_unit.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Postal code:' %}</label>
+        {{ form.postal_code }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Country code:' %}</label>
+        {{ form.country_code }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Active:' %}</label>
+        {{ form.is_active }}
+      </fieldset>
+    </div>
+    <div class="form-content-left">
+    <h6>{% trans "Default Tariffs" %}</h6>
+      <fieldset>
+        <label>{% trans 'Electricity:' %}</label>
+        {{ form.electricity_tariff }}
+        {{ form.electricity_tariff.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Gas:' %}</label>
+        {{ form.gas_tariff }}
+        {{ form.gas_tariff.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Water:' %}</label>
+        {{ form.water_tariff }}
+        {{ form.water_tariff.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Heat:' %}</label>
+        {{ form.heat_tariff }}
+        {{ form.heat_tariff.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Oil:' %}</label>
+        {{ form.oil_tariff }}
+        {{ form.oil_tariff.errors }}
+      </fieldset>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="form-content-left" style="margin-left: 13px;">
+      <h6>{% trans 'Units:' %}</h6>
+      <table class="units">
+        <thead>
+          <tr>
+            <td></td>
+            <td>{% trans 'Instantaneous' %}</td>
+            <td>{% trans 'Consumption' %}</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{% trans 'Electricity' %}</td>
+            <td>{{ form.electricity_instantaneous }}</td>
+            <td>{{ form.electricity_consumption }}</td>
+          </tr>
+          <tr>
+            <td>{% trans 'Gas' %}</td>
+            <td>{{ form.gas_instantaneous }}</td>
+            <td>{{ form.gas_consumption }}</td>
+          </tr>
+          <tr>
+            <td>{% trans 'Water' %}</td>
+            <td>{{ form.water_instantaneous }}</td>
+            <td>{{ form.water_consumption }}</td>
+          </tr>
+          <tr>
+            <td>{% trans 'Heat' %}</td>
+            <td>{{ form.heat_instantaneous }}</td>
+            <td>{{ form.heat_consumption }}</td>
+          </tr>
+          <tr>
+            <td>{% trans 'Oil' %}</td>
+            <td>{{ form.oil_instantaneous }}</td>
+            <td>{{ form.oil_consumption }}</td>
+          </tr>
+          <tr>
+            <td>{% trans 'Temperature' %}</td>
+            <td>{{ form.temperature }}</td>
+          </tr>
+        </tbody>
+      </table>
+      {{ form.non_field_errors }}
+    </div>
+    <div class="form-content-left">
+      <h6>{% trans 'Custom Production Units' %}</h6>
+      <fieldset>
+      {{ form.production_a_unit.label_tag }}
+      {{ form.production_a_unit }}
+      {{ form.production_a_unit.errors }}
+      </fieldset>
+      <fieldset>
+      {{ form.production_b_unit.label_tag }}
+      {{ form.production_b_unit }}
+      {{ form.production_b_unit.errors }}
+      </fieldset>
+      <fieldset>
+      {{ form.production_c_unit.label_tag }}
+      {{ form.production_c_unit }}
+      {{ form.production_c_unit.errors }}
+      </fieldset>
+      <fieldset>
+      {{ form.production_d_unit.label_tag }}
+      {{ form.production_d_unit }}
+      {{ form.production_d_unit.errors }}
+      </fieldset>
+      <fieldset>
+      {{ form.production_e_unit.label_tag }}
+      {{ form.production_e_unit }}
+      {{ form.production_e_unit.errors }}
+      </fieldset>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Attach",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "url": "http://127.0.0.1:8080/skave.html",
+            "webRoot": "C:\\Users\\code\\repos\\hogt_web\\frontend\\vama",
+            "sourceMapPathOverrides": {
+                "/source/*": "${workspaceRoot}/*"
+            }
+        }
+    ]
+}

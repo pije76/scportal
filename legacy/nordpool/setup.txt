@@ -1,0 +1,36 @@
+# Basic setup in DB --- mapping of Denmark east/west (in DKK) from Nordpool to
+# indexes
+
+import pytz
+
+from legacy.indexes.models import Index, SpotMapping
+
+
+timezone = pytz.timezone("Europe/Copenhagen")
+
+dkwdkkindex = Index.objects.create(
+    unit="kr/MWh",
+    data_type=Index.ELECTRICITY_TARIFF,
+    data_format=Index.SPOT,
+    name="Nordpool Denmark West DKK",
+    default_value=3.3,
+    timezone=timezone)
+SpotMapping.objects.create(
+    index=dkwdkkindex,
+    area='DK1',
+    currency='DKK',
+    timezone='Europe/Copenhagen')
+
+
+dkedkkindex = Index.objects.create(
+    unit="kr/MWh",
+    data_type=Index.ELECTRICITY_TARIFF,
+    data_format=Index.SPOT,
+    name="Nordpool Denmark East DKK",
+    default_value=3.3,
+    timezone=timezone)
+SpotMapping.objects.create(
+    index=dkedkkindex,
+    area='DK2',
+    currency='DKK',
+    timezone='Europe/Copenhagen')

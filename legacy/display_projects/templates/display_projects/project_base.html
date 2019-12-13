@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load mptt_tags %}
+{% load display_measurementpoints %}
+{% load dropdown %}
+
+{% block page_id %}projects-page{% endblock %}
+
+{% block page_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+$(document).ready(function () {
+  gridportal.website.initInpageMenu('{% static 'images/arrow-right.png' %}', '{% static 'images/arrow-left.png' %}');
+});
+</script>
+{% block detail_js %}{% endblock detail_js %}
+{% endblock page_js %}
+
+{% block page_css %}
+<style>
+    #content-main {
+        overflow-x: hidden;
+    }
+</style>
+{% endblock %}
+
+{% block title %} {% trans "Projects" %} {% endblock title %}
+{% block content_heading %}{% endblock content_heading %}
+
+{% block content %}
+<div id="projects" class="grid_23 prefix_1">
+{% block project_content %}
+{% endblock project_content %}
+</div>
+{% endblock content %}
+
+{% block in_page_menu %}
+
+  <div class="in-page-menu">
+    <div class="scroller">
+      <div class="menu-content">
+        <div class="spacer">
+          <strong>{% trans "Open" %}</strong>
+          <ul>
+            {% for project in open %}
+              <li class="spacer"><a href="{% url 'display_projects-update' pk=project.id %}">{{ project.name_plain }}</a></li>
+            {% endfor %}
+          </ul>
+          <strong>{% trans "Closed" %}</strong>
+          <ul>
+            {% for project in closed %}
+              <li class="spacer"><a href="{% url 'display_projects-update' pk=project.id %}">{{ project.name_plain }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <div class="rotate">
+        <span>{% trans "Projects" %}</span>
+      </div>
+      <img src="{% static 'images/arrow-right.png' %}" />
+    </div>
+  </div>
+
+{% endblock %}

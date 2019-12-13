@@ -1,0 +1,273 @@
+{% spaceless %}
+{% load static from staticfiles %}
+{% load url from future %}
+{% load i18n %}
+{% load dropdown %}
+{% load version %}
+{% load customer %}
+{% load gminfo %}
+{% load compress %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>SC Portal - {% block title %}{% endblock %}</title>
+    {% block base_css %}
+    {% compress css %}
+    <link rel="stylesheet" href="{% static '960gs/min/reset.css' %}">
+    <link rel="stylesheet" href="{% static '960gs/min/text.css' %}">
+    <link rel="stylesheet" href="{% static '960gs/min/960_24_col.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery/smoothness/jquery-ui-1.9.2.custom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery-dropdown/jquery.dropdown.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery-timepicker/jquery-ui-timepicker-addon.css' %}">
+    <link rel="stylesheet" href="{% static 'chosen/chosen.css' %}">
+    <link rel="stylesheet" href="{% static 'slickswitch/css/slickswitch.css' %}">
+    <link rel="stylesheet" href="{% static 'custom-scrollbar-plugin/jquery.mCustomScrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'fancybox/jquery.fancybox-1.3.4.css' %}">
+    {% endcompress %}
+
+    {% if request.get_host == "portal.smartflex.dk" %}
+      <link rel="stylesheet" href="{% static 'style-smartflex.css' %}" />
+    {% elif request.get_host == "endesa.grid-manager.com" %}
+      <link rel="stylesheet" href="{% static 'style-endesa.css' %}" />
+    {% else %}
+      <link rel="stylesheet" href="{% static 'style.css' %}" />
+    {% endif %}
+    <!--[if IE]>
+    <style type="text/css">
+      .btn {
+        margin-left: 2px;
+        margin-top: 0px;
+      }
+      .loginform {
+        margin: 5px;
+      }
+    </style>
+    <![endif]-->
+
+    {# Hack to rotate text in ie 8 #}
+    <!--[if lt IE 9]>
+    <style type="text/css">
+      .rotate {
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+
+        top: 1px!important;
+        left: 2px!important;
+      }
+    </style>
+    <![endif]-->
+    {% endblock base_css %}
+    {% block page_css %}{% endblock page_css %}
+    {% block base_js %}
+    {% include "jserror/include.html" %}
+    {# translations just before our code... #}
+    <script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'jquery/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery/jquery-ui-1.9.2.custom.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'chosen/chosen.jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'custom-scrollbar-plugin/minified/jquery.mousewheel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'custom-scrollbar-plugin/minified/jquery.mCustomScrollbar.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.labelify.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.scrollTo-1.4.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.ui.touch-punch.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.showpassword.js' %}"></script>
+    <script type="text/javascript" src="{% static 'noty/jquery.noty.js' %}"></script>
+    <script type="text/javascript" src="{% static 'noty/layouts/topCenter.js' %}"></script>
+    <script type="text/javascript" src="{% static 'noty/themes/gridmanager.js' %}"></script>
+    <script type="text/javascript" src="{% static 'flotr2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery-dropdown/jquery.dropdown.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jstree/jquery.jstree.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery-timepicker/jquery-ui-sliderAccess.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery-timepicker/jquery-ui-timepicker-addon.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jsgauge/gauge.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jsgauge/jquery.gauge.js' %}"></script>
+    <script type="text/javascript" src="{% static 'slickswitch/js/jquery.slickswitch.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fancybox/jquery.fancybox-1.3.4.pack.js' %}"></script>
+    <script type="text/javascript" src="{% static 'website.js' %}"></script>
+    {% endcompress %}
+    <script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*jslint todo: true */
+/*global $, jQuery, gettext, pgettext, get_format, noty, gridportal */
+/*jslint sub: true */ {# make jslint not complain about regional['all'] #}
+
+jQuery(function () {
+    'use strict';
+    gridportal.website.slideSettings();
+});
+$.datepicker.regional['all'] = {
+    closeText: '{% trans "Close" %}',
+    prevText: '{% trans "Previous" %}',
+    nextText: '{% trans "Next" %}',
+    currentText: '{% trans "Now" %}',
+    monthNames: ['{% trans "January" %}', '{% trans "February" %}', '{% trans "March" %}', '{% trans "April" %}', '{% trans "May" %}', '{% trans "June" %}', '{% trans "July" %}', '{% trans "August" %}', '{% trans "September" %}', '{% trans "October" %}', '{% trans "November" %}', '{% trans "December" %}'],
+    monthNamesShort: ['{% trans "Jan" %}', '{% trans "Feb" %}', '{% trans "Mar" %}', '{% trans "Apr" %}', '{% trans "May" %}', '{% trans "June" %}', '{% trans "July" %}', '{% trans "Aug" %}', '{% trans "Sept" %}', '{% trans "Oct" %}', '{% trans "Nov" %}', '{% trans "Dec" %}'],
+    dayNames: ['{% trans "Sunday" %}', '{% trans "Monday" %}', '{% trans "Tuesday" %}', '{% trans "Wednesday" %}', '{% trans "Thursday" %}', '{% trans "Friday" %}', '{% trans "Saturday" %}'],
+    dayNamesShort: ['{% trans "Sun" %}', '{% trans "Mon" %}', '{% trans "Tue" %}', '{% trans "Wed" %}', '{% trans "Thu" %}', '{% trans "Fri" %}', '{% trans "Sat" %}'],
+    dayNamesMin: ['{% trans "Su" %}', '{% trans "Mo" %}', '{% trans "Tu" %}', '{% trans "We" %}', '{% trans "Th" %}', '{% trans "Fr" %}', '{% trans "Sa" %}'],
+    weekHeader: '{% trans "Wk" context "abbreviation for week" %}',
+    dateFormat: 'yy-mm-dd',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+};
+$.datepicker.setDefaults($.datepicker.regional['all']);
+$.timepicker.regional['all'] = {
+    timeOnlyTitle: '{% trans "Choose a time" %}',
+    timeText: '{% trans "Time" %}',
+    hourText: '{% trans "Hour" %}',
+    minuteText: '{% trans "Minute" %}',
+    secondText: '{% trans "Second" %}',
+    millisecText: '{% trans "Millisecond" %}',
+    timezoneText: '{% trans "Timezone" %}',
+    currentText: '{% trans "Now" %}',
+    closeText: '{% trans "Close" %}',
+    timeFormat: 'HH:mm',
+    amNames: ['AM', 'A'],
+    pmNames: ['PM', 'P'],
+    isRTL: false
+};
+$.timepicker.setDefaults($.timepicker.regional['all']);
+    </script>
+    {% endblock base_js %}
+    {% block extra_js %}{% endblock extra_js %}
+    {% block page_js %}{% endblock page_js %}
+  </head>
+  <body id="{% block page_id %}{% endblock %}">
+    <div id="header">
+      <div class="container_24">
+        <div class="grid_8">
+          <a href="{% url 'display_widgets-dashboard' %}">
+            <h1>
+              SC Portal
+            </h1>
+          </a>
+          {% if app_selection|length > 1 %}
+          <span class="app_switcher">&nbsp;&nbsp;
+            <a href="{% url 'start_site:apps' %}">{% trans 'Apps' %}</a>
+          </span>
+          {% endif %}
+        </div>
+        <div class="grid_12 truncate-text">
+          {% if user.is_admin and request.customer %}
+          <a href="{% url 'manage_customers-as_admin' %}">{% trans 'Go back to admin mode' %}</a>
+          <span>&nbsp;-&nbsp;</span>
+          <span>{% trans 'Acting for customer:' %} {{ request.customer.name_plain }}.</span>
+          {% elif user.is_authenticated and not user.is_admin %}
+            <span class=" right">{% username %} - {% customer_name %}</span>
+          {% else %}
+            <span>&nbsp;</span>
+          {% endif %}
+        </div>
+        <div class="grid_4">
+          <div class="right">
+            <span class="language">
+              <form name="setLangDanish" action="/i18n/setlang/" method="POST">{% csrf_token %}
+                  <input name="next" type="hidden" value="/" />
+                  <input type="hidden" name="language" value="da" />
+                  <span class="flag"><a href="#" onclick="document.setLangDanish.submit();return false;"><img src="{% static 'images/danish.png' %}" /></a></span>
+              </form>
+
+              <form name="setLangSpanish" action="/i18n/setlang/" method="POST">{% csrf_token %}
+                  <input name="next" type="hidden" value="/" />
+                  <input type="hidden" name="language" value="es" />
+                  <span class="flag"><a href="#" onclick="document.setLangSpanish.submit();return false;"><img src="{% static 'images/spanish.png' %}" /></a></span>
+              </form>
+
+              <form name="setLangEnglish" action="/i18n/setlang/" method="POST">{% csrf_token %}
+                  <input name="next" type="hidden" value="/" />
+                  <input type="hidden" name="language" value="en" />
+                  <span class="flag"><a href="#" onclick="document.setLangEnglish.submit();return false;"><img src="{% static 'images/english.png' %}" /></a></span>
+              </form>
+            </span>
+            {% if user.is_authenticated %}
+              <span class="logout"><a href="{% url 'website-logout' %}">{% trans "Logout" %}<img src="{% static 'images/logout.png' %}" /> </a></span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="menu">
+      <div class="container_24">
+        <div class="grid_24 wrapper">
+          {% if user.is_admin %}
+            {% include "admin_menu.html" %}
+          {% elif user.is_customer_superuser %}
+            {% include "customer_superuser_menu.html" %}
+          {% elif user.is_authenticated %}
+            {% include "customer_user_menu.html" %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% comment %}
+      reason for the rather deep nesting of tags:
+      settings-menu for overall placement of menu with css;
+      slide has relative position within (open/closed...) and full width
+      container_24/grid_24 for the content width
+    {% endcomment %}
+    <div id="settings-menu">
+      <div class="slide">
+        <div class="container_24">
+          <div class="grid_24">
+            <div class="left">
+              {% if user.is_admin and not request.customer %}
+                {% include "admin_settings_menu.html" %}
+              {% elif user.is_admin or user.is_customer_superuser %}
+                {% include "customer_superuser_settings_menu.html" %}
+              {% elif user.is_authenticated %}
+                {% include "customer_user_settings_menu.html" %}
+              {% endif %}
+            </div>
+            <div class="right">
+              {% if user.is_authenticated %}
+                <div class="settings-btn-background">
+                  <div class="settings-btn">{% trans "Settings" %}</div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-header" class="container_24">
+        <div class="grid_24">
+          <h1>{% block content_heading %}{% endblock %}</h1>
+          {% block tabs %}{% endblock tabs %}
+        </div>
+      </div>
+      <div id="content-main" class="content container_24">
+        {% block content %}
+        <div class="grid_24">{% block left_content %}{% endblock %}</div>
+        {% endblock %}
+        {% block in_page_menu %}{% endblock %}
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container_24">
+        <div class="grid_24">
+	  <div class="left">
+	    SC-Technology Aps <br />
+      Søbyvej 18B <br />
+      7840 Højslev
+	  </div>
+	  <div class="right">
+	    {% gridplatform_version %}
+	  </div>
+        </div>
+      </div>
+    </div>
+    {% block end %}{% endblock end %}
+    {% block after_content %}
+    {# Workaround; for popups/other managed by JS-libraries that fail to manage positioning inside the grid.  See list_page.html for example use... #}
+    {% dropdown_bodies %}
+    {% endblock %}
+  </body>
+</html>
+{% endspaceless %}

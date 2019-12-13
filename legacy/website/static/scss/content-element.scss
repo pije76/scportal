@@ -1,0 +1,78 @@
+#content-header {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.content .content-element {
+    margin-bottom: 5px;
+    .header {
+        border-bottom: 1px solid #CCC;
+        margin-bottom: 1ex;
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 0px;
+        }
+        a {
+            text-decoration: none;
+            position: relative;
+            top: 8px;
+            img {
+                position: relative;
+                top: -1px;
+            }
+        }
+        a:link, a:visited {
+            color: #000;
+        }
+    }
+    .header-options {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        .sort {
+            margin-left: 2px;
+            padding: 1px;
+            background-color: #CCC;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid #BDBDBD;
+            cursor: pointer;
+        }
+        .sort.active {
+            background-color: #99ce9e;
+        }
+        .left {
+            margin-top: 2px;
+        }
+    }
+    /* To be used with description lists with long user created names */
+    dl.name-description-list {
+    /* (80% of 400px; size for name forms) */
+        width:320px;
+    }
+    dl.name-headline {
+        width: 450px;
+    }
+    dl {
+        width: 250px;
+        display: inline-block;
+        float:left;
+        dt {
+            font-weight: bold;
+            margin-right: 5px;
+            clear: both;
+            float:left;
+            display: inline-block;
+        }
+        dd {
+            display:inline-block;
+            float:left;
+        }
+        .term_block {
+        float: none;
+        display: block;
+        }
+    }
+
+}

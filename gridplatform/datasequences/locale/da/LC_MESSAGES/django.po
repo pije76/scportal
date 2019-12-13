@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models/accumulation.py:119 models/accumulation.py:152
+#: models/energyconversion.py:89 models/nonaccumulation.py:82
+msgid "data source"
+msgstr "datakilde"
+
+#: models/accumulation.py:134
+msgid "Input configuration and data source units are not compatible"
+msgstr "Inputkonfigurations- og datakilde-enheder er ikke kompatible"
+
+#: models/accumulation.py:161
+msgid "pulse quantity"
+msgstr "antal (pulser)"
+
+#: models/accumulation.py:162
+msgid "output quantity"
+msgstr "antal (output-enhed)"
+
+#: models/accumulation.py:163
+msgid "output unit"
+msgstr "output-enhed"
+
+#: models/accumulation.py:171
+msgid "Input configuration and output units are not compatible"
+msgstr "Inputkonfigurations- og output-enhed er ikke kompatible"
+
+#: models/accumulation.py:204
+msgid "value"
+msgstr "værdi"
+
+#: models/accumulation.py:209
+msgid "unit"
+msgstr "enhed"
+
+#: models/accumulation.py:219
+msgid "The \"to time\" is required for single value periods."
+msgstr "\"Til tidspunkt\" er påkrævet for enkeltværdiperioder."
+
+#: models/accumulation.py:225
+msgid "The chosen unit is not compatible."
+msgstr "Den valgte enhed er ikke kompatibel."
+
+#: models/base.py:44
+msgid "name"
+msgstr "navn"
+
+#: models/base.py:153
+msgid "unspecified"
+msgstr "ikke angivet"
+
+#: models/base.py:162
+#, python-brace-format
+msgid "{from_timestamp} - {to_timestamp}: {datasequence}"
+msgstr "{from_timestamp} - {to_timestamp}: {datasequence}"
+
+#: models/base.py:170
+msgid "Period must start on a clock hour"
+msgstr "Periode skal started ved et helt klokkeslet"
+
+#: models/base.py:172
+msgid "Period must end on a clock hour"
+msgstr "Periode skal slutte ved et helt klokkeslet"
+
+#: models/energyconversion.py:51
+msgid "energy conversion data sequence"
+msgstr "energikonverteringsdatafølge"
+
+#: models/energyconversion.py:52
+msgid "energy conversion data sequences"
+msgstr "energikonverteringsdatafølger"
+
+#: models/energyconversion.py:85 models/nonaccumulation.py:78
+msgid "data sequence"
+msgstr "datafølge"
+
+#: models/energyconversion.py:100
+msgid "volume to energy conversion period"
+msgstr "volume-til-energi-konverteringsperiode"
+
+#: models/energyconversion.py:101
+msgid "volume to energy conversion periods"
+msgstr "volume-til-energi-konverteringsperioder"
+
+#: models/nonaccumulation.py:38
+msgid "nonaccumulation data sequence"
+msgstr "ikke-akkumulerende datafølge"
+
+#: models/nonaccumulation.py:39
+msgid "nonaccumulation data sequences"
+msgstr "ikke-akkumulerende datafølger"
+
+#: models/nonaccumulation.py:50
+msgid "Field cannot be updated."
+msgstr "Felt kan ikke opdateres."
+
+#: models/nonaccumulation.py:87
+msgid "nonaccumulation period"
+msgstr "ikke-akkumuleringsperiode"
+
+#: models/nonaccumulation.py:88
+msgid "nonaccumulation periods"
+msgstr "ikke-akkumuleringsperioder"
+
+#: models/qualitycontrol.py:20
+msgid "clock hours"
+msgstr "klokketimer"
+
+#: models/qualitycontrol.py:21
+msgid "report error if offline for this many clock hours"
+msgstr "meld fejl hvis offline for dette antal klokketimer"
+
+#~ msgid "from time"
+#~ msgstr "fra tidspunkt"
+
+#~ msgid "to time"
+#~ msgstr "til tidspunkt"
+
+#~ msgid "Period \"to\" must be after period \"from\""
+#~ msgstr "\"Fra tidspunkt\" skal komme før \"til tidspunkt\""
+
+#~ msgid "There are overlapping periods."
+#~ msgstr "Der findes overlappende perioder."
+
+#~ msgid "Data sequence and data source units are not compatible"
+#~ msgstr "Datafølge- og datakilde-enheder er ikke kompatible"
+
+#~ msgid "accumulation data sequence base"
+#~ msgstr "baseinstans for akkumulerende datafølger"
+
+#~ msgid "accumulation data sequence bases"
+#~ msgstr "baseinstanser for akkumulerende datafølger"
+
+#~ msgid "accumulation period base"
+#~ msgstr "baseinstans for akkumuleringsperioder"
+
+#~ msgid "accumulation period bases"
+#~ msgstr "baseinstanser for akkumuleringsperioder"
+
+#~ msgid "non-pulse accumulation period mixin"
+#~ msgstr "nonpulsakkumuleringsperiodemixin"
+
+#~ msgid "non-pulse accumulation period mixins"
+#~ msgstr "nonpulsakkumuleringsperiodemixins"
+
+#~ msgid "pulse accumulation period mixin"
+#~ msgstr "pulsakkumuleringsperiodemixin"
+
+#~ msgid "pulse accumulation period mixins"
+#~ msgstr "pulsakkumuleringsperiodemixins"
+
+#~ msgid "conversion accumulation period mixin"
+#~ msgstr "konverteringsakkumuleringsperiodemixin"
+
+#~ msgid "single value accumulation period mixin"
+#~ msgstr "enkeltværdisakkumuleringsperiodemixin"
+
+#~ msgid "single value accumulation period mixins"
+#~ msgstr "enkeltværdisakkumuleringsperiodemixins"
+
+#~ msgid "{period_class_name} is overlapping with {other_period_instance}"
+#~ msgstr "{period_class_name} er overlappende med {other_period_instance}"
+
+#~ msgid "picewise constant data sequence base"
+#~ msgstr "baseinstans for stykvis konstante datafølger"
+
+#~ msgid "picewise constant data sequence bases"
+#~ msgstr "baseinstanser for stykvis konstante datafølger"
+
+#~ msgid "picewise constant period base"
+#~ msgstr "baseinstans for stykvis konstante perioder"
+
+#~ msgid "picewise constant period bases"
+#~ msgstr "baseinstanser for stykvis konstante perioder"
+
+#~ msgid "accumulation input configurations"
+#~ msgstr "akkumuleringinputkonfigurationer"
+
+#~ msgid "input configuration"
+#~ msgstr "inputkonfigurationer"
+
+#~ msgid "nonaccumulation input configuration"
+#~ msgstr "ikke-akkumuleringsinputkonfiguration"
+
+#~ msgid "nonaccumulation input configurations"
+#~ msgstr "ikke-akkumuleringsinputkonfigurationer"
+
+#~ msgid "maximum acceptable offline period, in hours"
+#~ msgstr "maksimalt accepterbare offline-tid, i timer"

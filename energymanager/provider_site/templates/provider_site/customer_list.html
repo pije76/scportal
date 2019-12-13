@@ -1,0 +1,15 @@
+{% extends "provider_site/base.html" %}
+{% load i18n %}
+{% load bootstrap_tags %}
+
+
+{% block content %}
+
+{% panel _("Customers") search=True %}
+<a href="{% url 'provider_site:customer-create' %}" title="{% trans 'Add' %}">
+  <i class="fa fa-plus"></i>
+</a>
+{% endpanelbuttons %}
+<div class="content-loader" data-url="{% url 'provider_site:customer-list-content' %}" data-orderby="name_plain"></div>
+{% endpanel %}
+{% endblock content %}

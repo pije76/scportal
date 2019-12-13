@@ -1,0 +1,977 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: views.py:172
+msgid "The measurement point has been deleted"
+msgstr "Målepunkt slettet"
+
+#: views.py:284 views.py:302 views.py:320 views.py:338 views.py:356
+#: views.py:374 views.py:392 views.py:410 views.py:577
+msgid "The measurement point has been created"
+msgstr "Målepunkt oprettet"
+
+#: views.py:293 views.py:311 views.py:329 views.py:347 views.py:365
+#: views.py:383 views.py:401 views.py:419 views.py:596
+msgid "The measurement point has been updated"
+msgstr "Målepunkt opdateret"
+
+#: views.py:459
+msgid "Valid-from dates must be unique"
+msgstr "Gyldig-fra-datoer skal være entydige"
+
+#: views.py:667 views.py:713
+msgid "The measurement point has been saved"
+msgstr "Målepunktet er gemt"
+
+#: forms/consumption.py:236
+msgid "Edit Electricity Measurement Point"
+msgstr "Redigér Elektricitetsmålepunkt"
+
+#: forms/consumption.py:239
+msgid "Edit Water Measurement Point"
+msgstr "Redigér Vandmålepunkt"
+
+#: forms/consumption.py:242
+msgid "Edit Gas Measurement Point"
+msgstr "Redigér Gasmålepunkt"
+
+#: forms/consumption.py:245
+msgid "Edit Heat Measurement Point"
+msgstr "Redigér Varmemålepunkt"
+
+#: forms/consumption.py:248
+msgid "Edit Oil Measurement Point"
+msgstr "Redigér Oliemålepunkt"
+
+#: forms/consumption.py:275
+msgid "New Electricity Measurement Point"
+msgstr "Nyt Elektricitetsmålepunkt"
+
+#: forms/consumption.py:278
+msgid "New Water Measurement Point"
+msgstr "Nyt Vandmålepunkt"
+
+#: forms/consumption.py:281
+msgid "New Gas Measurement Point"
+msgstr "Nyt Gasmålepunkt"
+
+#: forms/consumption.py:284
+msgid "New Heat Measurement Point"
+msgstr "Nyt Varmemålepunkt"
+
+#: forms/consumption.py:287
+msgid "New Oil Measurement Point"
+msgstr "Nyt Oliemålepunkt"
+
+#: forms/consumptionsummation.py:74
+msgid "New Electricity Summation Point"
+msgstr "Nyt Elektricitetsmålepunkt"
+
+#: forms/consumptionsummation.py:77
+msgid "New Water Summation Point"
+msgstr "Nyt Vandsummeringspunkt"
+
+#: forms/consumptionsummation.py:80
+msgid "New Gas Summation Point"
+msgstr "Nyt Gassummeringspunkt"
+
+#: forms/consumptionsummation.py:83
+msgid "New Heat Summation Point"
+msgstr "Nyt Varmesummeringspunkt"
+
+#: forms/consumptionsummation.py:86
+msgid "New Oil Summation Point"
+msgstr "Nyt Oliesummeringpunkt"
+
+#: forms/consumptionsummation.py:89
+msgid "Edit Electricity Summation Point"
+msgstr "Redigér Elektricitetssummeringspunkt"
+
+#: forms/consumptionsummation.py:92
+msgid "Edit Water Summation Point"
+msgstr "Redigér Vandsummeringspunkt"
+
+#: forms/consumptionsummation.py:95
+msgid "Edit Gas Summation Point"
+msgstr "Redigér Gassummeringspunkt"
+
+#: forms/consumptionsummation.py:98
+msgid "Edit Heat Summation Point"
+msgstr "Redigér Varmesummeringspunkt"
+
+#: forms/consumptionsummation.py:101
+msgid "Edit Oil Summation Point"
+msgstr "Redigér Oliesummeringspunkt"
+
+#: forms/current.py:38
+msgid "Edit Current Measurement Point"
+msgstr "Redigér Strøm-målepunkt"
+
+#: forms/current.py:62
+msgid "New Current Measurement Point"
+msgstr "Nyt Strøm-målepunkt"
+
+#: forms/districtheatingform.py:44 forms/districtheatingform.py:58
+msgid "New District Heating Measurement Point"
+msgstr "Nyt Fjernvarmemålepunkt"
+
+#: forms/districtheatingform.py:47 forms/districtheatingform.py:61
+msgid "Edit District Heating Measurement Point"
+msgstr "Redigér Fjernvarmemålepunkt"
+
+#: forms/efficiency.py:38
+msgid "Edit Efficiency Measurement Point"
+msgstr "Redigér Effektivitetsmålepunkt"
+
+#: forms/efficiency.py:62
+msgid "New Efficiency Measurement Point"
+msgstr "Nyt Effektivitetssmålepunkt"
+
+#: forms/imported.py:55
+msgid "New Imported Electricity Measurement Point"
+msgstr "Nyt Importeret Elektricitetsmålepunkt"
+
+#: forms/imported.py:58
+msgid "New Imported Heat Measurement Point"
+msgstr "Nyt Importeret Varmemålepunkt"
+
+#: forms/imported.py:61
+msgid "New Imported Water Measurement Point"
+msgstr "Nyt Importeret Vandmålepunkt"
+
+#: forms/imported.py:64
+msgid "New Imported Gas Measurement Point"
+msgstr "Nyt Importeret Gasmålepunkt"
+
+#: forms/imported.py:67
+msgid "New Imported Oil Measurement Point"
+msgstr "Nyt Importeret Oliemålepunkt"
+
+#: forms/imported.py:72
+msgid "Edit Imported Electricity Measurement Point"
+msgstr "Redigér Importeret Elektricitetsmålepunkt"
+
+#: forms/measurementpointbase.py:72
+msgid ""
+"Gauge widget is present on the dashboard;                             "
+"corrupting these values are not allowed"
+msgstr ""
+"Der vises p.t. et speedometer-widget er på dit dashboard; derfor kan du ikke "
+"ændre i disse værdier"
+
+#: forms/measurementpointbase.py:79
+msgid "Maximum value must be above minumum value"
+msgstr "Maksimalværdien skal være højere end minimumsværdien"
+
+#: forms/measurementpointbase.py:84
+msgid "Lower threshold must be above minumum value"
+msgstr "Den nedere grænse skal være over minimumsværdien"
+
+#: forms/measurementpointbase.py:89
+msgid "Upper threshold must be below maximum value"
+msgstr "Den øvre grænse skal være over maksimalværdien"
+
+#: forms/measurementpointbase.py:94
+msgid "Upper threshold must be above lower threshold"
+msgstr "Den øvre grænse skal være over den nedre grænse"
+
+#: forms/multipliedconsumptionform.py:42
+msgid "New Electricity Multiplication Point"
+msgstr "Nyt Elektricitetsmultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:45
+msgid "New Water Multiplication Point"
+msgstr "Nyt Vandmultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:48
+msgid "New Gas Multiplication Point"
+msgstr "Nyt Gasmultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:51
+msgid "New Heat Multiplication Point"
+msgstr "Nyt Varmemultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:54
+msgid "New Oil Multiplication Point"
+msgstr "Nyt Oliemultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:57
+msgid "Edit Electricity Multiplication Point"
+msgstr "Redigér Elektricitetsmultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:60
+msgid "Edit Water Multiplication Point"
+msgstr "Redigér Vandmultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:63
+msgid "Edit Gas Multiplication Point"
+msgstr "Redigér Gasmultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:66
+msgid "Edit Heat Multiplication Point"
+msgstr "Redigér Varmemultipliceringspunkt"
+
+#: forms/multipliedconsumptionform.py:69
+msgid "Edit Oil Multiplication Point"
+msgstr "Redigér Oliemultipliceringspunkt"
+
+#: forms/power.py:33
+msgid "Edit Power Measurement Point"
+msgstr "Redigér Effektmålepunkt"
+
+#: forms/power.py:52
+msgid "New Power Measurement Point"
+msgstr "Nyt Effektmålepunkt"
+
+#: forms/powerfactor.py:33
+msgid "Edit Power Factor Measurement Point"
+msgstr "Redigér Power-faktor-målepunkt"
+
+#: forms/powerfactor.py:52
+msgid "New Power Factor Measurement Point"
+msgstr "Nyt Power-faktor-målepunkt"
+
+#: forms/production.py:38
+msgid "Edit Production Measurement Point"
+msgstr "Redigér Produktionsmålepunkt"
+
+#: forms/production.py:62
+msgid "New Production Measurement Point"
+msgstr "Nyt Produktionsmålepunkt"
+
+#: forms/reactive_energy.py:34
+msgid "Edit Reactive Energy Measurement Point"
+msgstr "Redigér Reaktiv-energi-målepunkt"
+
+#: forms/reactive_energy.py:53
+msgid "New Reactive Energy Measurement Point"
+msgstr "Nyt Reaktiv-energi-målepunkt"
+
+#: forms/reactive_power.py:34
+msgid "Edit Reactive Power Measurement Point"
+msgstr "Redigér Reaktiv-effekt-målepunkt"
+
+#: forms/reactive_power.py:53
+msgid "New Reactive Power Measurement Point"
+msgstr "Nyt Reaktiv-effekt-målepunkt"
+
+#: forms/tariff.py:41
+msgid "valid from"
+msgstr "gyldig fra"
+
+#: forms/tariff.py:50
+msgid ""
+"The selected tariff has a different currency than existing cost calculation."
+msgstr ""
+"Den valgte tariff har en møntfod forskellig fra eksisterende "
+"omkostningsberegning."
+
+#: forms/temperature.py:54
+msgid "Edit Relative Temperature Measurement Point"
+msgstr "Redigér Relativtemperaturmålepunkt"
+
+#: forms/temperature.py:56
+msgid "Edit Absolute Temperature Measurement Point"
+msgstr "Redigér Absoluttemperaturmålepunkt"
+
+#: forms/temperature.py:81
+msgid "New Temperature Measurement Point"
+msgstr "Nyt Temperaturmålepunkt"
+
+#: forms/voltage.py:38
+msgid "Edit Voltage Measurement Point"
+msgstr "Redigér Spænding-målepunkt"
+
+#: forms/voltage.py:62
+msgid "New Voltage Measurement Point"
+msgstr "Nyt Spænding-målepunkt"
+
+#: templates/manage_measurementpoints/base_form.html:23
+#: templates/manage_measurementpoints/temperature_create_form.html:18
+#: templates/manage_measurementpoints/temperature_update_form.html:19
+msgid "Name:"
+msgstr "Navn:"
+
+#: templates/manage_measurementpoints/base_form.html:28
+#: templates/manage_measurementpoints/block.html:10
+#: templates/manage_measurementpoints/temperature_create_form.html:23
+#: templates/manage_measurementpoints/temperature_update_form.html:24
+msgid "Group:"
+msgstr "Gruppe:"
+
+#: templates/manage_measurementpoints/base_form.html:41
+#: templates/manage_measurementpoints/temperature_create_form.html:28
+#: templates/manage_measurementpoints/form_includes/input_form.html:5
+msgid "Input:"
+msgstr "Input:"
+
+#: templates/manage_measurementpoints/base_form.html:85
+msgid "Comment:"
+msgstr "Kommentar:"
+
+#: templates/manage_measurementpoints/base_form.html:117
+msgid "Image:"
+msgstr "Billede:"
+
+#: templates/manage_measurementpoints/block.html:7
+msgid "Meter no.: "
+msgstr "Målernr.: "
+
+#: templates/manage_measurementpoints/block.html:7
+msgid "Installation no.: "
+msgstr "Installationsnr.: "
+
+#: templates/manage_measurementpoints/block.html:15
+msgid "None"
+msgstr "Ingen"
+
+#: templates/manage_measurementpoints/block.html:21
+msgid "Input configurations:"
+msgstr "Inputkonfigurationer:"
+
+#: templates/manage_measurementpoints/block.html:33
+msgid "Measurement Point:"
+msgstr "Målepunkt:"
+
+#: templates/manage_measurementpoints/block.html:36
+msgid "multiplied by"
+msgstr "ganget med"
+
+#: templates/manage_measurementpoints/block.html:43
+msgid "Heat Measurement Point:"
+msgstr "Varmemålepunkt:"
+
+#: templates/manage_measurementpoints/block.html:51
+#: templates/manage_measurementpoints/form_includes/summation_elements.html:5
+msgid "Plus Measurement Points:"
+msgstr "Plus-målepunkter"
+
+#: templates/manage_measurementpoints/block.html:63
+#: templates/manage_measurementpoints/form_includes/summation_elements.html:8
+msgid "Minus Measurement Points:"
+msgstr "Minus-målepunkter"
+
+#: templates/manage_measurementpoints/block.html:76
+msgid "Edit"
+msgstr "Redigér"
+
+#: templates/manage_measurementpoints/consumption_measurement_point_summation_form.html:7
+#: templates/manage_measurementpoints/district_heating_measurement_point_form.html:6
+#: templates/manage_measurementpoints/measurementpoint_update_form.html:8
+#: templates/manage_measurementpoints/multiplication_measurement_point_form.html:6
+#: templates/manage_measurementpoints/temperature_update_form.html:50
+msgid "Save"
+msgstr "Gem"
+
+#: templates/manage_measurementpoints/consumption_measurement_point_summation_form.html:9
+#: templates/manage_measurementpoints/district_heating_measurement_point_form.html:8
+#: templates/manage_measurementpoints/measurementpoint_update_form.html:9
+#: templates/manage_measurementpoints/multiplication_measurement_point_form.html:8
+#: templates/manage_measurementpoints/temperature_update_form.html:53
+msgid "Delete"
+msgstr "Slet"
+
+#: templates/manage_measurementpoints/imported.html:10
+msgid "Data import:"
+msgstr "Dataimport:"
+
+#: templates/manage_measurementpoints/imported.html:12
+msgid "File:"
+msgstr "Fil:"
+
+#: templates/manage_measurementpoints/imported.html:17
+msgid "Consumption column:"
+msgstr "Forbrugssøjle:"
+
+#: templates/manage_measurementpoints/imported.html:22
+msgid "Timezone:"
+msgstr "Tidszone"
+
+#: templates/manage_measurementpoints/imported.html:27
+msgid "Unit:"
+msgstr "Enhed:"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:15
+#: templates/manage_measurementpoints/measurementpoint_list.html:16
+msgid "Settings: Details"
+msgstr "Indstillinger: Detaljer"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:20
+msgid "Measurement Point"
+msgstr "Målepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:25
+msgid "Add"
+msgstr "Tilføj"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:32
+msgid "Electricity Measurement Point"
+msgstr "Elektricitetsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:37
+msgid "Gas Measurement Point"
+msgstr "Gasmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:42
+msgid "Water Measurement Point"
+msgstr "Vandmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:47
+msgid "Heat Measurement Point"
+msgstr "Varmemålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:52
+msgid "Oil Measurement Point"
+msgstr "Oliemålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:57
+msgid "Temperature Measurement Point"
+msgstr "Temperaturmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:62
+msgid "Production Measurement Point"
+msgstr "Produktionsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:67
+msgid "Current Measurement Point"
+msgstr "Strøm-målepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:72
+msgid "Voltage Measurement Point"
+msgstr "Spænding-målepunkt:"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:77
+msgid "Power Measurement Point"
+msgstr "Effektmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:82
+msgid "Reactive Power Measurement Point"
+msgstr "Reaktiv-effekt-målepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:87
+msgid "Reactive Energy Measurement Point"
+msgstr "Reaktiv-energi-målepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:92
+msgid "Power Factor Measurement Point"
+msgstr "Power-faktor-målepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:98
+msgid "Efficiency Measurement Point"
+msgstr "Effektivitetsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:104
+msgid "Electricity Measurement Points Summation"
+msgstr "Elektricitetssummeringsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:109
+msgid "Gas Measurement Points Summation"
+msgstr "Gassummeringsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:114
+msgid "Water Measurement Points Summation"
+msgstr "Vandsummeringsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:119
+msgid "Heat Measurement Points Summation"
+msgstr "Varmesummeringsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:124
+msgid "Oil Measurement Points Summation"
+msgstr "Oliesummeringspunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:130
+msgid "Electricity Multiplication Measurement Point"
+msgstr "Elektricitetsmultipliceringspunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:135
+msgid "Gas Multiplication Measurement Point"
+msgstr "Gasmultiplikationsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:140
+msgid "Water Multiplication Measurement Point"
+msgstr "Vandmultiplikationsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:145
+msgid "Heat Multiplication Measurement Point"
+msgstr "Varmemultiplikationsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:150
+msgid "Oil Multiplication Measurement Point"
+msgstr "Oliemultipliceringspunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:156
+msgid "District Heating Measurement Point"
+msgstr "Fjernvarmemålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:161
+msgid "Imported Electricity Measurement Point"
+msgstr "Importeret Elektricitetsmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:166
+msgid "Imported Gas Measurement Point"
+msgstr "Importeret Gasmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:171
+msgid "Imported Water Measurement Point"
+msgstr "Importeret Vandmålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:176
+msgid "Imported Heat Measurement Point"
+msgstr "Importeret Varmemålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:181
+msgid "Imported Oil Measurement Point"
+msgstr "Importeret Oliemålepunkt"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:193
+msgid "Sort by"
+msgstr "Sortér efter"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:194
+msgid "Name"
+msgstr "Navn"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:195
+msgid "Group"
+msgstr "Gruppe"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:198
+msgid "Filter"
+msgstr "Filter"
+
+#: templates/manage_measurementpoints/temperature_create_form.html:33
+#: templates/manage_measurementpoints/temperature_update_form.html:29
+msgid "Relay:"
+msgstr "Relæ"
+
+#: templates/manage_measurementpoints/temperature_create_form.html:38
+#: templates/manage_measurementpoints/temperature_update_form.html:34
+#: templates/manage_measurementpoints/form_includes/options_form.html:16
+msgid "Hidden on details page:"
+msgstr "Skjult på detalje-siden"
+
+#: templates/manage_measurementpoints/temperature_create_form.html:43
+#: templates/manage_measurementpoints/temperature_update_form.html:40
+msgid "Define heating degree days:"
+msgstr "Definér varmegraddage:"
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:4
+msgid "Degree days correction:"
+msgstr "Graddagekorrigering"
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:5
+msgid "Calculate the consumption by normalize to historical heating conditions"
+msgstr "Beregn forbruget ved at normalisere til historiske varmeforhold."
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:7
+msgid "Heating degree days:"
+msgstr "Varmegraddage:"
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:12
+msgid "Standard heating degree days:"
+msgstr "Standardvarmegraddage:"
+
+#: templates/manage_measurementpoints/form_includes/district_heating_elements.html:4
+msgid "Volume input:"
+msgstr "Volume-input:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:7
+msgid "Gauge setup"
+msgstr "Speedometer opsætning"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:9
+msgid "Maximum:"
+msgstr "Maksimum:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:14
+msgid "Lower threshold:"
+msgstr "Nedre visergrænse:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:19
+msgid "Upper threshold:"
+msgstr "Øvre visergrænse:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:24
+msgid "Gauge colours:"
+msgstr "Viserfarver"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:5
+msgid "Indexes:"
+msgstr "Indekser:"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:6
+msgid "Select one or more indexes to calculate the utilization of resources"
+msgstr "Vælg en eller flere indekser for at beregne udnyttelsen af resourcer"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:7
+msgid "Area:"
+msgstr "Areal:"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:10
+msgid "Employees:"
+msgstr "Medarbejdere:"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:13
+msgid "CO₂:"
+msgstr "CO₂:"
+
+#: templates/manage_measurementpoints/form_includes/meter_options_form.html:5
+msgid "Meter number:"
+msgstr "Målernummer: "
+
+#: templates/manage_measurementpoints/form_includes/meter_options_form.html:10
+msgid "Installation number:"
+msgstr "Installationsnummer: "
+
+#: templates/manage_measurementpoints/form_includes/multiplication_elements.html:4
+msgid "Measurement point:"
+msgstr "Målepunkt:"
+
+#: templates/manage_measurementpoints/form_includes/multiplication_elements.html:9
+msgid "Multiplier:"
+msgstr "Faktor:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:8
+msgid "Options:"
+msgstr "Tilvalg:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:9
+msgid "Relay on detail page:"
+msgstr "Relæ på detalje-siden:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:12
+msgid "Show rate graph:"
+msgstr "Vis rate-graf:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:15
+msgid "Only enable rate graphs if you have a high enough data resolution"
+msgstr ""
+"Tilvælg kun rate-grafer hvis de underliggende data er tilstrækkelig "
+"detaljerede."
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:19
+msgid "Hidden on reports page:"
+msgstr "Skjult på rapport-siden"
+
+#: templates/manage_measurementpoints/form_includes/summation_elements.html:4
+msgid "Measurement Points:"
+msgstr "Målepunkter:"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:4
+msgid "Tariffs:"
+msgstr "Tariffer:"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:6
+msgid ""
+"When attaching tariffs to this measurement point the consumption costs will "
+"be calculated"
+msgstr ""
+"Tilknyt tariffer til dette målepunkt for at beregne forbrugsomkosninger"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:12
+msgid "Valid from:"
+msgstr "Gyldig fra:"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:13
+msgid "Tariff:"
+msgstr "Tarif:"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:14
+msgid "Delete:"
+msgstr "Slet:"
+
+#~ msgid "The consumption measurement point summation has been saved"
+#~ msgstr "Forbrugsmålepunktet er gemt"
+
+#~ msgid "Volume Input:"
+#~ msgstr "Volume-input:"
+
+#~ msgid "Physical inputs:"
+#~ msgstr "Fysiske inputs:"
+
+#~ msgid "All pulse convertion values must be set"
+#~ msgstr "Alle pulsekonverteringer skal være udfyldte"
+
+#~ msgid "New Electricity Pulse Measurement Point"
+#~ msgstr "Nyt Elektricitetspulsmålepunkt"
+
+#~ msgid "New Water Pulse Measurement Point"
+#~ msgstr "Nyt Vandpulsmålepunkt"
+
+#~ msgid "New Gas Pulse Measurement Point"
+#~ msgstr "Nyt Gaspulsmålepunkt"
+
+#~ msgid "New Heat Pulse Measurement Point"
+#~ msgstr "Nyt Varmepulsmålepunkt"
+
+#~ msgid "New Oil Pulse Measurement Point"
+#~ msgstr "Nyt Oliepulsmålepunkt"
+
+#~ msgid "Edit Electricity Pulse Measurement Point"
+#~ msgstr "Redigér Elektricitetspulsmålepunkt"
+
+#~ msgid "Edit Water Pulse Measurement Point"
+#~ msgstr "Redigér Vandpulsmålepunkt"
+
+#~ msgid "Edit Gas Pulse Measurement Point"
+#~ msgstr "Redigér Gaspulsmålepunkt"
+
+#~ msgid "Edit Heat Pulse Measurement Point"
+#~ msgstr "Redigér Varmepulsmålepunkt"
+
+#~ msgid "Edit Oil Pulse Measurement Point"
+#~ msgstr "Redigér Oliepulsmålepunkt"
+
+#~ msgid "Next"
+#~ msgstr "Næste"
+
+#~ msgid "Formula"
+#~ msgstr "Formel"
+
+#~ msgid "Input list 1"
+#~ msgstr "Input-liste 1"
+
+#~ msgid "Input list 2"
+#~ msgstr "Input-liste 2"
+
+#~ msgid "Constant 1"
+#~ msgstr "Konstant 1"
+
+#~ msgid "Constant 2"
+#~ msgstr "Konstant 2"
+
+#~ msgid "Input list 3"
+#~ msgstr "Input-liste 3"
+
+#~ msgid "Input list 4"
+#~ msgstr "Input-liste 4"
+
+#~ msgid "Constant 3"
+#~ msgstr "Konstant 3"
+
+#~ msgid "Constant 4"
+#~ msgstr "Konstant 4"
+
+#~ msgid "Unit"
+#~ msgstr "Enhed"
+
+#~ msgid "Electricity Pulse Measurement Point"
+#~ msgstr "Elektricitetspulsmålepunkt"
+
+#~ msgid "Gas Pulse Measurement Point"
+#~ msgstr "Gaspulsmålepunkt"
+
+#~ msgid "Water Pulse Measurement Point"
+#~ msgstr "Vandpulsmålepunkt"
+
+#~ msgid "Heat Pulse Measurement Point"
+#~ msgstr "Varmepulsmålepunkt"
+
+#~ msgid "Oil Pulse Measurement Point"
+#~ msgstr "Oliepulsmålepunkt"
+
+#~ msgid "Select measurementpoint type:"
+#~ msgstr "Vælg målepunktstype:"
+
+#~ msgid "Measurement Point name:"
+#~ msgstr "Navn til målepunkt:"
+
+#~ msgid "Finish"
+#~ msgstr "Udfør"
+
+#~ msgid "Pulse:"
+#~ msgstr "Puls:"
+
+#~ msgid "Select relay:"
+#~ msgstr "Vælg relæ:"
+
+#~ msgid "Select input(s):"
+#~ msgstr "Vælg input:"
+
+#~ msgid "Add another"
+#~ msgstr "Tilføj endnu én"
+
+#~ msgid "Relative:"
+#~ msgstr "Relativ:"
+
+#~ msgid "Heat measurement point:"
+#~ msgstr "Varmemålepunkt:"
+
+#~ msgid "Volume measurement point:"
+#~ msgstr "Volumemålepunkt:"
+
+#~ msgid "Pulse Conversion:"
+#~ msgstr "Pulskonvertering:"
+
+#~ msgid ""
+#~ "Pulse conversion is done by <i>factor</i> number of <i>output units</i> "
+#~ "per <i>divisor</i> number of pulses."
+#~ msgstr ""
+#~ "Pulskonvertering foregår ved <i>tæller</i> antal <i>output-enheder</i> "
+#~ "pr. <i>nævner</i> antal pulser."
+
+#~ msgid "Divisor:"
+#~ msgstr "Nævner"
+
+#~ msgid "Factor:"
+#~ msgstr "Tæller"
+
+#~ msgid "Output Unit:"
+#~ msgstr "Output-enhed:"
+
+#~ msgid "Set up formula"
+#~ msgstr "Opsæt formel"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgid "Done"
+#~ msgstr "Færdig"
+
+#~ msgid ""
+#~ "\n"
+#~ "            %(pulses)s pulses correspond to %(value)s %(unit)s\n"
+#~ "          "
+#~ msgstr ""
+#~ "\n"
+#~ "            %(pulses)s pulser svarer til %(value)s %(unit)s\n"
+#~ "          "
+
+#~ msgid "Specify source type:"
+#~ msgstr "Vælg resourcetype:"
+
+#~ msgid ""
+#~ "\n"
+#~ "          %(divisor)s pulses correspond to %(factor)s %(unit)s\n"
+#~ "        "
+#~ msgstr ""
+#~ "\n"
+#~ "          %(divisor)s pulser svarer til %(factor)s %(unit)s\n"
+#~ "        "
+
+#~ msgid "Modules"
+#~ msgstr "Moduler"
+
+#~ msgid ""
+#~ "Heating degree days cannot be specified in terms of relative temperatures."
+#~ msgstr "Varmegraddage kan ikke specificeres vha. en relativ temperatur."
+
+#~ msgid ""
+#~ "\n"
+#~ "\t\tNew %(resource_type)s Measurement Point\n"
+#~ "\t"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tNyt %(resource_type)s Målepunkt\n"
+#~ "\t"
+
+#~ msgid "electricity"
+#~ msgstr "elektricitet"
+
+#~ msgid "heat"
+#~ msgstr "varme"
+
+#~ msgid "gas"
+#~ msgstr "gas"
+
+#~ msgid "water"
+#~ msgstr "vand"
+
+#~ msgid "Offset:"
+#~ msgstr "Offset:"
+
+#~ msgid "Output unit:"
+#~ msgstr "Output-enhed"
+
+#~ msgid "Pulse Conversion (Only for Pulse Input)"
+#~ msgstr "Pulskonvertering (Kun for Pulsinput)"
+
+#~ msgid "Leave these fields blank, if no pulse conversion should apply."
+#~ msgstr "Disse felter skal kun udfyldes når pulskonvertering skal anvendes."
+
+#~ msgid "Puls:"
+#~ msgstr "Puls:"
+
+#~ msgid "Residue name:"
+#~ msgstr "Residue-navn:"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Parent:"
+#~ msgstr "Forælder:"
+
+#~ msgid "Physical input:"
+#~ msgstr "Fysiske input:"
+
+#~ msgid ""
+#~ "\n"
+#~ "      <h6>Pulse Conversion (Only for pulse input)</h6>\n"
+#~ "      <p>Pulse conversion is done by <i>factor</i> number of <i>output "
+#~ "units</i>\n"
+#~ "      pr <i>divisor</i> number of pulses.  Leave these fields blank, if "
+#~ "no\n"
+#~ "      pulse conversion should apply.</p>\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "      <h6>Pulskonvertering (Kun for pulsinput)</h6>\n"
+#~ "      <p>Pulskonvertering foregår ved <i>tæller</i> antal\n"
+#~ "      <i>output-enheder</i> pr. <i>nævner</i> antal pulser.\n"
+#~ "      Unlad at udfylde disse felter, hvis ingen pulskonvertering\n"
+#~ "      skal finde sted.</p>\n"
+#~ "    "
+
+#~ msgid "Electricity"
+#~ msgstr "Elektricitet"
+
+#~ msgid "Heat"
+#~ msgstr "Varme"
+
+#~ msgid "Temperature"
+#~ msgstr "Temperatur"
+
+#~ msgid "Gas"
+#~ msgstr "Gas"
+
+#~ msgid "Water"
+#~ msgstr "Vand"
+
+#~ msgid "Calculation"
+#~ msgstr "Beregning"
+
+#~ msgid "%(physical_input_name)s %(preferred_unit)s"
+#~ msgstr "%(physical_input_name)s %(preferred_unit)s"
+
+#~ msgid "Rate"
+#~ msgstr "Rate"
+
+#~ msgid "Collection:"
+#~ msgstr "Gruppe:"
+
+#~ msgid "Add Measurement point"
+#~ msgstr "Tilføj målepunkt"
+
+#~ msgid "Collection"
+#~ msgstr "Gruppe"

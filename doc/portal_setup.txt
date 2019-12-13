@@ -1,0 +1,17 @@
+from gridplatform.users.models import User
+from gridplatform.encryption.testutils import encryption_context
+
+with encryption_context():
+    root = User.objects.create_user('root', 'hemmeligt', user_type=User.ADMIN)
+    root.is_staff = True
+    root.is_superuser = True
+    root.save()
+
+
+
+dropdb portal
+createdb -E utf8 portal
+
+gunzip -c initial.sql.gz | psql portal > /dev/null
+./manage.py migrate --all --noinput --traceback
+./manage.py fix_contenttypes_and_permissions

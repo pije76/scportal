@@ -1,0 +1,140 @@
+{% extends "display_projects/project_base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load dropdown %}
+
+{% block detail_js %}
+<script type="text/javascript" src="{% static 'manage_reports.js' %}"></script>
+<script type="text/javascript">
+/*jslint browser: true */
+/*global $, jQuery, gettext */
+$(document).ready(function () {
+    'use strict';
+    $('.download-pdf').click(function (event) {
+        var button = $(event.target),
+            data = 'project=' + button.data('projectId'),
+            container = button.parent(),
+            startUrl = '{% url "display_projects-startprojectreport" %}',
+            finalizeUrl = '{% url "display_projects-finalizeprojectreport" %}',
+            resultElem = button.next(),
+            statusUrl = '{% url "reports-status" %}',
+            spinnerUrl = '{% static "images/ajax-loader.gif" %}',
+            progressBar = container.find('.progressbar');
+        if (progressBar.length === 0) {
+            progressBar = $('<div class="progressbar" style="width: 100%;"></div>').appendTo(container);
+        }
+        event.preventDefault();
+        event.stopPropagation();
+        gridportal.manageReports.requestReport(data, container, startUrl, finalizeUrl, resultElem, statusUrl, spinnerUrl, progressBar);
+    });
+});
+</script>
+{% endblock detail_js %}
+
+{% block content_heading %} {% trans "Projects" %} {% endblock content_heading %}
+
+{% block project_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{% trans "Overview" %}</h3>
+    {% if user.is_customer_superuser or user.is_admin %}
+      <span class="right">
+	{% dropdown %}
+	{% anchor %}
+	{% trans 'Add' %}&nbsp;<img src="{% static 'images/add-icon.png' %}" alt="{% trans 'Add' %}">
+	{% endanchor %}
+	{% body %}
+	<ul>
+	  <li>
+	    <a href="{% url 'display_projects-annualsavingspotentialreportform' %}">
+	      {% trans "Annual Savings Potential Report" %}
+	    </a>
+	  </li>
+	  <li>
+	    <a href="{% url 'display_projects-create' 'electricity' %}">
+	      {% trans "Electricity Project" %}
+	    </a>
+	  </li>
+	  <li>
+	    <a href="{% url 'display_projects-create' 'gas' %}">
+	      {% trans "Gas Project" %}
+	    </a>
+	  </li>
+	  <li>
+	    <a href="{% url 'display_projects-create_water' 'water' %}">
+	      {% trans "Water Project" %}
+	    </a>
+	  </li>
+	  <li>
+	    <a href="{% url 'display_projects-create' 'district_heating' %}">
+	      {% trans "Heat Project" %}
+	    </a>
+	  </li>
+	  <li>
+	    <a href="{% url 'display_projects-create' 'oil' %}">
+	      {% trans "Oil Project" %}
+	    </a>
+	  </li>
+	</ul>
+	{% endbody %}
+	{% enddropdown %}
+    {% endif %}
+  </div>
+  <div>
+    <h4>{% trans "Active Projects" %}</h4>
+    <table class="projects_table" width="100%">
+      <thead>
+        <tr>
+          <td width="30%">{% trans "Name" %}</td>
+          <td width="55%">{% trans "Duration" %}</td>
+          <td width="15%">{% trans "Report" %}</td>
+        </tr>
+      </thead>
+      <tbody>
+      {% for project in open %}
+        <tr>
+          <td><a href="{% url 'display_projects-update' pk=project.id %}">{{ project.name_plain }}</a></td>
+          <td>
+            {% if project.from_timestamp and project.to_timestamp %}
+            {{ project.from_timestamp|date:"SHORT_DATETIME_FORMAT" }} - {{ project.to_timestamp|date:"SHORT_DATETIME_FORMAT" }}
+            {% endif %}
+          </td>
+          <td>
+            {% if project.from_timestamp and project.to_timestamp %}
+            <a href="#" class="download-pdf" data-project-id="{{ project.id|stringformat:"d" }}">Download</a>
+            <span></span>
+            {% endif %}
+          </td>
+        </tr>
+      {%endfor%}
+    </tbody>
+    </table>
+    <h4>{% trans "Done Projects" %}</h4>
+    <table class="projects_table" width="100%">
+      <thead>
+        <tr>
+          <td width="30%">{% trans "Name" %}</td>
+          <td width="55%">{% trans "Duration" %}</td>
+          <td width="15%">{% trans "Report" %}</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for project in closed %}
+          <tr>
+            <td><a href="{% url 'display_projects-update' pk=project.id %}">{{ project.name_plain }}</a></td>
+            <td>{{ project.from_timestamp|date:"SHORT_DATETIME_FORMAT" }} - {{ project.to_timestamp|date:"SHORT_DATETIME_FORMAT" }}</td>
+            <td>
+              <a href="#" class="download-pdf" data-project-id="{{ project.id|stringformat:"d" }}">Download</a>
+              <span></span>
+            </td>
+
+          </tr>
+        {%endfor%}
+    </tbody>
+    </table>
+  </div>
+</div>
+{% endblock project_content %}

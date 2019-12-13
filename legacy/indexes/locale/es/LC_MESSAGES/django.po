@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:52+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: migrations/0006_standard_degree_days_1941_1980.py:16
+msgid "Danish Technological Institute standard degree day index, 1941-1980"
+msgstr ""
+"Índice estándar de grados día según el Instituto Tecnológico Danés, "
+"1941-1980 "
+
+#: models/index.py:73
+msgid "Spot data"
+msgstr "Dato puntual"
+
+#: models/index.py:74
+msgid "Season data"
+msgstr "Dato estacional"
+
+#: models/index.py:75
+msgid "Derived data"
+msgstr "Dato derivado"
+
+#: models/index.py:76
+msgid "Monthly defined data"
+msgstr "Dato definido mensual"
+
+#: models/index.py:78
+msgid "name"
+msgstr "nombre"
+
+#: models/index.py:82
+msgid "Entry data format"
+msgstr "Introducir formato de datos"
+
+#: models/index.py:84
+msgid ""
+"\n"
+"                    <p><b>Spot data:</b> Entry data is stored as\n"
+"                    concrete time intervals mapped to constant entry\n"
+"                    data values.</p>\n"
+"\n"
+"                    <p><b>Season data:</b> Entry data is stored in\n"
+"                    seasons, where each season is defined in terms\n"
+"                    repeating the entry data values of one day.  The\n"
+"                    entry data values of that day is stored as time\n"
+"                    intervals mapped to constant entry data\n"
+"                    values.</p>\n"
+"\n"
+"                    <p><b>Derived data:</b> Entry data is not stored\n"
+"                    directly, but rather derived from the entry data\n"
+"                    of another index by multiplying with a coefficient\n"
+"                    and adding a constant, where the coefficient and\n"
+"                    constant may be defined differently for different\n"
+"                    concrete periods of time.</p>\n"
+"                    "
+msgstr ""
+"\n"
+"                    <p><b>Dato puntual:</b>El dato introducido ha sido "
+"almacenado\n"
+"                    como intervalos concretos de tiempo maleados como \n"
+"                    entradas constantes de valores de datos</p>\n"
+"\n"
+"                    <p><b>Dato estacional:</b>El dato introducido es "
+"almacenado\n"
+"                    estaciones (seasons), donde cada estación es definida en "
+"términos\n"
+"                    de repetir valores de datos introducidos para un día.  "
+"Los\n"
+"                    valores de los datos de entradade ese día son "
+"almacenados en \n"
+"                    intervalos maleados para los valores de los datos "
+"introducidos.</p>\n"
+"\n"
+"                    <p><b>Dato derivado:</b>El dato introducido no es "
+"almacenado\n"
+"                    directamente, pero más bien derivado del dato "
+"introducido \n"
+"                    de otro índice al multiplicarlo por un coeficiente\n"
+"                    y añadiendo una constante donde el coeficiente y\n"
+"                    la constante quizá sean definidos de diferente manera "
+"paradiferentes\n"
+"                    periodos de tiempo determinados.</p>\n"
+"                    "
+
+#: models/index.py:106
+msgid "group"
+msgstr "grupo"
+
+#: models/index.py:109
+msgid "timezone"
+msgstr "zona horaria"
+
+#: models/index.py:113
+msgid "index"
+msgstr "índice"
+
+#: models/index.py:114
+msgid "indexes"
+msgstr "índices"
+
+#: models/index.py:131
+#, fuzzy, python-brace-format
+msgid "{name} ({unit})"
+msgstr "{name} ({currency})"
+
+#: models/index.py:197
+#, fuzzy, python-brace-format
+msgid ""
+"This index cannot be deleted because the following depends on it: <br> "
+"{measurement_points_list}"
+msgid_plural ""
+"This index cannot be deleted because the following depend on it: <br> "
+"{measurement_points_list}"
+msgstr[0] ""
+"Este índice no puede ser borrado porque el siguiente               depende "
+"de él: <br />"
+msgstr[1] ""
+"Este índice no puede ser borrado porque el siguiente               depende "
+"de él: <br />"
+
+#: models/index.py:681
+msgid "entry"
+msgstr "entrada"
+
+#: models/index.py:682
+msgid "entries"
+msgstr "entradas"
+
+#: models/index.py:719
+msgid "period"
+msgstr "periodo"
+
+#: models/index.py:720
+msgid "periods"
+msgstr "periodos"
+
+#: models/index.py:790
+msgid "derived index period"
+msgstr "periodo de tarifa derivada"
+
+#: models/index.py:791
+msgid "derived index periods"
+msgstr "periodos de tarifa derivada"
+
+#: models/index.py:804
+msgid "Utility types must match"
+msgstr ""
+
+#: models/index.py:807
+msgid "Units must be compatible"
+msgstr ""
+
+#: models/index.py:810
+msgid "Other index is defined in terms of this index"
+msgstr ""
+
+#: models/index.py:858
+msgid "value between midnight and 1:00 am"
+msgstr ""
+
+#: models/index.py:861
+msgid "value between 1:00 am and 2:00 am"
+msgstr ""
+
+#: models/index.py:864
+msgid "value between 2:00 am and 3:00 am"
+msgstr ""
+
+#: models/index.py:867
+msgid "value between 3:00 am and 4:00 am"
+msgstr ""
+
+#: models/index.py:870
+msgid "value between 4:00 am and 5:00 am"
+msgstr ""
+
+#: models/index.py:873
+msgid "value between 5:00 am and 6:00 am"
+msgstr ""
+
+#: models/index.py:876
+msgid "value between 6:00 am and 7:00 am"
+msgstr ""
+
+#: models/index.py:879
+msgid "value between 7:00 am and 8:00 am"
+msgstr ""
+
+#: models/index.py:882
+msgid "value between 8:00 am and 9:00 am"
+msgstr ""
+
+#: models/index.py:885
+msgid "value between 9:00 am and 10:00 am"
+msgstr ""
+
+#: models/index.py:888
+msgid "value between 10:00 am and 11:00 am"
+msgstr ""
+
+#: models/index.py:891
+msgid "value between 11:00 am and noon"
+msgstr ""
+
+#: models/index.py:894
+msgid "value between noon am and 1:00 pm"
+msgstr ""
+
+#: models/index.py:897
+msgid "value between 1:00 pm and 2:00 pm"
+msgstr ""
+
+#: models/index.py:900
+msgid "value between 2:00 pm and 3:00 pm"
+msgstr ""
+
+#: models/index.py:903
+msgid "value between 3:00 pm and 4:00 pm"
+msgstr ""
+
+#: models/index.py:906
+msgid "value between 4:00 pm and 5:00 pm"
+msgstr ""
+
+#: models/index.py:909
+msgid "value between 5:00 pm and 6:00 pm"
+msgstr ""
+
+#: models/index.py:912
+msgid "value between 6:00 pm and 7:00 pm"
+msgstr ""
+
+#: models/index.py:915
+msgid "value between 7:00 pm and 8:00 pm"
+msgstr ""
+
+#: models/index.py:918
+msgid "value between 8:00 pm and 9:00 pm"
+msgstr ""
+
+#: models/index.py:921
+msgid "value between 9:00 pm and 10:00 pm"
+msgstr ""
+
+#: models/index.py:924
+msgid "value between 10:00 pm and 11:00 pm"
+msgstr ""
+
+#: models/index.py:927
+msgid "value between 11:00 pm and midnight"
+msgstr ""
+
+#: models/index.py:931
+msgid "season index period"
+msgstr "periodo de tarifa estacional"
+
+#: models/index.py:932
+msgid "season index periods"
+msgstr "periodos de tarifa estacionales"
+
+#: models/index.py:1025
+msgid "spot mapping"
+msgstr "mapeado puntual"
+
+#: models/index.py:1026
+msgid "spot mappings"
+msgstr "mapeados puntuales"
+
+#: models/standardmonth.py:24 models/standardmonth.py:25
+msgid "standard month index"
+msgstr "tarifa mensual estándar"
+
+#~ msgid "{name}"
+#~ msgstr "{name}"

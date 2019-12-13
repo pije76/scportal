@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+{% block page_js %}
+<script type="text/javascript">
+  jQuery(function() {
+    // Clicking the .populate_default_values button should populate
+    // the .value_at_hour input fields of the same period with the value
+    // kept in the .default_value_at_hour field.
+     $('.populate_default_values').click(function() {
+         var li = $(this).closest('li'),
+	     default_value = li.find('.default_value_at_hour').val();
+
+         li.find('.value_at_hour input').each(function() {
+             var value_at_hour_input = $(this);
+             if (value_at_hour_input.val() === '') {
+		 value_at_hour_input.val(default_value);
+             }
+        });
+      });
+
+    // Clicking the .clear_values button should clear all
+    // .editable_input inputs for the same period.
+    $('.clear_values').click(function() {
+        $(this).closest('li').find('.editable_input input').val('');
+    });
+    {% if messages %}
+    {% for message in messages %}
+    gridportal.website.notify('{{ message.tag }}', '{{ message }}');
+    {% endfor %}
+    {% endif %}
+
+    $('.date:not(.empty-form .date)').datepicker();
+    $('input[name=delete]').each(function () {
+      var btn = $(this);
+      btn.tooltip({
+        content: btn.data('reason')
+      });
+    });
+    $('input[name=delete]').click(function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      gridportal.website.synchroneousDelete(
+        "{% url 'manage_indexes-delete' %}",
+        "{{ form.instance.id|unlocalize }}",
+        "{% url 'manage_indexes-listing' %}");
+    });
+
+    $('select:not(.empty-form select)').chosen({enable_split_word_search: true});
+    $('button.add-form').click(function (event) {
+      event.preventDefault();
+      var parent = $(this).closest('div'),
+      emptyForm = parent.find('.empty-form'),
+      newForm = emptyForm.clone(),
+      totalForms = parent.find('input[name$="TOTAL_FORMS"]'),
+      newId = totalForms.val();
+      newForm.find('div, input, select, li').each(function () {
+        var input = $(this);
+        if (input.attr("name")) {
+          newPrefix = input.attr('name').replace('__prefix__', newId);
+          input.attr('name', newPrefix);
+        }
+        if (input.attr("id")) {
+          newPrefix = input.attr('id').replace('__prefix__', newId);
+          input.attr('id', newPrefix);
+        }
+      });
+      newForm.find('.date').datepicker();
+      newForm.removeClass('empty-form').show();
+      totalForms.val(parseInt(totalForms.val(), 10) + 1);
+      newForm.insertBefore(emptyForm);
+      newForm.find('select').chosen({enable_split_word_search: true});
+    });
+  });
+</script>
+{% endblock %}
+
+{% block page_id %}indexsettings-page{% endblock %}
+
+{% block title %}
+{% trans "Settings: Indexes" %}
+{% endblock title %}
+
+{% block content_heading %}
+{% trans "Settings: Indexes" %}
+{% endblock content_heading%}
+
+{% block left_content %}
+<div id="index" class="content-element">
+  <div class="header clearfix">
+    <h2>{{ view.headline }}</h2>
+  </div>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="item_id" value="{{ form.instance.id|unlocalize }}">
+    {% block fields %}
+    {% endblock fields %}
+
+    {% with inlines.0 as formset %}
+    <h6> {% trans "Periods" %} </h6>
+    {% block formset %}
+    {% endblock formset %}
+    {{ form.non_field_errors }}
+    {{ formset.non_form_errors }}
+    {% endwith %}
+
+    <div class="clearfix"></div>
+    <button class="add-form btn">Add another</button>
+    <div class="clearfix"></div>
+    {{ form.non_field_errors }}
+    <input type="submit" value="{% trans "Save and return to list" %}" />
+    {% if form.instance.id %}
+    <input type="button" name="delete" {% if form.instance.get_delete_prevention_reason %} data-reason="{{ form.instance.get_delete_prevention_reason }}" {% endif %} title="" value="{% trans 'Delete' %}">
+    {% endif %}
+  </form>
+</div>
+{% endblock %}

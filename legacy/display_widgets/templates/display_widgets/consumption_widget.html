@@ -1,0 +1,24 @@
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load relay %}
+
+<div class="widget" data-id="{{ widget.id|unlocalize }}" data-url="{% url 'display_measurementpoints-async_graph_last_24h' pk=graph.id %}" data-type="{{ widget.widget_type }}">
+    <div class="content-element">
+      <div class="header clearfix">
+        <img src="{% static 'images/mpicons/small.'|add:widget.collection.get_icon|add:'.png' %}" height="16" width="16" class="left icon">
+        <h5 class="left">{{ widget.collection.name_plain }}</h5>
+
+        <span class="right">
+            <span class="widget_detail_link"><a href="{% url 'display_measurementpoints-group' pk=widget.collection.id %}"><img src="{% static 'images/details-small.png' %}"></a></span>
+            <span>{% relay_image widget.collection.relay %}</span>
+            <span><div class="remove-btn right">x</div></span>
+        </span>
+      </div>
+      <div class="widget-role">{{ graph.get_role_display }}</div>
+      <div class="widget-graph" style="width: 100%; height: 180px;">
+      </div>
+    </div>
+</div>

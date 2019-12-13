@@ -1,0 +1,27 @@
+{% load i18n %}
+
+{% if object_list %}
+<table class="table table-striped table-bordered sorted" data-provides="rowlink">
+  <thead>
+    <th class="sorting" data-orderby="customer_meter_number">{% trans "Meter number" %}</th>
+    <th></th>
+  </thead>
+  <tbody>
+    {% for object in object_list %}
+    <tr>
+      <td>
+        <a href="{% url "datahub_site:connection-update" customer_id=customer.id pk=object.id %}">{{ object.customer_meter_number }}</a>
+      </td>
+      <td>
+        {% if not object.authorization_id %}
+        <a href="#" data-number="{{ object.customer_meter_number }}" class="connect-datahub" onClick="checkAuthorization(event);">Tjek godkendelse</a>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include "bootstrap/_pagination.html" %}
+{% else %}
+<span>{% trans "No datahub connections present." %}</span>
+{% endif %}

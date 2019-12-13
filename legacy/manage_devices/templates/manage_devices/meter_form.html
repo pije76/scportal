@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load static from staticfiles %}
+{% load dropdown %}
+
+{% block title %}{% trans "Settings: Devices" %}{% endblock title %}
+{% block page_id %}devices-page{% endblock %}
+
+{% block content_heading %}{% trans "Settings: Devices" %}{% endblock %}
+
+{% block tabs %}
+{% include "manage_devices/device_tabs.html" %}
+{% endblock tabs %}
+
+{% block content %}
+<div class="grid_24">
+  <div class="content-element">
+    <div class="header clearfix">
+      <h3 class="left">{{ object }}</h3>
+    </div>
+    <div class="meter_settings">
+      <form method="post" action="{% url 'manage_devices-meter-update' pk=object.id %}">
+        {% csrf_token %}
+        <input type="hidden" name="item_id" value="{{ object.id|unlocalize }}">
+        <div class="form-content-left">
+          <fieldset>
+            <label>{% trans 'Name:' %}</label>
+            {{ form.name }}
+            {{ form.name.errors }}
+          </fieldset>
+          <fieldset>
+            <label>{% trans 'Location:' %}</label>
+            {{ form.location }}
+            {{ form.location.errors }}
+          </fieldset>
+          <fieldset>
+            <label>{% trans 'Relay enabled:' %}</label>
+            {{ form.relay_enabled }}
+            {{ form.relay_enabled.errors }}
+          </fieldset>
+          {{ form.non_field_errors }}
+          <dl>
+            <dt>{% trans "ID:" %}</dt><dd>{{ object.get_manufactoring_id_display }}</dd>
+          </dl>
+          <div class="clearfix"></div>
+          <fieldset>
+            <input type="submit" value="{% trans "Save" %}">
+          </fieldset>
+        </div>
+        <div class="form-content-left input_list">
+          {% if object.get_non_pulse_inputs %}
+          <dl>
+            <dt style="display:block;">{% trans "Inputs:" %}<div class="clearfix"></div></dt>
+            <dd>
+              <ul>
+                {% for input in object.get_non_pulse_inputs %}
+                  <li>
+                    {{ input }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </dl>
+          {% endif %}
+          {% if object.get_pulse_inputs %}
+          <dl>
+            <dt style="display:block;">{% trans "Pulse inputs:" %}</dt>
+            <dd>
+              <ul>
+                {% for input in object.get_pulse_inputs %}
+                  <li>
+                    <div class="left">{{ input }}</div>
+                    <div class="right">
+                      {% dropdown %}
+                      {% anchor %}
+                        <span>{% trans 'Add Pulse Conversion' %}</span>
+                      {% endanchor %}
+                      {% body %}
+                      <ul>
+                        <li><a href="{% url 'manage_devices-pulseconversion-electricity-create' object.id input.id %}">{% trans 'Electricity' %}</a></li>
+                        <li><a href="{% url 'manage_devices-pulseconversion-district_heating-create' object.id input.id %}">{% trans 'Heat' %}</a></li>
+                        <li><a href="{% url 'manage_devices-pulseconversion-gas-create' object.id input.id %}">{% trans 'Gas' %}</a></li>
+                        <li><a href="{% url 'manage_devices-pulseconversion-water-create' object.id input.id %}">{% trans 'Water' %}</a></li>
+                        <li><a href="{% url 'manage_devices-pulseconversion-oil-create' object.id input.id %}">{% trans 'Oil' %}</a></li>
+			{% for production_choice, production_choice_label in current_customer.get_production_unit_choices %}
+                        <li><a href="{% url 'manage_devices-pulseconversion-production-create' object.id input.id production_choice %}">{{ production_choice_label }}</a></li>
+			{% endfor %}
+                      </ul>
+                      {% endbody %}
+                    {% enddropdown %}
+
+                    </div>
+                    <div class="clearfix"></div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </dl>
+          {% endif %}
+          {% if pulse_conversions %}
+          <dl>
+            <dt style="display:block;">{% trans "Pulse conversions:" %}<div class="clearfix"></div></dt>
+            <dd>
+              <ul>
+                {% for input in pulse_conversions %}
+                  <li>
+                    <div class="left">{{ input }}</div>
+                    <div class="right">
+                      <a href="{% url 'manage_devices-pulseconversion-update' object.id input.id %}">{% trans "Edit" %}</a>
+                    </div>
+                    <div class="clearfix"></div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </dl>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

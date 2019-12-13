@@ -1,0 +1,58 @@
+{% extends "configuration_site/base.html" %}
+{% load i18n %}
+
+{% load bootstrap_tags %}
+{% load utils %}
+
+{% block content %}
+{% panel panel_title %}
+<a href="{% url "configuration_site:consumption-update" pk=object.id customer_id=object.customer_id %}" title="{% trans 'Edit' %}">
+  {% icon "edit" %}
+</a>
+{% endpanelbuttons %}
+<strong>{% trans "Unit" %}</strong>: {{ object.unit|buckingham_display }}
+
+
+<div class="clearfix">
+<div id="time-selection">
+  {% bootstrap_form layout="inline" %}
+    {% form chart_form %}
+    {% form_buttons submit_label=_('Load') cancel_target=None delete_target=None %}
+  {% endbootstrap_form %}
+</div>
+</div>
+<h2>{% blocktrans with utility_unit=utility_unit|buckingham_display %}Consumption ({{ utility_unit }}){% endblocktrans %}</h2>
+<div class="load-chart-bar" data-url="{% url 'configuration_site:consumption-utility-bar-chart-start' customer_id=customer.id consumption_id=object.id %}" data-form="#time-selection form" data-unit="{{ utility_unit|buckingham_display }}"></div>
+
+
+{% endpanel %}
+
+{% panel _("Input periods") %}
+
+  <a href="{% url 'configuration_site:consumptionnonpulseperiod-create' datasequence_id=object.id customer_id=object.customer_id %}" title="{% trans 'Add' %}">
+    {% icon "plus" %}
+  </a>
+
+{% endpanelbuttons %}
+<table class="table table-striped table-bordered" data-provides="rowlink">
+  <thead>
+    <tr>
+      <th>{% trans "From time" %}</th>
+      <th>{% trans "To time" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for inputperiod in object.period_set.all %}
+  <tr>
+    <td>
+        <a href="{% url 'configuration_site:consumptionnonpulseperiod-update' datasequence_id=object.id pk=inputperiod.id customer_id=object.customer_id %}">{{ inputperiod.from_timestamp }}</a>
+    </td>
+    <td>{{ inputperiod.to_timestamp }}</td>
+  {% empty %}
+  <tr><td colspan="3">{% trans "No input periods present" %}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endpanel %}
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% spaceless %}
+{% load i18n %}
+{% load version %}
+{% load static from staticfiles %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block page_title %}
+    {% if request.get_host == "portal.smartflex.dk" %}
+      {% trans "SmartFlex: Login" %}
+    {% elif request.get_host == "endesa.grid-manager.com" %}
+      {% trans "Endesa Energy Portal: Login" %}
+    {% else %}
+      {% trans "SC-Portal: Login" %}
+    {% endif %}
+    {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    {% if bootstrap_theme == 'genius' %}
+    {% compress css %}
+    <link href="{% static 'bootstrap/genius/css/print.css' %}" rel="stylesheet" media="print">
+    <link href="{% static 'bootstrap/genius.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/style.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/retina.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/chosen.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/multiselect/css/multi-select.css' %}" rel="stylesheet">
+    {% endcompress %}
+    {% endif %}
+    {% compress css %}
+    <link href="{% static 'bootstrap/bootstrap-rowlink/bootstrap-rowlink.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/bootstrap-datepicker/datepicker.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/base.css' %}" rel="stylesheet">
+    {% endcompress %}
+    {# custom css #}
+    {% block site_css %}{% endblock site_css %}
+    {% block page_css %}{% endblock page_css %}
+    {% compress js %}
+    {# js... #}
+    <script type="text/javascript" src="{% static 'bootstrap/jquery-2.0.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/lodash-2.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/bootstrap-rowlink/bootstrap-rowlink.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/bootstrap-datepicker/bootstrap-datepicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/quicksearch/dist/jquery.quicksearch.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/multiselect/js/jquery.multi-select.js' %}"></script>
+
+    {% endcompress %}
+    {% if bootstrap_theme == 'genius' %}
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/jquery.chosen.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/core.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/custom.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius.js' %}"></script>
+    {% endcompress %}
+    {% endif %}
+    <script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'users/users.js' %}"></script>
+    {% endcompress %}
+    {% block site_js %}{% endblock site_js %}
+    {% block page_js %}{% endblock page_js %}
+  </head>
+  <body>
+  {% block content %}{% endblock content %}
+  {% include "users/_user_profile_modal.html" %}
+  </body>
+</html>
+{% endspaceless %}

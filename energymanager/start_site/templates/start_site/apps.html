@@ -1,0 +1,43 @@
+{% extends "start_site/base.html"%}
+{% load i18n %}
+{% load bootstrap_tags %}
+{% load widget_tweaks %}
+
+{% block content %}
+{% include "start_site/navbar.html" %}
+<div class="container">
+  <div class="row">
+    <div id="content" class="col-sm-12 full">
+      <div class="row">
+        <div class="login-box">
+          <div class="header">
+            {% if request.get_host == "portal.smartflex.dk" %}
+              {% trans "Welcome to SmartFlex, choose an app" %}
+            {% elif request.get_host == "endesa.grid-manager.com" %}
+              {% trans "Welcome to the Endesa Energy Portal, choose an app" %}
+            {% else %}
+              {% trans "Welcome to SC-Portal, choose an app" %}
+            {% endif %}
+          </div>
+          <div>
+          {% for app in app_selection %}
+            <div style="" class="appicon-wrapper">
+              <a href="{{ app.url }}">
+                {% if app.icon %}<img src="{{ app.icon }}" height="48" width="48" style="" class="appicon">{% endif %}
+                {{ app.name }}
+              </a>
+            </div>
+          {% endfor %}
+          </div>
+          <div class="clearfix"></div>
+          <div class="text-with-hr">
+            <span>{% trans "or" %}</span>
+          </div>
+            <h2>{% icon 'angle-left' %}&nbsp;<a href="{% url 'website-logout' %}">{% trans "Logout" %}</a></h2>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

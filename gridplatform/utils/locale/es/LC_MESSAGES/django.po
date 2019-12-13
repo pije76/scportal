@@ -1,0 +1,530 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-23 21:24+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: condense.py:165
+msgid "M. Y"
+msgstr "M. A"
+
+#: condense.py:167
+#, python-brace-format
+msgid "Q{quarter} Y"
+msgstr "T{quarter} A"
+
+#: fields.py:76
+msgid "Invalid MAC address."
+msgstr "Dirección MAC no válida."
+
+#: fields.py:100
+#, python-format
+msgid "not a valid MAC address: %s"
+msgstr "No es una dirección MAC válida: %s"
+
+#: fields.py:271
+msgid "Select a valid hour."
+msgstr "Seleccione una hora válida."
+
+#: fields.py:272
+msgid "Select a valid minute."
+msgstr "Seleccione un valor de minutos válido."
+
+#: fields.py:283
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hora"
+msgstr[1] "%d hora"
+
+#: fields.py:287
+#, python-format
+msgid "%02d minute"
+msgid_plural "%02d minutes"
+msgstr[0] "%02d minuto"
+msgstr[1] "%02d minutos"
+
+#: fields.py:384
+msgid "The image you have uploaded is corrupted"
+msgstr "La imagen cargado es corrupta"
+
+#: fields.py:429
+msgid "This value must be a long integer."
+msgstr "Este valor debe de ser un long integer"
+
+#: format_id.py:32
+msgid "Other"
+msgstr "Otro"
+
+#: format_id.py:33
+msgid "Oil"
+msgstr "Gasoil"
+
+#: format_id.py:34
+msgid "Electricity"
+msgstr "Electricidad"
+
+#: format_id.py:35
+msgid "Gas"
+msgstr "Gas"
+
+#: format_id.py:36
+msgid "Heat outlet"
+msgstr "Salida de calor"
+
+#: format_id.py:37
+msgid "Steam"
+msgstr "Vapor"
+
+#: format_id.py:38
+msgid "Hot water"
+msgstr "Agua caliente"
+
+#: format_id.py:39
+msgid "Water"
+msgstr "Agua"
+
+#: format_id.py:40
+msgid "Heat cost allocator"
+msgstr "Reparto de coste de calor"
+
+#: format_id.py:41
+msgid "Compressed air"
+msgstr "Aire comprimido"
+
+#: format_id.py:42
+msgid "Cooling load meter outlet"
+msgstr "Salida del contador de energía frigorífica"
+
+#: format_id.py:43
+msgid "Cooling load meter inlet"
+msgstr "Entrada del contador de energía frigorífica"
+
+#: format_id.py:44
+msgid "Heat inlet"
+msgstr "Entrada de calor"
+
+#: format_id.py:45
+msgid "Heat/cooling load meter"
+msgstr "Contador de energía térmica calor/frío"
+
+#: format_id.py:46
+msgid "Bus/system"
+msgstr "Bus/sistema"
+
+#: format_id.py:47
+msgid "Unknown medium"
+msgstr "Medio desconocido"
+
+#: format_id.py:49
+msgid "Cold water"
+msgstr "Agua fría"
+
+#: format_id.py:50
+msgid "Dual water"
+msgstr "Agua doble"
+
+#: format_id.py:51
+msgid "Pressure"
+msgstr "Presión"
+
+#: format_id.py:52
+msgid "A/D converter"
+msgstr "Convertidor A/D"
+
+#: format_id.py:58
+#: format_id.py:61
+msgid "Reserved"
+msgstr "Reservado"
+
+#: format_id.py:66
+#, python-brace-format
+msgid "{id}, manufacturer: {manufacturer}, generation: {generation}, medium: {medium}"
+msgstr "{id},fabricante: {manufacturer},generador: {generation}, medio: {medium}"
+
+#: forms.py:69
+#: forms.py:97
+msgid "From date"
+msgstr "Desde"
+
+#: forms.py:71
+#: forms.py:99
+#, fuzzy
+msgid "From hour"
+msgstr "%d hora"
+
+#: forms.py:75
+#: forms.py:103
+msgid "To date"
+msgstr "Hasta"
+
+#: forms.py:78
+#: forms.py:106
+#, fuzzy
+msgid "To hour"
+msgstr "%d hora"
+
+#: forms.py:203
+msgid "Year"
+msgstr "Año"
+
+#: forms.py:208
+msgid "Week"
+msgstr "Semana"
+
+#: forms.py:238
+#, python-format
+msgid "There's no week %s in %s"
+msgstr "No hay semana %s en %s"
+
+#: models.py:204
+msgid "Changing class is not allowed."
+msgstr "Cambiar la clase no esta permitido"
+
+#: models.py:211
+msgid "from date"
+msgstr "Desde"
+
+#: models.py:212
+msgid "to date"
+msgstr "hasta"
+
+#: models.py:219
+msgid "period of existense must be non-empty"
+msgstr "el periodo de existencia no debe estar vacío"
+
+#: paginator.py:160
+msgid "Page can not be converted to a date."
+msgstr "La pagina no puede ser convertida en una fecha"
+
+#: preferredunits.py:134
+#, python-brace-format
+msgid "{energy_unit}/person year"
+msgstr "{energy_unit}/personas año"
+
+#: preferredunits.py:144
+#, python-brace-format
+msgid "{energy_unit}/m² year"
+msgstr "{energy_unit}/m² año"
+
+#: units.py:23
+msgid "mW"
+msgstr "mW"
+
+#: units.py:24
+msgid "W"
+msgstr "W"
+
+#: units.py:25
+msgid "kW"
+msgstr "kW"
+
+#: units.py:26
+msgid "MW"
+msgstr "MW"
+
+#: units.py:29
+msgid "mJ/h"
+msgstr "mJ/h"
+
+#: units.py:30
+msgid "J/h"
+msgstr "J/h"
+
+#: units.py:31
+msgid "kJ/h"
+msgstr "kJ/h"
+
+#: units.py:32
+msgid "MJ/h"
+msgstr "MJ/h"
+
+#: units.py:37
+msgid "mWh"
+msgstr "mWh"
+
+#: units.py:38
+msgid "Wh"
+msgstr "Wh"
+
+#: units.py:39
+msgid "kWh"
+msgstr "kWh"
+
+#: units.py:40
+msgid "MWh"
+msgstr "MWh"
+
+#: units.py:43
+msgid "mJ"
+msgstr "mJ"
+
+#: units.py:44
+msgid "J"
+msgstr "J"
+
+#: units.py:45
+msgid "kJ"
+msgstr "kJ"
+
+#: units.py:46
+msgid "MJ"
+msgstr "MJ"
+
+#: units.py:51
+msgid "L"
+msgstr "L"
+
+#: units.py:52
+msgid "mL"
+msgstr "mL"
+
+#: units.py:53
+msgid "m³"
+msgstr "m³"
+
+#: units.py:56
+msgid "L/s"
+msgstr "L/s"
+
+#: units.py:57
+msgid "L/min"
+msgstr "L/min"
+
+#: units.py:58
+msgid "L/h"
+msgstr "L/h"
+
+#: units.py:59
+msgid "mL/h"
+msgstr "mL/h"
+
+#: units.py:60
+msgid "m³/s"
+msgstr "m³/s"
+
+#: units.py:61
+msgid "m³/min"
+msgstr "m³/min"
+
+#: units.py:62
+msgid "m³/h"
+msgstr "m³/h"
+
+#: units.py:79
+msgid "°C"
+msgstr "°C"
+
+#: units.py:80
+msgid "°F"
+msgstr "°F"
+
+#: units.py:81
+msgid "mK"
+msgstr "mK"
+
+#: units.py:82
+msgid "K"
+msgstr "K"
+
+#: units.py:86
+msgid "V"
+msgstr "V"
+
+#: units.py:90
+msgid "A"
+msgstr "A"
+
+#: units.py:94
+#: units.py:110
+#, fuzzy
+msgid "EUR/kWh"
+msgstr "g/kWh"
+
+#: units.py:95
+#: units.py:111
+msgid "EUR/MWh"
+msgstr "EUR/MWh"
+
+#: units.py:96
+#: units.py:112
+#, fuzzy
+msgid "DKK/kWh"
+msgstr "g/kWh"
+
+#: units.py:97
+#: units.py:113
+msgid "DKK/MWh"
+msgstr "DKK/MWh"
+
+#: units.py:101
+msgid "EUR/l"
+msgstr "EUR/l"
+
+#: units.py:102
+msgid "EUR/m³"
+msgstr "EUR/m³"
+
+#: units.py:103
+msgid "DKK/l"
+msgstr "DKK/l"
+
+#: units.py:104
+msgid "DKK/m³"
+msgstr "DKK/m³"
+
+#: units.py:121
+msgid "degree days"
+msgstr "grados día"
+
+#: units.py:124
+msgid "g/kWh"
+msgstr "g/kWh"
+
+#: units.py:125
+msgid "m²"
+msgstr "m²"
+
+#: units.py:126
+msgid "Person"
+msgstr "Persona"
+
+#: units.py:127
+msgid "tonne"
+msgstr "tonelada"
+
+#: units.py:128
+msgid "kg"
+msgstr "kg"
+
+#: units.py:132
+msgid "EUR"
+msgstr "EUR"
+
+#: units.py:133
+msgid "DKK"
+msgstr "DKK"
+
+#: units.py:137
+msgid "W/K"
+msgstr "W/K"
+
+#: units.py:150
+msgid "kWh/year"
+msgstr "kWh/año"
+
+#: units.py:151
+msgid "kWh/quarter"
+msgstr "kWh/trimestre"
+
+#: units.py:152
+msgid "kWh/month"
+msgstr "kWh/mes"
+
+#: units.py:153
+msgid "kWh/week"
+msgstr "kWh/semana"
+
+#: units.py:154
+msgid "kWh/day"
+msgstr "kWh/día"
+
+#: units.py:155
+msgid "kWh/hour"
+msgstr "kWh/hora"
+
+#: units.py:242
+msgid "impulse"
+msgstr "impulso"
+
+#: utilitytypes.py:28
+msgid "unknown"
+msgstr "desconocido"
+
+#: utilitytypes.py:29
+msgid "temperature"
+msgstr "temperatura"
+
+#: utilitytypes.py:31
+#, fuzzy
+msgid "electricity"
+msgstr "Electricidad"
+
+#: utilitytypes.py:33
+msgid "district heating"
+msgstr "district heating"
+
+#: utilitytypes.py:35
+msgid "fuel"
+msgstr "combustible"
+
+#: utilitytypes.py:37
+msgid "liquid fuel"
+msgstr "combustible líquido"
+
+#: utilitytypes.py:38
+#, fuzzy
+msgid "oil"
+msgstr "Gasoil"
+
+#: utilitytypes.py:40
+msgid "solid fuel"
+msgstr "combustible sólido"
+
+#: utilitytypes.py:44
+#, fuzzy
+msgid "gas"
+msgstr "Gas"
+
+#: utilitytypes.py:46
+#, fuzzy
+msgid "water"
+msgstr "Agua"
+
+#: validators.py:14
+msgid "Must be non-zero."
+msgstr "No debe ser cero"
+
+#: validators.py:19
+msgid "Must be in the past."
+msgstr "Debe estar en el pasado"
+
+#: templates/utils/customer_selection_modal.html:8
+msgid "Select customer"
+msgstr "Seleccione consumidor"
+
+#: templates/utils/customer_selection_modal.html:20
+msgid "Cancel"
+msgstr "Cancelar"
+
+#~ msgid "{currency}/kWh"
+#~ msgstr "{currency}/kWh"
+
+#~ msgid "{currency}/MWh"
+#~ msgstr "{currency}/MWh"
+
+#~ msgid "{currency}/l"
+#~ msgstr "{currency}/l"
+
+#~ msgid "{currency}/m³"
+#~ msgstr "{currency}/m³"
+
+#~ msgid "active"
+#~ msgstr "activo"
+
+#~ msgid "degreedays"
+#~ msgstr "grados día"

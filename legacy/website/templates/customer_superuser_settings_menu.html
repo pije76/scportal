@@ -1,0 +1,64 @@
+{% spaceless %}
+{% load static from staticfiles %}
+{% load url from future %}
+{% load i18n %}
+
+
+<div class="menu-item mps">
+  <a href="{% url 'manage_measurementpoints:measurement_point-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Details" %}</span>
+  </a>
+</div>
+
+<div class="menu-item groups">
+  <a href="{% url 'manage-groups-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Groups" %}</span>
+  </a>
+</div>
+
+<div class="menu-item rules">
+  <a href="{% url 'manage_rules-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Rules" %}</span>
+  </a>
+</div>
+
+<div class="menu-item indexsettings">
+  <a href="{% url 'manage_indexes-listing' %}">
+    <div class="icon"></div>
+    <span>{% trans "Indexes" %}</span>
+  </a>
+</div>
+
+<div class="menu-item devices">
+  <a href="{% url 'manage_devices-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Devices" %}</span>
+  </a>
+</div>
+
+<div class="menu-item locations">
+  <a href="{% url 'manage-locations-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Locations" %}</span>
+  </a>
+</div>
+
+<div class="menu-item users">
+  <a href="{% url 'manage_users-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Users" %}</span>
+  </a>
+</div>
+
+<div class="menu-item userprofile">
+  <a href="{% url 'edit_userprofile' pk=user.id %}">
+    <div class="icon"></div>
+    <span>{% trans "User Profile" %}</span>
+  </a>
+</div>
+
+<div class="menu-right-border"></div>
+{% endspaceless %}

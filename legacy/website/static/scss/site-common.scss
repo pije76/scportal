@@ -1,0 +1,146 @@
+$page-background: #d3d3d3;
+$border-color: #898989;
+
+
+body {
+    background-color: $footer-background;
+}
+body.blank {
+    background-color: #FFF;
+}
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, figure {
+    margin-bottom: 5px;
+}
+
+#header {
+    /* relative position to same as before --- but to make z-index take effect... */
+    position: relative;
+    z-index: 2;
+    background-color: $page-background;
+
+    .logo {
+        margin: 0;
+        font-size: 10px;
+    }
+    .logo-text {
+        display: none;
+    }
+}
+
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logout img, .flag {
+    margin-left: 2px;
+}
+.logout, .app_switcher {
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+.language form {
+    display: inline;
+}
+
+#menu, #settings-menu {
+    color: #FFF;
+    .menu-item {
+        float: left;
+        width: 75px;
+        /* height: 70px; */
+        text-align: center;
+        /* margin-top: 3px; */
+        line-height: 12px;
+        .icon {
+            width: 75px;
+            height: 40px;
+        }
+    }
+    .menu-right-border {
+        float: left;
+        width: 2px;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:link, a:visited {
+        color: #DDD;
+    }
+    a:active {
+        color: #FFF;
+    }
+
+}
+
+#menu {
+    height: 77px;
+    background-repeat: repeat-x;
+    .menu-item {
+        height: 70px;
+    }
+    .menu-right-border {
+        height: 70px;
+    }
+}
+
+#settings-menu {
+    position: absolute;
+    height: 0px;
+    z-index: 1;
+    width: 100%;
+    .slide {
+        position: relative;
+        top: -69px;
+        height: 72px;
+        background-image: url(images/settings-gradient.png);
+        background-repeat: repeat-x;
+    }
+    .slide.active {
+        top: 0px;
+    }
+    .menu-item {
+        height: 68px;
+        background-image: url(images/black-menu-background.png);
+    }
+    .menu-right-border {
+        height: 68px;
+        background-image: url(images/black-menu-right-border.png);
+    }
+    .settings-btn-background {
+        position: relative;
+        top: 67px;
+        width: 149px;
+        height: 25px;
+        background-image: url(images/settings-btn.png);
+        background-repeat: no-repeat;
+        .settings-btn {
+            cursor: pointer;
+            padding-top: 5px;
+            text-align: center;
+        }
+    }
+}
+
+#content {
+    background-color: $page-background;
+    min-height: 600px;
+    padding-bottom: 10px;
+}
+
+#footer {
+    background-color: $footer-background;
+    color: #FFF;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#content-main {
+    background-color: #FFFFFF;
+    border: 1px solid $border-color;
+    margin-bottom: 10px;
+    position: relative;
+}

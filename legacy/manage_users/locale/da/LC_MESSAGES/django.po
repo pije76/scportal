@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: views.py:70
+msgid "User"
+msgstr "Bruger"
+
+#: views.py:71
+msgid "Superuser"
+msgstr "Superbruger"
+
+#: views.py:77 views.py:94
+msgid "A user with that e-mail already exists"
+msgstr "En bruger med denne e-mailadresse findes allerede"
+
+#: views.py:159 views.py:242
+msgid "It is not allowed to delete yourself"
+msgstr "Det er ikke muligt at slette sig selv"
+
+#: views.py:198 views.py:280
+#, python-format
+msgid "%(site_name)s user information"
+msgstr "%(site_name)s brugerinformation"
+
+#: views.py:201 views.py:284
+#, python-format
+msgid ""
+"Username: %(username)s\n"
+"Password: %(password)s"
+msgstr ""
+"Brugernavn: %(username)s\n"
+"Kodeord: %(password)s"
+
+#: views.py:228
+msgid "The user has been deleted"
+msgstr "Brugeren er blevet slettet"
+
+#: views.py:297
+msgid "The user has been updated"
+msgstr "Bruger opdateret"
+
+#: views.py:304
+msgid "The user has been created"
+msgstr "Bruger oprettet"
+
+#: templates/manage_users/list.html:21
+msgid "Error adding api key"
+msgstr "Fejl under oprettelse af API-nøgle"
+
+#: templates/manage_users/list.html:33
+msgid "Token removed"
+msgstr "Nøgle fjernet"
+
+#: templates/manage_users/list.html:47 templates/manage_users/list.html:48
+msgid "Settings: User Administration"
+msgstr "Indstillinger: Brugeradministration"
+
+#: templates/manage_users/list.html:49
+msgid "Users"
+msgstr "Brugere"
+
+#: templates/manage_users/list.html:54 templates/manage_users/list.html:55
+msgid "Add user"
+msgstr "Tilføj bruger"
+
+#: templates/manage_users/list.html:61
+msgid "Username"
+msgstr "Brugernavn"
+
+#: templates/manage_users/list.html:62
+msgid "Name"
+msgstr "Navn"
+
+#: templates/manage_users/user_block.html:9
+msgid "Username:"
+msgstr "Brugernavn:"
+
+#: templates/manage_users/user_block.html:14
+msgid "Password:"
+msgstr "Kodeord:"
+
+#: templates/manage_users/user_block.html:21
+#: templates/manage_users/user_form.html:10
+msgid "Edit"
+msgstr "Redigér"
+
+#: templates/manage_users/user_form.html:12
+msgid "New User"
+msgstr "Ny Bruger"
+
+#: templates/manage_users/user_form.html:26
+msgid "Name:"
+msgstr "Navn:"
+
+#: templates/manage_users/user_form.html:31
+msgid "E-mail:"
+msgstr "E-mail:"
+
+#: templates/manage_users/user_form.html:39
+msgid "User type:"
+msgstr "Brugertype:"
+
+#: templates/manage_users/user_form.html:46
+msgid "Send password:"
+msgstr "Send kodeord:"
+
+#: templates/manage_users/user_form.html:52
+msgid "Send new password"
+msgstr "Send nyt kodeord"
+
+#: templates/manage_users/user_form.html:58
+msgid "Phone:"
+msgstr "Telefon:"
+
+#: templates/manage_users/user_form.html:63
+msgid "Mobile:"
+msgstr "Mobil:"
+
+#: templates/manage_users/user_form.html:68
+msgid "Groups:"
+msgstr "Grupper:"
+
+#: templates/manage_users/user_form.html:78
+msgid "Save"
+msgstr "Gem"
+
+#: templates/manage_users/user_form.html:79
+msgid "Delete"
+msgstr "Slet"
+
+#: templates/manage_users/user_form.html:81
+msgid "Create"
+msgstr "Opret"
+
+#~ msgid ""
+#~ "Username: %(username)s\n"
+#~ "    Password: %(password)s"
+#~ msgstr ""
+#~ "Brugernavn: %(username)s\n"
+#~ "    Kodeord: %(password)s"
+
+#~ msgid "Sort by"
+#~ msgstr "Sortér efter"
+
+#~ msgid "Filter"
+#~ msgstr "Filter"
+
+#~ msgid "Collections:"
+#~ msgstr "Grupper:"

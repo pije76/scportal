@@ -1,0 +1,130 @@
+{% extends 'overlay_base.html' %}
+{% load i18n %}
+{% load l10n %}
+{% load url from future %}
+{% load static from staticfiles %}
+{% load widget_tweaks %}
+{% load imagekit %}
+
+
+{% block action %}{{ request.get_full_path }}{% endblock %}
+{% block title %}
+  {{ form.get_headline_display }}
+{% endblock %}
+{% block content %}
+{% if form.instance.id %}
+<input type="hidden" name="item_id" value="{{ form.instance.id|unlocalize }}">
+{% endif %}
+<div class="clearfix">
+  {% csrf_token %}
+  <div class="form-content-left">
+    {% block form_content_left %}
+    <fieldset>
+      <label>{% trans 'Name:' %}</label>
+      {{ form.name }}
+      {{ form.name.errors }}
+    </fieldset>
+    <fieldset>
+      <label>{% trans 'Group:' %}</label>
+      {{ form.parent }}
+      {{ form.parent.errors }}
+    </fieldset>
+    {% block meter_option_elements %}
+    {% if form.billing_meter_number %}
+    {% include "manage_measurementpoints/form_includes/meter_options_form.html" %}
+    {% endif %}
+    {% endblock meter_option_elements %}
+
+    {% block input_elements %}
+    {% if form.input_configuration %}
+    <fieldset>
+        <label>{% trans 'Input:' %}</label>
+        {{ form.input_configuration }}
+        {{ form.input_configuration.errors }}
+      </fieldset>
+    {% endif %}
+    {% if form.consumption_input %}
+    {% include "manage_measurementpoints/form_includes/input_form.html" %}
+    {% endif %}
+    {% endblock input_elements %}
+
+    {% block summation_elements %}
+    {% if form.plus_consumption_measurement_points %}
+    {% include "manage_measurementpoints/form_includes/summation_elements.html" %}
+    {% endif %}
+    {% endblock summation_elements %}
+
+    {% block multiplication_elements %}
+    {% if form.source_consumption_point %}
+    {% include "manage_measurementpoints/form_includes/multiplication_elements.html" %}
+    {% endif %}
+    {% endblock multiplication_elements %}
+
+    {% block district_heating_elements %}
+    {% if form.volume_input %}
+    {% include "manage_measurementpoints/form_includes/district_heating_elements.html" %}
+    {% endif %}
+    {% endblock district_heating_elements %}
+
+    {% block option_elements %}
+    {% if form.relay %}
+    {% include "manage_measurementpoints/form_includes/options_form.html" %}
+    {% endif %}
+    {% endblock option_elements %}
+
+    {% block gauge_elements %}
+    {% if form.gauge_min and form.instance.id %}
+    <fieldset>
+      {% include "manage_measurementpoints/form_includes/gauge_elements.html" %}
+    </fieldset>
+    {% endif %}
+    {% endblock gauge_elements %}
+
+    {% block comment %}
+    <fieldset>
+      <label>{% trans 'Comment:' %}</label>
+      {{ form.comment }}
+      {{ form.comment.errors }}
+    </fieldset>
+    {% endblock comment %}
+
+    {% endblock form_content_left %}
+  </div>
+  <div class="form-content-right">
+    {% block form_content_right %}
+
+    {% block index_elements %}
+    {% if form.area %}
+    {% include "manage_measurementpoints/form_includes/indexes_form.html" %}
+    {% endif %}
+    {% endblock index_elements %}
+
+    {% block degree_days_elements %}
+    {% if form.heating_degree_days %}
+    {% include "manage_measurementpoints/form_includes/degree_days_form.html" %}
+    {% endif %}
+    {% endblock degree_days_elements %}
+
+    {% block tariff_elements %}
+    {% if inlines.0 %}
+    <fieldset>
+      {% include "manage_measurementpoints/form_includes/tariff_form.html" %}
+    </fieldset>
+    {% endif %}
+    {% endblock tariff_elements %}
+    {% block image %}
+    <fieldset class="image">
+      <label>{% trans 'Image:' %}</label>
+      {% if form.instance.image %}
+      <a href="{% url 'manage-groups-collection_image' pk=form.instance.id %}"><img src="{% url 'manage-groups-collection_thumbnail' pk=form.instance.id %}"></a>
+      {% endif %}
+      {{ form.image }}
+      {{ form.image.errors }}
+    </fieldset>
+    {% endblock image %}
+    {% endblock form_content_right %}
+  </div>
+  {{ form.non_field_errors }}
+</div>
+{% endblock content %}
+

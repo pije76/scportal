@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: consumption.py:93
+msgid "from"
+msgstr "fra"
+
+#: consumption.py:93
+msgid "to"
+msgstr "til"
+
+#: consumption.py:93
+msgid "group"
+msgstr "gruppe"
+
+#: consumption.py:93
+msgid "portal name"
+msgstr "portalnavn"
+
+#: consumption.py:94
+msgid "resource type"
+msgstr "resourcetype"
+
+#: consumption.py:94
+msgid "consumption"
+msgstr "forbrug"
+
+#: consumption.py:95
+msgid "degreedays-corrected consumption"
+msgstr "graddagskorrigeret forbrug"
+
+#: consumption.py:96
+msgid "unit"
+msgstr "enhed"
+
+#: consumption.py:96
+msgid "cost"
+msgstr "omkostning"
+
+#: consumption.py:97
+msgid "currency"
+msgstr "møntfod"
+
+#: consumption.py:97
+msgid "meter number"
+msgstr "målernummer"
+
+#: consumption.py:97
+msgid "installation number"
+msgstr "installationsnummer"
+
+#: consumption.py:98
+msgid "id"
+msgstr "id"
+
+#: consumption.py:166 templates/reports/consumption.tex:19
+#: templates/reports/consumption.tex:48
+msgid "Consumption"
+msgstr "Forbrug"
+
+#: models.py:34
+msgid "report"
+msgstr "rapport"
+
+#: models.py:35
+msgid "reports"
+msgstr "rapporter"
+
+#: templates/reports/consumption.tex:44
+msgid "Group"
+msgstr "Gruppe"
+
+#: templates/reports/consumption.tex:45
+msgid "ID"
+msgstr "ID"
+
+#: templates/reports/consumption.tex:46
+msgid "Portal Name"
+msgstr "Portalnavn"
+
+#: templates/reports/consumption.tex:47
+msgid "Resource Type"
+msgstr "Resourcetype"
+
+#: templates/reports/consumption.tex:50
+msgid "Corrected w.r.t. HDG"
+msgstr "Korr. graddage"
+
+#: templates/reports/consumption.tex:53
+msgid "Cost"
+msgstr "Omkostning"
+
+#: templates/reports/consumption.tex:55
+msgid "Meter No."
+msgstr "Måler-nr."
+
+#: templates/reports/consumption.tex:56
+msgid "Inst. No."
+msgstr "Inst.nr."
+
+#: templates/reports/consumption.tex:91
+msgid "Errors and Warnings"
+msgstr "Fejl og Advarsler"
+
+#: templates/reports/report.tex:71
+#, python-format
+msgid "Page %(page)s of %(page_count)s"
+msgstr "Side %(page)s af %(page_count)s"
+
+#: templates/reports/report.tex:71
+#, python-format
+msgid "Generated: %(date)s"
+msgstr "Genereret: %(date)s"
+
+#~ msgid "Data series for {data_series_name}"
+#~ msgstr "Datasekvensen for {data_series_name}"
+
+#~ msgid ""
+#~ "Consumption for {measurement_point} is calculated from incomplete data."
+#~ msgstr "Forbrug for {measurement_point} er beregnet med ufuldstændige data."
+
+#~ msgid ""
+#~ "Consumption and therefore also cost is undefined for {measurement_point}"
+#~ msgstr ""
+#~ "Forbrug og derfor også omkostninger er udefinerede for {measurement_point}"
+
+#~ msgid ""
+#~ "Heating degree days corrected consumption for {measurement_point} is "
+#~ "calculated from incomplete data"
+#~ msgstr ""
+#~ "Varmegraddagekorregeret forbrug for målepunktet {measurement_point} er "
+#~ "beregnet med ufuldstændige data."
+
+#~ msgid ""
+#~ "Heating degree days corrected consumption undefined for "
+#~ "{measurement_point}"
+#~ msgstr ""
+#~ "Varmegraddagekorregeret forbrug er udefineret for {measurement_point}"
+
+#~ msgid "Cost for {measurement_point} is calculated from incomplete data"
+#~ msgstr ""
+#~ "Omkostninger for {measurement_point} er beregnet med ufuldstændige data."
+
+#~ msgid "Cost undefined for {measurement_point}"
+#~ msgstr "Omkostninger er udefinerede for {measurement_point}"
+
+#~ msgid ""
+#~ "Unable to calculate cost for {measurement_point} because it has no tariff "
+#~ "attached."
+#~ msgstr ""
+#~ "Omkostninger for {measurement_point} kan ikke beregnes, da målepunktet "
+#~ "ikke er tilknyttet nogen tariff."
+
+#~ msgid "Total"
+#~ msgstr "Total"

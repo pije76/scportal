@@ -1,0 +1,12 @@
+<form role="form" class="{% if layout == 'horizontal'%}form-horizontal{% elif layout == 'inline' %}form-inline{% endif %}" action="{{ form_action }}" method="{{ form_method }}"{% if form_enctype %} enctype="{{ form_enctype }}"{% endif %}>
+  {{ rendered_csrf_token }}
+  {% if rendered_non_field_errors %}
+    {% for non_field_errors in rendered_non_field_errors %}
+      {{ non_field_errors }}
+    {% endfor %}
+  {% endif %}
+  {{ rendered_content }}
+  {% if rendered_form_buttons %}
+    {{ rendered_form_buttons }}
+  {% endif %}
+</form>

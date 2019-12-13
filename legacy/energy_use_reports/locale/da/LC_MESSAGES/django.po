@@ -1,0 +1,467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: forms.py:51
+msgid "The start date must be before the end date."
+msgstr "Startdato skal være før slutdato."
+
+#: forms.py:59
+msgid ""
+"The start date of the previous period must be before the end date of the "
+"previous period."
+msgstr ""
+"Startdato for forrige periode skal være før slutdato for forrige periode."
+
+#: forms.py:65
+msgid "Report generation queue is to long, please try again later"
+msgstr "Rapportgenereringskøen er fuld, prøv venligst igen senere"
+
+#: models.py:31
+msgid "currency"
+msgstr "møntfod"
+
+#: models.py:34
+msgid "utility type"
+msgstr "forsyningstype"
+
+#: models.py:61
+msgid "Electricity Use Report"
+msgstr "Elektricitetsanvendelsesrapport"
+
+#: models.py:63
+msgid "Water Use Report"
+msgstr "Vandanvendelsesrapport"
+
+#: models.py:65
+msgid "Gas Use Report"
+msgstr "Gasanvendelsesrapport"
+
+#: models.py:67
+msgid "Heat Use Report"
+msgstr "Varmeanvendelsesrapport"
+
+#: models.py:69
+msgid "Oil Use Report"
+msgstr "Olieanvendelsesrapport"
+
+#: tasks.py:209
+#, python-brace-format
+msgid ""
+"The consumption of the main measurement point {measurement_point}, is "
+"calculated from incomplete data in the current period"
+msgstr ""
+"Forbruget for hovedmålepunktet {measurement_point}, er beregnet med "
+"ufuldstændige data i indeværende periode."
+
+#: tasks.py:216
+#, python-brace-format
+msgid ""
+"The consumption of the main measurement point {measurement_point}, is "
+"calculated from incomplete data in the previous period"
+msgstr ""
+"Forbruget for hovedmålepunktet {measurement_point}, er beregnet med "
+"ufuldstændige data i foregående periode."
+
+#: tasks.py:223
+#, python-brace-format
+msgid ""
+"Unable to calculate cost for the main measurement point {measurement_point}, "
+"because it has no tariff"
+msgstr ""
+"Omkostninger kan ikke beregnes for hovedmålepunktet {measurement_point}, da "
+"ingen tariff er tilknyttet målepunktet."
+
+#: tasks.py:230
+#, python-brace-format
+msgid ""
+"Unable to calculate cost for the main measurement point {measurement_point}, "
+"because the tariff currency is different from the report currency"
+msgstr ""
+"Omkostninger kan ikke beregnes for hovedmålepunktet {measurement_point}, da "
+"tariff-møntfoden er forskellig fra rapport-møntfoden."
+
+#: tasks.py:239
+#, python-brace-format
+msgid ""
+"The cost of the main measurement point {measurement_point}, is calculated "
+"from incomplete data in the current period"
+msgstr ""
+"Omkostninger for hovedmålepunktet {measurement_point}, er beregnet med "
+"ufuldstændige data i indeværende periode."
+
+#: tasks.py:246
+#, python-brace-format
+msgid ""
+"The cost of the main measurement point {measurement_point}, is calculated "
+"from incomplete data in the previous period"
+msgstr ""
+"Omkostninger for hovedmålepunktet {measurement_point}, er beregnet med "
+"ufuldstændige data i foregående periode."
+
+#: tasks.py:253
+#, python-brace-format
+msgid ""
+"Unable to calculate CO₂ emissions for the main measurement point "
+"{measurement_point}, because the measurement point has no CO₂ index assigned"
+msgstr ""
+"Omkostninger kan ikke beregnes for hovedmålepunktet {measurement_point}, da "
+"intet CO₂-udledningsindeks er tilknyttet målepunktet."
+
+#: tasks.py:262
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the main measurement point {measurement_point} are "
+"calculated from incomplete data in the current period"
+msgstr ""
+"CO₂-udledning for hovedmålepunktet {measurement_point} er beregnet med "
+"ufuldstændige data i indeværende periode."
+
+#: tasks.py:269
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the main measurement point {measurement_point} are "
+"calculated from incomplete data in the previous period"
+msgstr ""
+"CO₂-udledning for hovedmålepunktet {measurement_point} er beregnet med "
+"ufuldstændige data i foregående periode."
+
+#: tasks.py:282
+#, python-brace-format
+msgid ""
+"The consumption of the measurement point {measurement_point} in the area of "
+"energy use {energy_use_area}, is calculated from incomplete data in the "
+"current period"
+msgstr ""
+"Forbruget for målepunktet {measurement_point} i energianvendelsen "
+"{energy_use_area}, er beregnet med ufuldstændige data i indeværende periode."
+
+#: tasks.py:291
+#, python-brace-format
+msgid ""
+"The consumption of the measurement point {measurement_point} in the area of "
+"energy use {energy_use_area}, is calculated from incomplete data in the "
+"previous period"
+msgstr ""
+"Forbruget for målepunktet {measurement_point} i energianvendelsen "
+"{energy_use_area}, er beregnet med ufuldstændige data i foregående periode."
+
+#: tasks.py:300
+#, python-brace-format
+msgid ""
+"Unable to calculate cost for the measurement point {measurement_point} in "
+"the area of energy use {energy_use_area}, because the measurement point has "
+"no tariff"
+msgstr ""
+"Omkostninger kan ikke beregnes for målepunktet {measurement_point} i "
+"energianvendelsen {energy_use_area}, da ingen tariff er tilknyttet "
+"målepunktet."
+
+#: tasks.py:308
+#, python-brace-format
+msgid ""
+"Unable to calculate cost for the measurement point {measurement_point} in "
+"the area of energy use {energy_use_area}, because the tariff currency is "
+"different from the report currency"
+msgstr ""
+"Omkostninger kan ikke beregnes for målepunktet {measurement_point} i "
+"energianvendelsen {energy_use_area}, da tariff-møntfoden er forskellig fra "
+"rapport-møntfoden."
+
+#: tasks.py:316
+#, python-brace-format
+msgid ""
+"The cost of the measurement point {measurement_point} in the area of energy "
+"use {energy_use_area}, is calculated from incomplete data in the current "
+"period"
+msgstr ""
+"Omkostninger for målepunktet {measurement_point} i energianvendelsen "
+"{energy_use_area}, er beregnet med ufuldstændige data i indeværende periode."
+
+#: tasks.py:324
+#, python-brace-format
+msgid ""
+"The cost of the measurement point {measurement_point} in the area of energy "
+"use {energy_use_area}, is calculated from incomplete data in the previous "
+"period"
+msgstr ""
+"Omkostninger for målepunktet {measurement_point} i energianvendelsen "
+"{energy_use_area}, er beregnet med ufuldstændige data i foregående periode."
+
+#: tasks.py:332
+#, python-brace-format
+msgid ""
+"Unable to calculate CO₂ emissions for the measurement point "
+"{measurement_point} in the area of energy use {energy_use_area}, because the "
+"measurement point has no CO₂ index assigned"
+msgstr ""
+"CO₂-udledninger for målepunktet {measurement_point} i energianvendelsen "
+"{energy_use_area}, kan ikke beregnes da intet CO₂-udledningsindeks er "
+"tilknyttet målepunktet."
+
+#: tasks.py:341
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the measurement point {measurement_point} in the area "
+"of energy use {energy_use_area}, is calculated from incomplete data in the "
+"current period"
+msgstr ""
+"CO₂-udledninger for målepunktet {measurement_point} i energianvendelsen "
+"{energy_use_area}, er beregnet med ufuldstændige data i indeværende periode."
+
+#: tasks.py:349
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the measurement point {measurement_point} in the area "
+"of energy use {energy_use_area}, is calculated from incomplete data in the "
+"previous period"
+msgstr ""
+"CO₂-udledninger for målepunktet {measurement_point} i energianvendelsen "
+"{energy_use_area}, er beregnet med ufuldstændige data i foregående periode."
+
+#: tasks.py:456
+#, python-brace-format
+msgid ""
+"CO₂ emissions for the measurement point {measurement_point} are not defined, "
+"and therefore not included in the CO₂ emissions graph."
+msgstr ""
+"CO₂-udledninger for målepunktet {measurement_point} er udefineret, og derfor "
+"ikke medregnet i CO₂-udledningsgrafen."
+
+#: tasks.py:738
+msgid ""
+"No main measurement point has been selected.  Assuming all measurement "
+"points are main measurement points, and that no costs nor consumptions are "
+"unaccounted for."
+msgstr ""
+"Ingen hovedmålepunkter er valgt.  Antager at alle målepunkter er "
+"hovedmålepunkter, og at ingen omkostninger og intet forbrug har nogen ukendt "
+"anvendelse."
+
+#: views.py:226
+#, python-brace-format
+msgid ""
+"Consumption is negative for the area of energy use {energy_use_area}.  This "
+"prevents the consumption pie chart from being displayed."
+msgstr ""
+"Forbrug er negativt for energianvendelsen {energy_use_area}.  Dette "
+"forhindrer forbrugslagkagediagrammet i at kunne vises."
+
+#: views.py:234
+msgid ""
+"Total consumption for main measurement points is less than the total "
+"consumption of the areas of energy use in current period.   No pie chart for "
+"consumption will be shown"
+msgstr ""
+"Det samlede totalforbrug for hovedmålepunkterne er mindre end det samlede "
+"totalforbrug for energianvendelserne i indeværende periode.  "
+"Forbrugslagkagediagrammet vil ikke blive vist. "
+
+#: views.py:241
+msgid ""
+"Total consumption is negative. Energy use by consumption is excluded from "
+"the report"
+msgstr ""
+"Det totale forbrug er negativt og forbrugsfordelingsafsnittet er derfor "
+"udeladet af rapporten."
+
+#: views.py:253
+#, python-brace-format
+msgid ""
+"Costs are negative for the area of energy use {energy_use_area}.  This "
+"prevents the costs pie chart from being displayed."
+msgstr ""
+"Omkostninger er negative for energianvendelsen {energy_use_area}.  Dette "
+"forhindrer omkostningslagkagediagrammet i at kunne vises."
+
+#: views.py:261
+msgid ""
+"Total costs for main measurement points are less than the total costs of the "
+"areas of energy use in current period.  No pie chart for costs will be shown."
+msgstr ""
+"De samlede omkostninger for hovedmålepunkterne er mindre end de samlede "
+"omkostninger for energianvendelserne i indeværende periode.  "
+"Omkostningslagkagediagrammet vil ikke blive vist."
+
+#: views.py:268
+msgid ""
+"Total costs are negative. Energy use by cost is excluded from the report"
+msgstr ""
+"De totale omkostninger er negative, og omkostningsfordelingsafsnittet er "
+"derfor udeladt af rapporten."
+
+#: views.py:280
+#, python-brace-format
+msgid ""
+"CO₂ emissions are negative for the area of energy use {energy_use_area}.  "
+"This prevents the CO₂ emissions pie chart from being displayed."
+msgstr ""
+"CO₂-udledningen er negativ for energianvendelsen {energy_use_area}.  Dette "
+"forhindrer CO₂-udledningslagkagediagrammet i at kunne vises."
+
+#: views.py:288
+msgid ""
+"Total CO₂ emissions for main measurement points are less than the total  CO₂ "
+"emissions of the areas of energy use in current period.  No pie chart for "
+"CO₂ emissions will be shown."
+msgstr ""
+"Den samlede CO₂-udledning for hovedmålepunkterne er mindre end den samlede "
+"CO₂-udlending for energianvendelserne i indeværende periode.  CO₂-"
+"udledningslagkagediagrammet vil ikke blive vist."
+
+#: views.py:296
+msgid ""
+"Total CO₂ emissions are negative. Energy use by CO₂ emissions is excluded "
+"from the report"
+msgstr ""
+"Den samlede CO₂-udledning er negativ og omkostningsfordelingsafsnittet er "
+"derfor udeladt af rapporten."
+
+#: views.py:416 views.py:433
+msgid "Unaccounted Consumption"
+msgstr "Ukendt Forbrug"
+
+#: views.py:460 views.py:474
+msgid "Unaccounted Cost"
+msgstr "Ukendte Omkostninger"
+
+#: views.py:501 views.py:515
+msgid "Unaccounted CO₂ Emissions"
+msgstr "Ukendt CO₂-udledning"
+
+#: templates/energy_use_reports/report.tex:38
+msgid "Current Period"
+msgstr "Indeværende Periode"
+
+#: templates/energy_use_reports/report.tex:41
+msgid "Previous Period"
+msgstr "Forrige Periode"
+
+#: templates/energy_use_reports/report.tex:50
+msgid "Distribution of Cost"
+msgstr "Fordeling af Omkostninger"
+
+#: templates/energy_use_reports/report.tex:59
+#: templates/energy_use_reports/report.tex:75
+#: templates/energy_use_reports/report.tex:92
+#, python-format
+msgid ""
+"The areas of use marked with %(star)s contain errors. See errors and "
+"warnings on page~%(page)s"
+msgstr ""
+"Energianvendelser markeret med %(star)s har fejl.  Se fejl og advarsler på "
+"side~%(page)s"
+
+#: templates/energy_use_reports/report.tex:66
+msgid "Distribution of CO₂ Emissions"
+msgstr "Fordeling af CO₂-udledning"
+
+#: templates/energy_use_reports/report.tex:83
+msgid "Distribution of Consumption"
+msgstr "Fordeling af Forbrug"
+
+#: templates/energy_use_reports/report.tex:99
+msgid "Consumption Graph"
+msgstr "Forbrugsgraf"
+
+#: templates/energy_use_reports/report.tex:104
+msgid "CO₂ Emission Graph"
+msgstr "CO₂-udledningsgraf"
+
+#: templates/energy_use_reports/report.tex:112
+msgid "Errors and Warnings"
+msgstr "Fejl og Advarsler"
+
+#: templates/energy_use_reports/use_area_table.tex:7
+msgid "Area of Use"
+msgstr "Energianvendelse"
+
+#: templates/energy_use_reports/use_area_table.tex:8
+#, python-format
+msgid "Previous, %(unit)s "
+msgstr "Forrige, %(unit)s "
+
+#: templates/energy_use_reports/use_area_table.tex:9
+#, python-format
+msgid "Current, %(unit)s "
+msgstr "Indeværende, %(unit)s "
+
+#: templates/energy_use_reports/use_area_table.tex:10
+#, python-format
+msgid "Change (%%)"
+msgstr "Ændring (%%)"
+
+#: templates/energy_use_reports/use_area_table.tex:15
+msgid "Total"
+msgstr "I alt"
+
+#~ msgid ""
+#~ "Cost is calculated from incomplete data for {measurement_point} in "
+#~ "{energy_use_area} between {from_date} and {to_date}"
+#~ msgstr ""
+#~ "Omkostninger er baseret på ufuldstændige data for {measurement_point} i "
+#~ "{energy_use_area} mellem {from_date} og {to_date}"
+
+#~ msgid ""
+#~ "Consumption is calculated from incomplete data for {measurement_point} in "
+#~ "{energy_use_area} between {from_date} and {to_date}"
+#~ msgstr ""
+#~ "Forbrug er baseret på ufuldstændige data for {measurement_point} i "
+#~ "{energy_use_area} mellem {from_date} og {to_date}"
+
+#~ msgid ""
+#~ "Consumption undefined for {measurement_point} in {energy_use_area} "
+#~ "between {from_date} and {to_date}"
+#~ msgstr ""
+#~ "Forbrug er udefineret for {measurement_point} i {energy_use_area} mellem "
+#~ "{from_date} og {to_date}"
+
+#~ msgid ""
+#~ "Consumption is calculated from incomplete data for the main measurement "
+#~ "point {measurement_point} between {from_date} and {to_date}"
+#~ msgstr ""
+#~ "Forbrug er baseret på ufuldstændige data for {measurement_point} i "
+#~ "{energy_use_area} mellem {from_date} og {to_date}"
+
+#~ msgid ""
+#~ "Cost  is calculated from incomplete data for the main measurement point "
+#~ "{measurement_point} between {from_date} and {to_date}"
+#~ msgstr ""
+#~ "Omkostninger er baseret på ufuldstændige data for hovedmålepunktet "
+#~ "{measurement_point} mellem {from_date} og {to_date}"
+
+#~ msgid ""
+#~ "Cost is calculated from incomplete data for the main measurement point "
+#~ "{measurement_point} between {from_date} and {to_date}"
+#~ msgstr ""
+#~ "Omkostninger er baseret på ufuldstændige data for hovedmålepunktet "
+#~ "{measurement_point} mellem {from_date} og {to_date}"
+
+#~ msgid ""
+#~ "Consumption and therefore also cost is undefined for main "
+#~ "{measurement_point} between {from_date} and {to_date}"
+#~ msgstr ""
+#~ "Forbrug og dermed også omkostninger er udefinerede for hovedemålepunktet "
+#~ "{measurement_point} mellem {from_date} og {to_date}"
+
+#~ msgid "Previous, %(currency)s"
+#~ msgstr "Forrige, %(currency)s"
+
+#~ msgid "Current, %(currency)s"
+#~ msgstr "Indeværende, %(currency)s"

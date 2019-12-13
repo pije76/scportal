@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2013-08-23 14:45+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ESPAÑOL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: views.py:32
+msgid "Agents:"
+msgstr "Agents:"
+
+#: views.py:38
+msgid "Meters:"
+msgstr "Medidores:"
+
+#: views.py:44
+msgid "Locations:"
+msgstr "Localización:"
+
+#: views.py:51
+msgid "This location cannot be deleted because the following depends on it:"
+msgstr ""
+"Esta localización no puede ser borrada por que los siguientes equipos "
+"dependen de ella:"
+
+#: views.py:67
+msgid "The location has been deleted"
+msgstr "Esta localización ha sido borrada"
+
+#: views.py:179
+msgid "The location has been saved"
+msgstr "Esta localización ha sido guardada"
+
+#: templates/manage_locations/location_block.html:22
+#: templates/manage_locations/location_form.html:10
+#: templates/manage_locations/location_normal_block.html:16
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/manage_locations/location_details.html:9
+#: templates/manage_locations/location_details.html:10
+msgid "Settings: Locations: "
+msgstr "Ajustes: Localización:"
+
+#: templates/manage_locations/location_details.html:14
+msgid "Agents"
+msgstr "Agents"
+
+#: templates/manage_locations/location_details.html:21
+#: templates/manage_locations/location_details.html:49
+msgid "Sort by"
+msgstr "Abreviar por"
+
+#: templates/manage_locations/location_details.html:22
+msgid "MAC"
+msgstr "MAC"
+
+#: templates/manage_locations/location_details.html:25
+#: templates/manage_locations/location_details.html:53
+msgid "Filter"
+msgstr "Filtro"
+
+#: templates/manage_locations/location_details.html:42
+msgid "Meters"
+msgstr "Medidor"
+
+#: templates/manage_locations/location_details.html:50
+#: templates/manage_locations/location_list.html:23
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/manage_locations/location_form.html:12
+msgid "New Location"
+msgstr "Nueva Localización"
+
+#: templates/manage_locations/location_form.html:29
+msgid "Name:"
+msgstr "Nombre:"
+
+#: templates/manage_locations/location_form.html:36
+msgid "Parent:"
+msgstr "Padre:"
+
+#: templates/manage_locations/location_form.html:45
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/manage_locations/location_form.html:47
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/manage_locations/location_list.html:9
+#: templates/manage_locations/location_list.html:10
+msgid "Settings: Locations"
+msgstr "Ajustes: Localización"
+
+#: templates/manage_locations/location_list.html:11
+msgid "Locations"
+msgstr "Localización"
+
+#: templates/manage_locations/location_list.html:16
+#: templates/manage_locations/location_list.html:17
+msgid "Add location"
+msgstr "Añadir Localización"

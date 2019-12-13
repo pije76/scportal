@@ -1,0 +1,81 @@
+#measurement-points {
+    .mp_widget_graph {
+        width: 580px;
+        height: 200px;
+        border: 1px solid #CCC;
+        padding: 5px;
+        .spacer{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .widget {
+        .add-btn, {
+            cursor: pointer;
+        }
+    }
+    .on_dashboard {
+        position: relative;
+        top: 8px;
+    }
+    .date {
+        width:5em;
+    }
+}
+
+#dashboard {
+    .mp_widget_graph {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        height: 200px;
+        padding: 1px;
+        .spacer{
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+    .widget {
+        margin-top: 5px;
+        border: 1px solid #898989;
+        .remove-btn {
+            padding-top: 2px;
+        }
+        .add-btn {
+            cursor: pointer;
+        }
+        .widget-role {
+            text-align: center;
+        }
+    }
+}
+
+#dashboard .widget .header {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-bottom: 1px solid #898989;
+    margin-bottom: 0;
+    img {
+        margin-top: 2px;
+    }
+    .icon {
+        margin-top: 5px;
+    }
+    a {
+        top: 1px;
+    }
+    a img, {
+        top: auto;
+        margin-top: auto;
+    }
+    .relayStatus {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+
+#measurement-points .widget .header {
+    border-bottom: none;
+}

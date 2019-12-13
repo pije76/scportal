@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load mptt_tags %}
+{% load display_measurementpoints %}
+{% load dropdown %}
+
+{% block page_js %}
+<script type="text/javascript" src="{% static 'manage_reports.js' %}"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    'use strict';
+
+    {% if messages %}
+    {% for message in messages %}
+      noty({
+        text: "{{ message }}",
+        type: 'success',
+        dismissQueue: true,
+        theme: 'gridmanager',
+        layout: 'topCenter',
+        timeout: 3000
+      });
+    {% endfor %}
+    {% endif %}
+
+    $(".datepicker").datepicker();
+
+    var statusUrl = '{% url "website-task_status" %}',
+        spinnerUrl = '{% static 'images/ajax-loader.gif' %}',
+        requestReport = function (targetForm, resultElem, progressBar, noticeField, requestUrl, finalizeUrl) {
+            gridportal.manageReports.requestReport(targetForm.serialize(), targetForm, requestUrl, finalizeUrl, resultElem, statusUrl, spinnerUrl, progressBar, noticeField);
+        };
+
+
+    $('.pdfReport').click(function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        var targetForm = $(this).closest("form"),
+            resultElem = $(event.target).closest("form").find(".spinning-wheel"),
+            progressBar = $(event.target).closest('form').find(".progressbar"),
+            noticeField = $(event.target).closest('form').find(".notice-field");
+        requestReport(targetForm, resultElem, progressBar, noticeField, '{% url "energy_use_reports-start_report" %}', '{% url "energy_use_reports-finalize_report" %}');
+    });
+
+    $('.pdfENPIReport').click(function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        console.log($(event.target));
+        var targetForm = $(this).closest("form"),
+            resultElem = $(event.target).closest("form").find(".spinning-wheel"),
+            progressBar = $(event.target).closest('form').find(".progressbar"),
+            noticeField = $(event.target).closest('form').find(".notice-field");
+        requestReport(targetForm, resultElem, progressBar, noticeField, '{% url "enpi_reports-start_report" %}', '{% url "enpi_reports-finalize_report" %}');
+    });
+
+    $('.cancel').click(function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        $(this).prop("disabled", true);
+        var cancel_url = '{% url "website-cancel_task" %}';
+        jQuery.post(cancel_url, {task_id: $(this).closest('form').find('.task_id').val()});
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block page_id %}reports-page{% endblock %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+{% block content_heading %} {% trans "Reports" %} {% endblock content_heading %}
+
+{% block left_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{% trans "Overview" %}</h3>
+      <span class="right">
+        {% dropdown %}
+          {% anchor %}
+            {% trans 'Add' %}&nbsp;<img src="{% static 'images/add-icon.png' %}" alt="{% trans 'Add' %}">
+          {% endanchor %}
+          {% body %}
+          <ul>
+          {% if user.is_customer_superuser or user.is_admin %}
+            <li><a href="{% url 'manage_reports-create_energy_use_report' utility_type='electricity' %}">{% trans 'Electricity Use Report' %}</a></li>
+            <li><a href="{% url 'manage_reports-create_energy_use_report' utility_type='gas' %}">{% trans 'Gas Use Report' %}</a></li>
+            <li><a href="{% url 'manage_reports-create_energy_use_report' utility_type='water' %}">{% trans 'Water Use Report' %}</a></li>
+            <li><a href="{% url 'manage_reports-create_energy_use_report' utility_type='district_heating' %}">{% trans 'Heat Use Report' %}</a></li>
+            <li><a href="{% url 'manage_reports-create_energy_use_report' utility_type='oil' %}">{% trans 'Oil Use Report' %}</a></li>
+            <hr>
+	      {% for energy_driver_unit, energy_driver_unit_display in energy_driver_choices %}
+		<li><a href="{% url 'manage_reports-create_enpi_report_form' energy_driver_unit %}">
+                {% blocktrans with enpi_report_type=energy_driver_unit_display %}Energy Performance Indicator Report ({{ enpi_report_type }}){% endblocktrans %}</a></li>
+	      {% endfor %}
+	    <hr>
+          {% endif %}
+            <li><a href="{% url 'manage_reports-create_consumption_report' %}">{% trans 'Consumption Report' %}</a></li>
+          </ul>
+          {% endbody %}
+        {% enddropdown %}
+      </span>
+  </div>
+  <div>
+    {% if reports %}
+    <div id="reports" class="list-block">
+      <ul>
+      {% for report in reports %}
+      {% if report.form.energy_use_report %}
+      <li>
+        <div class="clearfix">
+          <form method="POST">
+            {% csrf_token %}
+            {{ report.form.energy_use_report.as_hidden }}
+            <input type="hidden" class="task_id">
+            <dl class="left name-headline">
+              <h3 class="left">
+                {% if user.is_customer_superuser or user.is_admin %}
+                <a href="{% url 'manage_reports-update_energy_use_report' pk=report.id %}">
+                  <img src="{% static 'images/detail.png' %}" class="left detail-icon">
+                  <span>{{ report.title_plain }}</span>
+                </a>
+                {% else %}
+                {{ report.title_plain }}
+                {% endif %}
+              </h3>
+              <dt class="term_block"> {% trans "Main Measurement Points:" %} </dt>
+              <dd>
+              {% if report.main_measurement_points.count %}
+                {% for measurement_point in report.main_measurement_points.all %}
+                  {{ measurement_point }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+              {% else %}
+                {% trans "None" %}
+              {% endif %}
+              </dd>
+              <dt class="term_block"> {% trans "Areas of Energy Use:" %} </dt>
+              <dd>
+                {% if report.energyusearea_set.count %}
+                  {% for area in report.energyusearea_set.all %}
+                    {{ area }}{% if not forloop.last %}, {% endif %}
+                  {% endfor %}
+                {% else %}
+                  {% trans "None" %}
+                {% endif %}
+              </dd>
+            </dl>
+            <div class="right">
+              <div>
+                <div class="left">
+                  <fieldset>
+                    <input id="id_include_cost" name="include_cost" type="checkbox">
+                    <span>{% trans "Include cost" %}</span>
+                  </fieldset>
+                  {% if not report.get_utility_type_display == "water" %}
+                  <fieldset>
+                    <input id="id_include_co2" name="include_co2" type="checkbox">
+                    <span>{% trans "Include CO<sub>2</sub> emissions" %}</span>
+                  </fieldset>
+                  {% endif %}
+                </div>
+                <div class="right">
+                  <fieldset>
+                    <span>{% trans "From date:" %}</span>
+                    <div style="float:right">
+                      <input style="width:200px" class="datepicker" name="from_date"
+                      value="{{report.form.from_date.value|date:"Y-m-d"}}" type="text">
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <span>{% trans "To date:" %}</span>
+                    <div style="float:right">
+                      <input style="width:200px" class="datepicker"  name="to_date"
+                      value="{{report.form.to_date.value|date:"Y-m-d"}}" type="text">
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="right">
+                <fieldset>
+                  <span>{% trans "From date of previous period:" %}</span>
+                  <div style="float:right">
+                    <input style="width:200px" class="datepicker" name="previous_period_from_date"
+                    value="{{ report.form.previous_period_from_date.value|date:"Y-m-d" }}" type="text">
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <span>{% trans "To date of previous period:" %}</span>
+                  <div style="float:right">
+                    <input style="width:200px" class="datepicker"  name="previous_period_to_date"
+                    value="{{ report.form.previous_period_to_date.value|date:"Y-m-d" }}" type="text">
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div style="float:right; text-align:right">
+                    <span class="spinning-wheel"></span>
+                    <input type="button" class="pdfReport" value="{% trans 'Download' %}">
+                    <input type="button" class="cancel" value="{% trans 'Cancel' %}" disabled="true">
+
+                    <div class="progressbar"></div>
+                    <div class="notice-field" style="display: none"> {% trans "Please stay on this page while your report is being generated" %}</div>
+                    <div class="reportErrors"></div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      {% else %}
+      <li>
+        <div class="clearfix">
+          <form method="POST" id="{{report.id}}">
+            {% csrf_token %}
+            {{ report.form.enpi_report.as_hidden }}
+            <input type="hidden" class="task_id">
+            <dl class="left name-headline">
+              <h3 class="left">
+                <a href="{% url 'manage_reports-update_enpi_report_form' pk=report.id %}">
+                  <img src="{% static 'images/detail.png' %}" class="left detail-icon">
+                  <span>{{ report.title_plain }}</span>
+                </a>
+              </h3>
+              <dt class="term_block"> {% trans "Areas of Energy Use:" %} </dt>
+              <dd>
+                {% if report.enpiusearea_set.count %}
+                  {% for area in report.enpiusearea_set.all %}
+                    {{ area }}{% if not forloop.last %}, {% endif %}
+                  {% endfor %}
+                {% else %}
+                  {% trans "None" %}
+                {% endif %}
+              </dd>
+            </dl>
+            <div class="right">
+              <fieldset>
+                <span>{% trans "From date:" %}</span>
+                <div class="right">
+                  <input style="width:200px" class="datepicker" name="from_date"
+                   value="{{report.form.from_date.value|date:"Y-m-d"}}" type="text">
+                </div>
+              </fieldset>
+              <fieldset>
+                <span>{% trans "To date:" %}</span>
+                <div style="float:right">
+                  <input style="width:200px" class="datepicker" name="to_date"
+                   value="{{report.form.to_date.value|date:"Y-m-d"}}" type="text">
+                </div>
+              </fieldset>
+              <fieldset>
+                <div style="float:right; text-align:right">
+                  <span class="spinning-wheel"></span>
+                  <input type="button" class="pdfENPIReport" value="{% trans 'Download' %}">
+                  <input type="button" class="cancel" value="{% trans 'Cancel' %}" disabled="true">
+
+                  <div class="progressbar"></div>
+                  <div class="notice-field" style="display: none"> {% trans "Please stay on this page while your report is being generated" %}</div>
+                  <div class="reportErrors"></div>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </li>
+      {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+    {% else %}
+    <p>
+      {% blocktrans %}You currently have no reports.  Click <i>Add</i> to add a new report.{% endblocktrans %}
+    </p>
+    {% endif %}
+  </div>
+</div>
+{% endblock left_content %}

@@ -1,0 +1,24 @@
+{% extends "list_page.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+
+{% block page_id %}agents-page{% endblock %}
+{% block list_url %}{% url 'setup_agents-list-json' %}{% endblock %}
+{% block default_sort_by %}mac{% endblock %}
+
+{% block title %}{% trans "Agent Administration" %}{% endblock %}
+{% block content_heading %}{% trans "Agent Administration" %}{% endblock content_heading %}
+{% block list_title %}{% trans "Agents" %}{% endblock %}
+
+{% block add_button %}
+<a class="right list-modifier" href="#" data-targeturl="{% url 'setup_agents-form'%}" data-targetlist="#model-list">
+  <span>{% trans "Add agent" %}&nbsp;</span>
+  <img src="{% static 'images/add-icon.png' %}" alt="{% trans "Add agent" %}">
+</a>
+{% endblock %}
+
+{% block sort_by %}
+<span class="sort" data-sort="mac">{% trans "MAC" %}</span>
+<span class="sort" data-sort="customer">{% trans "Customer" %}</span>
+{% endblock sort_by %}

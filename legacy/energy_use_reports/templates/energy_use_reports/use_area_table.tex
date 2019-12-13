@@ -1,0 +1,18 @@
+{% load i18n %}
+{% load l10n %}
+{% load reports %}
+
+\begin{tabu} to \linewidth{|X[3]X[2R]X[2R]X[0.1R]X[-1R]|}
+\hline
+\bf {% trans "Area of Use" %}&
+{% blocktrans %}Previous, {{ unit }} {% endblocktrans %}&
+{% blocktrans %}Current, {{ unit }} {% endblocktrans %}&
+\multicolumn{2}{r|}{ {% blocktrans %}Change (%){% endblocktrans %} }\\
+{% for name, previous_value, value, percent, change_percent, has_errors, color in total_data %}
+{% include 'energy_use_reports/use_area_table_row.tex' %}
+{% endfor %}
+\hline
+\bfseries {% trans "Total" %}{% if errors %}$^*${% endif %} & \bfseries {{ total_previous|floatformat:2 }} & \bfseries {{ total |floatformat:2 }} &
+{% if total_change_percent != "" %}{% if total_change_percent >= 10 %}$\nearrow${% elif total_change_percent <= -10 %}$\searrow${% endif %} & {{ total_change_percent|floatformat:1 }} {% endif %} \\
+\hline
+\end{tabu}

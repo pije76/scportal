@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: views.py:64
+msgid "From date must be before to date"
+msgstr "Fra tid skal være før til tid"
+
+#: views.py:70
+#, python-brace-format
+msgid "The selection has exceeded the limit of {limit} months"
+msgstr "Den valgte periode er længere end {limit} måneder"
+
+#: views.py:74
+msgid "Selection is too small. It must be at least one hour."
+msgstr "Perioden er for lille. Den skal indeholde mindst én time."
+
+#: templates/display_measurementpoints/group_detail.html:63
+msgid "The operation recieved a timeout"
+msgstr "Handlingen modtog et timeout"
+
+#: templates/display_measurementpoints/group_detail.html:66
+msgid "Ok"
+msgstr "Ok"
+
+#: templates/display_measurementpoints/group_detail.html:103
+msgid "Yes"
+msgstr "Ja"
+
+#: templates/display_measurementpoints/group_detail.html:106
+msgid "No"
+msgstr "Nej"
+
+#: templates/display_measurementpoints/group_detail.html:120
+msgid "Switch relay to: On?"
+msgstr "Skift relæ til: Tændt?"
+
+#: templates/display_measurementpoints/group_detail.html:121
+msgid "Switching relay on..."
+msgstr "Slår relæ til... "
+
+#: templates/display_measurementpoints/group_detail.html:122
+msgid "Switching relay on failed"
+msgstr "Relæ kunne ikke slås til"
+
+#: templates/display_measurementpoints/group_detail.html:129
+msgid "Switch relay to: Off?"
+msgstr "Skift relæ til: Slukket?"
+
+#: templates/display_measurementpoints/group_detail.html:130
+msgid "Switching relay off..."
+msgstr "Slår relæ fra..."
+
+#: templates/display_measurementpoints/group_detail.html:131
+msgid "Switching relay off failed"
+msgstr "Relæ kunne ikke slås fra"
+
+#: templates/display_measurementpoints/group_detail.html:218
+msgid "Meter no.: "
+msgstr "Målernr.:"
+
+#: templates/display_measurementpoints/group_detail.html:221
+msgid "Installation no.: "
+msgstr "Installationsnr.:"
+
+#: templates/display_measurementpoints/group_detail.html:228
+msgid "Show on dashboard"
+msgstr "Vis på dashboard"
+
+#: templates/display_measurementpoints/group_detail.html:228
+msgid "Add"
+msgstr "Tilføj"
+
+#: templates/display_measurementpoints/group_detail.html:234
+msgid "Gauge"
+msgstr "Viser"
+
+#: templates/display_measurementpoints/group_detail.html:241
+msgid "Consumption Graph"
+msgstr "Forbrugsgraf"
+
+#: templates/display_measurementpoints/group_detail.html:248
+msgid "Rate Graph"
+msgstr "Rategraf"
+
+#: templates/display_measurementpoints/group_detail.html:255
+msgid "Mean Cool-down Temperature Graph"
+msgstr "Middelnedkølningstemperaturgraf"
+
+#: templates/display_measurementpoints/group_detail.html:262
+msgid "Production Graph"
+msgstr "Produktionsgraf"
+
+#: templates/display_measurementpoints/group_detail.html:273
+msgid "Fullscreen"
+msgstr "Fuld-skærm"
+
+#: templates/display_measurementpoints/group_detail.html:286
+msgid "Relay"
+msgstr "Relæ"
+
+#: templates/display_measurementpoints/group_detail.html:324
+#: templates/display_measurementpoints/group_detail.html:336
+msgid "Download as CSV"
+msgstr "Download CSV"
+
+#: templates/display_measurementpoints/group_detail.html:327
+#: templates/display_measurementpoints/group_detail.html:344
+msgid "Previous"
+msgstr "Forrige"
+
+#: templates/display_measurementpoints/group_detail.html:328
+#: templates/display_measurementpoints/group_detail.html:345
+msgid "Next"
+msgstr "Næste"
+
+#: templates/display_measurementpoints/group_detail.html:335
+msgid "Expand"
+msgstr "Udvid"
+
+#: templates/display_measurementpoints/group_detail.html:341
+msgid "Not supported for this period."
+msgstr "Ikke understøttet for denne periode."
+
+#: templates/display_measurementpoints/index.html:58
+#: templates/display_measurementpoints/index.html:59
+msgid "Details"
+msgstr "Detaljer"
+
+#: templates/display_measurementpoints/index.html:63
+msgid "Choose a group or measurement point from the menu to the left"
+msgstr "Vælg en gruppe eller et målepunkt i menuen til venstre"
+
+#: templates/display_measurementpoints/index.html:88
+msgid "Measurement Points"
+msgstr "Målepunkter"
+
+#: templates/display_measurementpoints/period_selection.html:7
+msgid "Day"
+msgstr "Dag"
+
+#: templates/display_measurementpoints/period_selection.html:9
+msgid "Week"
+msgstr "Uge"
+
+#: templates/display_measurementpoints/period_selection.html:11
+msgid "Month"
+msgstr "Måned"
+
+#: templates/display_measurementpoints/period_selection.html:13
+msgid "From:"
+msgstr "Fra:"
+
+#: templates/display_measurementpoints/period_selection.html:14
+msgid "To:"
+msgstr "Til:"
+
+#: templates/display_measurementpoints/period_selection.html:15
+msgid "Apply"
+msgstr "Anvend"
+
+#: templatetags/display_measurementpoints.py:38
+#, python-brace-format
+msgid "{numeric_quantity} {unit_name}"
+msgstr "{numeric_quantity} {unit_name}"
+
+#~ msgid "Export PDF"
+#~ msgstr "Exportér PDF"
+
+#~ msgid "Export CSV"
+#~ msgstr "Exportér CSV"
+
+#~ msgid "1 hour"
+#~ msgstr "1 time"
+
+#~ msgid "3 hours"
+#~ msgstr "3 timer"
+
+#~ msgid "6 hours"
+#~ msgstr "6 timer"
+
+#~ msgid "12 hours"
+#~ msgstr "12 timer"
+
+#~ msgid "1 day"
+#~ msgstr "1 døgn"
+
+#~ msgid "3 days"
+#~ msgstr "3 døgn"
+
+#~ msgid "7 days"
+#~ msgstr "7 døgn"
+
+#~ msgid "Hour missing or invalid"
+#~ msgstr "Time mangler eller er ugyldig"
+
+#~ msgid "Date missing or invalid"
+#~ msgstr "Dato mangler eller er ugyldig"
+
+#~ msgid "Data series for {data_series_name}"
+#~ msgstr "Dataserie for {data_series_name}"
+
+#~ msgid "Period:"
+#~ msgstr "Periode:"
+
+#~ msgid "%m/%d %H:%M"
+#~ msgstr "%d/%m %H:%M"
+
+#~ msgid "%H:%M"
+#~ msgstr "%H:%M"
+
+#~ msgid "%a %m/%d %H:00"
+#~ msgstr "%a %d/%m %H:00"
+
+#~ msgid "%a %m/%d"
+#~ msgstr "%a %d/%m"
+
+#~ msgid "%b %e %H:00"
+#~ msgstr "%b %e %H:00"
+
+#~ msgid "%b %e"
+#~ msgstr "%b %e"
+
+#~ msgid "%B %Y"
+#~ msgstr "%B %Y"
+
+#~ msgid "The selected period is too long. A maximum of 24 hours is allowed"
+#~ msgstr ""
+#~ "Den valgte periode er for lang. Vælg en periode på 24 timer eller mindre."
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#~ msgid "To PDF"
+#~ msgstr "Til PDF"
+
+#~ msgid "To CSV"
+#~ msgstr "Til CSV"
+
+#~ msgid "Overview"
+#~ msgstr "Overblik"
+
+#~ msgid " Min: {{ min_value }} {{ unit }} | Max: {{ max_value }} {{ unit }}"
+#~ msgstr ""
+#~ " Min.: {{ min_value }} {{ unit }} | Maks.: {{ max_value }} {{ unit }}"
+
+#~ msgid "Total: {{ total }} {{ unit }}"
+#~ msgstr "Samlet: {{ total }} {{ unit }}"
+
+#~ msgid "Type: {{ type }}"
+#~ msgstr "Type: {{ type }}"
+
+#~ msgid "OFF"
+#~ msgstr "SLUKKET"
+
+#~ msgid "ON"
+#~ msgstr "TÆNDT"
+
+#~ msgid "Download PDF"
+#~ msgstr "Download PDF"
+
+#~ msgid "Generating PDF"
+#~ msgstr "Genererer PDF"
+
+#~ msgid "Power"
+#~ msgstr "Effekt"
+
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Max"
+#~ msgstr "Maks"
+
+#~ msgid "Add gauge"
+#~ msgstr "Tilføj speedometer"
+
+#~ msgid "Add diagram"
+#~ msgstr "Tilføj graf"

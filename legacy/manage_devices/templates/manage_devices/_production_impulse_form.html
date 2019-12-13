@@ -1,0 +1,15 @@
+{% extends "manage_devices/_impulse_form.html" %}
+{% load widget_tweaks %}
+{% load i18n %}
+{% load l10n %}
+
+{% block impulse_equation_output_side %}
+      <fieldset class="left">
+	<div>
+	  {{ form.output_quantity }} &times; {{ output_unit_display }}
+	</div>
+	<div>
+	  {{ form.output_quantity.errors }}
+	</div>
+      </fieldset>
+{% endblock impulse_equation_output_side %}

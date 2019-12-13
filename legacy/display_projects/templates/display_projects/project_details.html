@@ -1,0 +1,50 @@
+{% extends "display_projects/project_base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load display_measurementpoints %}
+{% load static from staticfiles %}
+
+{% block content_heading %}{% trans "Projects" %}{% endblock content_heading %}
+
+{% block project_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{{ benchmarkproject.name_plain }}</h3>
+    {% if user.is_customer_superuser or user.is_admin %}
+    <a class="right" href="{% url 'display_projects-update' pk=benchmarkproject.id %}">
+    <span>{% trans "Edit" %}&nbsp;</span> </a>
+    {% endif %}
+  </div>
+  <div>
+    <table class="yearlySavings">
+      <tr>
+        <td><h6>{% trans "Yearly savings:" %}</h6></td>
+        <td class="valueCell"><div class="cellTitle">Currency</div><div class="cellValue">17.911</div></td>
+        <td class="valueCell"><div class="cellTitle">kWh</div><div class="cellValue">21.555</div></td>
+        <td class="valueCell"><div class="cellTitle">CO2, kg</div><div class="cellValue">9.657</div></td>
+      </tr>
+      <tr>
+        <td collspan="4" height="5px"></td>
+      </tr>
+      <tr class="beforeAfterActions">
+        <td class="spacer rightAlign">{% trans "Before actions" %}</td>
+        <td class="rightAlign valueCell">33.333</td>
+        <td class="rightAlign valueCell">33.333</td>
+        <td class="rightAlign valueCell">33.333</td>
+      </tr>
+      <tr class="beforeAfterActions">
+        <td class="spacer rightAlign">{% trans "After actions" %}</td>
+        <td class="rightAlign valueCell">9.685</td>
+        <td class="rightAlign valueCell">9.685</td>
+        <td class="rightAlign valueCell">9.685</td>
+      </tr>
+    </table>
+    <div class="graphs">
+      <span id="cost" class="graph"></span>
+      <span id="consumption" class="graph"></span>
+      <span id="co2" class="graph"></span>
+    </div>
+  </div>
+</div>
+{% endblock project_content %}

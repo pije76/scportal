@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-23 20:43+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: consumption.py:92
+msgid "from"
+msgstr "desde"
+
+#: consumption.py:92
+msgid "to"
+msgstr "a"
+
+#: consumption.py:92
+msgid "group"
+msgstr "grupo"
+
+#: consumption.py:92
+msgid "portal name"
+msgstr "nombre del portal"
+
+#: consumption.py:93
+msgid "resource type"
+msgstr "tipo de fuente"
+
+#: consumption.py:93
+msgid "consumption"
+msgstr "consumo"
+
+#: consumption.py:94
+msgid "degreedays-corrected consumption"
+msgstr "grados día-consumo corregido"
+
+#: consumption.py:95
+msgid "unit"
+msgstr "unidad"
+
+#: consumption.py:95
+msgid "cost"
+msgstr "coste"
+
+#: consumption.py:96
+msgid "currency"
+msgstr "moneda"
+
+#: consumption.py:96
+msgid "meter number"
+msgstr "número de contador"
+
+#: consumption.py:96
+msgid "installation number"
+msgstr "número de instalación"
+
+#: consumption.py:97
+msgid "id"
+msgstr "id"
+
+#: consumption.py:165
+#: templates/reports/consumption.tex:19
+#: templates/reports/consumption.tex:48
+msgid "Consumption"
+msgstr "Consumo"
+
+#: models.py:34
+msgid "report"
+msgstr "informe"
+
+#: models.py:35
+msgid "reports"
+msgstr "informes"
+
+#: tasks.py:78
+#, python-brace-format
+msgid "Data series for {data_series_name}"
+msgstr "Serie de datos para {data_series_name}"
+
+#: tasks.py:142
+#, python-brace-format
+msgid "Consumption for {measurement_point} is calculated from incomplete data."
+msgstr "El consumo para {measurement_point} es calculado a partir de datos incompletos."
+
+#: tasks.py:150
+#, python-brace-format
+msgid "Consumption and therefore also cost is undefined for {measurement_point}"
+msgstr "El consumo, y por lo tanto también el coste, están indefinidos para{measurement_point}"
+
+#: tasks.py:163
+#, python-brace-format
+msgid "Heating degree days corrected consumption for {measurement_point} is calculated from incomplete data"
+msgstr "El consumo corregido según grados día calefacción para {measurement_point} es calculado a partir de datos incompletos"
+
+#: tasks.py:174
+#, python-brace-format
+msgid "Heating degree days corrected consumption undefined for {measurement_point}"
+msgstr "Consumo corregido según grados día de calefación indefinido para {measurement_point}"
+
+#: tasks.py:199
+#, python-brace-format
+msgid "Cost for {measurement_point} is calculated from incomplete data"
+msgstr "El coste para {measurement_point} es calculado a partir de datos incompletos"
+
+#: tasks.py:206
+#, python-brace-format
+msgid "Cost undefined for {measurement_point}"
+msgstr "Coste indefinido parar {measurement_point}"
+
+#: tasks.py:213
+#, python-brace-format
+msgid "Unable to calculate cost for {measurement_point} because it has no tariff attached."
+msgstr "Imposible calcular el coste para {measurement_point} no tiene tarifa asignada."
+
+#: templates/reports/consumption.tex:44
+msgid "Group"
+msgstr "Grupo"
+
+#: templates/reports/consumption.tex:45
+msgid "ID"
+msgstr "ID"
+
+#: templates/reports/consumption.tex:46
+msgid "Portal Name"
+msgstr "Nombre del portal"
+
+#: templates/reports/consumption.tex:47
+msgid "Resource Type"
+msgstr "Tipo de fuente"
+
+#: templates/reports/consumption.tex:50
+msgid "Corrected w.r.t. HDG"
+msgstr "GDC Corregidos"
+
+#: templates/reports/consumption.tex:53
+msgid "Cost"
+msgstr "Coste"
+
+#: templates/reports/consumption.tex:55
+msgid "Meter No."
+msgstr "Nº contador"
+
+#: templates/reports/consumption.tex:56
+msgid "Inst. No."
+msgstr "Nº Inst."
+
+#: templates/reports/consumption.tex:91
+msgid "Errors and Warnings"
+msgstr "Error y alerta"
+
+#: templates/reports/report.tex:71
+#, python-format
+msgid "Page %(page)s of %(page_count)s"
+msgstr "Página %(page)s de %(page_count)s"
+
+#: templates/reports/report.tex:71
+#, python-format
+msgid "Generated: %(date)s"
+msgstr "Generado: %(date)s"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#~ msgid "Unit"
+#~ msgstr "Unidad"
+
+#~ msgid "Page"
+#~ msgstr "Página"

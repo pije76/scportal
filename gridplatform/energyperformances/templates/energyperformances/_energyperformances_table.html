@@ -1,0 +1,31 @@
+{% load i18n %}
+
+<div>
+  {% if performances %}
+  {% if header %}
+  <h2>{{ header }}</h2>
+  {% endif %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>{% trans "Name" %}</th>
+        <th>{% trans "Value" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for performance in performances %}
+      <tr>
+        <td>{{ performance.object.name_plain }}</td>
+        {% if not performance.error %}
+        <td>{{ performance.value|floatformat }} {{ performance.unit }}</td>
+        {% else %}
+        <td>{{ performance.error }}</td>
+      {% endif %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  {{ none_available }}
+  {% endif %}
+</div>

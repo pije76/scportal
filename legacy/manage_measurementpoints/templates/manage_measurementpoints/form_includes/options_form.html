@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<div>
+  <fieldset>
+    {% if form.instance.used_in_report %}
+    <input type="hidden" name="used_in_report" value="true">
+    {% endif %}
+    <h6>{% trans "Options:" %}</h6>
+    <label>{% trans 'Relay on detail page:' %}</label>
+    {{ form.relay }}
+    {{ form.relay.errors }}
+    <label>{% trans 'Show rate graph:' %}</label>
+    {{ form.show_rate }}
+    {{ form.show_rate.errors }}
+    <div><i>{% trans "Only enable rate graphs if you have a high enough data resolution" %}</i></div>
+    <label>{% trans 'Hidden on details page:' %}</label>
+    {{ form.hidden_on_details_page }}
+    {{ form.hidden_on_details_page.errors }}
+    <label>{% trans 'Hidden on reports page:' %}</label>
+    {{ form.hidden_on_reports_page }}
+    {{ form.hidden_on_reports_page.errors }}
+  </fieldset>
+</div>

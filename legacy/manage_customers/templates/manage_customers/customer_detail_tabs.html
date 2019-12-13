@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load tabs %}
+
+{% trans 'Overview' as overview %}
+{% trans 'Agents' as agents %}
+{% trans 'Meters' as meters %}
+{% trans 'Locations' as locations %}
+{% trans 'Groups' as groups %}
+{% trans 'Users' as users %}
+{% trans 'Measurement Points' as measurementpoints %}
+
+<ul class="tabs">
+  {% tab_li overview 'manage_customers-detail' pk=customer.id %}
+  {% tab_li agents 'manage_customers-agent-list' customer=customer.id %}
+  {% tab_li meters 'manage_customers-meter-list' customer=customer.id %}
+</ul>

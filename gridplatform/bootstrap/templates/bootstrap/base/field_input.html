@@ -1,0 +1,13 @@
+{% if layout == 'horizontal' %}
+  <div class="col-sm-{{ input_columns }}">
+{% endif %}
+{{ widget }}
+{% if field.help_text %}
+  <span class="help-block">{{ field.help_text }}</span>
+{% endif %}
+{% for error in field.errors %}
+  <span class="help-block">{{ error }}</span>
+{% endfor %}
+{% if layout == 'horizontal' %}
+  </div>
+{% endif %}

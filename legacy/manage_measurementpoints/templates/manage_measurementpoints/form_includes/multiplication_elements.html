@@ -1,0 +1,12 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<fieldset>
+  <label>{% trans 'Measurement point:' %}</label>
+  {{ form.source_consumption_point }}
+  {{ form.source_consumption_point.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Multiplier:' %}</label>
+  {{ form.multiplier }}
+  {{ form.multiplier.errors }}
+</fieldset>

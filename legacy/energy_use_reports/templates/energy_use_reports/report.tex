@@ -1,0 +1,122 @@
+{% extends "reports/report.tex" %}
+
+{% load i18n %}
+{% load l10n %}
+{% load reports %}
+
+
+{% block preamble_extra %}
+\usepackage{tabu}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest, width=\textwidth, height=6cm}
+
+\pgfkeys{/pgf/number format/.cd,
+set decimal separator={{ '{' }}{{ DECIMAL_SEPARATOR }}},
+set thousands separator={{ '{' }}{{ THOUSAND_SEPARATOR }}}}
+
+% http://www.texample.net/tikz/examples/pie-chart/
+\newcommand{\slice}[4]{
+  % #1 = from degrees, #2 = to degrees, #3 = label, #4 = color
+  \pgfmathsetmacro{\midangle}{0.5*#1+0.5*#2}
+  % slice
+  \definecolor{slicecolor}{HTML}{#4}
+  \draw[thick,color=white,fill=slicecolor] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;
+  % label
+  \node[label=\midangle:{#3}] at (\midangle:1) {};
+}
+{% endblock preamble_extra %}
+
+
+{% block content %}
+
+\section*{ {{ energy_use_report.title_plain|texescape }} }
+\begin{center}
+\begin{tabular}{| l | p{8cm} |}
+\hline
+\bf {% trans "Current Period" %}&
+{{ from_date }} - {{ to_date }}\\
+\hline
+\bf {% trans "Previous Period" %}&
+{{ previous_from_date }} - {{ previous_to_date }}\\
+\hline
+\end{tabular}
+\end{center}
+
+
+{% if total_cost %}
+\newpage
+\subsection*{ {% trans "Distribution of Cost" %} }
+
+{% if show_cost_pie_chart %}
+{% include "energy_use_reports/pie.tex" with total=colored_costs %}
+{% endif %}
+
+{% include "energy_use_reports/use_area_table.tex" with total_data=colored_costs unit=energy_use_report.get_currency_unit_display|texescape total_previous=total_previous_cost total_change_percent=total_cost_change_percent total=total_cost%}
+
+{% if errors %}
+{% blocktrans notexescape with page="\pageref{sec:errors}" star="$^*$" %}The areas of use marked with {{ star }} contain errors. See errors and warnings on page~{{ page }}{% endblocktrans %}
+{% endif %}
+
+{% endif %}
+
+{% if total_co2 %}
+\newpage
+\subsection*{ {% trans "Distribution of CO₂ Emissions" %} }
+
+{% if show_co2_pie_chart %}
+{% include "energy_use_reports/pie.tex" with total=colored_co2 %}
+{% endif %}
+
+{% include "energy_use_reports/use_area_table.tex" with total_data=colored_co2 unit=energy_use_report.get_preferred_co2_emission_unit_display|texescape total_previous=total_previous_co2 total_change_percent=total_co2_change_percent total=total_co2%}
+
+{% if errors %}
+{% blocktrans notexescape with page="\pageref{sec:errors}" star="$^*$" %}The areas of use marked with {{ star }} contain errors. See errors and warnings on page~{{ page }}{% endblocktrans %}
+{% endif %}
+
+{% endif %}
+
+
+{% if total_consumption %}
+\newpage
+\subsection*{ {% trans "Distribution of Consumption" %} }
+
+{% if show_consumption_pie_chart %}
+{% include "energy_use_reports/pie.tex" with total=colored_consumptions %}
+{% endif %}
+
+{% include "energy_use_reports/use_area_table.tex" with total_data=colored_consumptions unit=energy_use_report.get_preferred_unit_display|texescape total_previous=total_previous_consumption total_change_percent=total_consumption_change_percent total=total_consumption%}
+
+{% if errors %}
+{% blocktrans notexescape with page="\pageref{sec:errors}" star="$^*$" %}The areas of use marked with {{ star }} contain errors. See errors and warnings on page~{{ page }}{% endblocktrans %}
+{% endif %}
+
+{% endif %}
+
+\newpage
+
+\section*{\relax {% trans "Consumption Graph" %} }
+
+\input{consumption}
+
+{% if include_co2 %}
+\section*{\relax {% trans "CO₂ Emission Graph" %} }
+
+\input{co2-emission}
+{% endif %}
+\newpage
+
+
+{% if errors %}
+\subsection*{ {% trans "Errors and Warnings" %} }
+\label{sec:errors}
+\begin{itemize}
+{% for error in errors %}
+\item {{ error|texescape }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+
+
+{% endblock content %}

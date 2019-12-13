@@ -1,0 +1,92 @@
+#floorplan, .floorplan-items {
+    .map > img{
+        position: absolute;
+        z-index: 1;
+    }
+    .map .item-overlay {
+        position: relative;
+        z-index: 2;
+        .arrow {
+            display: block;
+            height: 14px;
+        }
+        .remove {
+            display: inline;
+            padding-right: 2px;
+        }
+        .name {
+            width: 150px;
+            a,a:hover,a:visited {
+                color: #000;
+            }
+        }
+        .item_value {
+            padding-left: 2px;
+        }
+        textarea {
+            margin-top: 3px;
+        }
+        .infoitem .name {
+            display: none;
+        }
+        .infoitem .border{
+            padding: 1px;
+        }
+
+    }
+    .item-list {
+        float: left;
+        min-height: 200px;
+        width: 200px;
+    }
+    .drop-hover {
+        background-color: yellow;
+    }
+    .item {
+        cursor: pointer;
+        .name{
+            width: 160px;
+        }
+        .icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .border {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+             border-radius: 10px;
+        border: 2px solid #000;
+        background-color: #eee;
+        margin-bottom: 2px;
+    }
+
+    .arrow {
+        text-align: center;
+        display: none;
+    }
+    .icon img {
+        margin-top: 2px;
+        float: left;
+    }
+
+    .remove {
+        display: none;
+    }
+}
+
+#groups-page .in-page-menu .menu-content {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    min-width: 196px;
+
+    form {
+        display: none;
+    }
+
+    .infoitem .name{
+        padding-left: 2px;
+    }
+}

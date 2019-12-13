@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load bootstrap_tags %}
+{% if object_list %}
+<table class="table table-striped table-bordered sorted" data-provides="rowlink">
+  <thead>
+    <th class="sorting" data-orderby="name_plain">{% trans "Name" %}</th>
+    <th class="sorting" data-orderby="is_active">{% trans "Active" %}</th>
+  </thead>
+  <tbody>
+  {% for object in object_list %}
+  <tr>
+    <td><a href="{% url 'provider_site:customer-update' pk=object.id %}">{{ object.name_plain }}</a></td>
+    <td>{% if object.is_active %}{% icon 'check-square-o' %}{% else %}{% icon 'square-o' %}{% endif %}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% include "bootstrap/_pagination.html" %}
+{% else %}
+<span class="no-data">{% trans "No customers present." %}</span>
+{% endif %}

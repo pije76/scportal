@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-20 20:46+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models/accumulation.py:109
+#: models/accumulation.py:142
+#: models/energyconversion.py:64
+#: models/nonaccumulation.py:88
+msgid "data source"
+msgstr "origen de datos"
+
+#: models/accumulation.py:124
+msgid "Input configuration and data source units are not compatible"
+msgstr "La configuración de la entrada y la unidad de los datos de origen no son compatibles"
+
+#: models/accumulation.py:151
+msgid "pulse quantity"
+msgstr "cantidad de pulsos"
+
+#: models/accumulation.py:152
+msgid "output quantity"
+msgstr "cantidad de salida"
+
+#: models/accumulation.py:153
+msgid "output unit"
+msgstr "unidad de salida"
+
+#: models/accumulation.py:161
+msgid "Input configuration and output units are not compatible"
+msgstr "La configuración de la entrada y la unidad de los datos de salida no son compatibles"
+
+#: models/accumulation.py:194
+msgid "value"
+msgstr "valor"
+
+#: models/accumulation.py:199
+msgid "unit"
+msgstr "unidad"
+
+#: models/accumulation.py:209
+msgid "The \"to time\" is required for single value periods."
+msgstr "\"to time\" es necesario para periodos de valores simples"
+
+#: models/accumulation.py:215
+msgid "The chosen unit is not compatible."
+msgstr "La unidad seleccionada no es compatible"
+
+#: models/base.py:40
+msgid "name"
+msgstr "nombre"
+
+#: models/base.py:119
+msgid "from time"
+msgstr "desde"
+
+#: models/base.py:120
+msgid "to time"
+msgstr "hasta"
+
+#: models/base.py:145
+msgid "unspecified"
+msgstr "no especificado"
+
+#: models/base.py:154
+#, python-brace-format
+msgid "{from_timestamp} - {to_timestamp}: {datasequence}"
+msgstr "{from_timestamp} - {to_timestamp}: {datasequence}"
+
+#: models/base.py:162
+msgid "Period \"to\" must be after period \"from\""
+msgstr "El periodo \"hasta\" dede ser posterior al periodo \"desde\""
+
+#: models/base.py:164
+msgid "Period must start on a clock hour"
+msgstr "El periodo debe empezar a una hora en punto"
+
+#: models/base.py:166
+msgid "Period must end on a clock hour"
+msgstr "El periodo debe finalizar a una hora en punto"
+
+#: models/base.py:204
+msgid "There are overlapping periods."
+msgstr "Hay periodos que se solapan"
+
+#: models/energyconversion.py:48
+msgid "energy conversion data sequence"
+msgstr "secuencia de datos para conversion de energía"
+
+#: models/energyconversion.py:49
+msgid "energy conversion data sequences"
+msgstr "secuencias de datos para conversion de energía"
+
+#: models/energyconversion.py:60
+#: models/nonaccumulation.py:84
+msgid "data sequence"
+msgstr "secuencia de datos"
+
+#: models/energyconversion.py:74
+msgid "Data sequence and data source units are not compatible"
+msgstr "La secuencia de datosy el origen de los datos no son compatibles"
+
+#: models/nonaccumulation.py:34
+msgid "nonaccumulation data sequence"
+msgstr "secuencia de datos no acumulativa"
+
+#: models/nonaccumulation.py:35
+msgid "nonaccumulation data sequences"
+msgstr "secuencias de datos no acumulativa"
+
+#: models/nonaccumulation.py:46
+msgid "Field cannot be updated."
+msgstr "El campo no puede ser actualizado"
+
+#: models/nonaccumulation.py:93
+msgid "nonaccumulation period"
+msgstr "periodo no acumulativo"
+
+#: models/nonaccumulation.py:94
+msgid "nonaccumulation periods"
+msgstr "periodos no acumulativos"
+
+#: models/qualitycontrol.py:30
+msgid "clock hours"
+msgstr "horas en punto"
+
+#: models/qualitycontrol.py:31
+msgid "report error if offline for this many clock hours"
+msgstr "reporte informe de error si identifica estado offline durante numerosas horas"
+

@@ -1,0 +1,42 @@
+{% spaceless %}
+{% load static from staticfiles %}
+{% load url from future %}
+{% load i18n %}
+
+<div class="menu-item dashboard">
+  <a href="{% url 'display_widgets-dashboard' %}">
+    <div class="icon"></div>
+    <span>{% trans "Dashboard" %}</span>
+  </a>
+</div>
+
+<div class="menu-item mp">
+  <a href="{% url 'display_measurementpoints-index' %}">
+    <div class="icon"></div>
+    <span>{% trans "Details" %}</span>
+  </a>
+</div>
+
+<div class="menu-item indexes">
+  <a href="{% url 'display_indexes-index' %}">
+    <div class="icon"></div>
+    <span>{% trans "Indexes" %}</span>
+  </a>
+</div>
+
+<div class="menu-item reports">
+  <a href="{% url 'manage_reports-index' %}">
+    <div class="icon"></div>
+    <span>{% trans "Reports" %}</span>
+  </a>
+</div>
+
+<div class="menu-item projects">
+  <a href="{% url 'display_projects-index' %}">
+    <div class="icon"></div>
+    <span>{% trans "Projects" %}</span>
+  </a>
+</div>
+
+<div class="menu-right-border"></div>
+{% endspaceless %}

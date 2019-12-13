@@ -1,0 +1,458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: views.py:181
+msgid "At least one period must be defined"
+msgstr "Men én periode skal være defineret"
+
+#: views.py:189
+msgid "No two periods can have the same from date"
+msgstr "Der må ikke være to perioder med samme 'fra' data"
+
+#: views.py:342
+msgid "Create New Derived Electricity Tariff"
+msgstr "Opret Ny Afledt Elektricitetstarif"
+
+#: views.py:347
+msgid "Create New Derived Gas Tariff"
+msgstr "Opret Ny Afledt Gastarif"
+
+#: views.py:352
+msgid "Create New Derived Water Tariff"
+msgstr "Opret Ny Afledt Vandtarif"
+
+#: views.py:357
+msgid "Create New Derived District Heating Tariff"
+msgstr "Opret Ny Afledt Fjernevarmetarif"
+
+#: views.py:362
+msgid "Create New Derived Oil Tariff"
+msgstr "Opret Ny Afledt Olietarif"
+
+#: views.py:371
+msgid "Create New Seasons Electricity Tariff"
+msgstr "Opret Ny Sæson-elektricitetstarif"
+
+#: views.py:376
+msgid "Create New Seasons Gas Tariff"
+msgstr "Opret Ny Sæson-gastarif"
+
+#: views.py:381
+msgid "Create New Seasons Water Tariff"
+msgstr "Opret Ny Sæson-vandtarif"
+
+#: views.py:386
+msgid "Create New Seasons District Heating Tariff"
+msgstr "Opret Ny Sæson-fjernevarmetarif"
+
+#: views.py:391
+msgid "Create New Seasons Oil Tariff"
+msgstr "Opret Ny Sæson-olietarif"
+
+#: views.py:396
+msgid "Create New Seasons Employees Index"
+msgstr "Opret Ny Sæson Personale Index"
+
+#: views.py:403
+msgid "Create New Seasons Area Index"
+msgstr "Opret Nyt Sæson Areal Index"
+
+#: views.py:430
+#, python-brace-format
+msgid "Update Derived {index_role}"
+msgstr "Opdatér Afledt {index_role}"
+
+#: views.py:440
+#, python-brace-format
+msgid "Update Seasons {index_role}"
+msgstr "Opdater Sæson {index_role}"
+
+#: views.py:462
+msgid "The index has been deleted"
+msgstr "Indeks slettet"
+
+#: templates/manage_indexes/_derived_period_formset.html:8
+#: templates/manage_indexes/_seasons_period_formset.html:9
+#: templates/manage_indexes/index_form.html:122
+#: templates/manage_indexes/index_form.html:142
+msgid "From date:"
+msgstr "Fra dato:"
+
+#: templates/manage_indexes/_derived_period_formset.html:13
+msgid "Other index:"
+msgstr "Andet indeks:"
+
+#: templates/manage_indexes/_derived_period_formset.html:18
+#: templates/manage_indexes/index_form.html:130
+msgid "Coefficient:"
+msgstr "Koefficient:"
+
+#: templates/manage_indexes/_derived_period_formset.html:23
+#: templates/manage_indexes/index_form.html:131
+msgid "Constant:"
+msgstr "Konstant:"
+
+#: templates/manage_indexes/_derived_period_formset.html:28
+msgid "Roof:"
+msgstr "Loft"
+
+#: templates/manage_indexes/_derived_period_formset.html:33
+#: templates/manage_indexes/_seasons_period_formset.html:5
+#: templates/manage_indexes/index_form.html:117
+msgid "Delete:"
+msgstr "Slet:"
+
+#: templates/manage_indexes/_index_fields.html:3
+#: templates/manage_indexes/_tariff_fields.html:3
+#: templates/manage_indexes/index_form.html:84
+msgid "Name:"
+msgstr "Navn:"
+
+#: templates/manage_indexes/_index_fields.html:8
+#: templates/manage_indexes/_tariff_fields.html:8
+#: templates/manage_indexes/index_form.html:89
+msgid "Group:"
+msgstr "Gruppe:"
+
+#: templates/manage_indexes/_index_fields.html:14
+#: templates/manage_indexes/_tariff_fields.html:13
+#: templates/manage_indexes/index_block.html:21
+msgid "Unit:"
+msgstr "Enhed:"
+
+#: templates/manage_indexes/_index_fields.html:20
+#: templates/manage_indexes/_tariff_fields.html:18
+#: templates/manage_indexes/index_form.html:108
+msgid "Timezone:"
+msgstr "Tidszone:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:15
+#: templates/manage_indexes/index_form.html:148
+msgid "00-01:"
+msgstr "00-01:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:16
+#: templates/manage_indexes/index_form.html:149
+msgid "01-02:"
+msgstr "01-02:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:17
+#: templates/manage_indexes/index_form.html:150
+msgid "02-03:"
+msgstr "02-03:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:18
+#: templates/manage_indexes/index_form.html:151
+msgid "03-04:"
+msgstr "03-04:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:19
+#: templates/manage_indexes/index_form.html:152
+msgid "04-05:"
+msgstr "04-05:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:20
+#: templates/manage_indexes/index_form.html:153
+msgid "05-06:"
+msgstr "05-06:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:21
+#: templates/manage_indexes/index_form.html:154
+msgid "06-07:"
+msgstr "06-07:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:22
+#: templates/manage_indexes/index_form.html:155
+msgid "07-08:"
+msgstr "07-08:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:23
+#: templates/manage_indexes/index_form.html:156
+msgid "08-09:"
+msgstr "08-09:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:24
+#: templates/manage_indexes/index_form.html:157
+msgid "09-10:"
+msgstr "09-10:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:25
+#: templates/manage_indexes/index_form.html:158
+msgid "10-11:"
+msgstr "10-11:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:26
+#: templates/manage_indexes/index_form.html:159
+msgid "11-12:"
+msgstr "11-12:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:37
+#: templates/manage_indexes/index_form.html:170
+msgid "12-13:"
+msgstr "12-13:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:38
+#: templates/manage_indexes/index_form.html:171
+msgid "13-14:"
+msgstr "12-13:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:39
+#: templates/manage_indexes/index_form.html:172
+msgid "14-15:"
+msgstr "14-15:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:40
+#: templates/manage_indexes/index_form.html:173
+msgid "15-16:"
+msgstr "15-16:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:41
+#: templates/manage_indexes/index_form.html:174
+msgid "16-17:"
+msgstr "16-17:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:42
+#: templates/manage_indexes/index_form.html:175
+msgid "17-18:"
+msgstr "17-18:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:43
+#: templates/manage_indexes/index_form.html:176
+msgid "18-19:"
+msgstr "18-19:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:44
+#: templates/manage_indexes/index_form.html:177
+msgid "19-20:"
+msgstr "19-20:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:45
+#: templates/manage_indexes/index_form.html:178
+msgid "20-21:"
+msgstr "20-21:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:46
+#: templates/manage_indexes/index_form.html:179
+msgid "21-22:"
+msgstr "21-22:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:47
+#: templates/manage_indexes/index_form.html:180
+msgid "22-23:"
+msgstr "22-23:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:48
+#: templates/manage_indexes/index_form.html:181
+msgid "23-24:"
+msgstr "23-24:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:62
+#: templates/manage_indexes/index_form.html:195
+msgid ""
+"All fields must be filled out with intergers and only 5 digits per field"
+msgstr "Alle felter skal udfyldes med heltal og max 5 tal per felt"
+
+#: templates/manage_indexes/_seasons_period_formset.html:66
+#: templates/manage_indexes/index_form.html:199
+msgid "Populate empty hours"
+msgstr "Udfyld tomme felter"
+
+#: templates/manage_indexes/_seasons_period_formset.html:70
+#: templates/manage_indexes/index_form.html:203
+msgid "Clear period"
+msgstr "Ryd periode"
+
+#: templates/manage_indexes/form_base.html:84
+#: templates/manage_indexes/form_base.html:88
+#: templates/manage_indexes/index_form.html:69
+#: templates/manage_indexes/index_form.html:73
+#: templates/manage_indexes/indexes_list.html:11
+msgid "Settings: Indexes"
+msgstr "Indstillinger: Indekser"
+
+#: templates/manage_indexes/form_base.html:103
+#: templates/manage_indexes/index_form.html:112
+msgid "Periods"
+msgstr "Perioder"
+
+#: templates/manage_indexes/form_base.html:114
+#: templates/manage_indexes/index_form.html:209
+msgid "Save and return to list"
+msgstr "Gem og luk"
+
+#: templates/manage_indexes/form_base.html:116
+#: templates/manage_indexes/index_form.html:212
+msgid "Delete"
+msgstr "Slet"
+
+#: templates/manage_indexes/index_block.html:11
+msgid "Edit index"
+msgstr "Redigér index"
+
+#: templates/manage_indexes/index_block.html:19
+msgid "Data type:"
+msgstr "Datatype:"
+
+#: templates/manage_indexes/index_block.html:29
+msgid "Set for all measurement points"
+msgstr "Indstil for alle målepunkter"
+
+#: templates/manage_indexes/index_form.html:95
+msgid "Currency:"
+msgstr "Møntfod:"
+
+#: templates/manage_indexes/index_form.html:122
+msgid "Index:"
+msgstr "Indeks:"
+
+#: templates/manage_indexes/index_form.html:132
+msgid "Roof (optional):"
+msgstr "Loft (valgfrit):"
+
+#: templates/manage_indexes/index_form.html:208
+msgid "Save"
+msgstr "Gem"
+
+#: templates/manage_indexes/indexes_list.html:10
+msgid "Setting: Indexes"
+msgstr "Indstillinger: Indekser"
+
+#: templates/manage_indexes/indexes_list.html:12
+msgid "Indexes"
+msgstr "Indekser"
+
+#: templates/manage_indexes/indexes_list.html:28
+msgid "Derived electricity tariff"
+msgstr "Afledt elektricitetstarif"
+
+#: templates/manage_indexes/indexes_list.html:29
+msgid "Seasons electricity tariff"
+msgstr "Sæson-elektricitetstarif"
+
+#: templates/manage_indexes/indexes_list.html:31
+msgid "Derived gas tariff"
+msgstr "Afledt gastarif"
+
+#: templates/manage_indexes/indexes_list.html:32
+msgid "Seasons gas tariff"
+msgstr "Sæson-gastarif"
+
+#: templates/manage_indexes/indexes_list.html:34
+msgid "Derived water tariff"
+msgstr "Afledt vandtarif"
+
+#: templates/manage_indexes/indexes_list.html:35
+msgid "Seasons water tariff"
+msgstr "Sæson-vandtarif"
+
+#: templates/manage_indexes/indexes_list.html:37
+msgid "Derived district heating tariff"
+msgstr "Afledt fjernvarmetarif"
+
+#: templates/manage_indexes/indexes_list.html:38
+msgid "Seasons district heating tariff"
+msgstr "Sæson-fjernevarmetarif"
+
+#: templates/manage_indexes/indexes_list.html:40
+msgid "Derived oil tariff"
+msgstr "Afledt olietarif"
+
+#: templates/manage_indexes/indexes_list.html:41
+msgid "Seasons oil tariff"
+msgstr "Sæson-olietarif"
+
+#: templates/manage_indexes/indexes_list.html:43
+msgid "Employees"
+msgstr "Medarbejdere"
+
+#: templates/manage_indexes/indexes_list.html:44
+msgid "Area"
+msgstr "Areal"
+
+#: templates/manage_indexes/indexes_list.html:49
+msgid "Name"
+msgstr "Navn"
+
+#: templates/manage_indexes/indexes_list.html:50
+msgid "Unit"
+msgstr "Enhed"
+
+#~ msgid "Seasons heat tariff"
+#~ msgstr "Sæson-varmetarif"
+
+#~ msgid "electricity tariff"
+#~ msgstr "elektricitetstarif"
+
+#~ msgid "gas tariff"
+#~ msgstr "gastarif"
+
+#~ msgid "water tariff"
+#~ msgstr "vandtarif"
+
+#~ msgid "oil tariff"
+#~ msgstr "olietarif"
+
+#~ msgid "heat tariff"
+#~ msgstr "varmetarif"
+
+#~ msgid "employees"
+#~ msgstr "medarbejdere"
+
+#~ msgid "area"
+#~ msgstr "areal"
+
+#~ msgid ""
+#~ "The index must match the selected currency and unit for the derived index"
+#~ msgstr ""
+#~ "Indekset skal stemme overens med den valgte møntfod og enhed for det "
+#~ "afledte indeks"
+
+#~ msgid "The index has been saved"
+#~ msgstr "Indeks gemt"
+
+#~ msgid "The index has been created"
+#~ msgstr "Indeks oprettet"
+
+#~ msgid "{currency}/kWh"
+#~ msgstr "{currency}/kWh"
+
+#~ msgid "{currency}/l"
+#~ msgstr "{currency}/l"
+
+#~ msgid "{currency}/m³"
+#~ msgstr "{currency}/m³"
+
+#~ msgid "Currency/unit"
+#~ msgstr "Møntfod/enhed"
+
+#~ msgid "Group"
+#~ msgstr "Gruppe"
+
+#~ msgid "Add derived index"
+#~ msgstr "Tilføj afledt indeks"
+
+#~ msgid "Add seasons index"
+#~ msgstr "Tilføj sæsonindeks"
+
+#~ msgid "Sort by"
+#~ msgstr "Sortér efter"
+
+#~ msgid "Filter"
+#~ msgstr "Filter"

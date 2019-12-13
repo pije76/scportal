@@ -1,0 +1,24 @@
+{% extends "list_page.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+
+{% block page_id %}devices-page{% endblock %}
+{% block list_url %}{% url 'manage_devices-agent-list-json' %}{% endblock %}
+{% block default_sort_by %}location{% endblock %}
+
+{% block title %}{% trans "Settings: Devices" %}{% endblock title %}
+{% block content_heading %}{% trans "Settings: Devices" %}{% endblock content_heading %}
+{% block list_title %}{% trans "Agents" %}{% endblock %}
+
+{% block tabs %}
+{% include "manage_devices/device_tabs.html" %}
+{% endblock tabs %}
+
+{% block add_button %}
+{% endblock %}
+
+{% block sort_by %}
+<span class="sort" data-sort="location">{% trans "Location" %}</span>
+<span class="sort" data-sort="mac">{% trans "MAC" %}</span>
+{% endblock %}

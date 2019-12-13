@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:23
+msgid "cost compensation"
+msgstr "afgiftsgodtgørelse"
+
+#: models.py:24
+msgid "cost compensations"
+msgstr "afgiftsgodtgørelser"
+
+#: models.py:54
+msgid "data sequence"
+msgstr "datasekvenser"
+
+#: models.py:60
+msgid "cost compensation period"
+msgstr "afgiftsgodtgørelsesperiode"
+
+#: models.py:61
+msgid "cost compensation periods"
+msgstr "afgiftsgodtgørelsesperioder"
+
+#: models.py:71
+msgid "value"
+msgstr "værdi"
+
+#: models.py:72
+msgid "unit"
+msgstr "enhed"
+
+#: models.py:76
+msgid "fixed compensation period"
+msgstr "enkeltværdisgodtgørelsesperiode"
+
+#: models.py:77
+msgid "fixed compensation periods"
+msgstr "enkeltværdisgodtgørelsesperioder"
+
+#: models.py:99
+msgid "Selected unit is not compatible with unit of cost compensation."
+msgstr "Valgte enhed er ikke kompatibel med afgiftsgodtgørelsesenheden."
+
+#~ msgid "cost compensation data sequence"
+#~ msgstr "afgiftsgodtgørelsesdatasekvens"
+
+#~ msgid "cost compensation data sequences"
+#~ msgstr "afgiftsgodtgørelsesdatasekvenser"

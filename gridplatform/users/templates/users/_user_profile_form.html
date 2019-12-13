@@ -1,0 +1,8 @@
+{% load bootstrap_tags %}
+
+{% url 'users:profile' as profile_action %}
+{% bootstrap_form form_action=profile_action %}
+<div class="modal-body">
+    {% form form %}
+</div>
+{% endbootstrap_form %}

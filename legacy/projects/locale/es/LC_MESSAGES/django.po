@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:55+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: models.py:129
+msgid "name"
+msgstr ""
+
+#: models.py:133
+msgid "customer"
+msgstr ""
+
+#: models.py:134
+msgid "background"
+msgstr ""
+
+#: models.py:135
+msgid "expectations"
+msgstr ""
+
+#: models.py:136
+msgid "actions"
+msgstr ""
+
+#: models.py:139
+msgid "subsidy"
+msgstr ""
+
+#: models.py:141
+msgid "result"
+msgstr ""
+
+#: models.py:143
+msgid "comments"
+msgstr ""
+
+#: models.py:146
+msgid ""
+"Comments about project schedules, project changes, contact persons and so on."
+msgstr ""
+
+#: models.py:150
+msgid "project duration"
+msgstr ""
+
+#: models.py:154
+msgid "estimated yearly costs before"
+msgstr ""
+
+#: models.py:159
+msgid "estimated yearly consumption before"
+msgstr ""
+
+#: models.py:164
+msgid "estimated yearly CO₂ emissions before"
+msgstr ""
+
+#: models.py:168
+msgid "expected savings in yearly total costs"
+msgstr ""
+
+#: models.py:172
+msgid "expected savings in yearly consumption after"
+msgstr ""
+
+#: models.py:176
+msgid "expected reduction in yearly CO₂ emissions"
+msgstr ""
+
+#: models.py:180
+msgid "utility type"
+msgstr ""
+
+#: models.py:183
+msgid "include measured costs"
+msgstr ""
+
+#: models.py:206
+msgid "In planning"
+msgstr ""
+
+#: models.py:208
+msgid "In progress"
+msgstr ""
+
+#: models.py:211
+msgid "Completed"
+msgstr ""
+
+#: models.py:240
+msgid "Fill in all \"baseline\" and \"result\" dates."
+msgstr ""
+
+#: models.py:244
+#, fuzzy
+msgid "Baseline \"to\" is not after \"from\"."
+msgstr "\"To\" no va después de \"From\" en {stage}"
+
+#: models.py:247
+#, fuzzy
+msgid "Result \"to\" is not after \"from\"."
+msgstr "\"To\" no va después de \"From\" en {stage}"
+
+#: models.py:302 models.py:785 models.py:888 models.py:1192 tests.py:462
+msgid "Baseline"
+msgstr ""
+
+#: models.py:304 models.py:807 models.py:917 models.py:1209 tests.py:454
+#: tests.py:458 tests.py:466
+msgid "Result"
+msgstr ""
+
+#: models.py:636
+msgid "minutes"
+msgstr "minutos"
+
+#: models.py:641
+msgid "hours"
+msgstr "horas"
+
+#: models.py:646
+msgid "days"
+msgstr "días"
+
+#: models.py:651
+msgid "months"
+msgstr "meses"
+
+#: models.py:656 templates/projects/annual_savings_potential_report.tex:41
+#: templates/projects/annual_savings_potential_report.tex:54
+msgid "years"
+msgstr "años"
+
+#: models.py:1173
+#, python-brace-format
+msgid "Tariff for {mps} does not cover the duration of {stage}"
+msgstr "La tarifa para {mps} no abarca la duración de {stage}"
+
+#: models.py:1216 models.py:1281
+msgid "project"
+msgstr ""
+
+#: models.py:1217
+msgid "description"
+msgstr ""
+
+#: models.py:1219
+msgid "energy before"
+msgstr ""
+
+#: models.py:1223
+msgid "energy after"
+msgstr ""
+
+#: models.py:1227
+msgid "cost before"
+msgstr ""
+
+#: models.py:1231
+msgid "cost after"
+msgstr ""
+
+#: models.py:1235
+msgid "CO² before"
+msgstr ""
+
+#: models.py:1239
+msgid "CO² after"
+msgstr ""
+
+#: models.py:1243
+msgid "unit for energy"
+msgstr ""
+
+#: models.py:1265
+msgid "Must be positive."
+msgstr ""
+
+#: models.py:1284
+msgid "cost"
+msgstr ""
+
+#: models.py:1286
+msgid "amortization period in months"
+msgstr ""
+
+#: models.py:1290
+msgid "interest rate"
+msgstr ""
+
+#: models.py:1297
+msgid "scrap value"
+msgstr ""
+
+#: models.py:1328
+msgid "Interest rate must be set when amortization period is non-zero."
+msgstr ""
+
+#: models.py:1333
+msgid "Amortization period must be non-zero when interest rate is set."
+msgstr ""
+
+#: models.py:1339
+msgid ""
+"Scrap value requires amortization period and interest rate to be both non-"
+"zero."
+msgstr ""
+
+#: views.py:51
+msgid "Annual Savings Potential"
+msgstr ""
+
+#: templates/projects/annual_savings_potential_report.tex:27
+msgid "Action"
+msgstr ""
+
+#: templates/projects/annual_savings_potential_report.tex:28
+msgid "Costs"
+msgstr ""
+
+#: templates/projects/annual_savings_potential_report.tex:29
+msgid "Savings"
+msgstr ""
+
+#: templates/projects/annual_savings_potential_report.tex:30
+msgid "Subsidy"
+msgstr ""
+
+#: templates/projects/annual_savings_potential_report.tex:31
+msgid "Investment"
+msgstr ""
+
+#: templates/projects/annual_savings_potential_report.tex:32
+msgid "Payback Period (years)"
+msgstr ""
+
+#: templates/projects/annual_savings_potential_report.tex:43
+#: templates/projects/annual_savings_potential_report.tex:56
+msgid "n/a"
+msgstr ""
+
+#~ msgid "electricity"
+#~ msgstr "electricidad"
+
+#~ msgid "heat"
+#~ msgstr "calor"
+
+#~ msgid "gas"
+#~ msgstr "gas"
+
+#~ msgid "water"
+#~ msgstr "agua"
+
+#~ msgid "data origin"
+#~ msgstr "origen de los datos"
+
+#~ msgid "Stage 1"
+#~ msgstr "Etapa 1"
+
+#~ msgid "Stage 2"
+#~ msgstr "Etapa 2"
+
+#~ msgid "Stage {stage_number}: {from_time} - {to_time}"
+#~ msgstr "Etapa {stage_number}: {from_time} - {to_time}"

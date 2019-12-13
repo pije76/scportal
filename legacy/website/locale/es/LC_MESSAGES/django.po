@@ -1,0 +1,347 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:26+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: templates/admin_menu.html:9
+msgid "Customers"
+msgstr "Clientes"
+
+#: templates/admin_menu.html:16
+msgid "Agents"
+msgstr "Agents"
+
+#: templates/admin_settings_menu.html:9
+#: templates/customer_superuser_settings_menu.html:59
+#: templates/customer_user_settings_menu.html:9
+msgid "User Profile"
+msgstr "Perfil de Usuario"
+
+#: templates/admin_superuser_menu_points.html:9
+#: templates/customer_superuser_settings_menu.html:10
+#: templates/customer_user_menu.html:16
+msgid "Details"
+msgstr "Detalles"
+
+#: templates/admin_superuser_menu_points.html:16
+#: templates/customer_superuser_settings_menu.html:31
+#: templates/customer_user_menu.html:23
+msgid "Indexes"
+msgstr "Tarifas"
+
+#: templates/admin_superuser_menu_points.html:23
+#: templates/customer_user_menu.html:30
+msgid "Reports"
+msgstr "Informes"
+
+#: templates/admin_superuser_menu_points.html:30
+#: templates/customer_user_menu.html:37
+msgid "Projects"
+msgstr "Proyectos"
+
+#: templates/base.html:101 templates/base.html.py:127
+#: templates/overlay_base.html:17
+msgid "Close"
+msgstr "Cerrar"
+
+#: templates/base.html:102
+msgid "Previous"
+msgstr "Previo"
+
+#: templates/base.html:103
+msgid "Next"
+msgstr "Siguiente"
+
+#: templates/base.html:104 templates/base.html.py:126
+msgid "Now"
+msgstr "Ahora"
+
+#: templates/base.html:105
+msgid "January"
+msgstr "Enero"
+
+#: templates/base.html:105
+msgid "February"
+msgstr "Febrero"
+
+#: templates/base.html:105
+msgid "March"
+msgstr "Marzo"
+
+#: templates/base.html:105
+msgid "April"
+msgstr "Abril"
+
+#: templates/base.html:105 templates/base.html.py:106
+msgid "May"
+msgstr "Mayo"
+
+#: templates/base.html:105 templates/base.html.py:106
+msgid "June"
+msgstr "Junio"
+
+#: templates/base.html:105 templates/base.html.py:106
+msgid "July"
+msgstr "Julio"
+
+#: templates/base.html:105
+msgid "August"
+msgstr "Agosto"
+
+#: templates/base.html:105
+msgid "September"
+msgstr "Septiembre"
+
+#: templates/base.html:105
+msgid "October"
+msgstr "Octubre"
+
+#: templates/base.html:105
+msgid "November"
+msgstr "Noviembre"
+
+#: templates/base.html:105
+msgid "December"
+msgstr "Diciembre"
+
+#: templates/base.html:106
+msgid "Jan"
+msgstr "Ene"
+
+#: templates/base.html:106
+msgid "Feb"
+msgstr "Feb"
+
+#: templates/base.html:106
+msgid "Mar"
+msgstr "Mar"
+
+#: templates/base.html:106
+msgid "Apr"
+msgstr "Abr"
+
+#: templates/base.html:106
+msgid "Aug"
+msgstr "Ago"
+
+#: templates/base.html:106
+msgid "Sept"
+msgstr "Sept"
+
+#: templates/base.html:106
+msgid "Oct"
+msgstr "Oct"
+
+#: templates/base.html:106
+msgid "Nov"
+msgstr "Nov"
+
+#: templates/base.html:106
+msgid "Dec"
+msgstr "Dic"
+
+#: templates/base.html:107
+msgid "Sunday"
+msgstr "Domingo"
+
+#: templates/base.html:107
+msgid "Monday"
+msgstr "Lunes"
+
+#: templates/base.html:107
+msgid "Tuesday"
+msgstr "Martes"
+
+#: templates/base.html:107
+msgid "Wednesday"
+msgstr "Miércoles"
+
+#: templates/base.html:107
+msgid "Thursday"
+msgstr "Jueves"
+
+#: templates/base.html:107
+msgid "Friday"
+msgstr "Viernes"
+
+#: templates/base.html:107
+msgid "Saturday"
+msgstr "Sábado"
+
+#: templates/base.html:108
+msgid "Sun"
+msgstr "Dom"
+
+#: templates/base.html:108
+msgid "Mon"
+msgstr "Lun"
+
+#: templates/base.html:108
+msgid "Tue"
+msgstr "Mar"
+
+#: templates/base.html:108
+msgid "Wed"
+msgstr "Mie"
+
+#: templates/base.html:108
+msgid "Thu"
+msgstr "Jue"
+
+#: templates/base.html:108
+msgid "Fri"
+msgstr "Vie"
+
+#: templates/base.html:108
+msgid "Sat"
+msgstr "Sab"
+
+#: templates/base.html:109
+msgid "Su"
+msgstr "Do"
+
+#: templates/base.html:109
+msgid "Mo"
+msgstr "Lu"
+
+#: templates/base.html:109
+msgid "Tu"
+msgstr "Ma"
+
+#: templates/base.html:109
+msgid "We"
+msgstr "Mi"
+
+#: templates/base.html:109
+msgid "Th"
+msgstr "Ju"
+
+#: templates/base.html:109
+msgid "Fr"
+msgstr "Vi"
+
+#: templates/base.html:109
+msgid "Sa"
+msgstr "Sa"
+
+#: templates/base.html:110
+msgctxt "abbreviation for week"
+msgid "Wk"
+msgstr "Semana"
+
+#: templates/base.html:119
+msgid "Choose a time"
+msgstr "Elija una franja temporal"
+
+#: templates/base.html:120
+msgid "Time"
+msgstr "Horario"
+
+#: templates/base.html:121
+msgid "Hour"
+msgstr "Hora"
+
+#: templates/base.html:122
+msgid "Minute"
+msgstr "Minuto"
+
+#: templates/base.html:123
+msgid "Second"
+msgstr "Segundo"
+
+#: templates/base.html:124
+msgid "Millisecond"
+msgstr "Milisegundo"
+
+#: templates/base.html:125
+msgid "Timezone"
+msgstr "Zona Horaria"
+
+#: templates/base.html:154
+msgid "Apps"
+msgstr ""
+
+#: templates/base.html:160
+msgid "Go back to admin mode"
+msgstr "Volver al modo administrador"
+
+#: templates/base.html:162
+#, fuzzy
+msgid "Acting for customer:"
+msgstr "Actuando como cliente"
+
+#: templates/base.html:191
+msgid "Logout"
+msgstr "Salir"
+
+#: templates/base.html:233
+msgid "Settings"
+msgstr "Ajustes"
+
+#: templates/customer_superuser_menu.html:9
+#: templates/customer_user_menu.html:9
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/customer_superuser_settings_menu.html:17
+msgid "Groups"
+msgstr "Grupos"
+
+#: templates/customer_superuser_settings_menu.html:24
+msgid "Rules"
+msgstr "Reglas"
+
+#: templates/customer_superuser_settings_menu.html:38
+msgid "Devices"
+msgstr "Dispositivos"
+
+#: templates/customer_superuser_settings_menu.html:45
+msgid "Locations"
+msgstr "Localización"
+
+#: templates/customer_superuser_settings_menu.html:52
+msgid "Users"
+msgstr "Usuarios"
+
+#: templates/list_page.html:47
+msgid "Add"
+msgstr "Añadir"
+
+#: templates/list_page.html:59
+msgid "Sort by"
+msgstr "Abreviar por"
+
+#: templates/list_page.html:63
+msgid "Filter"
+msgstr "Filtro"
+
+#: templates/overlay_base.html:11
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/website/login.html:5 templates/website/login.html.py:6
+#: templates/website/login.html:23
+msgid "Login"
+msgstr "Registro"
+
+#: templatetags/version.py:28
+msgid "Version: {}"
+msgstr "Versión: {}"
+
+#~ msgid "yy-mm-dd"
+#~ msgstr "yy-mm-dd"

@@ -1,0 +1,63 @@
+{% extends "list_page.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block page_js %}
+<script type="text/javascript">
+/*global jQuery, gridportal, $ */
+jQuery(function () {
+    "use strict";
+    $('.list-block').on('click', '.generate_token', function(event) {
+        var btn = $(this),
+            remove_btn = btn.closest('form').find('.remove_token'),
+            key_span = btn.closest('form').find('.api_key');
+
+        jQuery.post(btn.attr('href'), function (data) {
+            if (data.success){
+                key_span.html(data.key);
+                btn.hide();
+                remove_btn.show();
+            } else {
+                key_span.html('<ul class="errorlist"><li>{% trans "Error adding api key" %}</li></ul>');
+            }
+        });
+        
+        event.preventDefault();
+    });
+    $('.list-block').on('click', '.remove_token', function(event) {
+        var btn = $(this),
+            generate_btn = btn.closest('form').find('.generate_token'),
+            key_span = btn.closest('form').find('.api_key');
+
+        jQuery.post(btn.attr('href'), function (data) {
+            key_span.html('{% trans "Token removed" %}');
+        });
+        event.preventDefault();
+        btn.hide();
+        generate_btn.show();
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block page_id %}users-page{% endblock %}
+{% block list_url %}{% url 'manage_users-list-json' %}{% endblock %}
+{% block default_sort_by %}email{% endblock %}
+
+{% block title %}{% trans "Settings: User Administration" %}{% endblock title %}
+{% block content_heading %}{% trans "Settings: User Administration" %}{% endblock content_heading %}
+{% block list_title %}{% trans "Users" %}{% endblock %}
+
+{% block add_button %}
+{% if user.is_customer_superuser or user.is_admin %}
+<a class="right add-user list-modifier" href="#" data-targeturl="{% url 'manage_users-form'%}" data-targetlist="#model-list">
+  <span>{% trans "Add user" %}&nbsp;</span>
+  <img src="{% static 'images/add-icon.png' %}" alt="{% trans 'Add user' %}">
+</a>
+{% endif %}
+{% endblock %}
+
+{% block sort_by %}
+<span class="sort" data-sort="email">{% trans "Username" %}</span>
+<span class="sort" data-sort="name">{% trans "Name" %}</span>
+{% endblock %}

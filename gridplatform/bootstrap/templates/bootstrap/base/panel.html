@@ -1,0 +1,17 @@
+{% load i18n %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ title }}<span class="pull-right">{{ buttons }}</span></h3>
+    {% if search %}
+    <div class="lala">
+    <span class="list-search">
+      <input type="text" placeholder="{% trans 'Search' %}">
+      <i class="fa fa-search"></i>
+    </span>
+  </div>
+    {% endif %}
+  </div>
+  <div class="panel-body">
+    {{ body }}
+  </div>
+</div>

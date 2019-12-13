@@ -1,0 +1,12 @@
+{% extends "project_site/base.html" %}
+{% load i18n %}
+{% load bootstrap_tags %}
+
+
+{% block content %}
+{% panel _("Project Details") %}
+{% bootstrap_form %}
+{% form form %}
+{% endbootstrap_form %}
+{% endpanel %}
+{% endblock %}

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="notificationProcessingService"
+                  targetNamespace="http://www.gridmanager.nu"
+                  xmlns:ns1="http://schemas.xmlsoap.org/wsdl/soap/http"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="http://www.gridmanager.nu"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.gridmanager.nu" version="1.0"
+               xmlns:tns="http://www.gridmanager.nu"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               elementFormDefault="qualified">
+      <xs:element name="controlModeUpdated" type="tns:controlModeUpdated"/>
+      <xs:element name="controlModeUpdatedResponse"
+                  type="tns:controlModeUpdatedResponse"/>
+      <xs:element name="devicesStateChanged" type="tns:devicesStateChanged"/>
+      <xs:element name="devicesStateChangedResponse"
+                  type="tns:devicesStateChangedResponse"/>
+      <xs:element name="newMeasurementsArrived"
+                  type="tns:newMeasurementsArrived"/>
+      <xs:element name="newMeasurementsArrivedResponse"
+                  type="tns:newMeasurementsArrivedResponse"/>
+      <xs:complexType name="newMeasurementsArrived">
+        <xs:sequence>
+          <xs:element name="deviceIds" type="tns:ArrayOfLong" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfLong">
+        <xs:sequence>
+          <xs:element name="long" type="xs:long"
+                      minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="newMeasurementsArrivedResponse">
+        <xs:sequence>
+          <xs:element name="status" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="controlModeUpdated">
+        <xs:sequence>
+          <xs:element name="deviceIds" type="tns:ArrayOfLong" minOccurs="0"/>
+          <xs:element name="newControlMode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="controlModeUpdatedResponse">
+        <xs:sequence>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devicesStateChanged">
+        <xs:sequence>
+          <xs:element name="agentIds" type="tns:ArrayOfLong" minOccurs="0"/>
+          <xs:element name="deviceIds" type="tns:ArrayOfLong" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devicesStateChangedResponse">
+        <xs:sequence>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="devicesStateChanged">
+    <wsdl:part element="tns:devicesStateChanged" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devicesStateChangedResponse">
+    <wsdl:part element="tns:devicesStateChangedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="controlModeUpdatedResponse">
+    <wsdl:part element="tns:controlModeUpdatedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="controlModeUpdated">
+    <wsdl:part element="tns:controlModeUpdated" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="newMeasurementsArrivedResponse">
+    <wsdl:part element="tns:newMeasurementsArrivedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="newMeasurementsArrived">
+    <wsdl:part element="tns:newMeasurementsArrived" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="NotificationProcessingInterface">
+    <wsdl:operation name="newMeasurementsArrived">
+      <wsdl:input message="tns:newMeasurementsArrived"
+                  name="newMeasurementsArrived">
+      </wsdl:input>
+      <wsdl:output message="tns:newMeasurementsArrivedResponse"
+                   name="newMeasurementsArrivedResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="controlModeUpdated">
+      <wsdl:input message="tns:controlModeUpdated" name="controlModeUpdated">
+      </wsdl:input>
+      <wsdl:output message="tns:controlModeUpdatedResponse"
+                   name="controlModeUpdatedResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="devicesStateChanged">
+      <wsdl:input message="tns:devicesStateChanged" name="devicesStateChanged">
+      </wsdl:input>
+      <wsdl:output message="tns:devicesStateChangedResponse"
+                   name="devicesStateChangedResponse">
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="notificationProcessingServiceSoapBinding"
+                type="tns:NotificationProcessingInterface">
+    <soap:binding style="document"
+                  transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="newMeasurementsArrived">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="newMeasurementsArrived">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="newMeasurementsArrivedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="controlModeUpdated">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="controlModeUpdated">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="controlModeUpdatedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="devicesStateChanged">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="devicesStateChanged">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="devicesStateChangedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="notificationProcessingService">
+    <wsdl:port binding="tns:notificationProcessingServiceSoapBinding"
+               name="NotificationProcessingServicePort">
+      <soap:address location="http://172.22.0.42:8088/gridmanager/services/notificationProcessing"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

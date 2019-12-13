@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-29 17:26+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: views.py:115
+msgid "From time should be before to time"
+msgstr "El tiempo del desde debería ser anterior al tiempo del hasta"
+
+#: views.py:118
+msgid "Select at least one measurement point"
+msgstr "Seleccione al menos un punto de medida"
+
+#: views.py:187 views.py:195
+msgid "Consumption report"
+msgstr "Informe de consumo"
+
+#: views.py:368
+msgid "Include at least one area of energy use"
+msgstr ""
+
+#: views.py:380
+#, python-brace-format
+msgid ""
+"The following measurement points can only be included once: "
+"{measurement_points}"
+msgstr ""
+
+#: views.py:450 views.py:469
+msgid "The report has been deleted"
+msgstr "El informe ha sido borrado"
+
+#: templates/enpi_reports/enpireport_form.html:7
+#, fuzzy
+msgid "EnPI Reports"
+msgstr "Informes"
+
+#: templates/enpi_reports/enpireport_form.html:9
+#: templates/manage_reports/energy_use_report_form.html:50
+#: templates/manage_reports/energy_use_report_form.html:53
+#: templates/manage_reports/generate_report.html:11
+#: templates/manage_reports/generate_report.html:127
+#: templates/manage_reports/index.html:72
+#: templates/manage_reports/index.html:73
+msgid "Reports"
+msgstr "Informes"
+
+#: templates/enpi_reports/enpireport_form.html:11
+#, fuzzy
+msgid "EnPI Report"
+msgstr "Informes"
+
+#: templates/enpi_reports/enpireport_form.html:22
+#: templates/manage_reports/energy_use_report_form.html:64
+msgid "Title:"
+msgstr "Titulo:"
+
+#: templates/enpi_reports/enpireport_form.html:32
+#: templates/manage_reports/energy_use_report_form.html:80
+#: templates/manage_reports/index.html:138
+#: templates/manage_reports/index.html:208
+msgid "Areas of Energy Use:"
+msgstr "Áeas de Uso de Energía"
+
+#: templates/enpi_reports/enpireport_form.html:37
+#: templates/enpi_reports/enpireport_form.html:63
+#: templates/manage_reports/energy_use_report_form.html:85
+#: templates/manage_reports/energy_use_report_form.html:106
+msgid "Name:"
+msgstr "Nombre:"
+
+#: templates/enpi_reports/enpireport_form.html:42
+#: templates/enpi_reports/enpireport_form.html:67
+msgid "Energy driver:"
+msgstr ""
+
+#: templates/enpi_reports/enpireport_form.html:47
+#: templates/manage_reports/energy_use_report_form.html:96
+msgid "Delete:"
+msgstr "Borrar:"
+
+#: templates/enpi_reports/enpireport_form.html:53
+#: templates/enpi_reports/enpireport_form.html:73
+#: templates/manage_reports/energy_use_report_form.html:90
+#: templates/manage_reports/energy_use_report_form.html:110
+#, fuzzy
+msgid "Measurement Points:"
+msgstr "Puntos de medida:"
+
+#: templates/enpi_reports/enpireport_form.html:78
+#: templates/manage_reports/energy_use_report_form.html:115
+msgid "Add another area"
+msgstr "Añadir otra área"
+
+#: templates/enpi_reports/enpireport_form.html:83
+#: templates/manage_reports/energy_use_report_form.html:120
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/enpi_reports/enpireport_form.html:84
+#: templates/manage_reports/energy_use_report_form.html:121
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/enpi_reports/enpireport_form.html:86
+#: templates/manage_reports/energy_use_report_form.html:123
+msgid "Create"
+msgstr "Crear"
+
+#: templates/manage_reports/energy_use_report_form.html:58
+msgid "Energy Use Report"
+msgstr "Informe de Uso de Energía"
+
+#: templates/manage_reports/energy_use_report_form.html:69
+#: templates/manage_reports/index.html:128
+#, fuzzy
+msgid "Main Measurement Points:"
+msgstr "Puntos de medida:"
+
+#: templates/manage_reports/energy_use_report_form.html:74
+msgid "Currency:"
+msgstr "Moneda:"
+
+#: templates/manage_reports/generate_report.html:132
+msgid "Generate Reports"
+msgstr "Generar Informe"
+
+#: templates/manage_reports/generate_report.html:138
+msgid "Measurement points:"
+msgstr "Puntos de medida:"
+
+#: templates/manage_reports/generate_report.html:139
+msgid "Check/Uncheck All"
+msgstr "Seleccionar/deselecionar todo"
+
+#: templates/manage_reports/generate_report.html:140
+msgid "Filter"
+msgstr "Filtro"
+
+#: templates/manage_reports/generate_report.html:159
+msgid "Selected measurement points:"
+msgstr "Puntos de medida seleccionados:"
+
+#: templates/manage_reports/generate_report.html:166
+msgid "From:"
+msgstr "Desde:"
+
+#: templates/manage_reports/generate_report.html:171
+msgid "To:"
+msgstr "Hasta:"
+
+#: templates/manage_reports/generate_report.html:176
+msgid "Include cost:"
+msgstr "Incluir Costes:"
+
+#: templates/manage_reports/generate_report.html:183
+msgid "Download PDF"
+msgstr "Descargar como PDF"
+
+#: templates/manage_reports/generate_report.html:185
+msgid "Download CSV"
+msgstr "Descargar como CSV"
+
+#: templates/manage_reports/generate_report.html:188
+#: templates/manage_reports/index.html:185
+#: templates/manage_reports/index.html:241
+msgid "Please stay on this page while your report is being generated"
+msgstr ""
+
+#: templates/manage_reports/index.html:78
+msgid "Overview"
+msgstr "Revisar"
+
+#: templates/manage_reports/index.html:82
+msgid "Add"
+msgstr "Añadir"
+
+#: templates/manage_reports/index.html:87
+#, fuzzy
+msgid "Electricity Use Report"
+msgstr "Informe de Uso de Energía"
+
+#: templates/manage_reports/index.html:88
+#, fuzzy
+msgid "Gas Use Report"
+msgstr "Informe de Uso de Energía"
+
+#: templates/manage_reports/index.html:89
+#, fuzzy
+msgid "Water Use Report"
+msgstr "Informe de Uso de Energía"
+
+#: templates/manage_reports/index.html:90
+#, fuzzy
+msgid "Heat Use Report"
+msgstr "Informe de Uso de Energía"
+
+#: templates/manage_reports/index.html:91
+#, fuzzy
+msgid "Oil Use Report"
+msgstr "Informe de Uso de Energía"
+
+#: templates/manage_reports/index.html:95
+#, python-format
+msgid "Energy Performance Indicator Report (%(enpi_report_type)s)"
+msgstr ""
+
+#: templates/manage_reports/index.html:99
+#, fuzzy
+msgid "Consumption Report"
+msgstr "Informe de consumo"
+
+#: templates/manage_reports/index.html:135
+#: templates/manage_reports/index.html:145
+#: templates/manage_reports/index.html:215
+msgid "None"
+msgstr ""
+
+#: templates/manage_reports/index.html:154
+#, fuzzy
+msgid "Include cost"
+msgstr "Incluir Costes:"
+
+#: templates/manage_reports/index.html:159
+msgid "Include CO<sub>2</sub> emissions"
+msgstr ""
+
+#: templates/manage_reports/index.html:165
+#: templates/manage_reports/index.html:221
+#, fuzzy
+msgid "From date:"
+msgstr "desde:"
+
+#: templates/manage_reports/index.html:172
+#: templates/manage_reports/index.html:228
+msgid "To date:"
+msgstr "Hasta fecha:"
+
+#: templates/manage_reports/index.html:181
+#: templates/manage_reports/index.html:237
+msgid "Download"
+msgstr "Descargar "
+
+#: templates/manage_reports/index.html:182
+#: templates/manage_reports/index.html:238
+msgid "Cancel"
+msgstr ""
+
+#: templates/manage_reports/index.html:255
+msgid "You currently have no reports.  Click <i>Add</i> to add a new report."
+msgstr ""
+"Actualmente no hay ningún informe.  Click <i>Añadir</i> para añadir un nuevo "
+"informe."
+
+#: templates/manage_reports/report_block.html:15
+msgid "Report type:"
+msgstr "Tipo de Informe:"
+
+#: templates/manage_reports/report_block.html:17
+msgid "Requested:"
+msgstr "Requerido:"
+
+#: templates/manage_reports/report_block.html:19
+msgid "Generated:"
+msgstr "Generado:"
+
+#~ msgid "Data series for {data_series_name}"
+#~ msgstr "Serie de datos para {data_series_name}"
+
+#~ msgid "Cost is not defined for {measurement_point_name} at all"
+#~ msgstr "El coste no está definido para {measurement_point_name} "
+
+#~ msgid ""
+#~ "Cost for {measurement_point_name} is only defined from {cost_valid_from} "
+#~ "to {cost_valid_to}"
+#~ msgstr ""
+#~ "El coste para {measurement_point_name} sólo está definido desde "
+#~ "{cost_valid_from} hasta {cost_valid_to}"
+
+#~ msgid "Generate Energy Use Report"
+#~ msgstr "Generar Informe de Uso de Energía"
+
+#, fuzzy
+#~ msgid "Energy Use Reports"
+#~ msgstr "Generar Informe"

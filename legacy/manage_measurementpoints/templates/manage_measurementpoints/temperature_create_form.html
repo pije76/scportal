@@ -1,0 +1,52 @@
+{% extends 'overlay_base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+{% block action %}{% url 'manage_measurementpoints:temperature_measurement_point-create' %}{% endblock %}
+{% block title %}
+  {{ form.get_headline_display }}
+{% endblock %}
+
+{% block content %}
+<div class="clearfix">
+    {% csrf_token %}
+    <div class="left">
+      <fieldset>
+        <label>{% trans 'Name:' %}</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Group:' %}</label>
+        {{ form.parent }}
+        {{ form.parent.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Input:' %}</label>
+        {{ form.input_configuration }}
+        {{ form.input_configuration.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Relay:' %}</label>
+        {{ form.relay }}
+        {{ form.relay.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Hidden on details page:' %}</label>
+        {{ form.hidden_on_details_page }}
+        {{ form.hidden_on_details_page.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Define heating degree days:' %}</label>
+        {{ form.defines_heating_degree_days }}
+        {{ form.defines_heating_degree_days.errors }}
+      </fieldset>
+      {% if form.non_field_errors %}
+      <fieldset>
+        {{ form.non_field_errors }}
+      </fieldset>
+      {% endif %}
+    </div>
+</div>
+{% endblock %}

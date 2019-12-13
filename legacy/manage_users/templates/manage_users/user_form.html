@@ -1,0 +1,83 @@
+{% extends 'overlay_base.html' %}
+{% load i18n %}
+{% load l10n %}
+{% load url from future %}
+{% load static from staticfiles %}
+{% load action %}
+
+{% block title %}
+  {% if user_form.instance.id %}
+    {% trans "Edit" %} {{ user_form.instance.name_plain }}
+  {% else %}
+    {% trans "New User" %}
+  {% endif %}
+{% endblock title %}
+
+{% block action %}
+  {% action 'manage_users-update' user_form.instance pk=user_form.instance.id %}
+{% endblock %}
+
+{% block content %}
+<div class="clearfix">
+    {% csrf_token %}
+    <input type="hidden" name="item_id" value="{{ user_form.instance.id|unlocalize }}">
+    <div class="form-content-left">
+      <fieldset>
+        <label>{% trans 'Name:' %}</label>
+        {{ user_form.name }}
+        {{ user_form.name.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'E-mail:' %}</label>
+        {{ user_form.e_mail }}
+        {{ user_form.e_mail.errors }}
+      </fieldset>
+      <fieldset>
+      {% if request.user.id == user_form.instance.id %}
+        {{ user_form.user_type.as_hidden }}
+      {% else %}
+        <label>{% trans 'User type:' %}</label>
+        {{ user_form.user_type }}
+        {{ user_form.user_type.errors }}
+      {% endif %}
+      </fieldset>
+      {% if not user_form.instance.id %}
+        <fieldset>
+        <label>{% trans 'Send password:' %}</label>
+          {{ user_form.send_password }}
+          {{ user_form.send_password.errors }}
+        </fieldset>
+      {% else %}
+        <fieldset class="show-password">
+          <label><input id="send_password" name="send_password" type="checkbox" />{% trans 'Send new password' %}</label>
+        </fieldset>
+      {% endif %}
+    </div>
+    <div class="form-content-left">
+      <fieldset>
+        <label>{% trans 'Phone:' %}</label>
+        {{ user_form.phone }}
+        {{ user_form.phone.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Mobile:' %}</label>
+        {{ user_form.mobile }}
+        {{ user_form.mobile.errors }}
+      </fieldset>
+      <fieldset>
+        <label>{% trans 'Groups:' %}</label>
+        {{ userprofile_form.collections }}
+        {{ userprofile_form.collections.errors }}
+      </fieldset>
+    </div>
+</div>
+{% endblock %}
+
+{% block buttons %}
+  {% if user_form.instance.id %}
+    <input type="submit" value="{% trans "Save" %}" />
+    <button class="delete btn" data-reason="{{ delete.reason }}" title="" data-deleteurl="{% url 'manage_users-delete' %}">{% trans 'Delete' %}</button>
+  {% else %}
+    <input type="submit" value="{% trans "Create" %}">
+  {% endif %}
+{% endblock buttons %}

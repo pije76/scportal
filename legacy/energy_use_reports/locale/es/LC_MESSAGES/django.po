@@ -1,0 +1,384 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:48+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: forms.py:47
+msgid "The start date must be before the end date."
+msgstr "La fecha de inicio debe ser anterior a la fecha de finalización."
+
+#: forms.py:51
+msgid "Report generation queue is to long, please try again later"
+msgstr ""
+
+#: models.py:30
+msgid "currency"
+msgstr ""
+
+#: models.py:33
+msgid "utility type"
+msgstr ""
+
+#: models.py:60
+msgid "Electricity Use Report"
+msgstr ""
+
+#: models.py:62
+msgid "Water Use Report"
+msgstr ""
+
+#: models.py:64
+msgid "Gas Use Report"
+msgstr ""
+
+#: models.py:66
+msgid "Heat Use Report"
+msgstr ""
+
+#: models.py:68
+msgid "Oil Use Report"
+msgstr ""
+
+#: tasks.py:209
+#, python-brace-format
+msgid ""
+"The consumption of the main measurement point {measurement_point}, is "
+"calculated from incomplete data in the current period"
+msgstr ""
+
+#: tasks.py:216
+#, python-brace-format
+msgid ""
+"The consumption of the main measurement point {measurement_point}, is "
+"calculated from incomplete data in the previous period"
+msgstr ""
+
+#: tasks.py:223
+#, fuzzy, python-brace-format
+msgid ""
+"Unable to calculate cost for the main measurement point {measurement_point}, "
+"because it has no tariff"
+msgstr ""
+"No se puede calcular el coste para {measurement_point} en {energy_use_area}, "
+"porque el punto de medida no tiene tarifa asociada"
+
+#: tasks.py:230
+#, fuzzy, python-brace-format
+msgid ""
+"Unable to calculate cost for the main measurement point {measurement_point}, "
+"because the tariff currency is different from the report currency"
+msgstr ""
+"No se puede calcular el coste para {measurement_point} en {energy_use_area}, "
+"porque la moneda de la tarifa es diferente a la moneda del informe"
+
+#: tasks.py:239
+#, python-brace-format
+msgid ""
+"The cost of the main measurement point {measurement_point}, is calculated "
+"from incomplete data in the current period"
+msgstr ""
+
+#: tasks.py:246
+#, python-brace-format
+msgid ""
+"The cost of the main measurement point {measurement_point}, is calculated "
+"from incomplete data in the previous period"
+msgstr ""
+
+#: tasks.py:253
+#, fuzzy, python-brace-format
+msgid ""
+"Unable to calculate CO₂ emissions for the main measurement point "
+"{measurement_point}, because the measurement point has no CO₂ index assigned"
+msgstr ""
+"No se puede calcular el coste para {measurement_point} en {energy_use_area}, "
+"porque el punto de medida no tiene tarifa asociada"
+
+#: tasks.py:262
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the main measurement point {measurement_point} are "
+"calculated from incomplete data in the current period"
+msgstr ""
+
+#: tasks.py:269
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the main measurement point {measurement_point} are "
+"calculated from incomplete data in the previous period"
+msgstr ""
+
+#: tasks.py:282
+#, python-brace-format
+msgid ""
+"The consumption of the measurement point {measurement_point} in the area of "
+"energy use {energy_use_area}, is calculated from incomplete data in the "
+"current period"
+msgstr ""
+
+#: tasks.py:291
+#, python-brace-format
+msgid ""
+"The consumption of the measurement point {measurement_point} in the area of "
+"energy use {energy_use_area}, is calculated from incomplete data in the "
+"previous period"
+msgstr ""
+
+#: tasks.py:300
+#, fuzzy, python-brace-format
+msgid ""
+"Unable to calculate cost for the measurement point {measurement_point} in "
+"the area of energy use {energy_use_area}, because the measurement point has "
+"no tariff"
+msgstr ""
+"No se puede calcular el coste para {measurement_point} en {energy_use_area}, "
+"porque el punto de medida no tiene tarifa asociada"
+
+#: tasks.py:308
+#, fuzzy, python-brace-format
+msgid ""
+"Unable to calculate cost for the measurement point {measurement_point} in "
+"the area of energy use {energy_use_area}, because the tariff currency is "
+"different from the report currency"
+msgstr ""
+"No se puede calcular el coste para {measurement_point} en {energy_use_area}, "
+"porque la moneda de la tarifa es diferente a la moneda del informe"
+
+#: tasks.py:316
+#, python-brace-format
+msgid ""
+"The cost of the measurement point {measurement_point} in the area of energy "
+"use {energy_use_area}, is calculated from incomplete data in the current "
+"period"
+msgstr ""
+
+#: tasks.py:324
+#, python-brace-format
+msgid ""
+"The cost of the measurement point {measurement_point} in the area of energy "
+"use {energy_use_area}, is calculated from incomplete data in the previous "
+"period"
+msgstr ""
+
+#: tasks.py:332
+#, fuzzy, python-brace-format
+msgid ""
+"Unable to calculate CO₂ emissions for the measurement point "
+"{measurement_point} in the area of energy use {energy_use_area}, because the "
+"measurement point has no CO₂ index assigned"
+msgstr ""
+"No se puede calcular el coste para {measurement_point} en {energy_use_area}, "
+"porque el punto de medida no tiene tarifa asociada"
+
+#: tasks.py:341
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the measurement point {measurement_point} in the area "
+"of energy use {energy_use_area}, is calculated from incomplete data in the "
+"current period"
+msgstr ""
+
+#: tasks.py:349
+#, python-brace-format
+msgid ""
+"The CO₂ emissions of the measurement point {measurement_point} in the area "
+"of energy use {energy_use_area}, is calculated from incomplete data in the "
+"previous period"
+msgstr ""
+
+#: tasks.py:456
+#, python-brace-format
+msgid ""
+"CO₂ emissions for the measurement point {measurement_point} are not defined, "
+"and therefore not included in the CO₂ emissions graph."
+msgstr ""
+
+#: tasks.py:733
+msgid ""
+"No main measurement point has been selected.  Assuming all measurement "
+"points are main measurement points, and that no costs nor consumptions are "
+"unaccounted for."
+msgstr ""
+
+#: views.py:226
+#, python-brace-format
+msgid ""
+"Consumption is negative for the area of energy use {energy_use_area}.  This "
+"prevents the consumption pie chart from being displayed."
+msgstr ""
+
+#: views.py:234
+msgid ""
+"Total consumption for main measurement points is less than the total "
+"consumption of the areas of energy use in current period.   No pie chart for "
+"consumption will be shown"
+msgstr ""
+
+#: views.py:241
+msgid ""
+"Total consumption is negative. Energy use by consumption is excluded from "
+"the report"
+msgstr ""
+
+#: views.py:253
+#, python-brace-format
+msgid ""
+"Costs are negative for the area of energy use {energy_use_area}.  This "
+"prevents the costs pie chart from being displayed."
+msgstr ""
+
+#: views.py:261
+msgid ""
+"Total costs for main measurement points are less than the total costs of the "
+"areas of energy use in current period.  No pie chart for costs will be shown."
+msgstr ""
+
+#: views.py:268
+msgid ""
+"Total costs are negative. Energy use by cost is excluded from the report"
+msgstr ""
+
+#: views.py:280
+#, python-brace-format
+msgid ""
+"CO₂ emissions are negative for the area of energy use {energy_use_area}.  "
+"This prevents the CO₂ emissions pie chart from being displayed."
+msgstr ""
+
+#: views.py:288
+msgid ""
+"Total CO₂ emissions for main measurement points are less than the total  CO₂ "
+"emissions of the areas of energy use in current period.  No pie chart for "
+"CO₂ emissions will be shown."
+msgstr ""
+
+#: views.py:296
+msgid ""
+"Total CO₂ emissions are negative. Energy use by CO₂ emissions is excluded "
+"from the report"
+msgstr ""
+
+#: views.py:416 views.py:433
+msgid "Unaccounted Consumption"
+msgstr ""
+
+#: views.py:460 views.py:474
+msgid "Unaccounted Cost"
+msgstr ""
+
+#: views.py:501 views.py:515
+msgid "Unaccounted CO₂ Emissions"
+msgstr ""
+
+#: templates/energy_use_reports/report.tex:38
+msgid "Current Period"
+msgstr "Periodo actual"
+
+#: templates/energy_use_reports/report.tex:41
+msgid "Previous Period"
+msgstr "Periodo previo"
+
+#: templates/energy_use_reports/report.tex:50
+msgid "Distribution of Cost"
+msgstr ""
+
+#: templates/energy_use_reports/report.tex:59
+#: templates/energy_use_reports/report.tex:75
+#: templates/energy_use_reports/report.tex:92
+#, python-format
+msgid ""
+"The areas of use marked with %(star)s contain errors. See errors and "
+"warnings on page~%(page)s"
+msgstr ""
+
+#: templates/energy_use_reports/report.tex:66
+msgid "Distribution of CO₂ Emissions"
+msgstr ""
+
+#: templates/energy_use_reports/report.tex:83
+msgid "Distribution of Consumption"
+msgstr ""
+
+#: templates/energy_use_reports/report.tex:99
+msgid "Consumption Graph"
+msgstr "Gráfica de Consumo"
+
+#: templates/energy_use_reports/report.tex:104
+msgid "CO₂ Emission Graph"
+msgstr ""
+
+#: templates/energy_use_reports/report.tex:112
+msgid "Errors and Warnings"
+msgstr "Errores y avisos"
+
+#: templates/energy_use_reports/use_area_table.tex:7
+#, fuzzy
+msgid "Area of Use"
+msgstr "Área de Uso de Energía"
+
+#: templates/energy_use_reports/use_area_table.tex:8
+#, python-format
+msgid "Previous, %(unit)s "
+msgstr "Previo,  %(unit)s "
+
+#: templates/energy_use_reports/use_area_table.tex:9
+#, python-format
+msgid "Current, %(unit)s "
+msgstr "Actual, %(unit)s "
+
+#: templates/energy_use_reports/use_area_table.tex:10
+#, python-format
+msgid "Change (%%)"
+msgstr "Cambio (%%)"
+
+#: templates/energy_use_reports/use_area_table.tex:15
+msgid "Total"
+msgstr "Total"
+
+#~ msgid ""
+#~ "Cost extrapolated for {measurement_point} in {energy_use_area} between "
+#~ "{from_time} and {to_time}"
+#~ msgstr ""
+#~ "El coste extrapolado para {measurement_point} en {energy_use_area} entre "
+#~ "{from_time} y {to_time}"
+
+#~ msgid ""
+#~ "Consumption extrapolated for {measurement_point} in {energy_use_area} "
+#~ "between {from_time} and {to_time}"
+#~ msgstr ""
+#~ "El consumo extrapolado para {measurement_point} en {energy_use_area} "
+#~ "entre {from_time} y {to_time}"
+
+#~ msgid ""
+#~ "Consumption undefined for {measurement_point} in {energy_use_area} "
+#~ "between {from_time} and {to_time}"
+#~ msgstr ""
+#~ "Consumo indefinido para {measurement_point} en {energy_use_area} entre "
+#~ "{from_time} y {to_time}"
+
+#~ msgid "Areas of Energy Use by Cost"
+#~ msgstr "Áreas de Uso de Energía por Coste"
+
+#~ msgid "Previous, %(currency)s"
+#~ msgstr "Previo, %(currency)s"
+
+#~ msgid "Current, %(currency)s"
+#~ msgstr "Actual, %(currency)s"
+
+#~ msgid "Areas of Energy Use by Energy Consumption"
+#~ msgstr "Áreas de Uso de Energía por Consumo de Energía"

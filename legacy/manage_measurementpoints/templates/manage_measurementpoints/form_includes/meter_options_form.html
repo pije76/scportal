@@ -1,0 +1,13 @@
+{% load i18n %}
+{% load widget_tweaks %}
+
+<fieldset>
+  <label>{% trans 'Meter number:' %}</label>
+  {{ form.billing_meter_number }}
+  {{ form.billing_meter_number.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Installation number:' %}</label>
+  {{ form.billing_installation_number }}
+  {{ form.billing_installation_number.errors }}
+</fieldset>

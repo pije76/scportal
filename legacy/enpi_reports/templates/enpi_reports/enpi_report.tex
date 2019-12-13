@@ -1,0 +1,29 @@
+{% extends "reports/report.tex" %}
+{% load reports %}
+
+{% block content %}
+{% if total_enpi and total_enpi.table_data %}
+\clearpage
+\section*{{ '{' }}{% trans 'Total EnPI' %}{{ '}' }}
+{% include 'enpi_reports/enpi_graph_block.tex' with data_dict=total_enpi %}
+{% endif %}
+
+{% for enpi_use_area in enpi_use_areas.values %}
+{% if enpi_use_area.table_data %}
+\clearpage
+\section*{{ '{' }}{{ enpi_use_area.name|texescape }}{{ '}' }}
+
+{% include 'enpi_reports/enpi_graph_block.tex' with data_dict=enpi_use_area %}
+{% endif %}
+{% endfor %}
+
+{% if errors %}
+\clearpage
+\section*{ {% trans 'Errors and Warnings' context 'section headline in enpi report' %} }
+\begin{itemize}
+{% for error in errors %}
+  \item {{ error|texescape }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+{% endblock %}

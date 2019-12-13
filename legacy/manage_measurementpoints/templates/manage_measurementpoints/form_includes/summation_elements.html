@@ -1,0 +1,11 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<fieldset>
+  <h6>{% trans "Measurement Points:" %}</h6>
+  <label>{% trans 'Plus Measurement Points:' %}</label>
+  {{ form.plus_consumption_measurement_points }}
+  {{ form.plus_consumption_measurement_points.errors }}
+  <label>{% trans 'Minus Measurement Points:' %}</label>
+  {{ form.minus_consumption_measurement_points }}
+  {{ form.minus_consumption_measurement_points.errors }}
+</fieldset>

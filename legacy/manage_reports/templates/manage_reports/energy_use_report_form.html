@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load utils %}
+{% load mptt_tags %}
+{% block page_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+$(document).ready(function () {
+    $('button.add-form').click(function (event) {
+        event.preventDefault();
+        var parent = $(this).closest('div'),
+            emptyForm = parent.find('.empty-form'),
+            newForm = emptyForm.clone(),
+            totalForms = parent.find('input[name$="TOTAL_FORMS"]'),
+            newId = totalForms.val();
+        newForm.find('div, input, select, li').each(function () {
+            var input = $(this);
+            if (input.attr("name")) {
+              newPrefix = input.attr('name').replace('__prefix__', newId);
+              input.attr('name', newPrefix);
+            }
+            if (input.attr("id")) {
+              newPrefix = input.attr('id').replace('__prefix__', newId);
+              input.attr('id', newPrefix);
+            }
+        });
+        newForm.removeClass('empty-form').show();
+        totalForms.val(parseInt(totalForms.val(), 10) + 1);
+        newForm.insertBefore(emptyForm);
+        newForm.find('select').chosen({enable_split_word_search: true, search_contains: true});
+    });
+    $('input[name=delete]').click(function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    gridportal.website.synchroneousDelete(
+      "{% url 'manage_reports-delete' %}",
+      "{{ form.instance.id|unlocalize }}",
+      "{% url 'manage_reports-index' %}");
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block page_id %}reports-page{% endblock %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+
+
+{% block content_heading %}{% trans "Reports" %}{% endblock content_heading %}
+{% block content %}
+<div class="grid_24">
+  <div class="content-element">
+    <div class="header clearfix">
+      <h3 class="left">{% trans "Energy Use Report" %}</h3>
+    </div>
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+          <label>{% trans "Title:" %}</label>
+          <div class="name-input">
+            {{ form.title }}
+            {{ form.title.errors }}
+          </div>
+          <label>{% trans "Main Measurement Points:" %}</label>
+          <div class="name-select">
+            {{ form.main_measurement_points }}
+            {{ form.main_measurement_points.errors }}
+          </div>
+          <label>{% trans "Currency:" %}</label>
+          {{ form.currency_unit }}
+          {{ form.currency_unit.errors }}
+        </fieldset>
+        <fieldset>
+          {{ area_formset.management_form }}
+          <h6> {% trans "Areas of Energy Use:" %} </h6>
+          {% for area_form in area_formset %}
+          {{ area_form.id.as_hidden }}
+          <div class="area-form formset-member">
+            <div class="form-content-left">
+              <label> {% trans "Name:" %} </label>
+              {{ area_form.name }}
+              {{ area_form.name.errors }}
+            </div>
+            <div class="form-content-left">
+            <label> {% trans "Measurement Points:" %} </label>
+            {{ area_form.measurement_points }}
+            {{ area_form.measurement_points.errors }}
+
+            {% if not forloop.last %}
+            <div style="display:inline; float:right">
+              {% trans "Delete:" %}{{ area_form.DELETE }}
+            </div>
+            {% endif %}
+            </div>
+            <div class="clearfix"></div>
+            {{ area_form.non_field_errors }}
+          </div>
+          {% endfor %}
+          <div class="empty-form formset-member" style="display: none">
+            <div class="form-content-left">
+              <label> {% trans "Name:" %} </label>
+              {{ area_formset.empty_form.name }}
+            </div>
+            <div class="form-content-left">
+              <label> {% trans "Measurement Points:" %} </label>
+              {{ area_formset.empty_form.measurement_points }}
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <button class="add-form" style="margin-top: 5px">{% trans "Add another area" %}</button>
+        </fieldset>
+        {{ form.non_field_errors }}
+        {{ area_formset.non_form_errors }}
+        {% if form.instance.id %}
+          <input type="submit" value="{% trans "Save" %}">
+          <input type="button" name="delete" title="" value="{% trans 'Delete' %}">
+        {% else %}
+          <input type="submit" value="{% trans "Create" %}">
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

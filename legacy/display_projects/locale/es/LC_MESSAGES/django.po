@@ -1,0 +1,664 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:29+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: tasks.py:54
+msgid "CO₂ (ton)"
+msgstr "CO₂ (ton)"
+
+#: templates/display_projects/annual_savings_potential_form.html:35
+#: templates/display_projects/index.html:38
+#: templates/display_projects/project_base.html:31
+#: templates/display_projects/project_base.html:64
+#: templates/display_projects/project_details.html:8
+#: templates/display_projects/project_form.html:65
+#: templates/display_projects/project_form.html:66
+msgid "Projects"
+msgstr "Proyectos"
+
+#: templates/display_projects/annual_savings_potential_form.html:41
+#: templates/display_projects/index.html:54
+#, fuzzy
+msgid "Annual Savings Potential Report"
+msgstr "Vista general de ahorros anuales"
+
+#: templates/display_projects/annual_savings_potential_form.html:56
+msgid "Download"
+msgstr ""
+
+#: templates/display_projects/annual_savings_potential_form.html:57
+msgid "Cancel"
+msgstr ""
+
+#: templates/display_projects/annual_savings_potential_form.html:59
+msgid "Please stay on this page while your report is being generated"
+msgstr ""
+
+#: templates/display_projects/index.html:43
+msgid "Overview"
+msgstr "Vista general"
+
+#: templates/display_projects/index.html:48
+msgid "Add"
+msgstr ""
+
+#: templates/display_projects/index.html:59
+#, fuzzy
+msgid "Electricity Project"
+msgstr "Proyectos Activos"
+
+#: templates/display_projects/index.html:64
+#, fuzzy
+msgid "Gas Project"
+msgstr "Proyectos"
+
+#: templates/display_projects/index.html:69
+#, fuzzy
+msgid "Water Project"
+msgstr "Crear proyecto"
+
+#: templates/display_projects/index.html:74
+#, fuzzy
+msgid "Heat Project"
+msgstr "Crear proyecto"
+
+#: templates/display_projects/index.html:79
+#, fuzzy
+msgid "Oil Project"
+msgstr "Proyectos"
+
+#: templates/display_projects/index.html:88
+msgid "Active Projects"
+msgstr "Proyectos Activos"
+
+#: templates/display_projects/index.html:92
+#: templates/display_projects/index.html:120
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/display_projects/index.html:93
+#: templates/display_projects/index.html:121
+msgid "Duration"
+msgstr "Duración"
+
+#: templates/display_projects/index.html:94
+#: templates/display_projects/index.html:122
+msgid "Report"
+msgstr "Informes"
+
+#: templates/display_projects/index.html:116
+msgid "Done Projects"
+msgstr "Proyectos Realizados"
+
+#: templates/display_projects/project_base.html:47
+msgid "Open"
+msgstr "Abierto"
+
+#: templates/display_projects/project_base.html:53
+msgid "Closed"
+msgstr "Cerrado"
+
+#: templates/display_projects/project_details.html:16
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/display_projects/project_details.html:22
+msgid "Yearly savings:"
+msgstr "Ahorros Anuales"
+
+#: templates/display_projects/project_details.html:31
+msgid "Before actions"
+msgstr "Acciones anteriores"
+
+#: templates/display_projects/project_details.html:37
+msgid "After actions"
+msgstr "Acciones posteriores"
+
+#: templates/display_projects/project_form.html:72
+#, fuzzy
+msgid "Edit Project"
+msgstr "Editar proyecto"
+
+#: templates/display_projects/project_form.html:74
+#: templates/display_projects/project_form.html:366
+#, fuzzy
+msgid "Create Project"
+msgstr "Crear proyecto"
+
+#: templates/display_projects/project_form.html:88
+msgid "months"
+msgstr ""
+
+#: templates/display_projects/project_form.html:92
+#, fuzzy
+msgid "Background"
+msgstr "Contexto:"
+
+#: templates/display_projects/project_form.html:110
+#: templates/display_projects/project_form.html:135
+#: templates/display_projects/project_form.html:220
+#: templates/display_projects/project_form.html:347
+#, fuzzy
+msgid "Explanation:"
+msgstr "Expectativas:"
+
+#: templates/display_projects/project_form.html:115
+#, fuzzy
+msgid "Expectations"
+msgstr "Expectativas:"
+
+#: templates/display_projects/project_form.html:116
+#, fuzzy
+msgid ""
+"Enter the estimated annual consumption and the expected savings. All savings "
+"and costs to be included."
+msgstr ""
+"Introducir los consumos anuales estimados y los ahorros estimados. Todos los "
+"ahorros y costes han de ser incluidos"
+
+#: templates/display_projects/project_form.html:141
+#, fuzzy
+msgid "Actions"
+msgstr "Acciones:"
+
+#: templates/display_projects/project_form.html:149
+#, fuzzy
+msgid "Investment Costs"
+msgstr "Inversión"
+
+#: templates/display_projects/project_form.html:150
+msgid ""
+"\n"
+"      <p>\n"
+"        To calculate the payback period correctly, investment costs should\n"
+"        be entered here.  These include the costs for Grid Manager\n"
+"        solution, installation, replacement of machinery, and so on.\n"
+"      </p>\n"
+"      <p>\n"
+"        Three kinds of investment costs can be entered:\n"
+"        <ul>\n"
+"          <li>\n"
+"        A simple investment where the total cost is just entered\n"
+"        in the cost column.\n"
+"          </li>\n"
+"          <li>\n"
+"        A finansed investment with monthly payment and interests\n"
+"        compounded every month where the initial principal of the loan\n"
+"        is entered in the cost column, the nominal annual rate is\n"
+"        entered in the interest rate column and the number of payments\n"
+"        is entered in the period column.\n"
+"          </li>\n"
+"          <li>\n"
+"        A leasing agreement with monthly payment and interests\n"
+"        compounded every month where the initial principal of the loan\n"
+"        is entered in the cost column, the nominal annual rate is\n"
+"        entered in the interest rate column, the number of payments is\n"
+"        entered in the period column and the scrap value is entered in\n"
+"        the scrap value column.\n"
+"          </li>\n"
+"      </p>\n"
+"      "
+msgstr ""
+
+#: templates/display_projects/project_form.html:183
+#: templates/display_projects/project_form.html:298
+msgid "Description"
+msgstr "Descripción"
+
+#: templates/display_projects/project_form.html:184
+msgid "Cost"
+msgstr "Coste"
+
+#: templates/display_projects/project_form.html:185
+#, fuzzy
+msgid "Period (Months)"
+msgstr "Periodo (Meses)"
+
+#: templates/display_projects/project_form.html:186
+#, fuzzy
+msgid "Interest rate"
+msgstr "Tasa de Interes (%%)"
+
+#: templates/display_projects/project_form.html:187
+#: templates/display_projects/report.tex:297
+msgid "Scrap value"
+msgstr "Valor residual"
+
+#: templates/display_projects/project_form.html:188
+#: templates/display_projects/project_form.html:307
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/display_projects/project_form.html:217
+#: templates/display_projects/project_form.html:343
+msgid "Add another"
+msgstr "Añadir otro"
+
+#: templates/display_projects/project_form.html:226
+#, fuzzy
+msgid "Results"
+msgstr "Resultados"
+
+#: templates/display_projects/project_form.html:228
+msgid ""
+"\n"
+"    <p>\n"
+"        Results are documented by benchmarking measurements of a base-line "
+"period\n"
+"        with measurements of a result period.  Measurements for both "
+"periods\n"
+"        must be representable for a full year.\n"
+"    </p>\n"
+"\n"
+"    <p>\n"
+"    Including cost measured from these periods is optional.  If enabled,\n"
+"    the tariffs involved in the base-line period or in the results period\n"
+"    must also be representable for a full year.\n"
+"    </p>\n"
+"\n"
+"    <p>\n"
+"    For additional savings that cannot be measured this way see <a\n"
+"    href=\"#additional_savings\">additional savings</a> further down.\n"
+"    </p>\n"
+"        "
+msgstr ""
+
+#: templates/display_projects/project_form.html:249
+msgid "Start of base-line period:"
+msgstr ""
+
+#: templates/display_projects/project_form.html:254
+msgid "End of base-line period:"
+msgstr ""
+
+#: templates/display_projects/project_form.html:260
+msgid "Base-line measurement points:"
+msgstr ""
+
+#: templates/display_projects/project_form.html:267
+msgid "Start of result period:"
+msgstr ""
+
+#: templates/display_projects/project_form.html:272
+msgid "End of result period:"
+msgstr ""
+
+#: templates/display_projects/project_form.html:278
+msgid "Result measurement points:"
+msgstr ""
+
+#: templates/display_projects/project_form.html:292
+#, fuzzy
+msgid "Additional Savings"
+msgstr "Ahorros Adicionales Anuales"
+
+#: templates/display_projects/project_form.html:294
+msgid ""
+"If the project has an impact on other processes leading to additional "
+"savings, they can be entered here. In the case of negative impact a negative "
+"value is entered. All values must be annual."
+msgstr ""
+"Si el proyecto tiene un impacto sobre otros procesos que lleven a ahorros "
+"adicionales, pueden ser introducidos aquí. En el caso de impacto negativo, "
+"un valor negativo puede introducirse. Todos los valores deben ser anuales."
+
+#: templates/display_projects/project_form.html:299
+msgid "Before (kWh)"
+msgstr "Antes (kWh)"
+
+#: templates/display_projects/project_form.html:300
+msgid "After (kWh)"
+msgstr "Después (kWh)"
+
+#: templates/display_projects/project_form.html:301
+#: templates/display_projects/report.tex:211
+#: templates/display_projects/report.tex:213
+#: templates/display_projects/report.tex:215
+#: templates/display_projects/report.tex:243
+#: templates/display_projects/report.tex:245
+#: templates/display_projects/report.tex:247
+msgid "Before"
+msgstr "Antes"
+
+#: templates/display_projects/project_form.html:302
+#: templates/display_projects/report.tex:211
+#: templates/display_projects/report.tex:213
+#: templates/display_projects/report.tex:215
+#: templates/display_projects/report.tex:243
+#: templates/display_projects/report.tex:245
+#: templates/display_projects/report.tex:247
+msgid "After"
+msgstr "Después"
+
+#: templates/display_projects/project_form.html:304
+#, fuzzy
+msgid "Before CO2 (ton)"
+msgstr "CO2 (ton)"
+
+#: templates/display_projects/project_form.html:305
+#, fuzzy
+msgid "After CO2 (ton)"
+msgstr "CO2 (ton)"
+
+#: templates/display_projects/project_form.html:353
+msgid "Additional Comments"
+msgstr ""
+
+#: templates/display_projects/project_form.html:362
+#, fuzzy
+msgid "Save Project"
+msgstr "Proyectos Activos"
+
+#: templates/display_projects/project_form.html:364
+#, fuzzy
+msgid "Delete Project"
+msgstr "Proyectos Realizados"
+
+#: templates/display_projects/project_form.html:364
+msgid "Are you sure you want to delete the project?"
+msgstr "¿Está seguro de querer borrar el proyecto?"
+
+#: templates/display_projects/report.tex:46
+msgid "Annual Savings Overview"
+msgstr "Vista general de ahorros anuales"
+
+#: templates/display_projects/report.tex:55
+msgid ""
+"Currencies used in one or more measured costs calculations are different "
+"from that of this project.  As a result, all measured costs are left out."
+msgstr ""
+
+#: templates/display_projects/report.tex:65
+msgid "Yearly"
+msgstr "Anual"
+
+#: templates/display_projects/report.tex:68
+#, fuzzy
+msgid "Before savings effort, "
+msgstr "esfuerzos antes de ahorros"
+
+#: templates/display_projects/report.tex:69
+msgid "After savings effort, "
+msgstr "Esfuerzos después de ahorros"
+
+#: templates/display_projects/report.tex:72
+#, fuzzy
+msgid "Estimated calculations"
+msgstr "Consumo estimado"
+
+#: templates/display_projects/report.tex:111
+#, fuzzy
+msgid "Project duration"
+msgstr "Descripción del proyecto"
+
+#: templates/display_projects/report.tex:112
+#, python-format
+msgid ""
+"\n"
+"%(months)s month\n"
+msgid_plural ""
+"\n"
+"%(months)s months\n"
+msgstr[0] ""
+"\n"
+"%(months)s mes\n"
+msgstr[1] ""
+"\n"
+"%(months)s meses\n"
+
+#: templates/display_projects/report.tex:119
+msgid "Activity duration"
+msgstr "Duración de la actividad"
+
+#: templates/display_projects/report.tex:126
+msgid "Baseline"
+msgstr ""
+
+#: templates/display_projects/report.tex:133
+#, fuzzy
+msgid "Result"
+msgstr "Resultados:"
+
+#: templates/display_projects/report.tex:144
+msgid "Project Description"
+msgstr "Descripción del proyecto"
+
+#: templates/display_projects/report.tex:147
+msgid "Background:"
+msgstr "Contexto:"
+
+#: templates/display_projects/report.tex:149
+msgid "Expectations:"
+msgstr "Expectativas:"
+
+#: templates/display_projects/report.tex:151
+msgid "Actions:"
+msgstr "Acciones:"
+
+#: templates/display_projects/report.tex:153
+msgid "Result:"
+msgstr "Resultados:"
+
+#: templates/display_projects/report.tex:155
+msgid "Comments:"
+msgstr "Comentarios"
+
+#: templates/display_projects/report.tex:161
+msgid "Goal"
+msgstr "Objetivo"
+
+#: templates/display_projects/report.tex:163
+#, python-format
+msgid "Project as a whole, %(months)s months."
+msgstr "Proyecto en su conjunto, %(months)s meses."
+
+#: templates/display_projects/report.tex:174
+msgid "Expected savings"
+msgstr "Ahorros esperados"
+
+#: templates/display_projects/report.tex:182
+msgid "Achieved savings"
+msgstr "Ahorros logrados"
+
+#: templates/display_projects/report.tex:184
+#, python-format
+msgid "Difference, %%"
+msgstr "Diferencia, %%"
+
+#: templates/display_projects/report.tex:197
+msgid "Annual Measured Savings"
+msgstr "Ahorros Medidos Anuales"
+
+#: templates/display_projects/report.tex:211
+#: templates/display_projects/report.tex:213
+#: templates/display_projects/report.tex:215
+#: templates/display_projects/report.tex:243
+#: templates/display_projects/report.tex:245
+#: templates/display_projects/report.tex:247
+msgctxt "project saving"
+msgid "Saved"
+msgstr "Guardado"
+
+#: templates/display_projects/report.tex:228
+msgid "Annual Additional Savings"
+msgstr "Ahorros Adicionales Anuales"
+
+#: templates/display_projects/report.tex:242
+msgid "kWh"
+msgstr ""
+
+#: templates/display_projects/report.tex:262
+msgid "Total"
+msgstr "Total"
+
+#: templates/display_projects/report.tex:286
+msgid "Project Costs"
+msgstr "Costes de proyecto"
+
+#: templates/display_projects/report.tex:297
+msgid "Investment"
+msgstr "Inversión"
+
+#: templates/display_projects/report.tex:297
+msgid "Period"
+msgstr "Periodo"
+
+#: templates/display_projects/report.tex:297
+msgid "Interest"
+msgstr "Intereses"
+
+#: templates/display_projects/report.tex:307
+msgid "Monthly payment"
+msgstr "Pago mensual"
+
+#: templates/display_projects/report.tex:309
+msgid "Annual payment"
+msgstr "Pago anual"
+
+#: templates/display_projects/report.tex:317
+msgid "Consumption Graphs"
+msgstr ""
+
+#: templates/display_projects/report.tex:329
+#, fuzzy
+msgid "Rate Graphs"
+msgstr "Gráficos"
+
+#~ msgid ""
+#~ "Currency must be specified when \"Include                             "
+#~ "calculated cost\" is selected"
+#~ msgstr ""
+#~ "La unidad monetaria debe ser especificada cuando  "
+#~ "\"Introduce                             el coste calculado\" es "
+#~ "seleccionado"
+
+#, fuzzy
+#~ msgid ""
+#~ "Measurementpoints currencies are not                            "
+#~ "compatible with project currency"
+#~ msgstr ""
+#~ "El punto de medición debe tener el mismo                         origen "
+#~ "de datos que el proyecto"
+
+#~ msgid ""
+#~ "The measurement points must have the same                         data "
+#~ "origin as the project"
+#~ msgstr ""
+#~ "El punto de medición debe tener el mismo                         origen "
+#~ "de datos que el proyecto"
+
+#~ msgid "Stage 1 from time must be lesser than to time"
+#~ msgstr "Fase 1 el tiempo del desde debe ser menor que el tiempo del hasta"
+
+#~ msgid "Stage 2 from time must be lesser than to time"
+#~ msgstr "Fase 2 el tiempo del desde debe ser menor que el tiempo del hasta"
+
+#~ msgid "You must set currency if you add additional costs"
+#~ msgstr "Debe establecer la unidad monetaria si añade costes adicionales"
+
+#~ msgid "Add project"
+#~ msgstr "Añadir proyecto"
+
+#~ msgid "Active Stages"
+#~ msgstr "Fases Activas"
+
+#~ msgid "Name:"
+#~ msgstr "Nombre"
+
+#~ msgid "The entire activity duration (Months):"
+#~ msgstr "Tiempo completo de duración (meses):"
+
+#~ msgid "Currency:"
+#~ msgstr "Moneda:"
+
+#~ msgid "Supplements to annual savings"
+#~ msgstr "Suplementos a los ahorros anuales"
+
+#~ msgid "Costs"
+#~ msgstr "Costes"
+
+#~ msgid ""
+#~ "Enter the cost of the project. Eg. costs for Grid Manager solution, "
+#~ "installation, replacement of machinery, etc.."
+#~ msgstr ""
+#~ "Introducir el coste del proyecto.Ejm. costes de la solución Grid Manager, "
+#~ "instalación, sustitución de equipos, etc."
+
+#~ msgid "CO2 (ton)"
+#~ msgstr "CO2 (ton)"
+
+#~ msgid "Estimated consumption"
+#~ msgstr "Consumo estimado"
+
+#~ msgid "Include measured costs:"
+#~ msgstr "Incluya los costes medidos:"
+
+#~ msgid "Data origin:"
+#~ msgstr "Origen de datos:"
+
+#~ msgid "Stage 1"
+#~ msgstr "Fase 1"
+
+#~ msgid "From:"
+#~ msgstr "Desde:"
+
+#~ msgid "To:"
+#~ msgstr "Hasta:"
+
+#~ msgid "Stage 2"
+#~ msgstr "Fase 2"
+
+#~ msgid "Save"
+#~ msgstr "Guardar"
+
+#~ msgid "Create"
+#~ msgstr "Crear"
+
+#~ msgid "Savings"
+#~ msgstr "Ahorros"
+
+#~ msgid "Rest"
+#~ msgstr "Resto"
+
+#~ msgid "No savings"
+#~ msgstr "No hay ahorros"
+
+#~ msgid "Total Savings"
+#~ msgstr "Ahorros totales"
+
+#~ msgid "Measured"
+#~ msgstr "Medido"
+
+#~ msgid "Annual (estimated)"
+#~ msgstr "Anual (estimado)"
+
+#~ msgid "Extra"
+#~ msgstr "Extra"
+
+#~ msgid "Expected"
+#~ msgstr "Esperados"
+
+#~ msgid "Achieved"
+#~ msgstr "Logrados"
+
+#~ msgid "Difference"
+#~ msgstr "Diferencia"
+
+#~ msgid "Runtime"
+#~ msgstr "Periodo de Vida"

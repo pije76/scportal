@@ -1,0 +1,27 @@
+{% load i18n %}
+
+{% load bootstrap_tags %}
+
+{% if object_list %}
+<table class="table table-striped table-bordered sorted" data-provides="rowlink">
+  <thead>
+    <th class="sorting" data-orderby="name_plain" width="90%">{% trans "Name" %}</th>
+    <th>{% trans "Overview" %}</th>
+  </thead>
+  <tbody>
+    {% for object in object_list %}
+    <tr>
+      <td>
+        <a href="{% url "project_site:project-update" customer_id=customer.id pk=object.id %}">{{ object.name_plain }}</a>
+      </td>
+      <td>
+        <a href="{% url "project_site:project-detail" customer_id=customer.id pk=object.id %}">{% icon "arrow-right" %}</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include "bootstrap/_pagination.html" %}
+{% else %}
+<span>{% trans "No projects present." %}</span>
+{% endif %}

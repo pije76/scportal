@@ -1,0 +1,28 @@
+#: static/manage_indexes.js:13
+msgid ""
+"This tariff is going to be applyed on the following measurement points:<br>"
+msgstr ""
+
+#: static/manage_indexes.js:22 static/manage_indexes.js.c:62
+msgid "Apply tariff"
+msgstr ""
+
+#: static/manage_indexes.js:26 static/manage_indexes.js.c:66
+msgid "Ok"
+msgstr ""
+
+#: static/manage_indexes.js:31
+msgid "The tariff is set"
+msgstr ""
+
+#: static/manage_indexes.js:34
+msgid "The tariff was not set"
+msgstr ""
+
+#: static/manage_indexes.js:41
+msgid "Cancel"
+msgstr ""
+
+#: static/manage_indexes.js:59
+msgid "There's no measurement points of this type without a tariff"
+msgstr ""

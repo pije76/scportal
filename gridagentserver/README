@@ -1,0 +1,15 @@
+This is the GridAgent Server, version 2.1.
+
+It implements the (new) GridAgent Server Protocol, versions 1 and 2.
+
+Options are specified in agentserver/settings.py
+
+Database access is via the Django ORM, through models specified in our GridPlatform project (i.e. the GridPortal 2.0 models).
+
+
+To run in development:
+* make and enter a Python virtualenv
+* run "setup.py develop" for gridplatform
+* run "setup.py develop" for gridagentserver-protocol
+* run "setup.py develop" here ...
+* start.sh

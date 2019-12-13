@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+
+{% block page_id %}groups-page{% endblock %}
+
+{% block tabs %}
+    {% include "manage_collections/group_details_tabs.html" with measurementpoints="selected" %}
+{% endblock %}
+
+{% block title %}{{ object.name_plain }} - {% trans "Details" %}{% endblock title %}
+{% block content_heading %}{{ object.name_plain }} - {% trans "Details" %}{% endblock content_heading %}
+{% block left_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{% trans "Measurement Points" %}</h3>
+  </div>
+  <div class="list-block"
+       data-url="{% url 'manage-groups-measurementpoints-list-json' group_id=object.id %}"
+       data-orderby="name"
+       data-spinner="{% static 'images/ajax-loader.gif' %}">
+     <div class="header-options clearfix">
+      <div class="left">
+        <span>{% trans "Sort by" %}</span>
+        <span class="sort" data-sort="name">{% trans "Name" %}</span>
+        <span class="sort" data-sort="group">{% trans "Group" %}</span>
+      </div>
+      <div class="right">
+        <input type="text" name="search" title="{% trans "Filter" %}" />
+        <span class="clear-search-btn">
+          <img src="{% static 'images/clear.png' %}">
+        </span>
+        <span class="loader">
+          <img src="{% static 'images/ajax-loader.gif' %}">
+        </span>
+      </div>
+    </div>
+    <ul class="model-tree"></ul>
+    <div class="paginator"></div>
+  </div>
+</div>
+
+{% endblock %}

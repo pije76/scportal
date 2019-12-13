@@ -1,0 +1,43 @@
+{% extends "list_page.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block page_id %}indexsettings-page{% endblock %}
+
+{% block list_url %}{% url 'manage_indexes-list_json' %}{% endblock %}
+{% block default_sort_by %}name{% endblock %}
+
+{% block title %}{% trans "Setting: Indexes" %}{% endblock %}
+{% block content_heading %}{% trans "Settings: Indexes" %}{% endblock content_heading %}
+{% block list_title %}{% trans "Indexes" %}{% endblock %}
+
+{% block page_js %}
+<script type="text/javascript" src="{% static 'manage_indexes.js' %}"></script>
+{% endblock page_js %}
+
+{% block add_menu_content %}
+<ul>
+  <li><a href="{% url 'manage_indexes-derived-electricity-tariff-create-view'  %}">{% trans "Derived electricity tariff" %}</a></li>
+  <li><a href="{% url 'manage_indexes-seasons-electricity-tariff-create-view' %}">{% trans "Seasons electricity tariff" %}</a></li>
+  <hr>
+  <li><a href="{% url 'manage_indexes-derived-gas-tariff-create-view' %}">{% trans "Derived gas tariff" %}</a></li>
+  <li><a href="{% url 'manage_indexes-seasons-gas-tariff-create-view' %}">{% trans "Seasons gas tariff" %}</a></li>
+  <hr>
+  <li><a href="{% url 'manage_indexes-derived-water-tariff-create-view' %}">{% trans "Derived water tariff" %}</a></li>
+  <li><a href="{% url 'manage_indexes-seasons-water-tariff-create-view' %}">{% trans "Seasons water tariff" %}</a></li>
+  <hr>
+  <li><a href="{% url 'manage_indexes-derived-district_heating-tariff-create-view' %}">{% trans "Derived district heating tariff" %}</a></li>
+  <li><a href="{% url 'manage_indexes-seasons-district_heating-tariff-create-view' %}">{% trans "Seasons district heating tariff" %}</a></li>
+  <hr>
+  <li><a href="{% url 'manage_indexes-derived-oil-tariff-create-view' %}">{% trans "Derived oil tariff" %}</a></li>
+  <li><a href="{% url 'manage_indexes-seasons-oil-tariff-create-view' %}">{% trans "Seasons oil tariff" %}</a></li>
+  <hr>
+  <li><a href="{% url 'manage_indexes-seasons-employees-index-create-view' %}">{% trans "Employees" %}</a></li>
+  <li><a href="{% url 'manage_indexes-seasons-area-index-create-view' %}">{% trans "Area" %}</a></li>
+</ul>
+{% endblock add_menu_content %}
+
+{% block sort_by %}
+<span class="sort" data-sort="name">{% trans "Name" %}</span>
+<span class="sort" data-sort="unit">{% trans "Unit" %}</span>
+{% endblock sort_by %}

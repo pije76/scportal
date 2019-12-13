@@ -1,0 +1,10 @@
+{% extends 'manage_measurementpoints/base_form.html' %}
+{% load i18n %}
+
+{% block meter_option_elements %}{% endblock %}
+{% block buttons %}
+  <input type="submit" value="{% trans "Save" %}" />
+  {% if form.instance.id %}
+    <button class="delete btn" {% if delete_prevention_reason %} data-reason="{{ delete_prevention_reason }}" {% endif %} title="" data-deleteurl="{% url 'manage_measurementpoints:measurement_point-delete' %}">{% trans 'Delete' %}</button>
+  {% endif %}
+{% endblock buttons %}

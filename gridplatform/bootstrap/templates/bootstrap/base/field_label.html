@@ -1,0 +1,4 @@
+<label{% if field.id_for_label %} for="{{ field.id_for_label }}"{% endif %} class="{% if layout == 'inline' %}sr-only{% elif layout == 'horizontal' %}control-label col-sm-{{ label_columns }}{% endif %}{% if label_class %} {{ label_class }}{% endif %}">
+<span>{{ field.label }}</span>
+{% if field.field.required %}<span>*</span>{% endif %}
+</label>

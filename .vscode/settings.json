@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "C:/Users/code/.virtualenvs/portal/Scripts/python.exe",
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_django", "--disable=missing-docstring"],
+    "python.linting.flake8Enabled": true
+}

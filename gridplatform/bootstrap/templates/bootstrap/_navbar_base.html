@@ -1,0 +1,73 @@
+{% load i18n %}
+{% load static from staticfiles %}
+{# start: Header #}
+<header class="navbar">
+  <div class="container">
+    {% block menu_button %}
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a>
+    {% endblock menu_button %}
+    <a class="navbar-brand col-md-2 col-sm-1 col-xs-2" href="{% block home_url %}{% endblock %}"><span>{% block title %}{% endblock %}</span></a>
+    {% block search %}{% endblock search %}
+    {# start: Header Menu #}
+    <div class="nav-no-collapse header-nav">
+      <ul class="nav navbar-nav pull-right">
+        {% block menu_extra %}{% endblock %}
+        {# start: switch language #}
+        <li>
+          <form action="{% url 'set_language' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.get_full_path }}">
+            <input type="hidden" name="language" value="da">
+            <button class="btn btn-default"><img src="{% static 'images/danish.png' %}" alt="da"></button>
+          </form>
+        </li>
+        <li>
+          <form action="{% url 'set_language' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.get_full_path }}">
+            <input type="hidden" name="language" value="en">
+            <button class="btn btn-default"><img src="{% static 'images/english.png' %}" alt="en"></button>
+          </form>
+        </li>
+        {# end: switch language #}
+        {# start: App Dropdown #}
+        <li class="dropdown">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <img src="{% static 'bootstrap/images/app_icon.png' %}" />
+          </a>
+          <div class="dropdown-menu app-switcher-menu">
+          {% for app in app_selection %}
+            <div style="" class="appicon-wrapper">
+              <a href="{{ app.url }}">
+                {% if app.icon %}<img src="{{ app.icon }}" height="48" width="48" style="" class="appicon">{% endif %}
+                {{ app.name }}
+              </a>
+            </div>
+          {% endfor %}
+          </div>
+        </li>
+        {# end: App Dropdown #}
+        {# start: User Dropdown #}
+        <li class="dropdown">
+          <a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
+            <div class="user">
+              <span class="name">{{ request.user }}</span>
+            </div>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="modal" data-target="#userprofile-modal">{% trans 'Profile' %}</a></li>
+            <li><a href="{% url 'website-logout' %}">{% trans 'Logout' %}</a></li>
+          </ul>
+        </li>
+        {# end: User Dropdown #}
+      </ul>
+    </div>
+    {# end: Header Menu #}
+  </div>
+</header>
+{# end: Header #}

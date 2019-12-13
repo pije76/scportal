@@ -1,0 +1,26 @@
+{% extends "project_site/base.html" %}
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% block content %}
+{% panel object %}
+    <h2><strong>{% trans 'Status' %}:</strong>{{ phase }}</h2>
+    <hr>
+    <div><strong>{% trans 'Baseline' %}:</strong> {{ object.baseline_from_date }} - {{ object.baseline_to_date }}</div>
+    <br>
+    <div><strong>{% trans 'Baseline Energy Consumption' %}:</strong> {{ baseline_sum|floatformat:2 }} {% trans 'KW/h' %}</div>
+    <div><strong>{% trans 'Baseline Time Consumption' %}:</strong> {{ baseline_time_sum|floatformat:2 }} {% trans 'hours' %}</div>
+
+    {% if object.datasource %}
+    <h3>{% trans 'Baseline Energy Consumption' %}</h3>
+    <div class="load-chart-bar" data-url="{% url 'project_site:consumption-utility-bar-chart-start' customer_id=customer.id project_id=object.id %}" data-form="#time-selection form" data-unit="{% trans 'Wh' %}" data-show-legend="false"></div>
+    {% endif %}
+
+    {% if object.time_datasource %}
+    <h3>{% trans 'Baseline Time Consumption' %}</h3>
+    <div class="load-chart-bar" data-url="{% url 'project_site:time-consumption-utility-bar-chart-start' customer_id=customer.id project_id=object.id %}" data-form="#time-selection form" data-unit="{% trans 'hours' %}" data-show-legend="false"></div>
+    {% endif %}
+
+{% endpanel %}
+
+{% endblock %}

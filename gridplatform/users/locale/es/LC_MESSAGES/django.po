@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-23 21:17+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: admin.py:23
+msgid "Password"
+msgstr "Contraseña"
+
+#: admin.py:26
+msgid "Password confirmation"
+msgstr "Confirmación contraseña"
+
+#: admin.py:28
+msgid "Enter the same password as above, for verification."
+msgstr "Introduzca la misma contraeña que arriba, para verificación"
+
+#: admin.py:31
+msgid "Provider"
+msgstr "Proveedor"
+
+#: admin.py:70
+msgid "Personal info"
+msgstr "Información personal"
+
+#: admin.py:73
+msgid "Permissions"
+msgstr "Permisos"
+
+#: admin.py:79
+msgid "Important dates"
+msgstr "Importar fechas"
+
+#: models.py:47
+msgid "Admin"
+msgstr "Administrador"
+
+#: models.py:48
+msgid "Super User"
+msgstr "Super Usuario"
+
+#: models.py:49
+msgid "User"
+msgstr "Usuario"
+
+#: models.py:50
+msgid "Api User"
+msgstr "Usuario de la API"
+
+#: models.py:56
+msgid "e-mail address"
+msgstr "dirección de e-mail"
+
+#: models.py:57
+msgid "phone"
+msgstr "telefóno"
+
+#: models.py:58
+msgid "mobile"
+msgstr "móvil"
+
+#: models.py:60
+msgid "name"
+msgstr "nombre"
+
+#: models.py:64
+msgid "customer"
+msgstr "consumidor"
+
+#: models.py:68
+msgid "provider"
+msgstr "proveedor"
+
+#: models.py:75
+msgid "user"
+msgstr "usuario"
+
+#: models.py:76
+msgid "users"
+msgstr "usuarios"
+
+#: models.py:80
+msgid "Can access the sales site"
+msgstr "Puede acceder a la herramienta ventas"
+
+#: models.py:82
+msgid "Can access the product list site"
+msgstr "Puede acceder a la herramienta listado de productos"
+
+#: models.py:84
+msgid "Can access the configuration site"
+msgstr "Puede acceder a la herramienta configuración"
+
+#: models.py:86
+msgid "Can access the system health site"
+msgstr "Puede acceder a la herramienta salud del sistema"
+
+#: models.py:88
+msgid "Can access the provider site"
+msgstr "Puede acceder a la herramienta de poveedor"
+
+#: models.py:90
+msgid "Can access the energy manager site"
+msgstr "Puede acceder a la herramienta gestión energética"
+
+#: models.py:92
+msgid "Can access the survey site"
+msgstr "Puede acceder a la herramienta site survey"
+
+#: models.py:94
+msgid "Can access the reporting site"
+msgstr "Puede acceder a la herramienta de informes"
+
+#: models.py:96
+msgid "Can access the tariff and compensation site"
+msgstr "Puede acceder a la herramienta de tarifas y compensación"
+
+#: models.py:98
+msgid "Can access the graph site"
+msgstr "Puede acceder a la herramienta gráficos"
+
+#: views.py:53
+msgid "password"
+msgstr "contraseña"
+
+#: views.py:55
+msgid "new password"
+msgstr "nueva contraseña"
+
+#: views.py:58
+msgid "new password again"
+msgstr "nueva contraseña de nuevo"
+
+#: views.py:73
+msgid "Please provide your password"
+msgstr "Por favor facilite su contraseña"
+
+#: views.py:80
+msgid "The password is not correct"
+msgstr "La contraseña no es correcta"
+
+#: views.py:84
+msgid "The passwords doesn't match"
+msgstr "Las contraseñas no coinciden"
+
+#: templates/users/_user_profile_modal.html:8
+msgid "User Profile"
+msgstr "Perfil de usuario"
+

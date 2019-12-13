@@ -1,0 +1,48 @@
+/* Hacks for Genius Admin Template */
+
+.list-group-item.disabled {
+    color: grey;
+}
+
+.table-condensed .alert {
+    margin-bottom: 0;
+}
+
+.list-search input {
+    border: none;
+    height: 39px;
+    border-left: 1px solid #ced1d4;
+    padding: 0 5px;
+    width: 20em;
+}
+.list-datepicker input {
+    border: none;
+    height: 39px;
+    border-left: 1px solid #ced1d4;
+    padding: 0 5px;
+    width: 6em;
+}
+
+.box .box-header .box-icon .list-search i,
+.box .box-header .box-icon .list-datepicker i
+{
+    border: none;
+    background-color: #FFF;
+    margin-right: 2px;
+}
+
+.box .box-header .box-icon .list-datepicker i
+{
+    border: none;
+    background-color: #FFF;
+    margin-right: 2px;
+}
+
+/* Hack to get normal boostrap behaivier */
+.modal-lg {
+    width: 900px!important;
+}
+
+a.navbar-brand span {
+    font-family: 'verdana'!important;
+}

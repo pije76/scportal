@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+
+{% block page_id %}userprofile-page{% endblock %}
+
+{% block page_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gettext */
+jQuery(function () {
+    'use strict';
+    $('#id_password').showPassword();
+    $('#content-main').on('submit', 'form', function () {
+        var form = $(this);
+        jQuery.post(form.attr('action'), form.serialize(), function (data) {
+            form.replaceWith(data.html);
+            if (data.success) {
+                $('#id_old_password').val('');
+                $('#id_password').val('');
+                if (data.statusText) {
+                    gridportal.website.notify('success', data.statusText);
+                }
+            }
+        });
+        return false;
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block title %}
+  {% trans "Settings: User Profile" %}
+{% endblock %}
+{% block content_heading %}
+  {% trans "Settings: User Profile" %}
+{% endblock %}
+
+
+{% block left_content %}
+  <div class="content-element">
+    <div class="header clearfix">
+      <h2 class="left">{{ user.name_plain }}</h2>
+    </div>
+    <div class="clearfix">
+      {% include 'edit_userprofile/form.html' %}
+    </div>
+  </div>
+{% endblock left_content %}
+

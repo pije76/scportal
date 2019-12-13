@@ -1,0 +1,141 @@
+{% spaceless %}
+{% load i18n %}
+{% load version %}
+{% load static from staticfiles %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block page_title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    {% if bootstrap_theme == 'genius' %}
+    {% compress css %}
+    <link href="{% static 'bootstrap/genius/css/print.css' %}" rel="stylesheet" media="print">
+    <link href="{% static 'bootstrap/genius.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/style.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/retina.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/genius/css/chosen.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/multiselect/css/multi-select.css' %}" rel="stylesheet">
+    {% endcompress %}
+    {% endif %}
+    {% compress css %}
+    <link href="{% static 'bootstrap/bootstrap-rowlink/bootstrap-rowlink.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/bootstrap-datepicker/datepicker.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/base.css' %}" rel="stylesheet">
+    {% endcompress %}
+    {# custom css #}
+    {% block site_css %}{% endblock site_css %}
+    {% block page_css %}{% endblock page_css %}
+    {% compress js %}
+    {# js... #}
+    <script type="text/javascript" src="{% static 'bootstrap/jquery-2.0.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/lodash-2.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/bean.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/flotr2.nolibs.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/chart.js/Chart.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/bootstrap-rowlink/bootstrap-rowlink.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/bootstrap-datepicker/bootstrap-datepicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/quicksearch/dist/jquery.quicksearch.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/multiselect/js/jquery.multi-select.js' %}"></script>
+
+    {% endcompress %}
+    {% if bootstrap_theme == 'genius' %}
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/jquery.chosen.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/core.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius/js/custom.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/genius.js' %}"></script>
+    {% endcompress %}
+    {% endif %}
+    <script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'bootstrap/base.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'users/users.js' %}"></script>
+    <script type="text/javascript" src="{% static 'utils/utils.js' %}"></script>
+    {% endcompress %}
+    {% block site_js %}{% endblock site_js %}
+    {% block page_js %}{% endblock page_js %}
+  </head>
+  <body>
+    {% block navbar %}{% endblock %}
+    <div class="container">
+      <div class="row">
+        <div id="sidebar-left" class="col-lg-2 col-sm-1">
+          <div class="sidebar-nav nav-collapse navbar-collapse">
+            {% block sidebar %}{% endblock sidebar %}
+          </div>
+          <a href="{{ request.get_full_path }}#" id="main-menu-min" class="full visible-md visible-lg"><i class="fa fa-angle-double-left"></i></a>
+        </div>
+        <div id="content" class="col-lg-10 col-sm-11 ">
+        {% if view.get_breadcrumbs %}
+          <ul class="breadcrumb">
+          {% for breadcrump in view.get_breadcrumbs %}
+            {% if forloop.last %}
+              <li class="active">{{ breadcrump.0 }}</li>
+            {% else %}
+            <li><a href="{{ breadcrump.1 }}">{{ breadcrump.0 }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          </ul>
+        {% endif %}
+        {% block content %}{% endblock %}
+        {% block contentfooter %}{%endblock %}
+        </div>
+      </div>
+    </div>
+    {% block delete_modal %}
+    <script>
+      $(document).ready(function () {
+          var modal = $('#delete-modal');
+          modal.on('show.bs.modal', function (event) {
+              var url = $(event.relatedTarget).data('url');
+              if (url) {
+                  modal.find('form').attr('action', url);
+              } else {
+                throw "You must specify an URL for the delete target!"
+              }
+          });
+      });
+    </script>
+    <div class="modal fade delete-confirmation" tabindex="-1" role="dialog" aria-hidden="true" id="delete-modal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">{% trans "Confirm" %}</h4>
+          </div>
+          <div class="modal-body">
+            {% trans "Are you sure you want to delete this?" %}
+          </div>
+          <div class="modal-footer">
+            <form method="post" action="{{ request.path }}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger">{% trans "Delete" %}</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Cancel" %}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock delete_modal %}
+
+    {% include "users/_user_profile_modal.html" %}
+
+
+      <div class="container">
+        {% gridplatform_version %}
+      </div>
+
+    {% block page_bottom %}{% endblock %}
+  </body>
+</html>
+{% endspaceless %}

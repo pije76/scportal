@@ -1,0 +1,142 @@
+.list-block {
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0px;
+    }
+    dl {
+        width: 250px;
+        float: left;
+        dt {
+            font-weight: bold;
+            margin-right: 5px;
+            display: inline-block;
+            float: left;
+            clear: both;
+        }
+        dd {
+            display: inline-block;
+            float: left;
+            ul {
+                margin: auto;
+            }
+        }
+    }
+    .header-options {
+        input {
+            height: 20px;
+            padding-right: 35px;
+            margin: 0;
+            float: right;
+        }
+        input.labelinside {
+            color: #999;
+        }
+        .clear-search-btn {
+            position:relative;
+            height:20px;
+            cursor: pointer;
+            display: none;
+            float:right;
+        }
+        .loader {
+            position: relative;
+            height: 20px;
+            display: none;
+            float: left;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        ul {
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+        li {
+            position: relative;
+            overflow: hidden;
+            margin-left: 0px;
+            margin-bottom: 5px;
+            div {
+                .list-column {
+                    float: left;
+                    width: 250px;
+                }
+                background-color: #FFF;
+            }
+            .info {
+                margin-left: 2px;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            .detail-icon {
+                margin-top:6px;
+                margin-right:5px;
+            }
+        }
+        li > div {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+    }
+    .paginator{
+        span {
+            border: 1px solid #000;
+            margin: 1px;
+            padding: 1px;
+            cursor: pointer;
+        }
+        span.active {
+            cursor: auto;
+            color: green;
+            border: 1px solid green;
+        }
+    }
+}
+
+.slide-in {
+    background-color: #FFFFFF;
+}
+
+.model-list, .model-tree {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        position: relative;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-bottom: 5px;
+        div {
+            .list-column {
+                float: left;
+                width: 250px;
+            }
+        }
+        .info {
+            margin-left: 2px;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .detail-icon {
+            margin-top:6px;
+            margin-right:5px;
+        }
+    }
+    li > div {
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+.model-tree {
+    ul {
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+}
+

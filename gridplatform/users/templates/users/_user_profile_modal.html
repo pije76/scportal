@@ -1,0 +1,14 @@
+{% load i18n %}
+
+{% spaceless %}
+<div class="modal fade userprofile" tabindex="-1" role="dialog" aria-hidden="true" id="userprofile-modal" data-form-url="{% url 'users:profile' %}">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{% trans "User Profile" %}</h4>
+      </div>
+      <div class="profileform"></div>
+    </div>
+  </div>
+</div>
+{% endspaceless %}

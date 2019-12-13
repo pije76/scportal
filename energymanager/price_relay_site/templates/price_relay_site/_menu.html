@@ -1,0 +1,19 @@
+{% load i18n %}
+
+{% load bootstrap_tags %}
+
+{% if customer %}
+<ul class="nav main-menu">
+  <li>
+    <a href="{% url 'price_relay_site:dashboard' customer_id=view.kwargs.customer_id %}">
+      {% icon "bar-chart-o" %}<span class="hidden-sm text">{% trans 'Dashboard' %}</span>
+    </a>
+  </li>
+   <li>
+    <a href="{% url 'price_relay_site:price-relay-project-list' customer_id=view.kwargs.customer_id %}">
+      {% icon "gears" %}<span class="hidden-sm text">{% trans 'Price Relay Projects' %}</span>
+    </a>
+  </li>
+
+</ul>
+{% endif %}

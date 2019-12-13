@@ -1,0 +1,10 @@
+{% load i18n %}
+{% load tabs %}
+
+{% trans 'Measurement Points' as measurementpoint %}
+{% trans 'Overview' as overview %}
+
+<ul class="tabs">
+  {% tab_li overview 'manage-groups-floorplan' pk=object.id %}
+  {% tab_li measurementpoint 'manage-groups-details' pk=object.id %}
+</ul>

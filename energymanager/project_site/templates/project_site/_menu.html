@@ -1,0 +1,13 @@
+{% load i18n %}
+
+{% load bootstrap_tags %}
+
+{% if customer %}
+<ul class="nav main-menu">
+   <li>
+    <a href="{% url 'project_site:project-list' customer_id=view.kwargs.customer_id %}">
+      {% icon "bar-chart-o" %}<span class="hidden-sm text">{% trans 'Projects' %}</span>
+    </a>
+  </li>
+</ul>
+{% endif %}

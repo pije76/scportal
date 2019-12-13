@@ -1,0 +1,58 @@
+{% extends "start_site/base.html"%}
+{% load i18n %}
+{% load bootstrap_tags %}
+{% load widget_tweaks %}
+{% load version %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div id="content" class="col-sm-12 full">
+      <div class="row">
+        <div class="login-box">
+          <div class="header">
+
+            {% if request.get_host == "portal.smartflex.dk" %}
+              {% trans "Login to SmartFlex" %}
+            {% elif request.get_host == "endesa.grid-manager.com" %}
+              {% trans "Login to Endesa Energy Manager" %}
+            {% else %}
+              {% trans "Login to SC-Portal" %}
+            {% endif %}
+          </div>
+          <form class="form-horizontal login" method="post">
+          {% csrf_token %}
+            <fieldset class="col-sm-12">
+              <div class="form-group">
+                  <div class="controls row">
+                  <div class="input-group col-sm-12">
+                    {% render_field form.username placeholder=form.username.label class+="form-control" %}
+
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  </div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="controls row">
+                  <div class="input-group col-sm-12">
+                    {% render_field form.password placeholder=form.password.label class+="form-control" %}
+                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                  </div>
+                  </div>
+              </div>
+              {{ form.non_field_errors }}
+
+              <div class="row">
+                <button type="submit" class="btn btn-lg btn-primary col-xs-12">Login</button>
+              </div>
+            </fieldset>
+          </form>
+          <div class="clearfix"></div>
+          <div class="pull-right">{% gridplatform_version %}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,13 @@
+digraph single {
+        start[shape=circle, label=""];
+        done[shape=circle, label=""];
+
+        start -> input;
+        input -> setup_type [label="pulse"];
+        setup_type -> setup_pulse;
+        setup_pulse -> set_relay;
+        input -> set_relay [label="not pulse"];
+
+        set_relay -> set_name;
+        set_name -> done;
+}

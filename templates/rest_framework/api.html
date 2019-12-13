@@ -1,0 +1,10 @@
+{% extends "rest_framework/base.html" %}
+
+{% block title %}GridPlatform API{% endblock %}
+{% block branding %}
+{% if debug %}
+<a class='brand' href='http://{{ request.get_host }}/api/current'>GridManager</a>
+{% else %}
+<a class='brand' href='http://portal.grid-manager.com/api/current'>GridManager</a>
+{% endif %}
+{% endblock %}

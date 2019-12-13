@@ -1,0 +1,146 @@
+#history-table .fa-arrow-right {
+	margin: 0 10px 0 10px;
+}
+
+.ms-container {
+	width: auto;
+}
+
+.appicon-wrapper {
+	width: 33%;
+        height: 100px;
+	float: left;
+	margin-bottom: 5px;
+	text-align:center;
+}
+
+.appicon {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.app-switcher-menu {
+	width: 360px;
+	padding-top: 20px;
+}
+
+.navbar-text {
+	background: transparent;
+	height: 40px;
+	width: auto;
+	padding: 8px 0 5px 10px!important;
+	margin: 0 0 0 3px;
+	position: relative;
+	color: #fff!important;
+}
+
+.navbar-text span {
+	display: inline-block;
+	text-align: left;
+	margin-top: -5px;
+	padding: 0;
+}
+
+span.disabled {
+	color: #aaa;
+}
+
+.popover .close {
+	line-height: 150%;
+}
+
+.popover h3 {
+	padding-right: 20px;
+}
+
+.bar-legend {
+	list-style: none;
+	padding: 0;
+	float: right;
+	position: relative;
+}
+
+.bar-legend li{
+	float: left;
+	margin-left: 5px;
+}
+
+.bar-legend li span{
+	padding: 5px;
+}
+
+#time-selection #id_week, #time-selection #id_year{
+	width: 75px;
+}
+
+#time-selection {
+	float: left;
+}
+
+.graph-link {
+	float: right;
+}
+
+.graph-link:after {
+	content:'';
+    display:block;
+    clear: both;
+}
+
+@media only screen and (max-width: 767px) {
+	.pull-right {
+	    width: 100%;
+	    margin: 10px auto;
+	    text-align: center;
+	}
+
+
+
+	.light-dashboard .pull-left {
+	    width: 100%;
+	    margin: 10px auto;
+	    text-align: center;
+	}
+
+	.dropdown.pull-right {
+	    width: auto;
+	    margin: auto auto;
+	    text-align: inherit;
+	}
+}
+
+.dropdown a > span {
+	border-radius: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+	top: 8px;
+    padding: 11px 15px;
+    height: 40px;
+    position: relative;
+	border-left: 1px solid #ced1d4;
+}
+
+.dropdown > a {
+	text-decoration: none;
+}
+
+.dropdown-menu {
+	top: 25px;
+} 
+
+.stats.led li {
+	width: 50%;
+}
+
+.backgroundColor.darkgreen {
+    background: #637B3A;
+}
+
+.info-boxes {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+

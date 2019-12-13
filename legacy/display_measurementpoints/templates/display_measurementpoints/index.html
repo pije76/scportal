@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load mptt_tags %}
+{% load display_measurementpoints %}
+{% load dropdown %}
+
+{% block page_id %}mp-page{% endblock %}
+
+{% block page_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+$(document).ready(function () {
+    'use strict';
+    var tree = jQuery(".in-page-menu .menu-content");
+
+    tree.bind('loaded.jstree', function (e, data) {
+        tree.find('a ins').remove();
+        {% if group.pk %}
+        $("#node_{{ group.pk|unlocalize }}").parents(".jstree-closed").each(function () {
+          tree.jstree("open_node", this, false, true);
+        });
+        {% endif %}
+        gridportal.website.initInpageMenu('{% static 'images/arrow-right.png' %}', '{% static 'images/arrow-left.png' %}');
+    }).bind("after_open.jstree", function (event, data) {
+        var menuHeight = $('.in-page-menu').height(),
+            contentHeight = $('#content-main').height();
+        if (contentHeight < menuHeight) {
+            $('#content-main').height(menuHeight + 20);
+        }
+    }).jstree({
+        themes: {
+            "theme": "default",
+            "url": "{% static 'jstree/themes/default/style.css' %}",
+            "dots": false,
+            "icons": false,
+            "open_parents": false
+        },
+        plugins: ["themes", "html_data"]
+    });
+});
+</script>
+{% block detail_js %}{% endblock detail_js %}
+{% endblock page_js %}
+
+{% block page_css %}
+<style>
+    #content-main {
+        overflow-x: hidden;
+    }
+</style>
+{% endblock %}
+
+{% block title %}{% trans "Details" %}{% endblock title %}
+{% block content_heading %}{% trans "Details" %}{% endblock content_heading %}
+
+{% block content %}
+<div id="measurementpoints" class="grid_23 prefix_1">
+  <span>{% trans "Choose a group or measurement point from the menu to the left" %} </span>
+</div>
+{% endblock content %}
+
+{% block in_page_menu %}
+  <div class="in-page-menu">
+    <div class="scroller">
+      <div class="menu-content">
+        {% for grouptree in groups %}
+          {% for node, structure in grouptree|tree_info %}
+            {% if structure.new_level %}
+              <ul><li id="node_{{ node.id|unlocalize }}">
+            {% else %}
+              </li><li id="node_{{ node.id|unlocalize }}">
+            {% endif %}
+            <a href="{% url 'display_measurementpoints-group' pk=node.id %}{% if period_form.from_date.value and period_form.to_date.value %}?from_date={{period_form.from_date.value}}&to_date={{period_form.to_date.value}}{%endif%}">
+              <span class="left"><img src="{% static 'images/mpicons/small.'|add:node.get_icon|add:'.png' %}" height="16" width="16"> {{ node }}</span>
+            </a>
+            {% for level in structure.closed_levels %}</li></ul>{% endfor %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="menu-btn">
+      <div class="rotate">
+        <span>{% trans "Measurement Points" %}</span>
+      </div>
+      <img src="{% static 'images/arrow-right.png' %}" />
+    </div>
+  </div>
+{% endblock %}

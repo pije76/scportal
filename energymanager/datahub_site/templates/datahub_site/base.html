@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.html" %}
+
+{% load i18n %}
+
+{% block page_title %}{% trans 'Datahub' %}{% endblock %}
+
+{% block navbar %}
+{% include "datahub_site/_navbar.html" %}
+{% endblock %}
+
+{% block sidebar %}
+{% include "datahub_site/_menu.html" %}
+{% endblock %}
+
+
+{% block page_bottom %}
+{% include "utils/customer_selection_modal.html" with urlname='datahub_site:customer' %}
+{% include "datahub_site/datahub_authorization_modal.html" %}
+{% endblock page_bottom %}

@@ -1,0 +1,15 @@
+{% load i18n %}
+{% load bootstrap_tags %}
+
+<li class="navbar-text">
+{% if customer %}
+    <span>{{ customer }}</span>
+{% endif %}
+</li>
+{% if view.customers|length != 1 %}
+  <li>
+    <a href="" id="customer-select-button" class="btn btn-inverse" data-toggle="modal" data-target="#customer-select-modal">
+      {% icon 'globe' %}
+    </a>
+  </li>
+{% endif %}

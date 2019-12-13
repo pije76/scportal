@@ -1,0 +1,18 @@
+{% extends "bootstrap/base.html" %}
+
+{% load i18n %}
+
+{% block page_title %}{% trans 'LED Light' %}{% endblock %}
+
+{% block navbar %}
+{% include "led_light_site/_navbar.html" %}
+{% endblock %}
+
+{% block sidebar %}
+{% include "led_light_site/_menu.html" %}
+{% endblock %}
+
+
+{% block page_bottom %}
+{% include "utils/customer_selection_modal.html" with urlname='led_light_site:customer' %}
+{% endblock page_bottom %}

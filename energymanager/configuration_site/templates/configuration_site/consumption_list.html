@@ -1,0 +1,15 @@
+{% extends "configuration_site/base.html" %}
+{% load i18n %}
+{% load pagination %}
+{% load bootstrap_tags %}
+
+{% block content %}
+{% panel _("Consumption Data Sequences") search=True %}
+<a href="{% url "configuration_site:consumption-create" customer_id=customer.id %}" title="{% trans 'Add' %}">
+  {% icon "plus" %}
+</a>
+{% endpanelbuttons %}
+<div class="content-loader" data-url="{% url "configuration_site:consumption-list-content" customer_id=customer.id %}" data-orderby="name_plain"></div>
+{% endpanel %}
+
+{% endblock %}

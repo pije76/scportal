@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load dropdown %}
+
+{% block page_js %}
+<script type="text/javascript" src="{% static 'manage_reports.js' %}"></script>
+<script type="text/javascript">
+/*jslint browser: true */
+/*global $, jQuery, gettext */
+$(document).ready(function () {
+    'use strict';
+    $('.pdfAnnualSavingsPotentialReport').click(function (event) {
+        var button = $(event.target),
+            data = $('.annual_savings_form').serialize(),
+            container = $('.annual_savings'),
+            startUrl = '{% url "projects-startannualsavingspotentialreport" %}',
+            finalizeUrl = '{% url "projects-finalizeannualsavingspotentialreport" %}',
+            resultElem = button.next(),
+            statusUrl = '{% url "reports-status" %}',
+            spinnerUrl = '{% static "images/ajax-loader.gif" %}',
+            progressBar = $('.progressbar');
+        event.preventDefault();
+        event.stopPropagation();
+        gridportal.manageReports.requestReport(data, container, startUrl, finalizeUrl, resultElem, statusUrl, spinnerUrl, progressBar);
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block content_heading %} {% trans "Projects" %} {% endblock content_heading %}
+
+{% block content %}
+<div class="grid_24">
+  <div class="content-element">
+    <div class="header clearfix">
+      <h3 class="left">{% trans "Annual Savings Potential Report" %}</h3>
+    </div>
+    <div class="annual_savings">
+      <form method="POST" class="annual_savings_form">
+        {% csrf_token %}
+        <fieldset class="projects-select">
+  	{{ form.projects.label_tag }}
+  	{{ form.projects }}
+  	{{ form.projects.errors }}
+    <div class="reportErrors"></div>
+        </fieldset>
+        <fieldset>
+
+  	<div style="float:right; text-align:right">
+  	  <span class="spinning-wheel"></span>
+  	  <input type="button" class="pdfAnnualSavingsPotentialReport" value="{% trans 'Download' %}">
+  	    <input type="button" class="cancel" value="{% trans 'Cancel' %}" disabled="true">
+  	      <div class="progressbar"></div>
+  	      <div class="notice-field" style="display: none"> {% trans "Please stay on this page while your report is being generated" %}</div>
+
+  	    </div>
+  	  </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

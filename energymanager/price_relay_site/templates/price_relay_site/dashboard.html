@@ -1,0 +1,39 @@
+{% extends "price_relay_site/base.html" %}
+{% load i18n %}
+{% load l10n %}
+
+{% load bootstrap_tags %}
+{% load utils %}
+
+{% block content %}
+<div class="light-dashboard">
+{% panel object.name_plain %}
+{% endpanelbuttons %}
+    <h2>{% trans "Price Forecast" %}</h2>
+    <div class="load-chart-line" data-url="{% url 'price_relay_site:forecast-chart-start' customer_id=customer.id project_id=object.id %}" data-form="#time-selection form" data-unit="{% trans 'Wh' %}" data-color="cost"></div>
+    <h2>{% trans "Relay Settings" %}</h2>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                    <th>{% trans "Time" %}</th>
+                    <th>{% trans "Look Ahead Time" %}</th>
+                    <th>{% trans "Procent Change" %}</th>
+                    <th>{% trans "Relay" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for setting in object.calculate_relay_settings %}
+                <tr>
+                    <td>{{ setting.sample.from_timestamp }}</td>
+                    <td>{{ setting.look_ahead_sample.from_timestamp }}</td>
+                    <td>{{ setting.change.value|floatformat:2 }}</td>
+                    <td>{{ setting.relay }}</td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+{% endpanel %}
+</div>
+{% endblock %}

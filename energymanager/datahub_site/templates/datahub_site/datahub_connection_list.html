@@ -1,0 +1,49 @@
+{% extends "datahub_site/base.html" %}
+{% load i18n %}
+{% load pagination %}
+{% load bootstrap_tags %}
+{% block page_js %}
+<script>
+  var checkAuthorization = function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    var target = $(event.target);
+    var meterNumber = target.data('number');
+    var url = '{% url "datahub_site:authorizations-view" %}';
+    var data;
+    var authorizationModal = $('#dathub-authorization-modal');
+    $.get(url, function(response) {
+      _(response).forEach(function(customer) {
+        _(customer.ListOfMeteringPoints).forEach(function(meter) {
+          if (meter.MeteringPointIdentification === meterNumber) {
+            data={
+              startDate: customer.StartDate,
+              endDate: customer.EndDate,
+              authorizationId: customer.Id
+            }
+          }
+        });
+      });
+      if (data) {
+        authorizationModal.find('.modal-body').html("<h2>Godkendt</h2>");
+      } else {
+        authorizationModal.find('.modal-body').html("<h2>Ikke godkendt</h2><p>Send anmodning om adgang</p>");
+      }
+      authorizationModal.modal("show");
+    });
+    return false;
+  }
+
+</script>
+{% endblock page_js %}
+{% block content %}
+{% panel _("Datahub Connections") search=True %}
+<a href="{% url "datahub_site:connection-create" customer_id=customer.id %}" title="{% trans 'Add' %}">
+  {% icon "plus" %}
+</a>
+{% endpanelbuttons %}
+<div class="content-loader" data-url="{% url "datahub_site:connection-list-content" customer_id=customer.id %}" data-orderby="customer_meter_number"></div>
+{% endpanel %}
+
+{% endblock %}
+

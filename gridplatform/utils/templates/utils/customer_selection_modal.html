@@ -1,0 +1,24 @@
+{% load i18n %}
+
+<div class="modal fade" id="customer-select-modal" tabindex="-1" role="dialog" aria-labelledby="customer-select-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="customer-select-modal-label">{% trans 'Select customer' %}</h4>
+      </div>
+      <div class="modal-body">
+      <input class="charfield textinput form-control" id="customerfilter" maxlength="100" placeholder="Filter" type="text" autocomplete="off">
+      <br />
+        <div class="list-group">
+          {% for customer in customers %}
+            <a href="{% url urlname customer_id=customer.id %}" class="list-group-item{% if customer == view.customer %} active{% endif %}">{{ customer }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Cancel' %}</button>
+      </div>
+    </div>
+  </div>
+</div>

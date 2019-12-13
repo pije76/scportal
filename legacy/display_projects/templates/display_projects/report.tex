@@ -1,0 +1,336 @@
+{% extends "reports/report.tex" %}
+
+{% load i18n %}
+{% load l10n %}
+{% load reports %}
+
+{% block report_title %}
+{{ name|texescape }}
+{% endblock %}
+
+{% block documentclass %}
+\documentclass[paper=a4,landscape,pagesize,DIV=20,11pt,headinclude,footinclude,parskip=half]{scrartcl}
+{% endblock %}
+
+{% block preamble_extra %}
+\usepackage{tabu}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest, width=\textwidth, height=6cm}
+
+% http://www.texample.net/tikz/examples/pie-chart/
+\newcommand{\slice}[5]{
+  \pgfmathparse{0.5*#1+0.5*#2}
+  \let\midangle\pgfmathresult
+
+  % slice
+  \draw[thick,fill=#5] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;
+
+  % outer label
+  \node[label=\midangle:#4] at (\midangle:1) {};
+
+  % inner label
+  \pgfmathparse{min((#2-#1-10)/110*(-0.3),0)}
+  \let\temp\pgfmathresult
+  \pgfmathparse{max(\temp,-0.5) + 0.8}
+  \let\innerpos\pgfmathresult
+  \node at (\midangle:\innerpos) {#3};
+}
+{% endblock %}
+
+{% block content %}
+
+\section*{\relax {% trans "Annual Savings Overview" %} *}
+{% if project.include_measured_costs %}
+  {% if stage_1_tariff_domain_warning %}
+{\color{red} {{ stage_1_tariff_domain_warning|texescape }} }
+  {% endif %}
+  {% if stage_2_tariff_domain_warning %}
+{\color{red} {{ stage_2_tariff_domain_warning|texescape }} }
+  {% endif %}
+  {% if project.cost_currency_conflicts %}
+{\color{red} {% trans "Currencies used in one or more measured costs calculations are different from that of this project.  As a result, all measured costs are left out." %} }
+  {% endif %}
+{% endif %}
+\begin{tabu} to \linewidth{@{}
+|X|{% if unit.cost %}
+X|{% endif %}
+X|
+X|
+@{}}
+\hline
+&{\small {% trans "Yearly" %} {{ unit.consumption|texescape }}}{% if unit.cost %}&{\small {% trans "Yearly" %} {{ unit.cost|texescape }}}{% endif %}&{\small {% trans "Yearly" %} {{ unit.co2|texescape }}}\\
+&{\LARGE {{ yearly_savings.consumption|floatformat:2 }}}{% if unit.cost %}&{\LARGE {{ yearly_savings.cost|floatformat:2 }}}{% endif %}&{\LARGE {{ yearly_savings.co2|floatformat:2 }}}\\
+\hline
+{\small {% trans "Before savings effort, "  %} }&{\small {{ total_stage1.consumption|floatformat:2 }}}{% if unit.cost %}&{\small {{ total_stage1.cost|floatformat:2 }}}{% endif %}&{\small {{ total_stage1.co2|floatformat:2 }}}\\
+{\small {% trans "After savings effort, "  %} }&{\small {{ total_stage2.consumption|floatformat:2 }}}{% if unit.cost %}&{\small {{ total_stage2.cost|floatformat:2 }}}{% endif %}&{\small {{ total_stage2.co2|floatformat:2 }}}\\
+\hline
+\end{tabu}
+*{% trans "Estimated calculations" %}
+
+\newcounter{savings}
+\newcounter{rest}
+\definecolor{piegreen}{HTML}{99FF99}
+\definecolor{pieblue}{HTML}{9999FF}
+\definecolor{piered}{HTML}{FF9999}
+
+\begin{tabu} to \linewidth{@{}X[C]X[C]X[C]@{}}
+%\rule{\linewidth}{2pt}&\rule{\linewidth}{2pt}&\rule{\linewidth}{2pt}\\
+{% if yearly_savings.consumption_pct != None %}
+{% include "display_projects/piechart.tex" with savings_pct=yearly_savings.consumption_pct %}
+{% endif %}
+&
+{% if yearly_savings.cost_pct != None and unit.cost %}
+{% include "display_projects/piechart.tex" with savings_pct=yearly_savings.cost_pct %}
+{% endif %}
+&
+{% if yearly_savings.co2_pct != None %}
+{% include "display_projects/piechart.tex" with savings_pct=yearly_savings.co2_pct %}
+{% endif %}
+\\
+{% if yearly_savings.consumption_pct %}
+\large {{ unit.consumption|texescape }}
+{% endif %}
+&
+{% if yearly_savings.cost_pct and unit.cost %}
+\large {{ unit.cost|texescape }}
+{% endif %}
+&
+{% if yearly_savings.co2_pct %}
+\large {{ unit.co2|texescape }}
+{% endif %}
+\\
+\end{tabu}
+
+\begin{tabular}{| l | r |}
+\hline
+{\textbf {% trans "Project duration" %} }&
+{% blocktrans count months=project_runtime %}
+{{ months }} month
+{% plural %}
+{{ months }} months
+{% endblocktrans %}
+\\
+\hline
+{\textbf {% trans "Activity duration" %} }&\parbox[top][12mm][t]{0.3\textwidth}{{ '{' }}
+\raggedleft
+~\\
+{{ activity_duration.from_timestamp|date:"SHORT_DATETIME_FORMAT"|texescape }}\\
+{{ activity_duration.to_timestamp|date:"SHORT_DATETIME_FORMAT"|texescape }}
+{{ '}' }}\\
+\hline
+{\textbf {% trans "Baseline" %} }&\parbox[top][12mm][t]{0.3\textwidth}{{ '{' }}
+\raggedleft
+~\\
+{{ stage_1_start|date:"SHORT_DATETIME_FORMAT"|texescape }}\\
+{{ stage_1_end|date:"SHORT_DATETIME_FORMAT"|texescape }}
+{{ '}' }}\\
+\hline
+{\textbf {% trans "Result" %} }&\parbox[top][12mm][t]{0.3\textwidth}{{ '{' }}
+\raggedleft
+~\\
+{{ stage_2_start|date:"SHORT_DATETIME_FORMAT"|texescape }}\\
+{{ stage_2_end|date:"SHORT_DATETIME_FORMAT"|texescape }}
+{{ '}' }}\\
+\hline
+\end{tabular}
+
+\newpage
+
+\section*{\relax {% trans "Project Description" %} }
+
+\begin{description}
+\item[{% trans "Background:" %}]\hfill\\
+    {{ background|default:""|texescape }}
+\item[{% trans "Expectations:" %}]\hfill\\
+    {{ expectations|default:""|texescape }}
+\item[{% trans "Actions:" %}]\hfill\\
+    {{ actions|default:""|texescape }}
+\item[{% trans "Result:" %}]\hfill\\
+    {{ result|default:""|texescape }}
+\item[{% trans "Comments:" %}]\hfill\\
+    {{ comments|default:""|texescape }}
+\end{description}
+
+\newpage
+
+\section*{\relax {% trans "Goal" %} }
+\noindent
+{% blocktrans %}Project as a whole, {{ months }} months.{% endblocktrans %}
+
+\begin{tabu} to \linewidth{@{}
+X
+X[R]% cost
+X[R]% consumption
+X[R]% CO_2
+@{}}
+\hline
+&{{ unit.consumption|texescape }}&{% if unit.cost %}{{ unit.cost|texescape }}{% endif %}&{{ unit.co2|texescape }}\\
+\hline
+{% trans "Expected savings" %}
+&
+{{ expected.consumption|floatformat:2 }}
+&
+{% if unit.cost %}{{ expected.cost|floatformat:2 }}{% endif %}
+&
+{{ expected.co2|floatformat:2 }}
+\\
+{% trans "Achieved savings" %}&{{ project_savings.consumption|floatformat:2 }}&{% if unit.cost %}{{ project_savings.cost|floatformat:2 }}{% endif %}&{{ project_savings.co2|floatformat:2 }}\\
+\hline
+{% trans "Difference, %" %}
+&
+{{ goal_diff.consumption_pct|floatformat:1 }}
+&
+{% if unit.cost %}{{ goal_diff.cost_pct|floatformat:1 }}{% endif %}
+&
+{{ goal_diff.co2_pct|floatformat:1 }}
+\\
+\hline
+\end{tabu}
+
+\newpage
+
+\section*{\relax {% trans "Annual Measured Savings" %} }
+\begin{tabu} to \linewidth{@{}
+X[R]% consumption before
+X[R]% consumption after
+X[R]|[0.1em]% consumption saved{% if include_measured_costs %}
+X[R]% cost before
+X[R]% cost after
+X[R]|[0.1em]% savings{% endif %}
+X[R]% CO2 before
+X[R]% CO2 after
+X[R]% CO2 saved
+@{}}
+\hline
+\textbf{{ '{' }}{{ unit.consumption }}}{% if include_measured_costs %}&&&\textbf{{ '{' }}{{ unit.cost }}}{% endif %}&&&\textbf{{ '{' }}{{ unit.co2 }}}&&\\
+{% trans "Before" %}&{% trans "After" %}&{% trans "Saved" context "project saving" %}
+&{% if include_measured_costs %}
+{% trans "Before" %}&{% trans "After" %}&{% trans "Saved" context "project saving" %}
+&{% endif %}
+{% trans "Before" %}&{% trans "After" %}&{% trans "Saved" context "project saving" %}
+\\
+\hline
+{{ yearly_stage1.consumption|floatformat:2 }}&{{ yearly_stage2.consumption|floatformat:2 }}&{{ yearly_stage_diff.consumption|floatformat:2 }}
+&{% if include_measured_costs %}
+{{ yearly_stage1.cost|floatformat:2 }}&{{ yearly_stage2.cost|floatformat:2 }}&{{ yearly_stage_diff.cost|floatformat:2 }}
+&{% endif %}
+{{ yearly_stage1.co2|floatformat:2 }}&{{ yearly_stage2.co2|floatformat:2 }}&{{ yearly_stage_diff.co2|floatformat:2 }}
+\\
+\hline
+\end{tabu}
+
+{% if additional_savings %}
+\section*{\relax {% trans "Annual Additional Savings" %} }
+\begin{tabu} to \linewidth{@{}
+X[3]|[0.1em]
+X[R]% consumption before
+X[R]% consumption after
+X[R]|[0.1em]% consumption saved
+X[R]% cost before
+X[R]% cost after
+X[R]|[0.1em]% savings
+X[R]% CO2 before
+X[R]% CO2 after
+X[R]% CO2 saved
+@{}}
+\hline
+&\textbf{{ '{' }}{% trans 'kWh' %}{{ '}' }}&&&\textbf{{ '{' }}{{ unit.cost }}}&&&\textbf{{ '{' }}{{ unit.co2 }}}&&\\
+{% trans Description %}&{% trans "Before" %}&{% trans "After" %}&{% trans "Saved" context "project saving" %}
+&
+{% trans "Before" %}&{% trans "After" %}&{% trans "Saved" context "project saving" %}
+&
+{% trans "Before" %}&{% trans "After" %}&{% trans "Saved" context "project saving" %}
+\\
+\hline
+{% for saving in additional_savings %}
+{{ saving.description_plain|texescape }}
+&
+{{ saving.before_energy|floatformat:2 }}&{{ saving.after_energy|floatformat:2 }}&{{ saving.diff_energy|floatformat:2 }}
+&
+{{ saving.before_cost|floatformat:2 }}&{{ saving.after_cost|floatformat:2 }}&{{ saving.diff_cost|floatformat:2 }}
+&
+{{ saving.before_co2|floatformat:2 }}&{{ saving.after_co2|floatformat:2 }}&{{ saving.diff_co2|floatformat:2 }}
+
+\\
+{% endfor %}
+\tabucline[0.1em]{-}
+{% trans "Total" %}&
+{{ additional_savings_sum.before_energy|floatformat:2 }}
+&
+{{ additional_savings_sum.after_energy|floatformat:2 }}
+&
+{{ additional_savings_sum.diff_energy|floatformat:2 }}
+&
+{{ additional_savings_sum.before_cost|floatformat:2 }}
+&
+{{ additional_savings_sum.after_cost|floatformat:2 }}
+&
+{{ additional_savings_sum.diff_cost|floatformat:2 }}
+&
+{{ additional_savings_sum.before_co2|floatformat:2 }}
+&
+{{ additional_savings_sum.after_co2|floatformat:2 }}
+&
+{{ additional_savings_sum.diff_co2|floatformat:2 }}
+\\
+\tabucline[0.1em]{-}
+\end{tabu}
+{% endif %}
+
+{% if project_costs %}
+\section*{\relax {% trans "Project Costs" %} }
+\begin{tabu} to \linewidth{@{}
+X[3]
+X[R]% investment
+X[R]% amortization_period
+X[R]% interest
+X[R]% scrap value
+X[R]
+@{}}
+\hline
+&\textbf{{ '{' }}{{ unit.cost }}{{ '}' }}&&&&\\
+&{% trans "Investment" %}&{% trans "Period" %}&{% trans "Interest" %}&{% trans "Scrap value" %}&\\
+\hline
+{% for cost in project_costs %}
+{{ cost.description_plain|texescape }}&
+{{ cost.cost|floatformat:2 }}&
+{{ cost.amortization_period|default:"" }}&
+{% if cost.interest_rate %}{{ cost.interest_rate|floatformat:2 }}\%{% endif %}&
+{{ cost.scrap_value|floatformat:2 }}&\\
+{% endfor %}
+\hline
+{% trans "Monthly payment" %}&&&&&
+{{ project_costs_results.monthly|floatformat:2 }}\\
+{% trans "Annual payment" %}&&&&&
+{{ project_costs_results.yearly|floatformat:2 }}\\
+\hline
+\end{tabu}
+{% endif %}
+
+\newpage
+
+\section*{\relax {% trans "Consumption Graphs" %} }
+{% for mp in measurement_points %}
+\subsection*{\relax {{ mp.instance.name_plain|texescape }} }
+
+\input{consumption-graph-{{ mp.instance.id|stringformat:"d" }}}
+{% endfor %}
+
+{% if has_rate_graphs %}
+\newpage
+
+{% comment %}Don't ever display the term rate to the user.  Write power for energy related reports, flow for water and so on.{% endcomment %}
+\section*{\relax {% trans "Rate Graphs" %} }
+{% for mp in measurement_points %}
+{% if mp.graph_data %}
+\subsection*{\relax {{ mp.instance.name_plain|texescape }} }
+
+\input{rate-graph-{{ mp.instance.id|stringformat:"d" }}}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% load i18n %}%
+{% load l10n %}%
+{% load reports %}%
+{% if percent == 0 %}%
+\hline
+\textcolor{gray}{{ '{' }}{{ name|texescape }}{% if has_errors %}$^*${% endif %}{{ '}' }}&%
+\textcolor{gray}{{ '{' }}{{ previous_value|floatformat:2 }}{{ '}' }}&%
+\textcolor{gray}{{ '{' }}{{ value|floatformat:2 }}{{ '}' }}&%
+{% if change_percent != "" %}%
+{% if change_percent >= 10 %}\textcolor{gray}{$\nearrow$}{% elif change_percent <= -10 %}\textcolor{gray}{$\searrow$}{% endif %}& \textcolor{gray}{ {{ change_percent|floatformat:1 }} }
+{% else %}%
+&%
+{% endif %}
+\\
+{% else %} %
+\hline
+{{ name|texescape }}{% if has_errors %}$^*${% endif %} & %
+{{ previous_value|floatformat:2 }} &%
+{{ value|floatformat:2 }} &%
+{% if change_percent != "" %}{% if change_percent >= 10 %}$\nearrow${% elif change_percent <= -10 %}$\searrow${% endif %}& {{ change_percent|floatformat:1 }}{% endif %} %
+\\
+{% endif %} %
+

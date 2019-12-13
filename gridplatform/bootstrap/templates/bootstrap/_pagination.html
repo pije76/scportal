@@ -1,0 +1,22 @@
+{% load pagination %}
+
+{% if is_paginated %}
+<div class="text-center">
+  <ul class="pagination">
+    {% if paginator.num_pages > pagination_max_page_choices %}
+    <li{% if not page_obj.has_previous %} class="disabled"{% endif %}>
+    <a href="{% page_url 1 %}">«</a></li>
+    {% endif %}
+
+    {% for page_number in paginator|pagination_page_choices:page_obj %}
+    <li{% if page_number == page_obj.number %} class="active"{% endif %}>
+    <a href="{% page_url page_number %}">{{ page_number }}</a></li>
+    {% endfor %}
+
+    {% if paginator.num_pages > pagination_max_page_choices %}
+    <li{% if not page_obj.has_next %} class="disabled"{% endif %}>
+    <a href="{% page_url paginator.num_pages %}">»</a></li>
+    {% endif %}
+  </ul>
+</div>
+{% endif %}

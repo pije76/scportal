@@ -1,0 +1,63 @@
+{% extends "reports/report.tex" %}
+
+{% block documentclass %}
+\documentclass[paper=a4,landscape,pagesize,DIV=20,11pt,headinclude,footinclude,parskip=half]{scrartcl}
+{% endblock %}
+
+{% load i18n %}
+{% load reports %}
+
+{% block preamble_extra %}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{seqsplit}
+\renewcommand{\seqinsert}{\ifmmode\allowbreak\else\-\fi}
+{% endblock %}
+
+
+{% block content %}
+\begin{longtabu} to \linewidth{@{}
+X[2]% project name
+X[1,r]% base-line annual costs
+X[1,r]% annual cost savings
+X[1,r]% subsidy
+X[1,r]% investment
+r% payback period years
+@{}}
+\bfseries {% trans "Action" %}&%
+\bfseries {% trans "Costs" %} ({{ currency }})&%
+\bfseries {% trans "Savings" %} ({{ currency }})&%
+\bfseries {% trans "Subsidy" %} ({{ currency }})&%
+\bfseries {% trans "Investment" %} ({{ currency }})&%
+\bfseries {% trans "Payback Period (years)" %}\endhead
+\hline%
+%{% for project in projects.values %}
+{{ project.name|texescape }}&%
+{{ project.baseline_annual_costs|floatformat:0 }}&%
+{{ project.expected_annual_cost_savings|floatformat:0 }}&%
+{{ project.subsidy|floatformat:0 }}&%
+{{ project.investment|floatformat:0 }}&%
+%{% if project.expected_payback_period_years %}
+{{ project.expected_payback_period_years|floatformat:2 }} {% trans "years" %}%
+%{% else %}
+{% trans "n/a" %}%
+%{% endif %}
+\\
+%{% endfor %}
+\hline%
+%
+&&
+{{ total_expected_annual_cost_savings|floatformat:0 }}&%
+{{ total_subsidy|floatformat:0 }}&%
+{{ total_investment|floatformat:0 }}&%
+%{% if total_expected_payback_period %}
+{{ total_expected_payback_period|floatformat:2 }} {% trans "years" %}
+%{% else %}
+{% trans "n/a" %}%
+%{% endif %}
+\\
+\tabucline{3-6}
+\\[-2.4ex]
+\tabucline{3-6}
+\end{longtabu}
+{% endblock content %}

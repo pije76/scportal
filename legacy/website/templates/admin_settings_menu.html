@@ -1,0 +1,14 @@
+{% spaceless %}
+{% load static from staticfiles %}
+{% load url from future %}
+{% load i18n %}
+
+<div class="menu-item userprofile">
+  <a href="{% url 'edit_userprofile' pk=user.id %}">
+    <div class="icon"></div>
+    <span>{% trans "User Profile" %}</span>
+  </a>
+</div>
+
+<div class="menu-right-border"></div>
+{% endspaceless %}

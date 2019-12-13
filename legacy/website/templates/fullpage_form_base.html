@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% block page_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+$(document).ready(function () {
+    $('button.add-form').click(function (event) {
+        event.preventDefault();
+        var parent = $(this).closest('div'),
+            emptyForm = parent.find('.empty-form'),
+            newForm = emptyForm.clone(),
+            totalForms = parent.find('input[name$="TOTAL_FORMS"]'),
+            newId = totalForms.val();
+        newForm.find('div, input, select, li').each(function () {
+            var input = $(this);
+            if (input.attr("name")) {
+              newPrefix = input.attr('name').replace('__prefix__', newId);
+              input.attr('name', newPrefix);
+            }
+            if (input.attr("id")) {
+              newPrefix = input.attr('id').replace('__prefix__', newId);
+              input.attr('id', newPrefix);
+            }
+        });
+        newForm.removeClass('empty-form').show();
+        totalForms.val(parseInt(totalForms.val(), 10) + 1);
+        newForm.insertBefore(emptyForm);
+        newForm.find('select').chosen({enable_split_word_search: true});
+    });
+    $('input[name=delete]').click(function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    gridportal.website.synchroneousDelete(
+      "{% block delete_url %}{% endblock %}",
+      "{{ form.instance.id|unlocalize }}",
+      "{% block redirect_url %}{% endblock %}");
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block content %}
+<div class="grid_24">
+    <div class="content-element form">
+        <div class="header clearfix">
+          <h3 class="left">{% block form_header %}{% endblock%}</h3>
+        </div>
+        {% block form %}{% endblock%}
+    </div>
+</div>
+{% endblock%}

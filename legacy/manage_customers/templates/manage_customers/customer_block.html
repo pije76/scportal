@@ -1,0 +1,37 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix" data-url="{% url 'manage_customers-form' pk=customer.id %}">
+  {% with profile=customer %}
+    <h3>
+      <a href="{% url 'manage_customers-detail' pk=customer.id %}">
+        <img src="{% static 'images/detail.png' %}" class="left detail-icon">
+        <span>{{ profile.name_plain }}</span>
+      </a>
+    </h3>
+    <dl>
+      <dt>{% trans "Address:" %}</dt>
+      <dd>{{ profile.address_plain }}</dd>
+      <dt>{% trans "Postal code:" %}</dt>
+      <dd>{{ profile.postal_code_plain }}</dd>
+      <dt>{% trans "Country code:" %}</dt>
+      <dd>{{ profile.country_code_plain }}</dd>
+    </dl>
+    <dl>
+      <dt>{% trans "Agents:" %}</dt>
+      <dd>{{ customer.agent_set.count }}</dd>
+      <dt>{% trans "Meters:" %}</dt>
+      <dd>{{ customer.meter_set.count }}</dd>
+      <dt>{% trans "Measurement Points:" %}</dt>
+      <dd>{{ customer.count_measurementpoints }}</dd>
+    </dl>
+  {% endwith %}
+  <span class="right">
+    <a class="open" href="#">
+      <img src="{% static 'images/arrow-left.png' %}" alt="{% trans 'Edit' %}">
+    </a>
+  </span>
+</div>
+{% endspaceless %}

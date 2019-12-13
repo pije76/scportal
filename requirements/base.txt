@@ -1,0 +1,38 @@
+Django==1.6.5  # high-level Python Web framework
+Pillow==2.4.0  # Python Image Library distribution; may require libjpeg-dev for JPEG support
+kombu==3.0.30  # AMQP/MQ abstraction lib used by Celery
+celery==3.1.8  # Python background task queue/runner
+django-celery==3.1.1 # Django integration for Celery NOTE: deprecated...
+django-appconf==0.6 # dependency of django-imagekit
+django-braces==1.4.0 # mixins for class-based generic views
+django-configurations==0.1 # more flexible settings.py configuration
+django-durationfield==0.4.0 # field type representing datetime.timedelta
+django-extra-views==0.6.4 # class-based generic views with formset support
+django-historicalrecords==1.0 # generic history for Django models.
+django-imagekit==3.0.1 # ProcessedImageField for Django
+django-model-utils==2.0.2 # utilities for models and managers
+django-mptt==0.5.5 # implementing Modified Preorder Tree Traversal with Django Models
+django-compressor==1.3 # asset packing
+django-timezones2==1.0.4 # helper for pytz
+django-widget-tweaks==1.3 # customize css classes/other on form elements
+isoweek==1.2.0 # translating ISO week numbers to datetime dates
+librabbitmq==1.0.1 # Optimised/C AMQP library for Celery
+numpy==1.8.0 # optimised math library
+pika==0.9.12 # AMQP (message queue) client library
+pilkit==1.1.6  # dependency of django-imagekit
+psycopg2==2.5 # PostgreSQL driver
+pycrypto==2.6 # cryptography toolkit
+pycurl==7.43.0
+pylibmc==1.2.3 # memcached interface
+python-dateutil==2.1 # real month deltas
+pytz==2013b # brings the Olson timezone database into Python
+south==0.8.4 # database migrations
+unicodecsv==0.9.4 # csv module which supports unicode
+Markdown==2.4.1  # Use by djangorestframework for API documentation
+djangorestframework==2.3.14 # Django REST framework
+djangorestframework-camel-case==0.2.0
+django-filter==0.7 # Practical generic filters
+dj-database-url==0.2.2  # DB config as URL string
+django-countries==2.1.2  # ISO 3166-1. CountryField.
+Unipath==1.0  # File path utility used in settings files.
+django-cors-headers==0.13  # allows REST to be used from clients served by third party server.

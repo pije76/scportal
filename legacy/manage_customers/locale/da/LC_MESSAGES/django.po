@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: views.py:39
+msgid "Encrypted"
+msgstr "Krypteret"
+
+#: views.py:101
+msgid "The username already exists"
+msgstr "En bruger med det navn eksisterer allerede"
+
+#: views.py:139
+msgid "The customer has been saved"
+msgstr "Kunden er gemt"
+
+#: templates/manage_customers/customer_agent_list.html:10
+#: templates/manage_customers/customer_agent_list.html:11
+msgid "agents"
+msgstr "Agenter"
+
+#: templates/manage_customers/customer_agent_list.html:12
+#: templates/manage_customers/customer_detail_tabs.html:5
+msgid "Agents"
+msgstr "Agenter"
+
+#: templates/manage_customers/customer_agent_list.html:22
+#: templates/manage_customers/customer_meter_list.html:22
+msgid "Location"
+msgstr "Lokation"
+
+#: templates/manage_customers/customer_agent_list.html:23
+#: templates/manage_customers/customer_meter_list.html:23
+msgid "MAC"
+msgstr "MAC"
+
+#: templates/manage_customers/customer_block.html:15
+#: templates/manage_customers/customer_detail.html:39
+#: templates/manage_customers/customerprofile_edit_form.html:29
+msgid "Address:"
+msgstr "Adresse:"
+
+#: templates/manage_customers/customer_block.html:17
+#: templates/manage_customers/customer_detail.html:40
+#: templates/manage_customers/customerprofile_edit_form.html:43
+msgid "Postal code:"
+msgstr "Postnummer:"
+
+#: templates/manage_customers/customer_block.html:19
+#: templates/manage_customers/customer_detail.html:41
+#: templates/manage_customers/customerprofile_edit_form.html:47
+msgid "Country code:"
+msgstr "Landekode:"
+
+#: templates/manage_customers/customer_block.html:23
+#: templates/manage_customers/customer_detail.html:32
+msgid "Agents:"
+msgstr "Agenter:"
+
+#: templates/manage_customers/customer_block.html:25
+#: templates/manage_customers/customer_detail.html:31
+msgid "Meters:"
+msgstr "Målere:"
+
+#: templates/manage_customers/customer_block.html:27
+#: templates/manage_customers/customer_detail.html:35
+msgid "Measurement Points:"
+msgstr "Målepunkter:"
+
+#: templates/manage_customers/customer_block.html:33
+#: templates/manage_customers/customerprofile_edit_form.html:9
+msgid "Edit"
+msgstr "Redigér"
+
+#: templates/manage_customers/customer_detail.html:14
+#: templates/manage_customers/customer_detail.html:17
+#: templates/manage_customers/customer_list.html:9
+#: templates/manage_customers/customer_list.html:10
+msgid "Customer Administration"
+msgstr "Kundeadministration"
+
+#: templates/manage_customers/customer_detail.html:27
+#: templates/manage_customers/customer_detail_tabs.html:4
+msgid "Overview"
+msgstr "Overblik"
+
+#: templates/manage_customers/customer_detail.html:30
+msgid "ID:"
+msgstr "ID:"
+
+#: templates/manage_customers/customer_detail.html:33
+msgid "Locations:"
+msgstr "Lokationer:"
+
+#: templates/manage_customers/customer_detail.html:34
+msgid "Groups:"
+msgstr "Grupper:"
+
+#: templates/manage_customers/customer_detail.html:38
+msgid "Users:"
+msgstr "Brugere:"
+
+#: templates/manage_customers/customer_detail.html:43
+msgid "Log in as customer"
+msgstr "Log ind som kunde"
+
+#: templates/manage_customers/customer_detail_tabs.html:6
+#: templates/manage_customers/customer_meter_list.html:12
+msgid "Meters"
+msgstr "Målere"
+
+#: templates/manage_customers/customer_detail_tabs.html:7
+msgid "Locations"
+msgstr "Lokationer"
+
+#: templates/manage_customers/customer_detail_tabs.html:8
+msgid "Groups"
+msgstr "Grupper"
+
+#: templates/manage_customers/customer_detail_tabs.html:9
+msgid "Users"
+msgstr "Brugere"
+
+#: templates/manage_customers/customer_detail_tabs.html:10
+msgid "Measurement Points"
+msgstr "Målepunkter"
+
+#: templates/manage_customers/customer_list.html:11
+msgid "Customers"
+msgstr "Kunder"
+
+#: templates/manage_customers/customer_list.html:15
+#: templates/manage_customers/customer_list.html:16
+msgid "Add customer"
+msgstr "Tilføj kunde"
+
+#: templates/manage_customers/customer_list.html:21
+msgid "Name"
+msgstr "Navn"
+
+#: templates/manage_customers/customer_meter_list.html:10
+#: templates/manage_customers/customer_meter_list.html:11
+msgid "meters"
+msgstr "målere"
+
+#: templates/manage_customers/customerprofile_edit_form.html:11
+msgid "New Customer"
+msgstr "Ny Kunde"
+
+#: templates/manage_customers/customerprofile_edit_form.html:24
+msgid "Company name:"
+msgstr "Firmanavn:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:33
+msgid "Timezone:"
+msgstr "Tidszone:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:38
+msgid "Currency:"
+msgstr "Valuta:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:51
+msgid "Active:"
+msgstr "Aktiv:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:56
+msgid "Default Tariffs"
+msgstr "Standardtariffer"
+
+#: templates/manage_customers/customerprofile_edit_form.html:58
+msgid "Electricity:"
+msgstr "Elektricitet:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:63
+msgid "Gas:"
+msgstr "Gas:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:68
+msgid "Water:"
+msgstr "Vand:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:73
+msgid "Heat:"
+msgstr "Varme:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:78
+msgid "Oil:"
+msgstr "Olie:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:86
+msgid "Units:"
+msgstr "Enheder:"
+
+#: templates/manage_customers/customerprofile_edit_form.html:91
+msgid "Instantaneous"
+msgstr "Rater"
+
+#: templates/manage_customers/customerprofile_edit_form.html:92
+msgid "Consumption"
+msgstr "Forbrug"
+
+#: templates/manage_customers/customerprofile_edit_form.html:97
+msgid "Electricity"
+msgstr "Elektricitet"
+
+#: templates/manage_customers/customerprofile_edit_form.html:102
+msgid "Gas"
+msgstr "Gas"
+
+#: templates/manage_customers/customerprofile_edit_form.html:107
+msgid "Water"
+msgstr "Vand"
+
+#: templates/manage_customers/customerprofile_edit_form.html:112
+msgid "Heat"
+msgstr "Varme"
+
+#: templates/manage_customers/customerprofile_edit_form.html:117
+msgid "Oil"
+msgstr "Olie"
+
+#: templates/manage_customers/customerprofile_edit_form.html:122
+msgid "Temperature"
+msgstr "Temperatur"
+
+#: templates/manage_customers/customerprofile_edit_form.html:130
+msgid "Custom Production Units"
+msgstr "Produktionsenheder"
+
+#~ msgid "Disabled:"
+#~ msgstr "Deaktiveret:"
+
+#~ msgid "Name:"
+#~ msgstr "Navn"
+
+#~ msgid "E-mail:"
+#~ msgstr "E-mail:"
+
+#~ msgid "Phone:"
+#~ msgstr "Telefon:"
+
+#~ msgid "Mobile:"
+#~ msgstr "Mobil:"
+
+#~ msgid "Finish"
+#~ msgstr "Færdig"
+
+#~ msgid "Location:"
+#~ msgstr "Lokation:"
+
+#~ msgid "Connection state:"
+#~ msgstr "Forbindelsestilstand:"
+
+#~ msgid "Online,Offline"
+#~ msgstr "Online,Offline"
+
+#~ msgid "MAC:"
+#~ msgstr "MAC:"
+
+#~ msgid "Next"
+#~ msgstr "Næste"
+
+#~ msgid "Agent:"
+#~ msgstr "Agent:"
+
+#~ msgid "Connection type:"
+#~ msgstr "Forbindelsestype"
+
+#~ msgid "Control mode:"
+#~ msgstr "Kontroltilstand"
+
+#~ msgid "Relay state:"
+#~ msgstr "Relætilstand"
+
+#~ msgid "Save"
+#~ msgstr "Gem"
+
+#~ msgid "Customer agents"
+#~ msgstr "Kundens agenter"
+
+#~ msgid "Customer meters"
+#~ msgstr "Kundens målere"
+
+#~ msgid "%(site_name)s user information"
+#~ msgstr "%(site_name)s brugerinformation"
+
+#~ msgid ""
+#~ "Username: %(username)s\n"
+#~ "Password: %(password)s"
+#~ msgstr ""
+#~ "Brugernavn: %(username)s\n"
+#~ "Password: %(password)s"
+
+#~ msgid "The customer has been created"
+#~ msgstr "Kunden er oprettet"
+
+#~ msgid "Sort by"
+#~ msgstr "Sortér efter"
+
+#~ msgid "Filter"
+#~ msgstr "Filter"
+
+#~ msgid "Collections:"
+#~ msgstr "Grupper:"

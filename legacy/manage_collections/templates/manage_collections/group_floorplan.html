@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+
+{% block page_id %}groups-page{% endblock %}
+
+{% block page_js %}
+  <script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+$(document).ready(function () {
+    'use strict';
+    gridportal.website.initInpageMenu('{% static 'images/arrow-right.png' %}', '{% static 'images/arrow-left.png' %}');
+
+    var map = $('.map img');
+    $('.map .item-overlay').width(map.width()).height(map.height());
+    $('#trash').css({
+        position: 'absolute',
+        left: map.width() - 100 + 'px',
+        top: map.height() - 50 + 'px'
+    });
+
+    function setItemDraggable($item) {
+        $item.draggable({
+            helper: 'clone',
+            containment: "#content-main",
+            appendTo: $('.item-overlay'),
+            cursor: "crosshair",
+            start: function () {
+                $(this).hide();
+                $(this).draggable("option", "cursorAt", { top: -5, left: $(this).width() / 2});
+            },
+            stop: function () {
+                $(this).show();
+            }
+        });
+    }
+
+    setItemDraggable($('.item'));
+
+
+    // Appends the element to .list-item div and resets the style
+    $(".item-overlay").on('click', '.remove', function () {
+        var planItem = $(this).closest('.item'),
+            zIndex = planItem.zIndex();
+        jQuery.getJSON('{% url 'manage-groups-remove_item' %}', {item: planItem.data('id')}, function (data) {
+            if (data.success) {
+                if (planItem.data('role') === "collection") {
+                    planItem.appendTo($('.in-page-menu .floorplan-items'));
+                    planItem.attr('style', 'position: relative');
+                    planItem.removeData('id');
+                    planItem.zIndex(0);
+                } else {
+                    planItem.remove();
+                }
+                $('.item-overlay .item').each(function () {
+                    var item = $(this),
+                        itemZindex = item.zIndex();
+                    if (itemZindex > zIndex) {
+                        item.zIndex(itemZindex - 1);
+                    }
+                });
+            }
+        });
+    });
+
+    function setZindex($item) {
+        var zIndex = 0;
+        $('.item-overlay .item').each(function () {
+            var itemZindex = $(this).zIndex();
+            if (itemZindex > zIndex) {
+                zIndex = itemZindex;
+            }
+        });
+        $item.zIndex(zIndex + 1);
+    }
+
+    // Appends the element to .item-overlay div and calculates the new position and adds them to the element
+    $(".item-overlay").droppable({
+        drop: function (event, ui) {
+            var overlayOffset = $(this).offset(),
+                top = ui.offset.top - overlayOffset.top,
+                left = ui.offset.left - overlayOffset.left,
+                collection = ui.draggable.data('group'),
+                planItem = ui.draggable,
+                token = $('input[name=csrfmiddlewaretoken]').val();
+
+            if (!planItem.parent().hasClass('item-overlay')) {
+                if (planItem.data('role') === "infoitem") {
+                    planItem = planItem.clone();
+                    planItem.find('.name').remove();
+                    planItem.find('form').css('display', 'inline').find('textarea').css('width', '161px');
+                }
+                planItem.appendTo($(this));
+                planItem.attr('style', 'position: absolute');
+                setItemDraggable(planItem);
+                setZindex(planItem);
+            }
+            planItem.css({top: top, left: left});
+            if (planItem.data('id') !== undefined) {
+                jQuery.post('{% url 'manage-groups-update_placement' %}', {x: Math.round(left), y: Math.round(top), csrfmiddlewaretoken: token, pk: planItem.data('id')});
+            } else {
+                if (planItem.data('role') === "collection") {
+                    jQuery.post('{% url 'manage-groups-place_item' pk=object.id %}', {x: Math.round(left), y: Math.round(top), collection: collection, z: planItem.zIndex(), csrfmiddlewaretoken: token}, function (data) {
+                        planItem.data('id', data.id);
+                    });
+                } else {
+                    jQuery.post('{% url 'manage-groups-place_infoitem' pk=object.id %}', {x: Math.round(left), y: Math.round(top), z: planItem.zIndex(), csrfmiddlewaretoken: token}, function (data) {
+                        planItem.data('id', data.id);
+                    });
+                }
+            }
+        }
+    });
+    $('.item-overlay').on('submit', '.infoitemform', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var form = $(this);
+        jQuery.post(
+            form.attr('action'),
+            {csrfmiddlewaretoken: form.find('[name=csrfmiddlewaretoken]').val(),
+                info: form.find('textarea').val(),
+                pk: form.closest('.item').data('id')}
+        );
+    });
+    $('.item-overlay .item textarea').each(function () {
+        $(this).height(this.scrollHeight);
+    });
+});
+
+</script>
+{% endblock %}
+
+{% block page_css %}
+<style>
+    #content-main {
+        overflow-x: hidden;
+    }
+</style>
+{% endblock %}
+
+{% block tabs %}
+    {% include "manage_collections/group_details_tabs.html" with measurementpoints="selected" %}
+{% endblock %}
+
+{% block title %}{{ object.name_plain }} - {% trans "Details" %}{% endblock title %}
+{% block content_heading %}{{ object.name_plain }} - {% trans "Details" %}{% endblock content_heading %}
+{% block left_content %}
+<div id="floorplan" class="grid_23 prefix_1">
+  <div class="content-element">
+    <div class="header clearfix">
+      <h3 class="left">{% trans "Overview" %}</h3>
+    </div>
+    {% if form.instance.id %}
+    <div class="map">
+        <img src="{% url 'manage-groups-floorplan_image' pk=form.instance.id %}" width="{{ form.instance.image.width }}" height="{{ form.instance.image.height }}">
+
+      <div class="item-overlay">
+        {% for item in placed_items %}
+        <div class="item" style="position: absolute; top: {{ item.y }}px; left: {{ item.x }}px; z-index: {{ item.z }};" data-role="{{ item.get_role_display }}" data-id="{{ item.id|unlocalize }}" {% if item.has_collection %}data-group="{{ item.collection_id|unlocalize }}"{% endif %}>
+	  <div class="arrow"><img src="{% static 'images/arrow.png' %}"></div>
+	  <div class="border">{% if item.has_collection %}<span class="icon left"><img src="{% static 'images/mpicons/small.'|add:item.collection.get_icon|add:'.png' %}" height="16" width="16"></span><div class="name left">{{ item.collection }}
+	  <span class="right">
+            {% with item.collection.get_last_rate as last_rate %}
+	      {% if last_rate %}
+                {{ last_rate.0|floatformat:1 }} {{ last_rate.1|default:'' }}
+              {% endif %}
+            {% endwith %}
+          </span>
+	  </div>
+    {% else %}
+      <form action="{% url 'manage-groups-save_info_item' %}" class="left infoitemform" method="post">
+        {% csrf_token %}
+        <textarea name="info">{{ item.infoitem.info_plain }}</textarea><br>
+        <button type="submit">{% trans "Save" %}</button>
+      </form>
+    {% endif %}
+	  <span class="right remove">X</span><div class="clearfix"></div></div>
+	</div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}{{ form.image.errors }}
+      {{ form.image }}  <input type="submit" value="{% trans "Upload" %}" />
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+ {% block in_page_menu %}
+
+  <div class="in-page-menu">
+    <div class="scroller">
+      <div class="menu-content">
+        <div class="floorplan-items">
+          {% for collection in collections %}
+            <div class="item" data-group="{{ collection.id|unlocalize }}" data-role="collection">
+              <div class="arrow"><img src="{% static 'images/arrow.png' %}"></div>
+              <div class="border"><span class="left icon"><img src="{% static 'images/mpicons/small.'|add:collection.get_icon|add:'.png' %}" height="16" width="16"></span><div class="name left">{{ collection }}
+	      <span class="right">{% with collection.get_last_rate as last_rate %}
+		{% if last_rate %}
+                  {{ last_rate.0|floatformat:1 }} {{ last_rate.1|default:'' }}
+		{% endif %}
+              {% endwith %}</span>
+              </div><span class="right remove">X</span>
+	      <div class="clearfix"></div>
+              </div>
+            </div>
+          {% endfor %}
+            <div class="item infoitem" data-group="0" data-role="infoitem">
+              <div class="arrow"><img src="{% static 'images/arrow.png' %}"></div>
+              <div class="border">
+                <div class="name left">{% trans "New text box" %}</div>
+                <form action="{% url 'manage-groups-save_info_item' %}" class="left infoitemform" method="post">
+                  {% csrf_token %}
+                  <textarea name="info"></textarea><br>
+                  <button type="submit">{% trans "Save" %}</button>
+                </form>
+                <span class="right remove">X</span>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <div class="rotate">
+        <span>{% trans "Measurement Points" %}</span>
+      </div>
+      <img src="{% static 'images/arrow-right.png' %}" />
+    </div>
+  </div>
+
+{% endblock %}

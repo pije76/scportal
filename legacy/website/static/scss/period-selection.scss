@@ -1,0 +1,13 @@
+#period-selection {
+    #id_hours {
+        width: auto;
+    }
+    #id_from_date, #id_to_date {
+        /* Should hold 16 characters; like "2013-07-05 07:00"... */
+        width: 16ex;
+        margin-right: 10px;
+    }
+    a {
+        text-decoration: none;
+    }
+}

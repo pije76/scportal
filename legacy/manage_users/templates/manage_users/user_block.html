@@ -1,0 +1,26 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix" data-url="{% url 'manage_users-form' pk=userprofile.user.id %}">
+  <h3>{{ userprofile.user.name_plain }}</h3>
+  <dl>
+    <dt>{% trans "Username:" %}</dt>
+    <dd>{{ userprofile.user.e_mail_plain }}</dd>
+  </dl>
+  {% if password %}
+  <dl>
+    <dt>{% trans "Password:" %}</dt>
+    <dd>{{ password }}</dd>
+  </dl>
+  {% endif %}
+  <span class="right">
+    {% if user.is_customer_superuser or user.is_admin %}
+    <a class="open" href="#">
+      <img src="{% static 'images/arrow-left.png' %}" alt="{% trans "Edit" %}">
+    </a>
+    {% endif %}
+  </span>
+</div>
+{% endspaceless %}

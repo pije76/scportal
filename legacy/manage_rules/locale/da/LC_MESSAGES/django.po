@@ -1,0 +1,386 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: views.py:64
+msgid "Duration is required"
+msgstr "Varighed er påkrævet"
+
+#: views.py:85
+msgid "phone number"
+msgstr "Telefonnummer:"
+
+#: views.py:157 views.py:289
+msgid "The rule has been saved"
+msgstr "Regel gemt"
+
+#: views.py:159 views.py:291
+msgid "The rule has been created"
+msgstr "Regel oprettet"
+
+#: views.py:325
+msgid "The rule has been deleted"
+msgstr "Regel slettet"
+
+#: templates/manage_rules/minimizerule_form.html:67
+#: templates/manage_rules/minimizerule_form.html:68
+#: templates/manage_rules/rule_list.html:9
+#: templates/manage_rules/rule_list.html:10
+#: templates/manage_rules/triggeredrule_form.html:66
+#: templates/manage_rules/triggeredrule_form.html:67
+msgid "Settings: Rules"
+msgstr "Indstillinger: Regler"
+
+#: templates/manage_rules/minimizerule_form.html:73
+msgid "Minimize Rule"
+msgstr "Minimeringsregel"
+
+#: templates/manage_rules/minimizerule_form.html:78
+#: templates/manage_rules/triggeredrule_form.html:78
+msgid "General"
+msgstr "Generelt"
+
+#: templates/manage_rules/minimizerule_form.html:80
+#: templates/manage_rules/triggeredrule_form.html:80
+msgid "Name:"
+msgstr "Navn:"
+
+#: templates/manage_rules/minimizerule_form.html:84
+#: templates/manage_rules/triggeredrule_form.html:84
+msgid "Enabled"
+msgstr "Aktiveret"
+
+#: templates/manage_rules/minimizerule_form.html:85
+#: templates/manage_rules/triggeredrule_form.html:85
+msgid "Timezone:"
+msgstr "Tidszone:"
+
+#: templates/manage_rules/minimizerule_form.html:88
+#: templates/manage_rules/triggeredrule_form.html:88
+msgid "Monday"
+msgstr "Mandag"
+
+#: templates/manage_rules/minimizerule_form.html:89
+#: templates/manage_rules/triggeredrule_form.html:89
+msgid "Tuesday"
+msgstr "Tirsdag"
+
+#: templates/manage_rules/minimizerule_form.html:90
+#: templates/manage_rules/triggeredrule_form.html:90
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: templates/manage_rules/minimizerule_form.html:91
+#: templates/manage_rules/triggeredrule_form.html:91
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: templates/manage_rules/minimizerule_form.html:92
+#: templates/manage_rules/triggeredrule_form.html:92
+msgid "Friday"
+msgstr "Fredag"
+
+#: templates/manage_rules/minimizerule_form.html:93
+#: templates/manage_rules/triggeredrule_form.html:93
+msgid "Saturday"
+msgstr "Lørdag"
+
+#: templates/manage_rules/minimizerule_form.html:94
+#: templates/manage_rules/triggeredrule_form.html:94
+msgid "Sunday"
+msgstr "Søndag"
+
+#: templates/manage_rules/minimizerule_form.html:97
+#: templates/manage_rules/triggeredrule_form.html:97
+msgid "From time:"
+msgstr "Fra tidspunkt:"
+
+#: templates/manage_rules/minimizerule_form.html:100
+#: templates/manage_rules/triggeredrule_form.html:100
+msgid "To time:"
+msgstr "Til tidspunkt:"
+
+#: templates/manage_rules/minimizerule_form.html:103
+msgid "Consecutive"
+msgstr "Sammenhængende"
+
+#: templates/manage_rules/minimizerule_form.html:104
+msgid "Duration of activity:"
+msgstr "Varighed af aktivitet:"
+
+#: templates/manage_rules/minimizerule_form.html:107
+#: templates/manage_rules/triggeredrule_form.html:162
+#: templates/manage_rules/triggeredrule_form.html:188
+msgid "Index:"
+msgstr "Indeks:"
+
+#: templates/manage_rules/minimizerule_form.html:113
+#: templates/manage_rules/triggeredrule_form.html:106
+msgid "Date Exceptions"
+msgstr "Undertagelser (datoer)"
+
+#: templates/manage_rules/minimizerule_form.html:119
+#: templates/manage_rules/minimizerule_form.html:139
+#: templates/manage_rules/triggeredrule_form.html:112
+#: templates/manage_rules/triggeredrule_form.html:132
+msgid "From date:"
+msgstr "Fra dato:"
+
+#: templates/manage_rules/minimizerule_form.html:124
+#: templates/manage_rules/minimizerule_form.html:144
+#: templates/manage_rules/triggeredrule_form.html:117
+#: templates/manage_rules/triggeredrule_form.html:137
+msgid "To date:"
+msgstr "Til dato:"
+
+#: templates/manage_rules/minimizerule_form.html:129
+#: templates/manage_rules/minimizerule_form.html:149
+#: templates/manage_rules/minimizerule_form.html:178
+#: templates/manage_rules/minimizerule_form.html:199
+#: templates/manage_rules/minimizerule_form.html:223
+#: templates/manage_rules/minimizerule_form.html:237
+#: templates/manage_rules/minimizerule_form.html:259
+#: templates/manage_rules/minimizerule_form.html:274
+#: templates/manage_rules/minimizerule_form.html:304
+#: templates/manage_rules/minimizerule_form.html:325
+#: templates/manage_rules/minimizerule_form.html:349
+#: templates/manage_rules/minimizerule_form.html:364
+#: templates/manage_rules/minimizerule_form.html:387
+#: templates/manage_rules/minimizerule_form.html:402
+#: templates/manage_rules/minimizerule_form.html:419
+#: templates/manage_rules/triggeredrule_form.html:122
+#: templates/manage_rules/triggeredrule_form.html:142
+#: templates/manage_rules/triggeredrule_form.html:177
+#: templates/manage_rules/triggeredrule_form.html:236
+#: templates/manage_rules/triggeredrule_form.html:290
+#: templates/manage_rules/triggeredrule_form.html:311
+#: templates/manage_rules/triggeredrule_form.html:334
+#: templates/manage_rules/triggeredrule_form.html:348
+#: templates/manage_rules/triggeredrule_form.html:369
+#: templates/manage_rules/triggeredrule_form.html:383
+#: templates/manage_rules/triggeredrule_form.html:410
+#: templates/manage_rules/triggeredrule_form.html:431
+#: templates/manage_rules/triggeredrule_form.html:454
+#: templates/manage_rules/triggeredrule_form.html:468
+#: templates/manage_rules/triggeredrule_form.html:489
+#: templates/manage_rules/triggeredrule_form.html:503
+#: templates/manage_rules/triggeredrule_form.html:518
+msgid "Delete"
+msgstr "Slet"
+
+#: templates/manage_rules/minimizerule_form.html:157
+#: templates/manage_rules/minimizerule_form.html:208
+#: templates/manage_rules/minimizerule_form.html:244
+#: templates/manage_rules/minimizerule_form.html:283
+#: templates/manage_rules/minimizerule_form.html:334
+#: templates/manage_rules/minimizerule_form.html:372
+#: templates/manage_rules/minimizerule_form.html:410
+#: templates/manage_rules/triggeredrule_form.html:150
+#: templates/manage_rules/triggeredrule_form.html:205
+#: templates/manage_rules/triggeredrule_form.html:269
+#: templates/manage_rules/triggeredrule_form.html:319
+#: templates/manage_rules/triggeredrule_form.html:354
+#: templates/manage_rules/triggeredrule_form.html:389
+#: templates/manage_rules/triggeredrule_form.html:439
+#: templates/manage_rules/triggeredrule_form.html:474
+#: templates/manage_rules/triggeredrule_form.html:509
+msgid "Add another"
+msgstr "Tilføj endnu én"
+
+#: templates/manage_rules/minimizerule_form.html:162
+msgid "Initial Relay Actions"
+msgstr "Relæ-handling ved start"
+
+#: templates/manage_rules/minimizerule_form.html:168
+#: templates/manage_rules/minimizerule_form.html:189
+#: templates/manage_rules/minimizerule_form.html:294
+#: templates/manage_rules/minimizerule_form.html:315
+#: templates/manage_rules/triggeredrule_form.html:280
+#: templates/manage_rules/triggeredrule_form.html:301
+#: templates/manage_rules/triggeredrule_form.html:400
+#: templates/manage_rules/triggeredrule_form.html:421
+msgid "Meter:"
+msgstr "Måler:"
+
+#: templates/manage_rules/minimizerule_form.html:173
+#: templates/manage_rules/minimizerule_form.html:194
+#: templates/manage_rules/minimizerule_form.html:299
+#: templates/manage_rules/minimizerule_form.html:320
+#: templates/manage_rules/triggeredrule_form.html:285
+#: templates/manage_rules/triggeredrule_form.html:306
+#: templates/manage_rules/triggeredrule_form.html:405
+#: templates/manage_rules/triggeredrule_form.html:426
+msgid "Relay action:"
+msgstr "Relæhandling:"
+
+#: templates/manage_rules/minimizerule_form.html:212
+#: templates/manage_rules/triggeredrule_form.html:323
+msgid "Initial E-mail Actions"
+msgstr "E-mail-handling ved start"
+
+#: templates/manage_rules/minimizerule_form.html:217
+#: templates/manage_rules/minimizerule_form.html:231
+#: templates/manage_rules/minimizerule_form.html:343
+#: templates/manage_rules/minimizerule_form.html:358
+#: templates/manage_rules/triggeredrule_form.html:328
+#: templates/manage_rules/triggeredrule_form.html:342
+#: templates/manage_rules/triggeredrule_form.html:448
+#: templates/manage_rules/triggeredrule_form.html:462
+msgid "Recipient:"
+msgstr "Modtager:"
+
+#: templates/manage_rules/minimizerule_form.html:220
+#: templates/manage_rules/minimizerule_form.html:234
+#: templates/manage_rules/minimizerule_form.html:256
+#: templates/manage_rules/minimizerule_form.html:271
+#: templates/manage_rules/minimizerule_form.html:346
+#: templates/manage_rules/minimizerule_form.html:361
+#: templates/manage_rules/triggeredrule_form.html:331
+#: templates/manage_rules/triggeredrule_form.html:345
+#: templates/manage_rules/triggeredrule_form.html:366
+#: templates/manage_rules/triggeredrule_form.html:380
+#: templates/manage_rules/triggeredrule_form.html:451
+#: templates/manage_rules/triggeredrule_form.html:465
+msgid "Message:"
+msgstr "Meddelelse:"
+
+#: templates/manage_rules/minimizerule_form.html:248
+#: templates/manage_rules/triggeredrule_form.html:358
+msgid "Initial Text Message Actions"
+msgstr "SMS-handling ved start"
+
+#: templates/manage_rules/minimizerule_form.html:253
+#: templates/manage_rules/minimizerule_form.html:268
+#: templates/manage_rules/minimizerule_form.html:381
+#: templates/manage_rules/minimizerule_form.html:396
+#: templates/manage_rules/triggeredrule_form.html:363
+#: templates/manage_rules/triggeredrule_form.html:377
+#: templates/manage_rules/triggeredrule_form.html:483
+#: templates/manage_rules/triggeredrule_form.html:497
+msgid "Phone number:"
+msgstr "Mobilnummer:"
+
+#: templates/manage_rules/minimizerule_form.html:288
+#: templates/manage_rules/triggeredrule_form.html:394
+msgid "Final Relay Actions"
+msgstr "Relæ-handling ved slut"
+
+#: templates/manage_rules/minimizerule_form.html:338
+#: templates/manage_rules/triggeredrule_form.html:443
+msgid "Final E-mail Actions"
+msgstr "E-mail-handling ved slut"
+
+#: templates/manage_rules/minimizerule_form.html:376
+#: templates/manage_rules/triggeredrule_form.html:478
+msgid "Final Text Message Actions"
+msgstr "SMS-handling ved slut"
+
+#: templates/manage_rules/minimizerule_form.html:384
+#: templates/manage_rules/minimizerule_form.html:399
+#: templates/manage_rules/triggeredrule_form.html:486
+#: templates/manage_rules/triggeredrule_form.html:500
+msgid "Message: (max 180 characters)"
+msgstr "Besked: (max 180 karakterer)"
+
+#: templates/manage_rules/minimizerule_form.html:415
+#: templates/manage_rules/triggeredrule_form.html:514
+msgid "Save"
+msgstr "Gem"
+
+#: templates/manage_rules/minimizerule_form.html:416
+#: templates/manage_rules/triggeredrule_form.html:515
+msgid "Save and return to list"
+msgstr "Gem og luk"
+
+#: templates/manage_rules/rule_list.html:11
+msgid "Rules"
+msgstr "Regler"
+
+#: templates/manage_rules/rule_list.html:14
+msgid "Name"
+msgstr "Navn"
+
+#: templates/manage_rules/rule_list.html:20
+msgid "Minimize rule"
+msgstr "Minimeringsregel"
+
+#: templates/manage_rules/rule_list.html:21
+msgid "Triggered rule"
+msgstr "Begivenhedsregel"
+
+#: templates/manage_rules/triggeredrule_form.html:73
+msgid "Triggered Rule"
+msgstr "Begivenhedsregel"
+
+#: templates/manage_rules/triggeredrule_form.html:155
+msgid "Index Conditions"
+msgstr "Indeksbetingelser"
+
+#: templates/manage_rules/triggeredrule_form.html:167
+#: templates/manage_rules/triggeredrule_form.html:192
+#: templates/manage_rules/triggeredrule_form.html:221
+#: templates/manage_rules/triggeredrule_form.html:251
+msgid "Operator:"
+msgstr "Operand:"
+
+#: templates/manage_rules/triggeredrule_form.html:172
+#: templates/manage_rules/triggeredrule_form.html:196
+#: templates/manage_rules/triggeredrule_form.html:226
+#: templates/manage_rules/triggeredrule_form.html:255
+msgid "Value:"
+msgstr "Værdi:"
+
+#: templates/manage_rules/triggeredrule_form.html:209
+msgid "Input Conditions"
+msgstr "Input-betingelser"
+
+#: templates/manage_rules/triggeredrule_form.html:216
+#: templates/manage_rules/triggeredrule_form.html:247
+msgid "Input:"
+msgstr "Input:"
+
+#: templates/manage_rules/triggeredrule_form.html:231
+#: templates/manage_rules/triggeredrule_form.html:259
+msgid "Unit:"
+msgstr "Enhed:"
+
+#: templates/manage_rules/triggeredrule_form.html:274
+msgid "Initial Relay actions"
+msgstr "Relæ-handling ved start"
+
+#~ msgid "The chosen currency doesn't match the chosen input."
+#~ msgstr "Den valgte møntfox passer ikke det valgte input."
+
+#~ msgid "Unit incompatible with selected input."
+#~ msgstr "Enhed er ikke kompatibel med det valgte input."
+
+#~ msgid "Used %s characters"
+#~ msgstr "%s karakterer brugt"
+
+#~ msgid "Add minimize rule"
+#~ msgstr "Tilføj minimeringsregel"
+
+#~ msgid "Add triggered rule"
+#~ msgstr "Tilføj begivenhedsregel"
+
+#~ msgid "Sort by"
+#~ msgstr "Sortér efter"
+
+#~ msgid "Filter"
+#~ msgstr "Filter"

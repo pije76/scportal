@@ -1,0 +1,15 @@
+{% extends "led_light_site/base.html" %}
+{% load i18n %}
+{% load pagination %}
+{% load bootstrap_tags %}
+
+{% block content %}
+{% panel _("LED Light Projects") search=True %}
+<a href="{% url "led_light_site_projects:led-light-project-create" customer_id=customer.id %}" title="{% trans 'Add' %}">
+  {% icon "plus" %}
+</a>
+{% endpanelbuttons %}
+<div class="content-loader" data-url="{% url "led_light_site_projects:led-light-project-list-content" customer_id=customer.id %}" data-orderby="name_plain"></div>
+{% endpanel %}
+
+{% endblock %}

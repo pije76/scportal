@@ -1,0 +1,25 @@
+{% spaceless %}
+{% load static from staticfiles %}
+{% load url from future %}
+{% load i18n %}
+
+<div class="menu-item customers">
+  <a href="{% url 'manage_customers-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Customers" %}</span>
+  </a>
+</div>
+
+<div class="menu-item devices">
+  <a href="{% url 'setup_agents-list' %}">
+    <div class="icon"></div>
+    <span>{% trans "Agents" %}</span>
+  </a>
+</div>
+
+{% if user.is_admin and request.customer %}
+{% include "admin_superuser_menu_points.html" %}
+{% endif %}
+
+<div class="menu-right-border"></div>
+{% endspaceless %}

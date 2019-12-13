@@ -1,0 +1,15 @@
+{% extends "configuration_site/base.html" %}
+{% load i18n %}
+{% load pagination %}
+{% load bootstrap_tags %}
+
+{% block content %}
+{% panel _("Agents") search=True %}
+<a href="{% url "configuration_site:agent-create" customer_id=customer.id %}" title="{% trans 'Add' %}">
+  {% icon "plus" %}
+</a>
+{% endpanelbuttons %}
+<div class="content-loader" data-url="{% url "configuration_site:agent-list-content" customer_id=customer.id %}" data-orderby="mac"></div>
+{% endpanel %}
+
+{% endblock %}

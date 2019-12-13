@@ -1,0 +1,1178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: fields.py:80
+msgid "Consumption"
+msgstr "Forbrug"
+
+#: fields.py:81 models/collections.py:415
+msgid "Power"
+msgstr "Effekt"
+
+#: fields.py:82 models/collections.py:416
+msgid "Reactive power"
+msgstr "Reaktiv effekt"
+
+#: fields.py:83 models/collections.py:417
+msgid "Reactive energy"
+msgstr "Reaktiv energi"
+
+#: fields.py:84 models/collections.py:418
+msgid "Power factor"
+msgstr "Power-faktor"
+
+#: fields.py:85
+msgid "Relative temperature"
+msgstr "Relativ temperatur"
+
+#: fields.py:86
+msgid "Absolute temperature"
+msgstr "Absolut temperatur"
+
+#: fields.py:87
+msgid "Cost"
+msgstr "Omkostning"
+
+#: fields.py:88
+msgid "Volume"
+msgstr "Volumen"
+
+#: fields.py:89
+msgid "Volume flow"
+msgstr "Volume flow"
+
+#: fields.py:90 models/collections.py:414
+msgid "Voltage"
+msgstr "Spænding"
+
+#: fields.py:91 models/collections.py:413
+msgid "Current"
+msgstr "Strøm"
+
+#: fields.py:92
+msgid "Frequency"
+msgstr "Frekvens"
+
+#: fields.py:93
+msgid "Mass"
+msgstr "Masse"
+
+#: fields.py:94
+msgid "Pressure"
+msgstr "Tryk"
+
+#: fields.py:95
+msgid "Time"
+msgstr "Tid"
+
+#: fields.py:96
+msgid "State"
+msgstr "Tilstand"
+
+#: fields.py:97
+msgid "Heat tariff"
+msgstr "Varmetarif"
+
+#: fields.py:98
+msgid "Gas tariff"
+msgstr "Gastarif"
+
+#: fields.py:99
+msgid "Electricity tariff"
+msgstr "Elektricitetstarif"
+
+#: fields.py:100
+msgid "Water tariff"
+msgstr "Vandtarif"
+
+#: fields.py:101
+msgid "CO₂ quotient"
+msgstr "CO₂ kvotient"
+
+#: fields.py:102
+msgid "Employees"
+msgstr "Ansatte"
+
+#: fields.py:103
+msgid "Cached data series"
+msgstr "Cachet dataserie"
+
+#: fields.py:104
+msgid "Hidden data series"
+msgstr "Skjult dataserie"
+
+#: fields.py:105
+msgid "Standard heating degree days"
+msgstr "Standard-graddage"
+
+#: fields.py:106
+msgid "Heating degree days"
+msgstr "Målte graddage"
+
+#: fields.py:108
+msgid "Heating degree days corrected consumption"
+msgstr "Forbrug korrigeret for graddage"
+
+#: fields.py:109
+msgid "Area"
+msgstr "Areal"
+
+#: fields.py:110
+msgid "CO₂"
+msgstr "CO₂"
+
+#: fields.py:111
+msgid "Hidden electricity tariff"
+msgstr "Skjult elektricitetstarif"
+
+#: fields.py:112
+msgid "Hidden gas tariff"
+msgstr "Skjult gastarif"
+
+#: fields.py:113
+msgid "Hidden heat tariff"
+msgstr "Skjult varmetarif"
+
+#: fields.py:114
+msgid "Hidden water tariff"
+msgstr "Skjult vandtarif"
+
+#: fields.py:116
+msgid "Consumption utilisation according to number of employees"
+msgstr "Forbrugsudnyttelse i forhold til antal medarbejdere"
+
+#: fields.py:118
+msgid "Consumption utilisation according to area"
+msgstr "Forbrugsudnyttelse i forhold til areal"
+
+#: fields.py:119
+msgid "Production EnPI"
+msgstr "Produktionsnøgletal"
+
+#: fields.py:120
+msgid "Mean cool-down temperature"
+msgstr "Gennemsnitlig nedkølningstemperatur"
+
+#: fields.py:121
+msgid "Oil tariff"
+msgstr "Olietarif"
+
+#: fields.py:122
+msgid "Hidden oil tariff"
+msgstr "Skjult olietarif"
+
+#: fields.py:123
+msgid "Linear regression"
+msgstr "Lineær regression"
+
+#: fields.py:124
+msgid "Energy driver"
+msgstr "Ydelse"
+
+#: fields.py:125
+msgid "Production"
+msgstr "Produktion"
+
+#: fields.py:126
+msgid "Heat loss coefficient"
+msgstr "Varmetabskoefficient"
+
+#: fields.py:127
+msgid "Efficiency"
+msgstr "Effektivitet"
+
+#: fields.py:133 models/collections.py:175
+msgid "Role"
+msgstr "Rolle"
+
+#: models/chain.py:31
+msgid "chain"
+msgstr "sammenkædning"
+
+#: models/chain.py:32
+msgid "chains"
+msgstr "sammenkædninger"
+
+#: models/chain.py:104
+msgid "chain link"
+msgstr "kædeled"
+
+#: models/chain.py:105
+msgid "chain links"
+msgstr "kædeled"
+
+#: models/chain.py:124
+msgid "The unit of the selected data series is incompatible with this chain"
+msgstr "Enheden for den valgte dataserie er inkompatible med denne kæde"
+
+#: models/co2calculation.py:34
+msgid "CO₂ calculation"
+msgstr "CO₂ beregning"
+
+#: models/co2calculation.py:35
+msgid "CO₂ calculations"
+msgstr "CO₂ beregninger"
+
+#: models/collections.py:99
+msgid "Name"
+msgstr "Navn"
+
+#: models/collections.py:102
+msgid "meter number"
+msgstr "målernummer"
+
+#: models/collections.py:105
+msgid "installation number"
+msgstr "installationsnummer"
+
+#: models/collections.py:142 models/collections.py:406
+msgid "Group"
+msgstr "Gruppe"
+
+#: models/collections.py:143 models/collections.py:408
+msgid "Consumption group"
+msgstr "Forbrugsgruppe"
+
+#: models/collections.py:144 models/collections.py:412
+#: proxies/temperaturemeasurementpoint.py:32
+msgid "Temperature measurement point"
+msgstr "Temperaturmålepunkt"
+
+#: models/collections.py:145 proxies/productionmeasurementpoint.py:28
+msgid "Production measurement point"
+msgstr "Produktionsmålepunkt"
+
+#: models/collections.py:146 proxies/voltagemeasurementpoint.py:24
+msgid "Voltage measurement point"
+msgstr "Spændingsmålepunkt"
+
+#: models/collections.py:147 proxies/currentmeasurementpoint.py:24
+msgid "Current measurement point"
+msgstr "Strøm-målepunkt"
+
+#: models/collections.py:148 proxies/powermeasurementpoint.py:24
+msgid "Power measurement point"
+msgstr "Effektmålepunkt"
+
+#: models/collections.py:150 proxies/reactivepowermeasurementpoint.py:24
+msgid "Reactive power measurement point"
+msgstr "Reaktiv-effekt-målepunkt"
+
+#: models/collections.py:152 proxies/reactiveenergymeasurementpoint.py:24
+msgid "Reactive energy measurement point"
+msgstr "Reaktiv-energi-målepunkt"
+
+#: models/collections.py:153 proxies/powerfactormeasurementpoint.py:24
+msgid "Power factor measurement point"
+msgstr "Power-faktor-målepunkt"
+
+#: models/collections.py:154
+msgid "Efficiency measurement point"
+msgstr "Effektivitetsmålepunkt"
+
+#: models/collections.py:155 models/collections.py:410
+#: proxies/consumptionmeasurementpoint.py:132
+msgid "Consumption measurement point"
+msgstr "Forbrugsmålepunkt"
+
+#: models/collections.py:177 models/dataseries.py:231
+msgid "utility type"
+msgstr "forsyningstype"
+
+#: models/collections.py:197
+msgid "green-yellow-red"
+msgstr "grøn-gul-rød"
+
+#: models/collections.py:198
+msgid "red-green-red"
+msgstr "rød-grøn-rød"
+
+#: models/collections.py:199
+msgid "yellow-green-yellow"
+msgstr "gul-grøn-rød"
+
+#: models/collections.py:200
+msgid "red-yellow-green"
+msgstr "rød-gul-grøn"
+
+#: models/collections.py:203
+msgid "Gauge colours"
+msgstr "Viserfarver"
+
+#: models/collections.py:241
+msgid "collection"
+msgstr "samling"
+
+#: models/collections.py:242
+msgid "collections"
+msgstr "samlinger"
+
+#: models/collections.py:436
+msgid "Measurement Points:"
+msgstr "Målepunkter:"
+
+#: models/collections.py:442
+msgid "Collections:"
+msgstr "Samlinger:"
+
+#: models/collections.py:448
+msgid ""
+"This group cannot be deleted because the following                      "
+"depends on it:"
+msgstr "Denne gruppe kan ikke slettes fordi følgende er afhængig af den:"
+
+#: models/collections.py:493
+msgid "name"
+msgstr "navn"
+
+#: models/collections.py:499
+msgid "location"
+msgstr "lokation"
+
+#: models/collections.py:500
+msgid "locations"
+msgstr "lokationer"
+
+#: models/costcalculation.py:58
+msgid "cost calculation"
+msgstr "omkostningsberegning"
+
+#: models/costcalculation.py:59
+msgid "cost calculations"
+msgstr "omkostningsberegninger"
+
+#: models/dataseries.py:241
+msgid "Piecewise constant accumulation"
+msgstr "Stykvis konstant akkumulering"
+
+#: models/dataseries.py:243
+msgid "Piecewise constant rate"
+msgstr "Stykvis konstant rate"
+
+#: models/dataseries.py:245
+msgid "Continuous accumulation"
+msgstr "Kontinuerlig akkumulering"
+
+#: models/dataseries.py:247
+msgid "Continuous rate"
+msgstr "Kontinuerlig rate"
+
+#: models/dataseries.py:249
+msgid "Interval function"
+msgstr "Intervalfunktion"
+
+#: models/dataseries.py:253 models/dataseries.py:254
+msgid "dataseries"
+msgstr "dataserier"
+
+#: models/dataseries.py:1469
+msgid "value"
+msgstr "værdi"
+
+#: models/dataseries.py:1470
+msgid "timestamp"
+msgstr "tidsstempel"
+
+#: models/dataseries.py:1473 models/dataseries.py:1474
+msgid "stored data"
+msgstr "gemt data"
+
+#: models/degreedays.py:112
+msgid ""
+"Heating degree days can only be defined in terms of absolute temperatures."
+msgstr "Vamegraddage kan kun defineres med absolutte temperaturer."
+
+#: models/degreedays.py:142
+msgid ""
+"Warning: Heating degree days are only defined for days or larger resolutions."
+msgstr ""
+"Advarsel: Varmegraddage er kun defineret for dage eller større opløsninger."
+
+#: models/graph.py:102
+msgid "Min: {{ min_value }} {{ unit }} | Max: {{ max_value }} {{ unit }}"
+msgstr "Min.: {{ min_value }} {{ unit }} | Maks.: {{ max_value }} {{ unit }}"
+
+#: models/graph.py:109
+msgid ""
+"Avg: {{ avg_value }} {{ unit }} | Min: {{ min_value }} {{ unit }} | Max: "
+"{{ max_value }} {{ unit }}"
+msgstr ""
+"Gns.: {{ avg_value }} {{ unit }} | Min.: {{ min_value }} {{ unit }} | Maks.: "
+"{{ max_value }} {{ unit }}"
+
+#: models/graph.py:119 models/graph.py:128 models/graph.py:459
+msgid "No values in this range."
+msgstr "Ingen værdier i dette interval"
+
+#: models/graph.py:126
+msgid "Total: {{ total }} {{ unit }}"
+msgstr "Total: {{ total }} {{ unit }}"
+
+#: models/graph.py:139
+msgid "Rightmost sample is incomplete"
+msgstr "Sidste sample er ufuldstændig"
+
+#: models/graph.py:140 models/graph.py:145
+#, python-brace-format
+msgid "{caption} ({warning})"
+msgstr "{caption} ({warning})"
+
+#: models/graph.py:144
+msgid "Graph is based on incomplete data"
+msgstr "Graf er baseret på ufuldstændige data"
+
+#: models/graph.py:443
+#, python-brace-format
+msgid "Avg: {average} {unit}."
+msgstr "Gns: {average} {unit}."
+
+#: models/graph.py:451
+#, python-brace-format
+msgid "Avg: {average} {unit} (Graph is based on incomplete data)."
+msgstr "Gns: {average} {unit} (Graf er baseret på ufuldstændige data)."
+
+#: models/graph.py:541
+msgid "graph"
+msgstr "graf"
+
+#: models/graph.py:542
+msgid "graphs"
+msgstr "grafer"
+
+#: models/indexcalculation.py:34
+msgid "index calculation"
+msgstr "index beregning"
+
+#: models/indexcalculation.py:35
+msgid "index calculations"
+msgstr "index beregninger"
+
+#: models/integral.py:32
+msgid "piecewise constant integral"
+msgstr "Stykvis konstant integrale"
+
+#: models/integral.py:33
+msgid "piecewise constant integrals"
+msgstr "Stykvis konstante integraler"
+
+#: models/link.py:24 models/link.py:25
+msgid "link"
+msgstr "indføjning"
+
+#: models/meantemperaturechange.py:45 models/meantemperaturechange.py:46
+msgid "mean temperature change"
+msgstr "Gennemsnitlig temperaturforandring"
+
+#: models/multiplication.py:24
+msgid "mulitplication"
+msgstr "multiplikation"
+
+#: models/multiplication.py:25
+msgid "multiplications"
+msgstr "multiplikationer"
+
+#: models/rateconversion.py:29
+msgid "rate conversion"
+msgstr "Kurvehælningsberegning"
+
+#: models/rateconversion.py:30
+msgid "rate conversions"
+msgstr "Kurvehælningsberegninger"
+
+#: models/simplelinearregression.py:23
+msgid "Simple linear regression"
+msgstr "Simpel lineær regression"
+
+#: models/simplelinearregression.py:24
+msgid "Simple linear regressions"
+msgstr "Simple lineære regressioner"
+
+#: models/storeddataseries.py:20 models/storeddataseries.py:21
+msgid "stored data series"
+msgstr "gemt(e) dataserie(r)"
+
+#: models/summation.py:70
+msgid "summation"
+msgstr "summering"
+
+#: models/summation.py:71
+msgid "summations"
+msgstr "summeringer"
+
+#: models/utilization.py:44
+msgid "normalization"
+msgstr "normalisering"
+
+#: models/utilization.py:45
+msgid "normalizations"
+msgstr "normaliseringer"
+
+#: models/utilization.py:59
+#, python-brace-format
+msgid ""
+"Consumption unit {consumption_unit} and needs unit {needs_unit} are not "
+"compatible with target unit {target_unit}"
+msgstr ""
+"Forbrugsenhed {consumption_unit} og behovsenhed {needs_unit} er ikke "
+"kompatible med {target_unit}"
+
+#: proxies/consumptionmeasurementpoint.py:133
+msgid "Consumption measurement points"
+msgstr "Forbrugsmålepunkter"
+
+#: proxies/consumptionmeasurementpoint.py:306
+msgid ""
+"You are not allowed to to hide this measurement point from reports while it "
+"is used in a report"
+msgstr ""
+"Du må ikke skjule dette målepunkt fra rapporter når det allerede indgår i en "
+"rapport"
+
+#: proxies/consumptionmeasurementpoint.py:315
+msgid ""
+"Both standard heating degree days and heating degree days must be set for "
+"heating degree days corrected consumption to be enabled.  To disable, "
+"deselect both."
+msgstr ""
+"Både standard graddage og målte graddage skal være valgt for at forbrug "
+"korrigeret for graddage kan beregnes. Fravælg begge hvis graddagskorrigering "
+"ikke ønskes."
+
+#: proxies/consumptionmeasurementpointsummation.py:39
+msgid "Summation measurement point"
+msgstr "Summeringsmålepunkt"
+
+#: proxies/consumptionmeasurementpointsummation.py:40
+msgid "Summation measurement points"
+msgstr "Summeringsmålepunkt"
+
+#: proxies/consumptionmeasurementpointsummation.py:48
+msgid "At least one measurement point must be selected."
+msgstr "Mindst ét målepunkt skal være markeret"
+
+#: proxies/consumptionmeasurementpointsummation.py:55
+#, python-brace-format
+msgid ""
+"{measurement_point} cannot be included in the summation, as it would form "
+"circular dependencies."
+msgstr ""
+"{measurement_point} kan ikke anvendes i beregning da dette ville forårsage "
+"en cirkulær afhænginghed blandt de involverede målepunkter"
+
+#: proxies/consumptionmultiplicationpoint.py:26
+msgid "Multiplication measurement point"
+msgstr "Multipliceringsmålepunkt"
+
+#: proxies/consumptionmultiplicationpoint.py:27
+msgid "Multiplication measurement points"
+msgstr "Multipliceringsmålepunkt"
+
+#: proxies/consumptionmultiplicationpoint.py:69
+#, python-brace-format
+msgid ""
+"{measurement_point} cannot be used in the multiplication, as it would form a "
+"circular dependency."
+msgstr ""
+"{measurement_point} kan ikke anvendes i beregning da dette ville forårsage "
+"en cirkulær afhænginghed blandt de involverede målepunkter"
+
+#: proxies/currentmeasurementpoint.py:25
+msgid "Current measurement points"
+msgstr "Strøm-målepunkter"
+
+#: proxies/districtheatingmeasurementpoint.py:51
+msgid "district heating measurement point"
+msgstr "Fjernvarmemålepunkt"
+
+#: proxies/districtheatingmeasurementpoint.py:52
+msgid "district heating measurement points"
+msgstr "Fjernvarmemålepunkter"
+
+#: proxies/importedmeasurementpoint.py:69
+msgid "Imported measurement point"
+msgstr "Importeret målepunkt"
+
+#: proxies/importedmeasurementpoint.py:70
+msgid "Imported measurement points"
+msgstr "Importerede målepunkter"
+
+#: proxies/importedmeasurementpoint.py:132
+#, python-brace-format
+msgid "{filename} contains no consumption data"
+msgstr "{filename} indeholder ingen forbrugsdata"
+
+#: proxies/importedmeasurementpoint.py:170
+#, python-brace-format
+msgid "Time value {time_value} did not parse"
+msgstr "Strengen {time_value} er ikke en gyldig tidsværdi"
+
+#: proxies/importedmeasurementpoint.py:178
+#, python-brace-format
+msgid "Time stamps are not sequential ({time_value}), check timezone"
+msgstr "Tidsstempler er ikke fortløbende ({time_value}), check tidszone"
+
+#: proxies/importedmeasurementpoint.py:199
+#, python-brace-format
+msgid "Column {consumption_column} does not exist"
+msgstr "Søjle {consumption_column} eksisterer ikke"
+
+#: proxies/importedmeasurementpoint.py:220
+#, python-brace-format
+msgid "Consumption value ({value_cell}) did not parse"
+msgstr "Strengen {value_cell} er ikke en gyldig forbrugsværdi"
+
+#: proxies/measurementpoint.py:33
+msgid "Measurement point"
+msgstr "Målepunkt:"
+
+#: proxies/measurementpoint.py:34
+msgid "Measurement points"
+msgstr "Målepunkter:"
+
+#: proxies/measurementpoint.py:71
+msgid ""
+"Gauge widget is present on the dashboard;                         corrupting "
+"these values are not allowed"
+msgstr "Viserinstrumenet er på dit dashboard; ændringerne vil invalidere denne"
+
+#: proxies/measurementpoint.py:78
+msgid "Maximum value must be above minumum value"
+msgstr "Maksimumsværdien skal være større end minimum"
+
+#: proxies/measurementpoint.py:83
+msgid "Lower threshold must be above minumum value"
+msgstr "Den nedre grænse skal være større end minimumsværdien"
+
+#: proxies/measurementpoint.py:88
+msgid "Upper threshold must be below maximum value"
+msgstr "Den øvre grænse skal være større en maksimumsværdien"
+
+#: proxies/measurementpoint.py:94
+msgid "Upper threshold must be above lower threshold"
+msgstr "Den øvre grænse skal være større end den nedre grænse"
+
+#: proxies/measurementpoint.py:237
+msgid "Projects:"
+msgstr "Projekter:"
+
+#: proxies/measurementpoint.py:247
+msgid "Summation Measurement Points:"
+msgstr "Summeringsmålepunkter:"
+
+#: proxies/measurementpoint.py:259
+msgid "Multiplication Measurement Points:"
+msgstr "Multipliceringsmålepunkter:"
+
+#: proxies/measurementpoint.py:272
+msgid "District Heating Measurement Points:"
+msgstr "Fjernvarmemålepunkter:"
+
+#: proxies/measurementpoint.py:282
+msgid "Energy Use Reports:"
+msgstr "Energianvendelsesrapporter:"
+
+#: proxies/measurementpoint.py:291
+msgid "Users:"
+msgstr "Brugere:"
+
+#: proxies/measurementpoint.py:300
+msgid ""
+"This measurement point cannot be deleted because the following depends on it:"
+msgstr ""
+"Dette målepunkt kan ikke slettes fordi følgende er afhængige af det: <br />"
+
+#: proxies/powerfactormeasurementpoint.py:25
+msgid "Power factor measurement points"
+msgstr "Power-faktor-målepunkter"
+
+#: proxies/powermeasurementpoint.py:25
+msgid "Power measurement points"
+msgstr "Effektmålepunkter"
+
+#: proxies/productionmeasurementpoint.py:29
+msgid "Production measurement points"
+msgstr "Produktionsmålepunkter"
+
+#: proxies/reactiveenergymeasurementpoint.py:25
+msgid "Reactive energy measurement points"
+msgstr "Reaktiv-energi-målepunkter"
+
+#: proxies/reactivepowermeasurementpoint.py:25
+msgid "Reactive power measurement points"
+msgstr "Reaktiv-effekt-målepunkter"
+
+#: proxies/temperaturemeasurementpoint.py:33
+msgid "Temperature measurement points"
+msgstr "Temperaturmålepunkter"
+
+#: proxies/temperaturemeasurementpoint.py:60
+#, python-brace-format
+msgid ""
+"Heating degree days of this temperature measurement point cannot be disabled "
+"because they are used by the measurement points {measurement_points}"
+msgstr ""
+"Varmegraddage kan ikke slåes fra for dette temperaturmålepunkt da de "
+"anvendes af af målepunkterne {measurement_points}"
+
+#: proxies/temperaturemeasurementpoint.py:66
+msgid ""
+"Heating degree days cannot be specified in terms of relative temperatures."
+msgstr "Varmegraddage kan ikke defineres ud fra relative temperaturer."
+
+#: proxies/temperaturemeasurementpoint.py:184
+msgid ""
+"This index cannot be deleted because the following          depends on it: "
+"<br /> "
+msgstr "Dette index kan ikke slettes fordi følgende er afhængig af den: <br />"
+
+#: proxies/voltagemeasurementpoint.py:25
+msgid "Voltage measurement points"
+msgstr "Spænding-målepunkter"
+
+#~ msgid "customer"
+#~ msgstr "kunde"
+
+#~ msgid "VAT no."
+#~ msgstr "CVR-nr."
+
+#~ msgid "address"
+#~ msgstr "adresse"
+
+#~ msgid "postal code"
+#~ msgstr "postnummer"
+
+#~ msgid "city"
+#~ msgstr "by"
+
+#~ msgid "phone"
+#~ msgstr "telefon"
+
+#~ msgid "country code"
+#~ msgstr "landekode"
+
+#~ msgid "contact person"
+#~ msgstr "kontaktperson"
+
+#~ msgid "e-mail"
+#~ msgstr "e-mail"
+
+#~ msgid "Electricity instantaneous unit"
+#~ msgstr "Effektenhed for elektricitet"
+
+#~ msgid "Electricity consumption unit"
+#~ msgstr "Elektricitet forbrugsenhed"
+
+#~ msgid "Gas instantaneous unit"
+#~ msgstr "Flow-enhed for gas"
+
+#~ msgid "Gas consumption unit"
+#~ msgstr "Forbrugsenhed for gas"
+
+#~ msgid "Water instantaneous unit"
+#~ msgstr "Vand øjebliksenhed"
+
+#~ msgid "Water consumption unit"
+#~ msgstr "Forbrugsenhed for vand"
+
+#~ msgid "Heat instantaneous unit"
+#~ msgstr "Effekenhed for varme"
+
+#~ msgid "Heat consumption unit"
+#~ msgstr "Forbrugsenhed for varme"
+
+#~ msgid "Temperature unit"
+#~ msgstr "Temperaturenhed"
+
+#~ msgid "Oil instantaneous unit"
+#~ msgstr "Flow-enhed for olie"
+
+#~ msgid "Oil consumption unit"
+#~ msgstr "Forbrugsenhed for olie"
+
+#~ msgid "currency"
+#~ msgstr "møntfod"
+
+#~ msgid "is active"
+#~ msgstr "er aktiv"
+
+#~ msgid "production A unit"
+#~ msgstr "produktionsenhed A"
+
+#~ msgid "production B unit"
+#~ msgstr "produktionsenhed B"
+
+#~ msgid "production C unit"
+#~ msgstr "produktionsenhed C"
+
+#~ msgid "production D unit"
+#~ msgstr "produktionsenhed D"
+
+#~ msgid "production E unit"
+#~ msgstr "produktionsenhed E"
+
+#~ msgid "industry types"
+#~ msgstr "brancher"
+
+#~ msgid "installation notes"
+#~ msgstr "installationsnoter"
+
+#~ msgid "customers"
+#~ msgstr "kunders"
+
+#~ msgid ""
+#~ "Production unit {production_unit_letter} is in use and cannot be empty"
+#~ msgstr ""
+#~ "Produktionsenhed {production_unit_letter} er i brug, og kan derfor ikke "
+#~ "være tom"
+
+#~ msgid "user profile"
+#~ msgstr "brugerprofil"
+
+#~ msgid "user profiles"
+#~ msgstr "brugerprofiler"
+
+#~ msgid "Calculation"
+#~ msgstr "Beregning"
+
+#~ msgid "disabled"
+#~ msgstr "deaktiveret"
+
+#~ msgid "Resource type"
+#~ msgstr "Resourcetype"
+
+#~ msgid "EUR"
+#~ msgstr "EUR"
+
+#~ msgid "DKK"
+#~ msgstr "DKK"
+
+#~ msgid "UAH"
+#~ msgstr "UAH"
+
+#~ msgid "USD"
+#~ msgstr "USD"
+
+#~ msgid ""
+#~ "Depending on the selected heat consumption measurement point forms a "
+#~ "circular dependency.  Choose another."
+#~ msgstr ""
+#~ "En relation til det valgte varmeforbrugsmålepunkt udgør en cirkulær "
+#~ "afhængighed.  Vælg et andet."
+
+#~ msgid ""
+#~ "Depending on the selected heat distribution medium measurement point "
+#~ "forms a circular dependency.  Choose another."
+#~ msgstr ""
+#~ "En relation til det valgte varme-transport-medium-målepunkt udgør en "
+#~ "cirkulær afhængighed.  Vælg et andet"
+
+#~ msgid "EUR (€)"
+#~ msgstr "EUR (€)"
+
+#~ msgid "DKK (kr)"
+#~ msgstr "DKK (kr)"
+
+#~ msgid "UAH (₴)"
+#~ msgstr "UAH (₴)"
+
+#~ msgid "{preferred_consumption_unit}/person"
+#~ msgstr "{preferred_consumption_unit}/person"
+
+#~ msgid "{preferred_consumption_unit}/m²"
+#~ msgstr "{preferred_consumption_unit}/m²"
+
+#~ msgid "This measurement point cannot be deleted "
+#~ msgstr "Dette målepunkt kan ikke slettes"
+
+#~ msgid "A dashboard widget is using the rate graph"
+#~ msgstr "En dashboard-widget bruger rate-grafen"
+
+#~ msgid "Electricity: Possible savings (%)"
+#~ msgstr "Elektricitet: Besparelsespotentiale (%)"
+
+#~ msgid "Electricity: Expected savings (%)"
+#~ msgstr "Elektricitet: Forventet besparelse (%)"
+
+#~ msgid "Water: Possible savings (%)"
+#~ msgstr "Vand: Besparelsespotentiale (%)"
+
+#~ msgid "Water: Expected savings (%)"
+#~ msgstr "Vand: Forventet besparelse (%)"
+
+#~ msgid "Heating: Possible savings (%)"
+#~ msgstr "Opvarmning: Besparelsespotentiale (%)"
+
+#~ msgid "Heating: Expected savings (%)"
+#~ msgstr "Opvarmning: Forventet besparelse (%)"
+
+#~ msgid "Gas: Possible savings (%)"
+#~ msgstr "Gas: Besparelsespotentiale (%)"
+
+#~ msgid "Gas: Expected savings (%)"
+#~ msgstr "Gas: Forventet besparelse (%)"
+
+#~ msgid "Oil: Possible savings (%)"
+#~ msgstr "Olie: Besparelsespotentiale (%)"
+
+#~ msgid "Oil: Expected savings (%)"
+#~ msgstr "Olie: Forventet besparelse (%)"
+
+#~ msgid "description"
+#~ msgstr "beskrivelse"
+
+#~ msgid "project lifespan in months"
+#~ msgstr "projektvarighed i måneder"
+
+#~ msgid "Electricity: Yearly consumption (price)"
+#~ msgstr "Elektricitet: Årlige forbrugsomkostninger"
+
+#~ msgid "Water: Yearly consumption (price)"
+#~ msgstr "Vand: Årlige forbrugsomkostninger"
+
+#~ msgid "Heating: Yearly consumption (price)"
+#~ msgstr "Opvarmning: Årlige forbrugsomkostninger"
+
+#~ msgid "Gas: Yearly consumption (price)"
+#~ msgstr "Gas: Årlige forbrugsomkostninger"
+
+#~ msgid "Oil: Yearly consumption (price)"
+#~ msgstr "Olie: Årlige forbrugsomkostninger"
+
+#~ msgid "guaranteed savings (%)"
+#~ msgstr "garanteret besparelse (%)"
+
+#~ msgid "interest rate"
+#~ msgstr "rente"
+
+#~ msgid "delivery date"
+#~ msgstr "leveringsdato"
+
+#~ msgid "screening date"
+#~ msgstr "screenings-dato"
+
+#~ msgid "GridManager installs"
+#~ msgstr "GridManager installerer"
+
+#~ msgid "sales opportunity"
+#~ msgstr "salgsmulighed"
+
+#~ msgid "sales opportunities"
+#~ msgstr "salgsmuligheder"
+
+#~ msgid "title"
+#~ msgstr "titel"
+
+#~ msgid "comment"
+#~ msgstr "kommentar"
+
+#~ msgid "activity log entry"
+#~ msgstr "aktivitetsnotits"
+
+#~ msgid "activity log entries"
+#~ msgstr "aktivitetsnotitser"
+
+#~ msgid "Minutes"
+#~ msgstr "Minutter"
+
+#~ msgid "5 Minutes"
+#~ msgstr "5 Minutter"
+
+#~ msgid "Hours"
+#~ msgstr "Timer"
+
+#~ msgid "Days"
+#~ msgstr "Dage"
+
+#~ msgid "Weeks"
+#~ msgstr "Uger"
+
+#~ msgid "Months"
+#~ msgstr "Måneder"
+
+#~ msgid "Quarters"
+#~ msgstr "Kvartaler"
+
+#~ msgid "Years"
+#~ msgstr "År"
+
+#~ msgid "timezone"
+#~ msgstr "tidszone"
+
+#~ msgid "Resolution"
+#~ msgstr "Opløsning"
+
+#~ msgid "cached data"
+#~ msgstr "Cachede data"
+
+#~ msgid "unknown"
+#~ msgstr "ukendt"
+
+#~ msgid "electricity"
+#~ msgstr "elektricitet"
+
+#~ msgid "water"
+#~ msgstr "vand"
+
+#~ msgid "gas"
+#~ msgstr "gas"
+
+#~ msgid "heat"
+#~ msgstr "varme"
+
+#~ msgid "oil"
+#~ msgstr "olie"
+
+#~ msgid "sequence element"
+#~ msgstr "følgeelement"
+
+#~ msgid "sequence inputs"
+#~ msgstr "følgeindput"
+
+#~ msgid "logical input"
+#~ msgstr "logisk input"
+
+#~ msgid "logical inputs"
+#~ msgstr "logiske inputs"
+
+#~ msgid "offset"
+#~ msgstr "justering"
+
+#~ msgid "New Electricity Consumption Measurement Point"
+#~ msgstr "Nyt Elektricitetsforbrugsmålepunkt"
+
+#~ msgid "Edit Electricity Consumption Measurement Point"
+#~ msgstr "Redigér Elektricitetsforbrugsmålepunkt"
+
+#~ msgid "New Electricity Summation Point"
+#~ msgstr "Nyt Elektricitetssummeringspunkt"
+
+#~ msgid "Edit Electricity Summation Point"
+#~ msgstr "Redigér Elektricitetssummeringspunkt"
+
+#~ msgid "Graph has been extrapolated"
+#~ msgstr "Graf er ekstrapoleret"
+
+#~ msgid "Number of output units"
+#~ msgstr "Antal output-enheder"
+
+#~ msgid "Number of pulses."
+#~ msgstr "Antal pulser."
+
+#~ msgid "Consumption Rate"
+#~ msgstr "Forbrugsrate"
+
+#~ msgid "Pulse computation"
+#~ msgstr "Puls-konvertering"
+
+#~ msgid "Simple join"
+#~ msgstr "Simpel sammenkædning"
+
+#~ msgid "Formula"
+#~ msgstr "Formel"
+
+#~ msgid "Nominator minuend"
+#~ msgstr "Tællerminuende"
+
+#~ msgid "Nominator subtrahend"
+#~ msgstr "Tællersubtrahende"
+
+#~ msgid "Denominator minuend"
+#~ msgstr "Nævnerminuende"
+
+#~ msgid "Denominator subtrahend"
+#~ msgstr "Nævnerminuende"
+
+#~ msgid "Denominator factor"
+#~ msgstr "Nævnermultiplikator"
+
+#~ msgid "Nominator offset"
+#~ msgstr "Tællerjustering"
+
+#~ msgid "Denominator offset"
+#~ msgstr "Nævnerjustering"
+
+#~ msgid "Offset"
+#~ msgstr "Justering"
+
+#~ msgid "derived dataseries"
+#~ msgstr "afledt dataserie"
+
+#~ msgid "Term"
+#~ msgstr "Term"
+
+#~ msgid "Value"
+#~ msgstr "Værdi"
+
+#~ msgid "constant"
+#~ msgstr "konstant"
+
+#~ msgid "constants"
+#~ msgstr "konstanter"
+
+#~ msgid "Factor"
+#~ msgstr "Tæller"
+
+#~ msgid "Divisor"
+#~ msgstr "Nævner"
+
+#~ msgid "Divisior must not be zero"
+#~ msgstr "Nævner må ikke være nul"
+
+#~ msgid "{currency}/kWh"
+#~ msgstr "{currency}/kWh"
+
+#~ msgid "{currency}/MWh"
+#~ msgstr "{currency}/MWh"
+
+#~ msgid "{currency}/l"
+#~ msgstr "{currency}/l"
+
+#~ msgid "{currency}/m³"
+#~ msgstr "{currency}/m³"
+
+#~ msgid "temperature"
+#~ msgstr "temperatur"
+
+#~ msgid "input states"
+#~ msgstr "input-tilstande"
+
+#~ msgid "output states"
+#~ msgstr "output-tilstande"
+
+#~ msgid "energy resource type"
+#~ msgstr "energiressourcetype"
+
+#~ msgid "data origin must be set for this physical input"
+#~ msgstr "dataafstamning skal være sat for det fysiske input"
+
+#~ msgid "factor and divisor can only be set for PULSE_COUNT inputs"
+#~ msgstr "tæller og nævner kan kun blive sat for PULSE_COUNT inputs"
+
+#~ msgid "Tariff must implement calculate cost"
+#~ msgstr "Tarif skal implementere omkostningsberegner"
+
+#~ msgid "Tariff must be a rate data series."
+#~ msgstr "Tarif skal være en rå dataserie"
+
+#~ msgid "Number of pulses per some number of output units."
+#~ msgstr "Antal pulser per output-enheder."
+
+#~ msgid "%Y-%m-%d %H:%M:%S"
+#~ msgstr "%Y-%m-%d %H:%M:%S"

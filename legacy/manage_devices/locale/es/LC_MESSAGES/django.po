@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:05+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: forms.py:45
+msgid "Relay cannot be disabled because it is used by "
+msgstr "El relé no puede ser desactivado por que está siendo usado por"
+
+#: forms.py:51
+msgid "On"
+msgstr "Encendido"
+
+#: forms.py:52
+msgid "Off"
+msgstr "Apagado"
+
+#: views.py:148
+msgid "The agent has been saved"
+msgstr "El Agent ha sido guardado"
+
+#: views.py:233
+msgid "Invalid relay state choice"
+msgstr "Estado de relé invalido"
+
+#: views.py:239 views.py:262 views.py:285
+msgid "Agent currently offline"
+msgstr "El Agent está actualmente desconectado"
+
+#: views.py:246 views.py:269
+msgid "Sending relay state change request"
+msgstr "Enviado solicitud de cambio de estado del relé"
+
+#: views.py:309
+msgid "Must define at least one period"
+msgstr ""
+
+#: templates/manage_devices/_impulse_form.html:21
+msgid "impulse"
+msgstr ""
+
+#: templates/manage_devices/_impulse_form.html:48
+#, fuzzy
+msgid "Delete:"
+msgstr "Borrar"
+
+#: templates/manage_devices/agent_block.html:8
+#: templates/manage_devices/agent_form.html:18
+#: templates/manage_devices/meter_block.html:20
+#: templates/manage_devices/meter_form.html:33
+msgid "Location:"
+msgstr "Localización:"
+
+#: templates/manage_devices/agent_block.html:10
+msgid "Online,Offline"
+msgstr "Conectado,Desconectado"
+
+#: templates/manage_devices/agent_block.html:11
+#: templates/manage_devices/meter_block.html:32
+msgid "Connection state:"
+msgstr "Estado de conexión"
+
+#: templates/manage_devices/agent_block.html:17
+#: templates/manage_devices/agent_form.html:8
+#: templates/manage_devices/meter_form.html:110
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/manage_devices/agent_form.html:23
+msgid "No longer in use:"
+msgstr ""
+
+#: templates/manage_devices/agent_form.html:29
+msgid "MAC:"
+msgstr "MAC:"
+
+#: templates/manage_devices/agent_list.html:10
+#: templates/manage_devices/agent_list.html:11
+#: templates/manage_devices/consumption_form.html:7
+#: templates/manage_devices/consumption_form.html:9
+#: templates/manage_devices/input_configuration_form_base.html:7
+#: templates/manage_devices/input_configuration_form_base.html:10
+#: templates/manage_devices/meter_form.html:7
+#: templates/manage_devices/meter_form.html:10
+#: templates/manage_devices/meter_list.html:10
+#: templates/manage_devices/meter_list.html:11
+#: templates/manage_devices/production_form.html:7
+#: templates/manage_devices/production_form.html:9
+#: templates/manage_devices/pulseconversioninputperiod_form.html:6
+#: templates/manage_devices/pulseconversioninputperiod_form.html:9
+msgid "Settings: Devices"
+msgstr "Ajustes: Dispositivos"
+
+#: templates/manage_devices/agent_list.html:12
+#: templates/manage_devices/device_tabs.html:5
+msgid "Agents"
+msgstr "Agents"
+
+#: templates/manage_devices/agent_list.html:22
+#: templates/manage_devices/meter_list.html:23
+msgid "Location"
+msgstr "Localizaciones"
+
+#: templates/manage_devices/agent_list.html:23
+msgid "MAC"
+msgstr "MAC"
+
+#: templates/manage_devices/consumption_form.html:12
+msgid "Convert Impulses to Consumption"
+msgstr ""
+
+#: templates/manage_devices/device_tabs.html:4
+#: templates/manage_devices/meter_list.html:12
+msgid "Meters"
+msgstr "Medidores"
+
+#: templates/manage_devices/input_configuration_form_base.html:65
+msgid "Pulse Conversion"
+msgstr ""
+
+#: templates/manage_devices/input_configuration_form_base.html:72
+#: templates/manage_devices/meter_form.html:28
+msgid "Name:"
+msgstr "Nombre"
+
+#: templates/manage_devices/input_configuration_form_base.html:93
+msgid "Add another period"
+msgstr ""
+
+#: templates/manage_devices/input_configuration_form_base.html:96
+#: templates/manage_devices/input_configuration_form_base.html:111
+#: templates/manage_devices/meter_form.html:48
+#: templates/manage_devices/pulseconversioninputperiod_form.html:18
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/manage_devices/meter_block.html:14
+msgid "No name"
+msgstr ""
+
+#: templates/manage_devices/meter_block.html:22
+msgid "Agent:"
+msgstr "Agent:"
+
+#: templates/manage_devices/meter_block.html:24
+#: templates/manage_devices/meter_form.html:44
+msgid "ID:"
+msgstr "ID:"
+
+#: templates/manage_devices/meter_block.html:26
+msgid "Control mode:"
+msgstr "Modo de control:"
+
+#: templates/manage_devices/meter_block.html:30
+msgid "Relay state:"
+msgstr "Estado relé:"
+
+#: templates/manage_devices/meter_block.html:34
+msgid "Last measurement update:"
+msgstr "Última actualización en la medición:"
+
+#: templates/manage_devices/meter_block.html:38
+msgid "No data"
+msgstr ""
+
+#: templates/manage_devices/meter_form.html:38
+msgid "Relay enabled:"
+msgstr "Relé habilitado:"
+
+#: templates/manage_devices/meter_form.html:54
+msgid "Inputs:"
+msgstr "Entradas:"
+
+#: templates/manage_devices/meter_form.html:68
+#, fuzzy
+msgid "Pulse inputs:"
+msgstr "Entradas:"
+
+#: templates/manage_devices/meter_form.html:77
+msgid "Add Pulse Conversion"
+msgstr ""
+
+#: templates/manage_devices/meter_form.html:81
+msgid "Electricity"
+msgstr ""
+
+#: templates/manage_devices/meter_form.html:82
+msgid "Heat"
+msgstr ""
+
+#: templates/manage_devices/meter_form.html:83
+msgid "Gas"
+msgstr ""
+
+#: templates/manage_devices/meter_form.html:84
+msgid "Water"
+msgstr ""
+
+#: templates/manage_devices/meter_form.html:85
+msgid "Oil"
+msgstr ""
+
+#: templates/manage_devices/meter_form.html:103
+msgid "Pulse conversions:"
+msgstr ""
+
+#: templates/manage_devices/meter_list.html:22
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/manage_devices/production_form.html:12
+msgid "Convert Impulses to Production"
+msgstr ""
+
+#: templates/manage_devices/pulseconversioninputperiod_form.html:25
+msgid "From:"
+msgstr ""
+
+#: templates/manage_devices/pulseconversioninputperiod_form.html:30
+msgid "To:"
+msgstr ""
+
+#: templates/manage_devices/pulseconversioninputperiod_form.html:38
+msgid "Pulse quantity:"
+msgstr ""
+
+#: templates/manage_devices/pulseconversioninputperiod_form.html:43
+msgid "Output quantity:"
+msgstr ""
+
+#: templates/manage_devices/pulseconversioninputperiod_form.html:48
+msgid "Output unit:"
+msgstr ""
+
+#~ msgid "Connection type:"
+#~ msgstr "Tipo de Conexión:"
+
+#~ msgid "The meter has been saved"
+#~ msgstr "El medidor ha sido guardado"
+
+#~ msgid "The agent has been deleted"
+#~ msgstr "El agent ha sido borrado"
+
+#~ msgid "The meter has been deleted"
+#~ msgstr "El Medidor ha sido borrado"

@@ -1,0 +1,24 @@
+{% extends "list_page.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block page_id %}groups-page{% endblock %}
+{% block list_url %}{% url 'manage-groups-list-json' %}{% endblock %}
+{% block default_sort_by %}name{% endblock %}
+
+{% block title %}{% trans "Settings: Groups" %}{% endblock title %}
+{% block content_heading %}{% trans "Settings: Groups" %}{% endblock content_heading %}
+{% block list_title %}{% trans "Groups" %}{% endblock %}
+
+{% block add_button %}
+{% if user.is_customer_superuser or user.is_admin %}
+<a class="right add-group list-modifier" href="#" data-targeturl="{% url 'manage-groups-form'%}" data-targetlist="#model-list">
+  <span>{% trans "Add group" %}&nbsp;</span>
+  <img src="{% static 'images/add-icon.png' %}" alt="{% trans "Add group" %}">
+</a>
+{% endif %}
+{% endblock %}
+
+{% block sort_by %}
+<span class="sort" data-sort="name">{% trans "Name" %}</span>
+{% endblock %}

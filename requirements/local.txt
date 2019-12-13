@@ -1,0 +1,17 @@
+# Local development dependencies go here
+-r base.txt
+
+coverage==3.7.1  # a tool for measuring code coverage of Python programs
+django-debug-toolbar==1.2.1  # debug toolbar; show SQL, template context, ++
+django-debug-panel==0.8.0  # debug toolbar for non-HTML/AJAX requests
+mock==1.0.1  # backport of Python3.3 unittest.mock
+django-juno-testrunner==0.2.5
+pep8==1.5.7  # python convention check (used by flake8)
+pyflakes==0.8.1  # import/stuff check (used by flake8)
+mccabe==0.2.1  # McCabe complexity checker (used by flake8)
+flake8==2.2.2  # source code formatting/... check
+-e git+https://github.com/K0den/django-qunit.git@be8c2c49eee6ac8ddb966d2d6a6c3ff6bec39ab2#egg=django_qunit2
+sphinx==1.2.3 # reStructuredText documentation framework
+PyVirtualDisplay==0.1.2 # headless chrome testing
+selenium==2.39.0  # remote control browser for testing
+filemagic==1.6  # unix 'file' command functionality for testing mime types of generated files.

@@ -1,0 +1,675 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: tasks.py:56
+msgid "CO₂ (ton)"
+msgstr "CO₂ (ton)"
+
+#: templates/display_projects/annual_savings_potential_form.html:35
+#: templates/display_projects/index.html:38
+#: templates/display_projects/project_base.html:31
+#: templates/display_projects/project_base.html:64
+#: templates/display_projects/project_details.html:8
+#: templates/display_projects/project_form.html:65
+#: templates/display_projects/project_form.html:66
+msgid "Projects"
+msgstr "Projekter"
+
+#: templates/display_projects/annual_savings_potential_form.html:41
+#: templates/display_projects/index.html:54
+msgid "Annual Savings Potential Report"
+msgstr "Årligt Besparelsespotentiale-rapport"
+
+#: templates/display_projects/annual_savings_potential_form.html:56
+msgid "Download"
+msgstr "Hent"
+
+#: templates/display_projects/annual_savings_potential_form.html:57
+msgid "Cancel"
+msgstr "Annullér"
+
+#: templates/display_projects/annual_savings_potential_form.html:59
+msgid "Please stay on this page while your report is being generated"
+msgstr "Bliv venligst på denne side, mens rapporten genereres"
+
+#: templates/display_projects/index.html:43
+msgid "Overview"
+msgstr "Oversigt"
+
+#: templates/display_projects/index.html:48
+msgid "Add"
+msgstr "Tilføj"
+
+#: templates/display_projects/index.html:59
+msgid "Electricity Project"
+msgstr "Elektricitetsprojekt"
+
+#: templates/display_projects/index.html:64
+msgid "Gas Project"
+msgstr "Gasprojekt"
+
+#: templates/display_projects/index.html:69
+msgid "Water Project"
+msgstr "Vandprojekt"
+
+#: templates/display_projects/index.html:74
+msgid "Heat Project"
+msgstr "Fjernvarmeprojekt"
+
+#: templates/display_projects/index.html:79
+msgid "Oil Project"
+msgstr "Olieprojekt"
+
+#: templates/display_projects/index.html:88
+msgid "Active Projects"
+msgstr "Aktive Projekter"
+
+#: templates/display_projects/index.html:92
+#: templates/display_projects/index.html:120
+msgid "Name"
+msgstr "Navn"
+
+#: templates/display_projects/index.html:93
+#: templates/display_projects/index.html:121
+msgid "Duration"
+msgstr "Varighed"
+
+#: templates/display_projects/index.html:94
+#: templates/display_projects/index.html:122
+msgid "Report"
+msgstr "Rapport"
+
+#: templates/display_projects/index.html:116
+msgid "Done Projects"
+msgstr "Afsluttede Projekter"
+
+#: templates/display_projects/project_base.html:47
+msgid "Open"
+msgstr "Åbne"
+
+#: templates/display_projects/project_base.html:53
+msgid "Closed"
+msgstr "Lukkede"
+
+#: templates/display_projects/project_details.html:16
+msgid "Edit"
+msgstr "Rediger"
+
+#: templates/display_projects/project_details.html:22
+msgid "Yearly savings:"
+msgstr "Årlig besparelse:"
+
+#: templates/display_projects/project_details.html:31
+msgid "Before actions"
+msgstr "Før indsats"
+
+#: templates/display_projects/project_details.html:37
+msgid "After actions"
+msgstr "Efter indsats"
+
+#: templates/display_projects/project_form.html:72
+msgid "Edit Project"
+msgstr "Rediger Projekt"
+
+#: templates/display_projects/project_form.html:74
+#: templates/display_projects/project_form.html:366
+msgid "Create Project"
+msgstr "Opret Projekt"
+
+#: templates/display_projects/project_form.html:88
+msgid "months"
+msgstr "måneder"
+
+#: templates/display_projects/project_form.html:92
+msgid "Background"
+msgstr "Baggrund"
+
+#: templates/display_projects/project_form.html:110
+#: templates/display_projects/project_form.html:135
+#: templates/display_projects/project_form.html:220
+#: templates/display_projects/project_form.html:347
+msgid "Explanation:"
+msgstr "Forklaring:"
+
+#: templates/display_projects/project_form.html:115
+msgid "Expectations"
+msgstr "Forventninger"
+
+#: templates/display_projects/project_form.html:116
+msgid ""
+"Enter the estimated annual consumption and the expected savings. All savings "
+"and costs to be included."
+msgstr ""
+"Indtast det anslåede årlige forbrug, de årlige omkostninger og de forventede "
+"årlige besparelser. Alle årlige besparelser og alle årlige omkostninger skal "
+"inkluderes."
+
+#: templates/display_projects/project_form.html:141
+msgid "Actions"
+msgstr "Indsatser"
+
+#: templates/display_projects/project_form.html:149
+msgid "Investment Costs"
+msgstr "Investeringsomkostninger"
+
+#: templates/display_projects/project_form.html:150
+msgid ""
+"\n"
+"      <p>\n"
+"        To calculate the payback period correctly, investment costs should\n"
+"        be entered here.  These include the costs for Grid Manager\n"
+"        solution, installation, replacement of machinery, and so on.\n"
+"      </p>\n"
+"      <p>\n"
+"        Three kinds of investment costs can be entered:\n"
+"        <ul>\n"
+"          <li>\n"
+"        A simple investment where the total cost is just entered\n"
+"        in the cost column.\n"
+"          </li>\n"
+"          <li>\n"
+"        A finansed investment with monthly payment and interests\n"
+"        compounded every month where the initial principal of the loan\n"
+"        is entered in the cost column, the nominal annual rate is\n"
+"        entered in the interest rate column and the number of payments\n"
+"        is entered in the period column.\n"
+"          </li>\n"
+"          <li>\n"
+"        A leasing agreement with monthly payment and interests\n"
+"        compounded every month where the initial principal of the loan\n"
+"        is entered in the cost column, the nominal annual rate is\n"
+"        entered in the interest rate column, the number of payments is\n"
+"        entered in the period column and the scrap value is entered in\n"
+"        the scrap value column.\n"
+"          </li>\n"
+"      </p>\n"
+"      "
+msgstr ""
+"\n"
+"<p>For at beregne tilbagebetalingstiden korrekt, indtastes "
+"investeringsomkostninger her.  Disse inkluderer udgifter til GridManager-"
+"løsninger, installation, udskiftning af maskinel, og så videre.</p><p>Tre "
+"typer af investeringsomkostninger kan indtastes:<ul><li>En simpel "
+"investering hvor de totale omkostninger blåt indtastes i omkostningsfeltet</"
+"li>En finansieret investering med månedlig ydelse og månedlig "
+"rentetilskrivning, hvor lånets størrelse indtastes i omkostningsfeltet, den "
+"pålydende rente indtastes i rente-feltet, og antallet af ydelser indtastes i "
+"ydelsesantal-feltet.</li><li>En leasing-aftale med månedlig ydelse og "
+"månedlig rentetilskrivning, hvor leasing-aftalens beløbstørrelse indtastes i "
+"omkostningsfeltet, den pålydende rente indtastes i rente-feltet, antallet af "
+"ydelser indtastes i ydelsesantal-feltet og scrap-værdien indstastes i scrap-"
+"værdi-feltet.</li></ul></p>"
+
+#: templates/display_projects/project_form.html:183
+#: templates/display_projects/project_form.html:298
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: templates/display_projects/project_form.html:184
+msgid "Cost"
+msgstr "Omkostninger"
+
+#: templates/display_projects/project_form.html:185
+msgid "Period (Months)"
+msgstr "Varighed (måneder)"
+
+#: templates/display_projects/project_form.html:186
+msgid "Interest rate"
+msgstr "Rente"
+
+#: templates/display_projects/project_form.html:187
+#: templates/display_projects/report.tex:297
+msgid "Scrap value"
+msgstr "Restværdi"
+
+#: templates/display_projects/project_form.html:188
+#: templates/display_projects/project_form.html:307
+msgid "Delete"
+msgstr "Slet"
+
+#: templates/display_projects/project_form.html:217
+#: templates/display_projects/project_form.html:343
+msgid "Add another"
+msgstr "Tilføj"
+
+#: templates/display_projects/project_form.html:226
+msgid "Results"
+msgstr "Resultater"
+
+#: templates/display_projects/project_form.html:228
+msgid ""
+"\n"
+"    <p>\n"
+"        Results are documented by benchmarking measurements of a base-line "
+"period\n"
+"        with measurements of a result period.  Measurements for both "
+"periods\n"
+"        must be representable for a full year.\n"
+"    </p>\n"
+"\n"
+"    <p>\n"
+"    Including cost measured from these periods is optional.  If enabled,\n"
+"    the tariffs involved in the base-line period or in the results period\n"
+"    must also be representable for a full year.\n"
+"    </p>\n"
+"\n"
+"    <p>\n"
+"    For additional savings that cannot be measured this way see <a\n"
+"    href=\"#additional_savings\">additional savings</a> further down.\n"
+"    </p>\n"
+"        "
+msgstr ""
+"\n"
+"<p>Resultater dokumenteres ved at sammenligne målinger fra base-line-periode "
+"med målinger fra en resultat-periode.  Målinger fra begge periode skal være "
+"representative for hele året.</p><p>For yderligere besparelser der ikke kan "
+"måles på denne måde, se <a href=\"#additiontal_savings\">yderligere "
+"besparelser</a> længere nede.</p>"
+
+#: templates/display_projects/project_form.html:249
+msgid "Start of base-line period:"
+msgstr "Start for base-line-periode:"
+
+#: templates/display_projects/project_form.html:254
+msgid "End of base-line period:"
+msgstr "Afslutning for base-line-periode:"
+
+#: templates/display_projects/project_form.html:260
+msgid "Base-line measurement points:"
+msgstr "Base-line-målepunkter:"
+
+#: templates/display_projects/project_form.html:267
+msgid "Start of result period:"
+msgstr "Start for resultat-periode:"
+
+#: templates/display_projects/project_form.html:272
+msgid "End of result period:"
+msgstr "Afslutning for resultat-periode:"
+
+#: templates/display_projects/project_form.html:278
+msgid "Result measurement points:"
+msgstr "Resultat-målepunkter:"
+
+#: templates/display_projects/project_form.html:292
+msgid "Additional Savings"
+msgstr "Yderligere Besparelser"
+
+#: templates/display_projects/project_form.html:294
+msgid ""
+"If the project has an impact on other processes leading to additional "
+"savings, they can be entered here. In the case of negative impact a negative "
+"value is entered. All values must be annual."
+msgstr ""
+"Hvis projektet påvirker andre processer og der derved opnås yderligere "
+"besparelser, så kan de indtastes her. I tilfælde af en negativ påvirkning "
+"indføres der negative tal. Tallene er på årsbasis."
+
+#: templates/display_projects/project_form.html:299
+msgid "Before (kWh)"
+msgstr "Før (kWh)"
+
+#: templates/display_projects/project_form.html:300
+msgid "After (kWh)"
+msgstr "Efter (kWh)"
+
+#: templates/display_projects/project_form.html:301
+#: templates/display_projects/report.tex:211
+#: templates/display_projects/report.tex:213
+#: templates/display_projects/report.tex:215
+#: templates/display_projects/report.tex:243
+#: templates/display_projects/report.tex:245
+#: templates/display_projects/report.tex:247
+msgid "Before"
+msgstr "Før"
+
+#: templates/display_projects/project_form.html:302
+#: templates/display_projects/report.tex:211
+#: templates/display_projects/report.tex:213
+#: templates/display_projects/report.tex:215
+#: templates/display_projects/report.tex:243
+#: templates/display_projects/report.tex:245
+#: templates/display_projects/report.tex:247
+msgid "After"
+msgstr "Efter"
+
+#: templates/display_projects/project_form.html:304
+msgid "Before CO2 (ton)"
+msgstr "Før CO₂ (ton)"
+
+#: templates/display_projects/project_form.html:305
+msgid "After CO2 (ton)"
+msgstr "Efter CO₂ (ton)"
+
+#: templates/display_projects/project_form.html:353
+msgid "Additional Comments"
+msgstr "Yderligere Kommentarer"
+
+#: templates/display_projects/project_form.html:362
+msgid "Save Project"
+msgstr "Gem Projekt"
+
+#: templates/display_projects/project_form.html:364
+msgid "Delete Project"
+msgstr "Slet Projekt"
+
+#: templates/display_projects/project_form.html:364
+msgid "Are you sure you want to delete the project?"
+msgstr "Er du sikker på at du ønsker at slette dette projekt?"
+
+#: templates/display_projects/report.tex:46
+msgid "Annual Savings Overview"
+msgstr "Overblik over årlig besparelse"
+
+#: templates/display_projects/report.tex:55
+msgid ""
+"Currencies used in one or more measured costs calculations are different "
+"from that of this project.  As a result, all measured costs are left out."
+msgstr ""
+"Mønfoden anvendt de forskellige omkostningsberegningerne er forskellige fra "
+"møntfoden for dette projekt. Som resultat heraf eromkostberegningerne ikke "
+"medtaget"
+
+#: templates/display_projects/report.tex:65
+msgid "Yearly"
+msgstr "Årlig"
+
+#: templates/display_projects/report.tex:68
+msgid "Before savings effort, "
+msgstr "Før besparelsesindsats, "
+
+#: templates/display_projects/report.tex:69
+msgid "After savings effort, "
+msgstr "Efter besparelsesindsats, "
+
+#: templates/display_projects/report.tex:72
+msgid "Estimated calculations"
+msgstr "Anslået årligt forbrug"
+
+#: templates/display_projects/report.tex:111
+msgid "Project duration"
+msgstr "Projektvarighed"
+
+#: templates/display_projects/report.tex:112
+#, python-format
+msgid ""
+"\n"
+"%(months)s month\n"
+msgid_plural ""
+"\n"
+"%(months)s months\n"
+msgstr[0] ""
+"\n"
+"%(months)s måned\n"
+msgstr[1] ""
+"\n"
+"%(months)s måneder\n"
+
+#: templates/display_projects/report.tex:119
+msgid "Activity duration"
+msgstr "Aktivitetsvarighed"
+
+#: templates/display_projects/report.tex:126
+msgid "Baseline"
+msgstr "Baseline"
+
+#: templates/display_projects/report.tex:133
+msgid "Result"
+msgstr "Resultat"
+
+#: templates/display_projects/report.tex:144
+msgid "Project Description"
+msgstr "Projektbeskrivelse"
+
+#: templates/display_projects/report.tex:147
+msgid "Background:"
+msgstr "Baggrund:"
+
+#: templates/display_projects/report.tex:149
+msgid "Expectations:"
+msgstr "Forventninger:"
+
+#: templates/display_projects/report.tex:151
+msgid "Actions:"
+msgstr "Indsatser:"
+
+#: templates/display_projects/report.tex:153
+msgid "Result:"
+msgstr "Resultat:"
+
+#: templates/display_projects/report.tex:155
+msgid "Comments:"
+msgstr "Kommentarer:"
+
+#: templates/display_projects/report.tex:161
+msgid "Goal"
+msgstr "Mål"
+
+#: templates/display_projects/report.tex:163
+#, python-format
+msgid "Project as a whole, %(months)s months."
+msgstr "Projektet som helhed, %(months)s måneder."
+
+#: templates/display_projects/report.tex:174
+msgid "Expected savings"
+msgstr "Forventet besparelse"
+
+#: templates/display_projects/report.tex:182
+msgid "Achieved savings"
+msgstr "Opnået besparelse"
+
+#: templates/display_projects/report.tex:184
+#, python-format
+msgid "Difference, %%"
+msgstr "Difference, %%"
+
+#: templates/display_projects/report.tex:197
+msgid "Annual Measured Savings"
+msgstr "Målte årlige besparelser"
+
+#: templates/display_projects/report.tex:211
+#: templates/display_projects/report.tex:213
+#: templates/display_projects/report.tex:215
+#: templates/display_projects/report.tex:243
+#: templates/display_projects/report.tex:245
+#: templates/display_projects/report.tex:247
+msgctxt "project saving"
+msgid "Saved"
+msgstr "Sparet"
+
+#: templates/display_projects/report.tex:228
+msgid "Annual Additional Savings"
+msgstr "Årlige tillægsbesparelser"
+
+#: templates/display_projects/report.tex:242
+msgid "kWh"
+msgstr "kWh"
+
+#: templates/display_projects/report.tex:262
+msgid "Total"
+msgstr "Total"
+
+#: templates/display_projects/report.tex:286
+msgid "Project Costs"
+msgstr "Projektomkostninger"
+
+#: templates/display_projects/report.tex:297
+msgid "Investment"
+msgstr "Investering"
+
+#: templates/display_projects/report.tex:297
+msgid "Period"
+msgstr "Periode"
+
+#: templates/display_projects/report.tex:297
+msgid "Interest"
+msgstr "Rente"
+
+#: templates/display_projects/report.tex:307
+msgid "Monthly payment"
+msgstr "Månedlig ydelse"
+
+#: templates/display_projects/report.tex:309
+msgid "Annual payment"
+msgstr "Årlig ydelse"
+
+#: templates/display_projects/report.tex:317
+msgid "Consumption Graphs"
+msgstr "Forbrugsgrafer"
+
+#: templates/display_projects/report.tex:329
+msgid "Rate Graphs"
+msgstr "Rategrafer"
+
+#~ msgid "Stage 1"
+#~ msgstr "Stadie 1"
+
+#~ msgid "Stage 2"
+#~ msgstr "Stadie 2"
+
+#~ msgid ""
+#~ "Measurementpoints currencies are not                            "
+#~ "compatible with project currency"
+#~ msgstr "Målepunkternes møntfod er inkompatible med projektets møntfod"
+
+#~ msgid "Stage 1 from time must be lesser than to time"
+#~ msgstr "Stadie 1 fra tid skal være mindre en til tid "
+
+#~ msgid "Stage 2 from time must be lesser than to time"
+#~ msgstr "Stadie 2 fra tid skal være mindre end til tid"
+
+#~ msgid "You must set currency if you add additional costs"
+#~ msgstr "Møntfod skal være valgt når yderligere omkostninger tilføjes"
+
+#~ msgid "Active Stages"
+#~ msgstr "Aktive Stadier"
+
+#~ msgid ""
+#~ "Currency must be specified when \"Include                             "
+#~ "calculated cost\" is selected"
+#~ msgstr "Møntfod skal vælges når \"Inkludér målte omkostninger\" er valgt"
+
+#~ msgid ""
+#~ "The measurement points must have the same                         data "
+#~ "origin as the project"
+#~ msgstr "Målepunkterne skal have samme dataafstamning som projektet"
+
+#~ msgid "Add project"
+#~ msgstr "Tilføj projekt"
+
+#~ msgid "Name:"
+#~ msgstr "Navn:"
+
+#~ msgid "The entire activity duration (Months):"
+#~ msgstr "Projektets varighed (måneder):"
+
+#~ msgid "Currency:"
+#~ msgstr "Møntfod"
+
+#~ msgid "Supplements to annual savings"
+#~ msgstr "Tillæg til årlige besparelser"
+
+#~ msgid "Costs"
+#~ msgstr "Omkostninger"
+
+#~ msgid ""
+#~ "Enter the cost of the project. Eg. costs for Grid Manager solution, "
+#~ "installation, replacement of machinery, etc.."
+#~ msgstr ""
+#~ "Indtast omkostningerne ifm. projektet. For eksempel omkostningerne til "
+#~ "GridManager-løsningen, installation, udskiftning af maskiner, osv."
+
+#~ msgid "CO2 (ton)"
+#~ msgstr "CO₂ (ton)"
+
+#~ msgid "Estimated consumption"
+#~ msgstr "Anslået årligt forbrug"
+
+#~ msgid "Include measured costs:"
+#~ msgstr "Inkludér målte omkostninger:"
+
+#~ msgid "Data origin:"
+#~ msgstr "Dataafstamning:"
+
+#~ msgid "From:"
+#~ msgstr "Fra:"
+
+#~ msgid "To:"
+#~ msgstr "Til:"
+
+#~ msgid "Save"
+#~ msgstr "Gem"
+
+#~ msgid "Create"
+#~ msgstr "Opret"
+
+# work-around for Django bug.
+#~ msgid "Interest rate (%)"
+#~ msgstr "Rente (%)"
+
+#~ msgid "Savings"
+#~ msgstr "Besparelser"
+
+#~ msgid "Rest"
+#~ msgstr "Rest"
+
+#~ msgid "No savings"
+#~ msgstr "Ingen besparelse"
+
+#~ msgid "Total Savings"
+#~ msgstr "Totale besparelser"
+
+#~ msgid "Measured"
+#~ msgstr "Målt"
+
+#~ msgid "Annual (estimated)"
+#~ msgstr "Årligt (estimeret)"
+
+#~ msgid "Extra"
+#~ msgstr "Ekstra"
+
+#~ msgid "Expected"
+#~ msgstr "Forventet"
+
+#~ msgid "Achieved"
+#~ msgstr "Opnået"
+
+#~ msgid "Difference"
+#~ msgstr "Difference"
+
+#~ msgid "Runtime"
+#~ msgstr "Løbetid"
+
+#~ msgid "Added by:"
+#~ msgstr "Oprettet af:"
+
+#~ msgid "Sum, year"
+#~ msgstr "Sum, år"
+
+#~ msgid "No stage 1 data"
+#~ msgstr "Ingen stadie 1 data"
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid "Duration: "
+#~ msgstr "Varighed: "
+
+#~ msgid "Energy saved:"
+#~ msgstr "Energibesparelse:"

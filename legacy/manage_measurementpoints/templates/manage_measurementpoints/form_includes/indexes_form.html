@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<div>
+  <fieldset>
+      <h6>{% trans "Indexes:" %}</h6>
+      <p>{% trans "Select one or more indexes to calculate the utilization of resources" %}</p>
+      <label>{% trans "Area:" %}</label>
+      {{ form.area}}
+      {{ form.area.errors }}
+      <label>{% trans "Employees:" %}</label>
+      {{ form.employees}}
+      {{ form.employees.errors }}
+      <label>{% trans "CO₂:" %}</label>
+      {{ form.co2 }}
+      {{ form.co2.errors }}
+    </fieldset>
+</div>

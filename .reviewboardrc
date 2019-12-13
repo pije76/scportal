@@ -1,0 +1,2 @@
+REVIEWBOARD_URL = 'http://reviewboard.gridmanager.dk/'
+REPOSITORY = 'GridPlatform'

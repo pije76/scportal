@@ -1,0 +1,36 @@
+{% load l10n %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+{{ period_form.id|unlocalize }}
+{{ period_form.index }}
+<fieldset>
+  <label>{% trans 'From date:' %}</label>
+  {{ period_form.from_date|add_class:"date" }}
+  {{ period_form.from_date.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Other index:' %}</label>
+  {{ period_form.other_index }}
+  {{ period_form.other_index.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Coefficient:' %}</label>
+  {{ period_form.coefficient }}
+  {{ period_form.coefficient.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Constant:' %}</label>
+  {{ period_form.constant }}
+  {{ period_form.constant.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Roof:' %}</label>
+  {{ period_form.roof }}
+  {{ period_form.roof.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Delete:' %}</label>
+  {{ period_form.DELETE }}
+</fieldset>
+{{ period_form.non_field_errors }}

@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:45
+msgid "main consumption"
+msgstr "hovedforbrug"
+
+#: models.py:50
+msgid "CO₂ conversion"
+msgstr "CO₂-konvertering"
+
+#: models.py:51
+msgid "CO₂ conversions"
+msgstr "CO₂-konverteringer"
+
+#: models.py:72 models.py:80
+msgid "Timestamp must be in five-minute resolution."
+msgstr "Tidspunkt skal passe med fem-minutters-intervaller."
+
+#: models.py:106
+msgid "data source"
+msgstr "datakilde"
+
+#: models.py:109
+msgid "dynamic CO₂ conversion"
+msgstr "dynamisk CO₂-konvertering"
+
+#: models.py:110
+msgid "dynamic CO₂ conversions"
+msgstr "dynamisk CO₂-konverteringer"
+
+#: models.py:120
+msgid "Invalid data source for utility unit of main consumption."
+msgstr "Ugyldig datakilde for hovedforbrugets forsyningsenhed."
+
+#: models.py:140
+msgid "value"
+msgstr "værdi"
+
+#: models.py:141
+msgid "unit"
+msgstr "enhed"
+
+#: models.py:146
+msgid "fixed CO₂ conversion"
+msgstr "fast CO₂-konvertering"
+
+#: models.py:147
+msgid "fixed CO₂ conversions"
+msgstr "faste CO₂-konverteringer"
+
+#: models.py:156
+msgid "Invalid unit for utility unit of main consumption."
+msgstr "Ugyldig enhed for hovedforbrugets forsyningsenhed."

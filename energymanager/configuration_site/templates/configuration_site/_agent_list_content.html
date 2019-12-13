@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load utils %}
+
+{% if object_list %}
+<table class="table table-striped table-bordered sorted" data-provides="rowlink">
+  <thead>
+    <th class="sorting" data-orderby="name_plain">{% trans "Mac" %}</th>
+    <th class="sorting" data-orderby="unit">{% trans "Location" %}</th>
+  </thead>
+  <tbody>
+    {% for object in object_list %}
+    <tr>
+      <td>
+        <a href="{% url "configuration_site:agent-update" customer_id=customer.id pk=object.id %}">{{ object.mac }}</a>
+      </td>
+      <td>{{ object.location }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include "bootstrap/_pagination.html" %}
+{% else %}
+<span>{% trans "No agents present." %}</span>
+{% endif %}

@@ -1,0 +1,28 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix" data-url="{% url 'setup_agents-form' pk=agent.id %}">
+  <h3>{{ agent.mac }}</h3>
+  <dl>
+    <dt>{% trans "Customer:" %}</dt>
+    <dd>{{ agent.customer }}</dd>
+    {% trans "Online,Offline" as online_offline %}
+    <dt>{% trans "Connection state:" %}</dt>
+    <dd>{{ agent.online|yesno:online_offline }}</dd>
+    <dt>{% trans "Device type:" %}</dt>
+    <dd>{{ agent.get_device_type_display }}</dd>
+    <dt>{% trans "Hardware version:" %}</dt>
+    <dd>{{ agent.get_hw_version_display|default_if_none:'-' }}</dd>
+    <dt>{% trans "Software version:" %}</dt>
+    <dd>{{ agent.get_sw_version_display|default_if_none:'-' }}</dd>
+  </dl>
+  <span class="right">
+    <a class="open" href="#">
+      <img src="{% static 'images/arrow-left.png' %}" alt="{% trans "Edit" %}">
+    </a>
+  </span>
+</div>
+{% endspaceless %}
+

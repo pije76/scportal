@@ -1,0 +1,4426 @@
+[
+{
+  "pk": 1,
+  "model": "providers.provider",
+  "fields": {
+    "encryption_data_initialization_vector": "AAAAAAAAAAAAAAAAAAAAAA==\n",
+    "name": ""
+  }
+},
+{
+  "pk": 68246232,
+  "model": "customers.customer",
+  "fields": {
+    "provider": 1,
+    "created": "2000-01-01T00:00:00.000Z",
+    "modified": "2000-01-01T00:00:00.000Z",
+    "water_instantaneous": "meter*meter*meter*hour^-1",
+    "postal_code": "1234",
+    "country_code": "dnk",
+    "timezone": "Europe/Copenhagen",
+    "contact_name": "",
+    "water_consumption": "meter*meter*meter",
+    "heat_instantaneous": "watt",
+    "city": "city",
+    "temperature": "celsius",
+    "heat_consumption": "kilowatt*hour",
+    "electricity_consumption": "kilowatt*hour",
+    "contact_phone": "",
+    "vat": "4242",
+    "electricity_instantaneous": "watt",
+    "phone": "12341234",
+    "gas_consumption": "meter*meter*meter",
+    "address": "address",
+    "gas_instantaneous": "liter*second^-1",
+    "name": "test customer",
+    "currency_unit": "currency_dkk",
+    "encryption_data_initialization_vector": "",
+    "contact_email": ""
+  }
+},
+{
+  "pk": 1,
+  "model": "customers.collection",
+  "fields": {
+    "customer": 68246232,
+    "rght": 10,
+    "relay": null,
+    "billing_meter_number": "",
+    "parent": null,
+    "lft": 1,
+    "gauge_preferred_unit": null,
+    "level": 0,
+    "encryption_data_initialization_vector": "6dvB9ysTFCv7tm/Fl0TI3A==\n",
+    "gauge_upper_threshold": null,
+    "subclass": [
+      "customers",
+      "collection"
+    ],
+    "billing_installation_number": "",
+    "gauge_min": "0.00",
+    "gauge_lower_threshold": null,
+    "hidden_on_details_page": false,
+    "hidden_on_reports_page": false,
+    "role": 0,
+    "gauge_colours": null,
+    "tree_id": 1,
+    "gauge_max": null,
+    "utility_type": 0,
+    "name": "plY6UyA=\n"
+  }
+},
+{
+  "pk": 2,
+  "model": "customers.collection",
+  "fields": {
+    "customer": 68246232,
+    "rght": 4,
+    "relay": null,
+    "billing_meter_number": "",
+    "parent": null,
+    "lft": 1,
+    "gauge_preferred_unit": null,
+    "level": 0,
+    "encryption_data_initialization_vector": "kS36oKbtdtL95jKhJvBhIw==\n",
+    "gauge_upper_threshold": null,
+    "subclass": [
+      "customers",
+      "collection"
+    ],
+    "billing_installation_number": "",
+    "gauge_min": "0.00",
+    "gauge_lower_threshold": null,
+    "hidden_on_details_page": false,
+    "hidden_on_reports_page": false,
+    "role": 0,
+    "gauge_colours": null,
+    "tree_id": 2,
+    "gauge_max": null,
+    "utility_type": 0,
+    "name": "jwTQhEE=\n"
+  }
+},
+{
+  "pk": 3,
+  "model": "customers.collection",
+  "fields": {
+    "customer": 68246232,
+    "rght": 3,
+    "relay": null,
+    "billing_meter_number": "",
+    "parent": 2,
+    "lft": 2,
+    "gauge_preferred_unit": null,
+    "level": 1,
+    "encryption_data_initialization_vector": "+5T2T4OOv4jJoD9pqvMduA==\n",
+    "gauge_upper_threshold": null,
+    "subclass": [
+      "customers",
+      "collection"
+    ],
+    "billing_installation_number": "",
+    "gauge_min": "0.00",
+    "gauge_lower_threshold": null,
+    "hidden_on_details_page": false,
+    "hidden_on_reports_page": false,
+    "role": 0,
+    "gauge_colours": null,
+    "tree_id": 2,
+    "gauge_max": null,
+    "utility_type": 0,
+    "name": "ITDbS90=\n"
+  }
+},
+{
+  "pk": 4,
+  "model": "customers.collection",
+  "fields": {
+    "customer": 68246232,
+    "rght": 3,
+    "relay": 3,
+    "billing_meter_number": "",
+    "parent": 1,
+    "lft": 2,
+    "gauge_preferred_unit": null,
+    "level": 1,
+    "encryption_data_initialization_vector": "3TxkyVQYDNwvYXVFqgWu9g==\n",
+    "gauge_upper_threshold": null,
+    "subclass": [
+      "customers",
+      "consumptionmeasurementpoint"
+    ],
+    "billing_installation_number": "",
+    "gauge_min": "0.00",
+    "gauge_lower_threshold": null,
+    "hidden_on_details_page": false,
+    "hidden_on_reports_page": false,
+    "role": 250,
+    "gauge_colours": null,
+    "tree_id": 1,
+    "gauge_max": null,
+    "utility_type": 1,
+    "name": "fmoIP2QakZU=\n"
+  }
+},
+{
+  "pk": 5,
+  "model": "customers.collection",
+  "fields": {
+    "customer": 68246232,
+    "rght": 5,
+    "relay": null,
+    "billing_meter_number": "",
+    "parent": 1,
+    "lft": 4,
+    "gauge_preferred_unit": null,
+    "level": 1,
+    "encryption_data_initialization_vector": "r6yPETEihDalQiWmPPUOIw==\n",
+    "gauge_upper_threshold": null,
+    "subclass": [
+      "customers",
+      "consumptionmeasurementpoint"
+    ],
+    "billing_installation_number": "",
+    "gauge_min": "0.00",
+    "gauge_lower_threshold": null,
+    "hidden_on_details_page": false,
+    "hidden_on_reports_page": false,
+    "role": 250,
+    "gauge_colours": null,
+    "tree_id": 1,
+    "gauge_max": null,
+    "utility_type": 1,
+    "name": "OSKNIh+5+1LabQ==\n"
+  }
+},
+{
+  "pk": 6,
+  "model": "customers.collection",
+  "fields": {
+    "customer": 68246232,
+    "rght": 7,
+    "relay": null,
+    "billing_meter_number": "",
+    "parent": 1,
+    "lft": 6,
+    "gauge_preferred_unit": null,
+    "level": 1,
+    "encryption_data_initialization_vector": "vCFKEqyKcbOT1ExxRLG9HQ==\n",
+    "gauge_upper_threshold": null,
+    "subclass": [
+      "customers",
+      "consumptionmeasurementpoint"
+    ],
+    "billing_installation_number": "",
+    "gauge_min": "0.00",
+    "gauge_lower_threshold": null,
+    "hidden_on_details_page": false,
+    "hidden_on_reports_page": false,
+    "role": 250,
+    "gauge_colours": null,
+    "tree_id": 1,
+    "gauge_max": null,
+    "utility_type": 2,
+    "name": "1qea1HASfr2rK9GnrXvc\n"
+  }
+},
+{
+  "pk": 7,
+  "model": "customers.collection",
+  "fields": {
+    "customer": 68246232,
+    "rght": 9,
+    "relay": null,
+    "billing_meter_number": "",
+    "parent": 1,
+    "lft": 8,
+    "gauge_preferred_unit": null,
+    "level": 1,
+    "encryption_data_initialization_vector": "k8wQY/+bIOb+et9O5peCLg==\n",
+    "gauge_upper_threshold": null,
+    "subclass": [
+      "customers",
+      "temperaturemeasurementpoint"
+    ],
+    "billing_installation_number": "",
+    "gauge_min": "0.00",
+    "gauge_lower_threshold": null,
+    "hidden_on_details_page": false,
+    "hidden_on_reports_page": false,
+    "role": 204,
+    "gauge_colours": null,
+    "tree_id": 1,
+    "gauge_max": null,
+    "utility_type": 0,
+    "name": "tlLzXUuTaRRL4LowRUdzgL917g==\n"
+  }
+},
+{
+  "pk": 1,
+  "model": "customers.location",
+  "fields": {
+    "customer": 68246232,
+    "rght": 2,
+    "name": "xGP0MFqH/QlCk9tHgQ==\n",
+    "parent": null,
+    "level": 0,
+    "encryption_data_initialization_vector": "Lpva/ivp7U1Sb/w6mv5GQg==\n",
+    "lft": 1,
+    "tree_id": 1
+  }
+},
+{
+  "pk": 1,
+  "model": "auth.user",
+  "fields": {
+    "username": "WNPS3VFY7RNCjtNftkTpdaH6it0=",
+    "first_name": "",
+    "last_name": "",
+    "is_superuser": true,
+    "is_staff": true,
+    "last_login": "2013-07-03T17:10:25.516Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$10000$JLMoPkP3QZSo$GlUGgVzSHzM7cOpvnYw9QX38/pRlCd2SNWB16Cmapq8=",
+    "email": "",
+    "date_joined": "2013-07-03T17:05:12.928Z"
+  }
+},
+{
+  "pk": 2,
+  "model": "auth.user",
+  "fields": {
+    "username": "gCHqRpl1qOLrjv/vIGIPqZX9B7o=",
+    "first_name": "",
+    "last_name": "",
+    "is_superuser": true,
+    "is_staff": false,
+    "last_login": "2013-07-03T17:09:56.566Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$10000$JLCnPkzjIAwr$A7lSR5aRgS3zgrzPFHzn91EkRsmsMexajm5pOpafouY=",
+    "email": "",
+    "date_joined": "2013-07-03T17:05:14.196Z"
+  }
+},
+{
+  "pk": 3,
+  "model": "auth.user",
+  "fields": {
+    "username": "MMAedSQ6upoBM/cNLxjtFw4LPW8=",
+    "first_name": "",
+    "last_name": "",
+    "is_superuser": false,
+    "is_staff": false,
+    "last_login": "2013-07-03T17:05:15.462Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$10000$DB9dKD2uiMAi$1MZrx1Srf+Kc4YyhXQcLCWF+bnUgvcpLSJobxtJNmz0=",
+    "email": "",
+    "date_joined": "2013-07-03T17:05:15.462Z"
+  }
+},
+{
+  "pk": 1,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "WNPS3VFY7RNCjtNftkTpdaH6it0="
+    ],
+    "content_type": [
+      "users",
+      "user"
+    ],
+    "key": "cHCIvieYLAfVC1geX1ncu1TtepxCJA7BWS17gvW8Vr5f8u7A5vD4DLnY/ZILACVvOSjv9bTwalqu\nqWb+AR9t2kISbv9K4Tumr9Z/j8H1Q8sspFPy5Zc4iQedCww2nZwGmc0pEmTx3oDdkvArGSE9xuiZ\nd2FNU2Xi9oyGufoSTlY=\n",
+    "object_id": 1
+  }
+},
+{
+  "pk": 2,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "gCHqRpl1qOLrjv/vIGIPqZX9B7o="
+    ],
+    "content_type": [
+      "users",
+      "user"
+    ],
+    "key": "jTVLlFIegudtsSpjxnfVWbU33b2JNGzCEpaq5KIDx3aYiw2/Y9h/Y5v9DO+nuwrbRT9whCvSeHD5\nn7gRQ/lGHEKl/OYWZlFPDKZtH2cMSOsJ2uMtsF2SGejE85m+aNhjKV3CS0AtlV98fnnRaldoKNiI\nI+rTmUu8Rr6t0sj1xbA=\n",
+    "object_id": 2
+  }
+},
+{
+  "pk": 3,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "WNPS3VFY7RNCjtNftkTpdaH6it0="
+    ],
+    "content_type": [
+      "users",
+      "user"
+    ],
+    "key": "SbtcGPNiLO+Aqu5nQjdb1lOB73+nGtBQG90WapPf3xnKor4EdAhbg9tVqcLn4pvucnB76Joupegw\n2W65kZWe3hZViE4V3yWQ4N1GTxrC6dNXLMteeiKsdXeqd//eoP0OdsKBNuwIGcInpP5wwSV4ZJMf\noUr2ypgT0XHUx4J6EvE=\n",
+    "object_id": 2
+  }
+},
+{
+  "pk": 4,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "MMAedSQ6upoBM/cNLxjtFw4LPW8="
+    ],
+    "content_type": [
+      "users",
+      "user"
+    ],
+    "key": "cHSUEW3xlMxzHRRV+mH7wWndTMpPURgvYN83aA4f2MBKZfTr21XjS39c8la/aoYl+JF49vhP2a3R\nr+Yrk3w4BGvQgt7ASgCbUXO7EqJj8LZ6nq06BzoCINCazWARzfjSdIqHJhqUO04CGVTVNPk1B/gL\nZkmWE07dXJPZD8Z8LdU=\n",
+    "object_id": 3
+  }
+},
+{
+  "pk": 5,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "WNPS3VFY7RNCjtNftkTpdaH6it0="
+    ],
+    "content_type": [
+      "users",
+      "user"
+    ],
+    "key": "A5AgYkgrwe/UzUXYyhx1CIWX3QljJEq3zQqJxcEwSNpdStCLRH19C78jrxo0rDMBhUtAhe+FEfoQ\n1RFYS/yFwqmpvayGXNAe16hEuBRQTVw/ol3X9SpLmfW8FMafvI/DooH+gvo+cEkCOrFDbXyf++iG\nXySjB8yVuCL+Y5IBlUg=\n",
+    "object_id": 3
+  }
+},
+{
+  "pk": 6,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "WNPS3VFY7RNCjtNftkTpdaH6it0="
+    ],
+    "content_type": [
+      "customers",
+      "customer"
+    ],
+    "key": "moZ9ncthkiJmfnF0Z32SJ25/HSeGe8ejZ9NfTNJlt3CBYKTkN44Sp92yUhS6vHduyuX/3i9PAGob\nvMCLIkslu2nZnyc0b1s+CAG//Qpj+9LMzvmXrwSbKOKMztuvpenWje/4nugLOolxzP6wqliPky1l\nv8PSmQz5/kzxz0VQLlo=\n",
+    "object_id": 68246232
+  }
+},
+{
+  "pk": 7,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "gCHqRpl1qOLrjv/vIGIPqZX9B7o="
+    ],
+    "content_type": [
+      "customers",
+      "customer"
+    ],
+    "key": "W1kVPd3o5Y32zJCdIls0VtLz+fGIzxPnUlpHL2QOKUG4bpuJdv8F/C84FtIpHZHZ7iX84Ret8D2V\n4iMX48D4Ob531mpsmuw83gz+n/GY3gnec6LdqZkcf9mw10vAJB8Q20QP/2l1t1afBIQGD1BvhGHQ\nmgVtoOHLapBMe/YxPd4=\n",
+    "object_id": 68246232
+  }
+},
+{
+  "pk": 8,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "MMAedSQ6upoBM/cNLxjtFw4LPW8="
+    ],
+    "content_type": [
+      "customers",
+      "customer"
+    ],
+    "key": "aoEYYpM2EyPRymJg7ddRUDP4FBR2u0xe25lRoUVvZk2ALVy1UmDxAAC6PawETjeU+4tarPAP25L3\nXSTY6ly/jMmVsDVq4aO+or5mj8ikdzAq6n33Cc2drMz9rzxjvEW0g2RoRw5MQBpbT+VBi+YuvAC3\nme4YnBp6RywtoyPC2Fs=\n",
+    "object_id": 68246232
+  }
+},
+{
+  "pk": 9,
+  "model": "encryption.encryptionkey",
+  "fields": {
+    "user": [
+      "gCHqRpl1qOLrjv/vIGIPqZX9B7o="
+    ],
+    "content_type": [
+      "users",
+      "user"
+    ],
+    "key": "R1b/xqaXz2P22aCOcSiz6wzjPDxDrGn/lq9ZizXaV1VLl74GS+yIC2VMKn1QSPU4l3p+KcVSFrnt\nVX/GNveNUZOHc3wGShu+G0XsyLjQueMoHj5wlWuZ4TIOmPTaUQBynIn6LPXbMsA3Cb1LwWlNyifJ\nvmClqfjS301SlSKpuQk=\n",
+    "object_id": 3
+  }
+},
+{
+  "pk": 1,
+  "model": "measurementpoints.graph",
+  "fields": {
+    "hidden": false,
+    "role": 0,
+    "collection": 4
+  }
+},
+{
+  "pk": 2,
+  "model": "measurementpoints.graph",
+  "fields": {
+    "hidden": false,
+    "role": 1,
+    "collection": 4
+  }
+},
+{
+  "pk": 3,
+  "model": "measurementpoints.graph",
+  "fields": {
+    "hidden": false,
+    "role": 0,
+    "collection": 5
+  }
+},
+{
+  "pk": 4,
+  "model": "measurementpoints.graph",
+  "fields": {
+    "hidden": false,
+    "role": 1,
+    "collection": 5
+  }
+},
+{
+  "pk": 5,
+  "model": "measurementpoints.graph",
+  "fields": {
+    "hidden": false,
+    "role": 0,
+    "collection": 6
+  }
+},
+{
+  "pk": 6,
+  "model": "measurementpoints.graph",
+  "fields": {
+    "hidden": false,
+    "role": 1,
+    "collection": 6
+  }
+},
+{
+  "pk": 7,
+  "model": "measurementpoints.graph",
+  "fields": {
+    "hidden": false,
+    "role": 19,
+    "collection": 7
+  }
+},
+{
+  "pk": 1,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": null,
+    "graph": null,
+    "subclass": [
+      "indexes",
+      "index"
+    ],
+    "role": 14,
+    "utility_type": 0,
+    "unit": "currency_dkk*megawatt^-1*hour^-1"
+  }
+},
+{
+  "pk": 2,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": null,
+    "graph": null,
+    "subclass": [
+      "indexes",
+      "index"
+    ],
+    "role": 14,
+    "utility_type": 0,
+    "unit": "currency_dkk*megawatt^-1*hour^-1"
+  }
+},
+{
+  "pk": 3,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": null,
+    "graph": null,
+    "subclass": [
+      "indexes",
+      "standardmonthindex"
+    ],
+    "role": 20,
+    "utility_type": 2,
+    "unit": "kelvin*day"
+  }
+},
+{
+  "pk": 4,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": null,
+    "graph": null,
+    "subclass": [
+      "indexes",
+      "index"
+    ],
+    "role": 105,
+    "utility_type": 0,
+    "unit": "gram*kilowatt^-1*hour^-1"
+  }
+},
+{
+  "pk": 6,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": 68246232,
+    "graph": 2,
+    "subclass": [
+      "measurementpoints",
+      "rateconversion"
+    ],
+    "role": 1,
+    "utility_type": 1,
+    "unit": "milliwatt"
+  }
+},
+{
+  "pk": 8,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": 68246232,
+    "graph": 4,
+    "subclass": [
+      "measurementpoints",
+      "rateconversion"
+    ],
+    "role": 1,
+    "utility_type": 1,
+    "unit": "milliwatt"
+  }
+},
+{
+  "pk": 10,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": 68246232,
+    "graph": 6,
+    "subclass": [
+      "measurementpoints",
+      "rateconversion"
+    ],
+    "role": 1,
+    "utility_type": 2,
+    "unit": "milliwatt"
+  }
+},
+{
+  "pk": 11,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": null,
+    "graph": null,
+    "subclass": [
+      "indexes",
+      "index"
+    ],
+    "role": 14,
+    "utility_type": 1,
+    "unit": "currency_dkk*kilowatt^-1*hour^-1"
+  }
+},
+{
+  "pk": 12,
+  "model": "measurementpoints.dataseries",
+  "fields": {
+    "customer": null,
+    "graph": null,
+    "subclass": [
+      "indexes",
+      "index"
+    ],
+    "role": 13,
+    "utility_type": 6,
+    "unit": "currency_dkk*liter^-1"
+  }
+},
+{
+  "pk": 12,
+  "model": "indexes.index",
+  "fields": {
+    "name": "Random Gas",
+    "encryption_data_initialization_vector": "",
+    "data_format": 0,
+    "collection": null,
+    "timezone": "Europe/Copenhagen"
+  }
+},
+{
+  "pk": 1,
+  "model": "indexes.index",
+  "fields": {
+    "name": "Nordpool Denmark West DKK",
+    "encryption_data_initialization_vector": "",
+    "data_format": 0,
+    "collection": null,
+    "timezone": "Europe/Copenhagen"
+  }
+},
+{
+  "pk": 2,
+  "model": "indexes.index",
+  "fields": {
+    "name": "Nordpool Denmark East DKK",
+    "encryption_data_initialization_vector": "",
+    "data_format": 0,
+    "collection": null,
+    "timezone": "Europe/Copenhagen"
+  }
+},
+{
+  "pk": 11,
+  "model": "indexes.index",
+  "fields": {
+    "name": "Random el",
+    "encryption_data_initialization_vector": "",
+    "data_format": 0,
+    "collection": null,
+    "timezone": "Europe/Copenhagen"
+  }
+},
+{
+  "pk": 3,
+  "model": "indexes.index",
+  "fields": {
+    "name": "Danish Technological Institute standard degree day index, 1941-1980",
+    "encryption_data_initialization_vector": "",
+    "data_format": 3,
+    "collection": null,
+    "timezone": "Europe/Copenhagen"
+  }
+},
+{
+  "pk": 4,
+  "model": "indexes.index",
+  "fields": {
+    "name": "Energinet.dk CO\u2082",
+    "encryption_data_initialization_vector": "",
+    "data_format": 0,
+    "collection": null,
+    "timezone": "Europe/Copenhagen"
+  }
+},
+{
+  "pk": 1,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.30000",
+    "from_timestamp": "2013-07-02T22:00:00Z",
+    "to_timestamp": "2013-07-02T23:00:00Z"
+  }
+},
+{
+  "pk": 2,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.38626",
+    "from_timestamp": "2013-07-02T23:00:00Z",
+    "to_timestamp": "2013-07-03T00:00:00Z"
+  }
+},
+{
+  "pk": 3,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.46524",
+    "from_timestamp": "2013-07-03T00:00:00Z",
+    "to_timestamp": "2013-07-03T01:00:00Z"
+  }
+},
+{
+  "pk": 4,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.53026",
+    "from_timestamp": "2013-07-03T01:00:00Z",
+    "to_timestamp": "2013-07-03T02:00:00Z"
+  }
+},
+{
+  "pk": 5,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.57583",
+    "from_timestamp": "2013-07-03T02:00:00Z",
+    "to_timestamp": "2013-07-03T03:00:00Z"
+  }
+},
+{
+  "pk": 6,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59810",
+    "from_timestamp": "2013-07-03T03:00:00Z",
+    "to_timestamp": "2013-07-03T04:00:00Z"
+  }
+},
+{
+  "pk": 7,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59520",
+    "from_timestamp": "2013-07-03T04:00:00Z",
+    "to_timestamp": "2013-07-03T05:00:00Z"
+  }
+},
+{
+  "pk": 8,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.56735",
+    "from_timestamp": "2013-07-03T05:00:00Z",
+    "to_timestamp": "2013-07-03T06:00:00Z"
+  }
+},
+{
+  "pk": 9,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.51693",
+    "from_timestamp": "2013-07-03T06:00:00Z",
+    "to_timestamp": "2013-07-03T07:00:00Z"
+  }
+},
+{
+  "pk": 10,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.44818",
+    "from_timestamp": "2013-07-03T07:00:00Z",
+    "to_timestamp": "2013-07-03T08:00:00Z"
+  }
+},
+{
+  "pk": 11,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.36691",
+    "from_timestamp": "2013-07-03T08:00:00Z",
+    "to_timestamp": "2013-07-03T09:00:00Z"
+  }
+},
+{
+  "pk": 12,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.27999",
+    "from_timestamp": "2013-07-03T09:00:00Z",
+    "to_timestamp": "2013-07-03T10:00:00Z"
+  }
+},
+{
+  "pk": 13,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.19477",
+    "from_timestamp": "2013-07-03T10:00:00Z",
+    "to_timestamp": "2013-07-03T11:00:00Z"
+  }
+},
+{
+  "pk": 14,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.11843",
+    "from_timestamp": "2013-07-03T11:00:00Z",
+    "to_timestamp": "2013-07-03T12:00:00Z"
+  }
+},
+{
+  "pk": 15,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.05742",
+    "from_timestamp": "2013-07-03T12:00:00Z",
+    "to_timestamp": "2013-07-03T13:00:00Z"
+  }
+},
+{
+  "pk": 16,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.01691",
+    "from_timestamp": "2013-07-03T13:00:00Z",
+    "to_timestamp": "2013-07-03T14:00:00Z"
+  }
+},
+{
+  "pk": 17,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00031",
+    "from_timestamp": "2013-07-03T14:00:00Z",
+    "to_timestamp": "2013-07-03T15:00:00Z"
+  }
+},
+{
+  "pk": 18,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00903",
+    "from_timestamp": "2013-07-03T15:00:00Z",
+    "to_timestamp": "2013-07-03T16:00:00Z"
+  }
+},
+{
+  "pk": 19,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.04232",
+    "from_timestamp": "2013-07-03T16:00:00Z",
+    "to_timestamp": "2013-07-03T17:00:00Z"
+  }
+},
+{
+  "pk": 20,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.09738",
+    "from_timestamp": "2013-07-03T17:00:00Z",
+    "to_timestamp": "2013-07-03T18:00:00Z"
+  }
+},
+{
+  "pk": 21,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.16955",
+    "from_timestamp": "2013-07-03T18:00:00Z",
+    "to_timestamp": "2013-07-03T19:00:00Z"
+  }
+},
+{
+  "pk": 22,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.25274",
+    "from_timestamp": "2013-07-03T19:00:00Z",
+    "to_timestamp": "2013-07-03T20:00:00Z"
+  }
+},
+{
+  "pk": 23,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.33993",
+    "from_timestamp": "2013-07-03T20:00:00Z",
+    "to_timestamp": "2013-07-03T21:00:00Z"
+  }
+},
+{
+  "pk": 24,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.42374",
+    "from_timestamp": "2013-07-03T21:00:00Z",
+    "to_timestamp": "2013-07-03T22:00:00Z"
+  }
+},
+{
+  "pk": 25,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.49710",
+    "from_timestamp": "2013-07-03T22:00:00Z",
+    "to_timestamp": "2013-07-03T23:00:00Z"
+  }
+},
+{
+  "pk": 26,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.55381",
+    "from_timestamp": "2013-07-03T23:00:00Z",
+    "to_timestamp": "2013-07-04T00:00:00Z"
+  }
+},
+{
+  "pk": 27,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.58908",
+    "from_timestamp": "2013-07-04T00:00:00Z",
+    "to_timestamp": "2013-07-04T01:00:00Z"
+  }
+},
+{
+  "pk": 28,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59993",
+    "from_timestamp": "2013-07-04T01:00:00Z",
+    "to_timestamp": "2013-07-04T02:00:00Z"
+  }
+},
+{
+  "pk": 29,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.58545",
+    "from_timestamp": "2013-07-04T02:00:00Z",
+    "to_timestamp": "2013-07-04T03:00:00Z"
+  }
+},
+{
+  "pk": 30,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.54686",
+    "from_timestamp": "2013-07-04T03:00:00Z",
+    "to_timestamp": "2013-07-04T04:00:00Z"
+  }
+},
+{
+  "pk": 31,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.48742",
+    "from_timestamp": "2013-07-04T04:00:00Z",
+    "to_timestamp": "2013-07-04T05:00:00Z"
+  }
+},
+{
+  "pk": 32,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.41214",
+    "from_timestamp": "2013-07-04T05:00:00Z",
+    "to_timestamp": "2013-07-04T06:00:00Z"
+  }
+},
+{
+  "pk": 33,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.32740",
+    "from_timestamp": "2013-07-04T06:00:00Z",
+    "to_timestamp": "2013-07-04T07:00:00Z"
+  }
+},
+{
+  "pk": 34,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.24033",
+    "from_timestamp": "2013-07-04T07:00:00Z",
+    "to_timestamp": "2013-07-04T08:00:00Z"
+  }
+},
+{
+  "pk": 35,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.15831",
+    "from_timestamp": "2013-07-04T08:00:00Z",
+    "to_timestamp": "2013-07-04T09:00:00Z"
+  }
+},
+{
+  "pk": 36,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.08826",
+    "from_timestamp": "2013-07-04T09:00:00Z",
+    "to_timestamp": "2013-07-04T10:00:00Z"
+  }
+},
+{
+  "pk": 37,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.03609",
+    "from_timestamp": "2013-07-04T10:00:00Z",
+    "to_timestamp": "2013-07-04T11:00:00Z"
+  }
+},
+{
+  "pk": 38,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00622",
+    "from_timestamp": "2013-07-04T11:00:00Z",
+    "to_timestamp": "2013-07-04T12:00:00Z"
+  }
+},
+{
+  "pk": 39,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00115",
+    "from_timestamp": "2013-07-04T12:00:00Z",
+    "to_timestamp": "2013-07-04T13:00:00Z"
+  }
+},
+{
+  "pk": 40,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.02134",
+    "from_timestamp": "2013-07-04T13:00:00Z",
+    "to_timestamp": "2013-07-04T14:00:00Z"
+  }
+},
+{
+  "pk": 41,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.06506",
+    "from_timestamp": "2013-07-04T14:00:00Z",
+    "to_timestamp": "2013-07-04T15:00:00Z"
+  }
+},
+{
+  "pk": 42,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.12862",
+    "from_timestamp": "2013-07-04T15:00:00Z",
+    "to_timestamp": "2013-07-04T16:00:00Z"
+  }
+},
+{
+  "pk": 43,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.20666",
+    "from_timestamp": "2013-07-04T16:00:00Z",
+    "to_timestamp": "2013-07-04T17:00:00Z"
+  }
+},
+{
+  "pk": 44,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.29259",
+    "from_timestamp": "2013-07-04T17:00:00Z",
+    "to_timestamp": "2013-07-04T18:00:00Z"
+  }
+},
+{
+  "pk": 45,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.37914",
+    "from_timestamp": "2013-07-04T18:00:00Z",
+    "to_timestamp": "2013-07-04T19:00:00Z"
+  }
+},
+{
+  "pk": 46,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.45901",
+    "from_timestamp": "2013-07-04T19:00:00Z",
+    "to_timestamp": "2013-07-04T20:00:00Z"
+  }
+},
+{
+  "pk": 47,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.52544",
+    "from_timestamp": "2013-07-04T20:00:00Z",
+    "to_timestamp": "2013-07-04T21:00:00Z"
+  }
+},
+{
+  "pk": 48,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.57284",
+    "from_timestamp": "2013-07-04T21:00:00Z",
+    "to_timestamp": "2013-07-04T22:00:00Z"
+  }
+},
+{
+  "pk": 49,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59718",
+    "from_timestamp": "2013-07-04T22:00:00Z",
+    "to_timestamp": "2013-07-04T23:00:00Z"
+  }
+},
+{
+  "pk": 50,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59643",
+    "from_timestamp": "2013-07-04T23:00:00Z",
+    "to_timestamp": "2013-07-05T00:00:00Z"
+  }
+},
+{
+  "pk": 51,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.57063",
+    "from_timestamp": "2013-07-05T00:00:00Z",
+    "to_timestamp": "2013-07-05T01:00:00Z"
+  }
+},
+{
+  "pk": 52,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.52198",
+    "from_timestamp": "2013-07-05T01:00:00Z",
+    "to_timestamp": "2013-07-05T02:00:00Z"
+  }
+},
+{
+  "pk": 53,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.45457",
+    "from_timestamp": "2013-07-05T02:00:00Z",
+    "to_timestamp": "2013-07-05T03:00:00Z"
+  }
+},
+{
+  "pk": 54,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.37411",
+    "from_timestamp": "2013-07-05T03:00:00Z",
+    "to_timestamp": "2013-07-05T04:00:00Z"
+  }
+},
+{
+  "pk": 55,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.28739",
+    "from_timestamp": "2013-07-05T04:00:00Z",
+    "to_timestamp": "2013-07-05T05:00:00Z"
+  }
+},
+{
+  "pk": 56,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.20174",
+    "from_timestamp": "2013-07-05T05:00:00Z",
+    "to_timestamp": "2013-07-05T06:00:00Z"
+  }
+},
+{
+  "pk": 57,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.12438",
+    "from_timestamp": "2013-07-05T06:00:00Z",
+    "to_timestamp": "2013-07-05T07:00:00Z"
+  }
+},
+{
+  "pk": 58,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.06186",
+    "from_timestamp": "2013-07-05T07:00:00Z",
+    "to_timestamp": "2013-07-05T08:00:00Z"
+  }
+},
+{
+  "pk": 59,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.01945",
+    "from_timestamp": "2013-07-05T08:00:00Z",
+    "to_timestamp": "2013-07-05T09:00:00Z"
+  }
+},
+{
+  "pk": 60,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00074",
+    "from_timestamp": "2013-07-05T09:00:00Z",
+    "to_timestamp": "2013-07-05T10:00:00Z"
+  }
+},
+{
+  "pk": 61,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00731",
+    "from_timestamp": "2013-07-05T10:00:00Z",
+    "to_timestamp": "2013-07-05T11:00:00Z"
+  }
+},
+{
+  "pk": 62,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.03860",
+    "from_timestamp": "2013-07-05T11:00:00Z",
+    "to_timestamp": "2013-07-05T12:00:00Z"
+  }
+},
+{
+  "pk": 63,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.09197",
+    "from_timestamp": "2013-07-05T12:00:00Z",
+    "to_timestamp": "2013-07-05T13:00:00Z"
+  }
+},
+{
+  "pk": 64,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.16292",
+    "from_timestamp": "2013-07-05T13:00:00Z",
+    "to_timestamp": "2013-07-05T14:00:00Z"
+  }
+},
+{
+  "pk": 65,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.24544",
+    "from_timestamp": "2013-07-05T14:00:00Z",
+    "to_timestamp": "2013-07-05T15:00:00Z"
+  }
+},
+{
+  "pk": 66,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.33257",
+    "from_timestamp": "2013-07-05T15:00:00Z",
+    "to_timestamp": "2013-07-05T16:00:00Z"
+  }
+},
+{
+  "pk": 67,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.41695",
+    "from_timestamp": "2013-07-05T16:00:00Z",
+    "to_timestamp": "2013-07-05T17:00:00Z"
+  }
+},
+{
+  "pk": 68,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.49145",
+    "from_timestamp": "2013-07-05T17:00:00Z",
+    "to_timestamp": "2013-07-05T18:00:00Z"
+  }
+},
+{
+  "pk": 69,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.54978",
+    "from_timestamp": "2013-07-05T18:00:00Z",
+    "to_timestamp": "2013-07-05T19:00:00Z"
+  }
+},
+{
+  "pk": 70,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.58701",
+    "from_timestamp": "2013-07-05T19:00:00Z",
+    "to_timestamp": "2013-07-05T20:00:00Z"
+  }
+},
+{
+  "pk": 71,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.60000",
+    "from_timestamp": "2013-07-05T20:00:00Z",
+    "to_timestamp": "2013-07-05T21:00:00Z"
+  }
+},
+{
+  "pk": 72,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.58765",
+    "from_timestamp": "2013-07-05T21:00:00Z",
+    "to_timestamp": "2013-07-05T22:00:00Z"
+  }
+},
+{
+  "pk": 73,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.55100",
+    "from_timestamp": "2013-07-05T22:00:00Z",
+    "to_timestamp": "2013-07-05T23:00:00Z"
+  }
+},
+{
+  "pk": 74,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.49315",
+    "from_timestamp": "2013-07-05T23:00:00Z",
+    "to_timestamp": "2013-07-06T00:00:00Z"
+  }
+},
+{
+  "pk": 75,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.41898",
+    "from_timestamp": "2013-07-06T00:00:00Z",
+    "to_timestamp": "2013-07-06T01:00:00Z"
+  }
+},
+{
+  "pk": 76,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.33477",
+    "from_timestamp": "2013-07-06T01:00:00Z",
+    "to_timestamp": "2013-07-06T02:00:00Z"
+  }
+},
+{
+  "pk": 77,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.24761",
+    "from_timestamp": "2013-07-06T02:00:00Z",
+    "to_timestamp": "2013-07-06T03:00:00Z"
+  }
+},
+{
+  "pk": 78,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.16489",
+    "from_timestamp": "2013-07-06T03:00:00Z",
+    "to_timestamp": "2013-07-06T04:00:00Z"
+  }
+},
+{
+  "pk": 79,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.09357",
+    "from_timestamp": "2013-07-06T04:00:00Z",
+    "to_timestamp": "2013-07-06T05:00:00Z"
+  }
+},
+{
+  "pk": 80,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.03970",
+    "from_timestamp": "2013-07-06T05:00:00Z",
+    "to_timestamp": "2013-07-06T06:00:00Z"
+  }
+},
+{
+  "pk": 81,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00781",
+    "from_timestamp": "2013-07-06T06:00:00Z",
+    "to_timestamp": "2013-07-06T07:00:00Z"
+  }
+},
+{
+  "pk": 82,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00060",
+    "from_timestamp": "2013-07-06T07:00:00Z",
+    "to_timestamp": "2013-07-06T08:00:00Z"
+  }
+},
+{
+  "pk": 83,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.01868",
+    "from_timestamp": "2013-07-06T08:00:00Z",
+    "to_timestamp": "2013-07-06T09:00:00Z"
+  }
+},
+{
+  "pk": 84,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.06052",
+    "from_timestamp": "2013-07-06T09:00:00Z",
+    "to_timestamp": "2013-07-06T10:00:00Z"
+  }
+},
+{
+  "pk": 85,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.12259",
+    "from_timestamp": "2013-07-06T10:00:00Z",
+    "to_timestamp": "2013-07-06T11:00:00Z"
+  }
+},
+{
+  "pk": 86,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.19965",
+    "from_timestamp": "2013-07-06T11:00:00Z",
+    "to_timestamp": "2013-07-06T12:00:00Z"
+  }
+},
+{
+  "pk": 87,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.28518",
+    "from_timestamp": "2013-07-06T12:00:00Z",
+    "to_timestamp": "2013-07-06T13:00:00Z"
+  }
+},
+{
+  "pk": 88,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.37197",
+    "from_timestamp": "2013-07-06T13:00:00Z",
+    "to_timestamp": "2013-07-06T14:00:00Z"
+  }
+},
+{
+  "pk": 89,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.45267",
+    "from_timestamp": "2013-07-06T14:00:00Z",
+    "to_timestamp": "2013-07-06T15:00:00Z"
+  }
+},
+{
+  "pk": 90,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.52048",
+    "from_timestamp": "2013-07-06T15:00:00Z",
+    "to_timestamp": "2013-07-06T16:00:00Z"
+  }
+},
+{
+  "pk": 91,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.56967",
+    "from_timestamp": "2013-07-06T16:00:00Z",
+    "to_timestamp": "2013-07-06T17:00:00Z"
+  }
+},
+{
+  "pk": 92,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59608",
+    "from_timestamp": "2013-07-06T17:00:00Z",
+    "to_timestamp": "2013-07-06T18:00:00Z"
+  }
+},
+{
+  "pk": 93,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59748",
+    "from_timestamp": "2013-07-06T18:00:00Z",
+    "to_timestamp": "2013-07-06T19:00:00Z"
+  }
+},
+{
+  "pk": 94,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.57375",
+    "from_timestamp": "2013-07-06T19:00:00Z",
+    "to_timestamp": "2013-07-06T20:00:00Z"
+  }
+},
+{
+  "pk": 95,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.52690",
+    "from_timestamp": "2013-07-06T20:00:00Z",
+    "to_timestamp": "2013-07-06T21:00:00Z"
+  }
+},
+{
+  "pk": 96,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.46088",
+    "from_timestamp": "2013-07-06T21:00:00Z",
+    "to_timestamp": "2013-07-06T22:00:00Z"
+  }
+},
+{
+  "pk": 97,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.38127",
+    "from_timestamp": "2013-07-06T22:00:00Z",
+    "to_timestamp": "2013-07-06T23:00:00Z"
+  }
+},
+{
+  "pk": 98,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.29480",
+    "from_timestamp": "2013-07-06T23:00:00Z",
+    "to_timestamp": "2013-07-07T00:00:00Z"
+  }
+},
+{
+  "pk": 99,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.20877",
+    "from_timestamp": "2013-07-07T00:00:00Z",
+    "to_timestamp": "2013-07-07T01:00:00Z"
+  }
+},
+{
+  "pk": 100,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.13044",
+    "from_timestamp": "2013-07-07T01:00:00Z",
+    "to_timestamp": "2013-07-07T02:00:00Z"
+  }
+},
+{
+  "pk": 101,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.06644",
+    "from_timestamp": "2013-07-07T02:00:00Z",
+    "to_timestamp": "2013-07-07T03:00:00Z"
+  }
+},
+{
+  "pk": 102,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.02216",
+    "from_timestamp": "2013-07-07T03:00:00Z",
+    "to_timestamp": "2013-07-07T04:00:00Z"
+  }
+},
+{
+  "pk": 103,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00136",
+    "from_timestamp": "2013-07-07T04:00:00Z",
+    "to_timestamp": "2013-07-07T05:00:00Z"
+  }
+},
+{
+  "pk": 104,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00578",
+    "from_timestamp": "2013-07-07T05:00:00Z",
+    "to_timestamp": "2013-07-07T06:00:00Z"
+  }
+},
+{
+  "pk": 105,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.03505",
+    "from_timestamp": "2013-07-07T06:00:00Z",
+    "to_timestamp": "2013-07-07T07:00:00Z"
+  }
+},
+{
+  "pk": 106,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.08670",
+    "from_timestamp": "2013-07-07T07:00:00Z",
+    "to_timestamp": "2013-07-07T08:00:00Z"
+  }
+},
+{
+  "pk": 107,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.15637",
+    "from_timestamp": "2013-07-07T08:00:00Z",
+    "to_timestamp": "2013-07-07T09:00:00Z"
+  }
+},
+{
+  "pk": 108,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.23817",
+    "from_timestamp": "2013-07-07T09:00:00Z",
+    "to_timestamp": "2013-07-07T10:00:00Z"
+  }
+},
+{
+  "pk": 109,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.32519",
+    "from_timestamp": "2013-07-07T10:00:00Z",
+    "to_timestamp": "2013-07-07T11:00:00Z"
+  }
+},
+{
+  "pk": 110,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.41009",
+    "from_timestamp": "2013-07-07T11:00:00Z",
+    "to_timestamp": "2013-07-07T12:00:00Z"
+  }
+},
+{
+  "pk": 111,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.48569",
+    "from_timestamp": "2013-07-07T12:00:00Z",
+    "to_timestamp": "2013-07-07T13:00:00Z"
+  }
+},
+{
+  "pk": 112,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.54560",
+    "from_timestamp": "2013-07-07T13:00:00Z",
+    "to_timestamp": "2013-07-07T14:00:00Z"
+  }
+},
+{
+  "pk": 113,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.58477",
+    "from_timestamp": "2013-07-07T14:00:00Z",
+    "to_timestamp": "2013-07-07T15:00:00Z"
+  }
+},
+{
+  "pk": 114,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59988",
+    "from_timestamp": "2013-07-07T15:00:00Z",
+    "to_timestamp": "2013-07-07T16:00:00Z"
+  }
+},
+{
+  "pk": 115,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.58966",
+    "from_timestamp": "2013-07-07T16:00:00Z",
+    "to_timestamp": "2013-07-07T17:00:00Z"
+  }
+},
+{
+  "pk": 116,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.55498",
+    "from_timestamp": "2013-07-07T17:00:00Z",
+    "to_timestamp": "2013-07-07T18:00:00Z"
+  }
+},
+{
+  "pk": 117,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.49876",
+    "from_timestamp": "2013-07-07T18:00:00Z",
+    "to_timestamp": "2013-07-07T19:00:00Z"
+  }
+},
+{
+  "pk": 118,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.42575",
+    "from_timestamp": "2013-07-07T19:00:00Z",
+    "to_timestamp": "2013-07-07T20:00:00Z"
+  }
+},
+{
+  "pk": 119,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.34212",
+    "from_timestamp": "2013-07-07T20:00:00Z",
+    "to_timestamp": "2013-07-07T21:00:00Z"
+  }
+},
+{
+  "pk": 120,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.25493",
+    "from_timestamp": "2013-07-07T21:00:00Z",
+    "to_timestamp": "2013-07-07T22:00:00Z"
+  }
+},
+{
+  "pk": 121,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.17155",
+    "from_timestamp": "2013-07-07T22:00:00Z",
+    "to_timestamp": "2013-07-07T23:00:00Z"
+  }
+},
+{
+  "pk": 122,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.09901",
+    "from_timestamp": "2013-07-07T23:00:00Z",
+    "to_timestamp": "2013-07-08T00:00:00Z"
+  }
+},
+{
+  "pk": 123,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.04346",
+    "from_timestamp": "2013-07-08T00:00:00Z",
+    "to_timestamp": "2013-07-08T01:00:00Z"
+  }
+},
+{
+  "pk": 124,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00957",
+    "from_timestamp": "2013-07-08T01:00:00Z",
+    "to_timestamp": "2013-07-08T02:00:00Z"
+  }
+},
+{
+  "pk": 125,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00022",
+    "from_timestamp": "2013-07-08T02:00:00Z",
+    "to_timestamp": "2013-07-08T03:00:00Z"
+  }
+},
+{
+  "pk": 126,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.01619",
+    "from_timestamp": "2013-07-08T03:00:00Z",
+    "to_timestamp": "2013-07-08T04:00:00Z"
+  }
+},
+{
+  "pk": 127,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.05613",
+    "from_timestamp": "2013-07-08T04:00:00Z",
+    "to_timestamp": "2013-07-08T05:00:00Z"
+  }
+},
+{
+  "pk": 128,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.11667",
+    "from_timestamp": "2013-07-08T05:00:00Z",
+    "to_timestamp": "2013-07-08T06:00:00Z"
+  }
+},
+{
+  "pk": 129,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.19270",
+    "from_timestamp": "2013-07-08T06:00:00Z",
+    "to_timestamp": "2013-07-08T07:00:00Z"
+  }
+},
+{
+  "pk": 130,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.27779",
+    "from_timestamp": "2013-07-08T07:00:00Z",
+    "to_timestamp": "2013-07-08T08:00:00Z"
+  }
+},
+{
+  "pk": 131,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.36475",
+    "from_timestamp": "2013-07-08T08:00:00Z",
+    "to_timestamp": "2013-07-08T09:00:00Z"
+  }
+},
+{
+  "pk": 132,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.44625",
+    "from_timestamp": "2013-07-08T09:00:00Z",
+    "to_timestamp": "2013-07-08T10:00:00Z"
+  }
+},
+{
+  "pk": 133,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.51539",
+    "from_timestamp": "2013-07-08T10:00:00Z",
+    "to_timestamp": "2013-07-08T11:00:00Z"
+  }
+},
+{
+  "pk": 134,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.56634",
+    "from_timestamp": "2013-07-08T11:00:00Z",
+    "to_timestamp": "2013-07-08T12:00:00Z"
+  }
+},
+{
+  "pk": 135,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59479",
+    "from_timestamp": "2013-07-08T12:00:00Z",
+    "to_timestamp": "2013-07-08T13:00:00Z"
+  }
+},
+{
+  "pk": 136,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59834",
+    "from_timestamp": "2013-07-08T13:00:00Z",
+    "to_timestamp": "2013-07-08T14:00:00Z"
+  }
+},
+{
+  "pk": 137,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.57670",
+    "from_timestamp": "2013-07-08T14:00:00Z",
+    "to_timestamp": "2013-07-08T15:00:00Z"
+  }
+},
+{
+  "pk": 138,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.53167",
+    "from_timestamp": "2013-07-08T15:00:00Z",
+    "to_timestamp": "2013-07-08T16:00:00Z"
+  }
+},
+{
+  "pk": 139,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.46708",
+    "from_timestamp": "2013-07-08T16:00:00Z",
+    "to_timestamp": "2013-07-08T17:00:00Z"
+  }
+},
+{
+  "pk": 140,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.38838",
+    "from_timestamp": "2013-07-08T17:00:00Z",
+    "to_timestamp": "2013-07-08T18:00:00Z"
+  }
+},
+{
+  "pk": 141,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.30221",
+    "from_timestamp": "2013-07-08T18:00:00Z",
+    "to_timestamp": "2013-07-08T19:00:00Z"
+  }
+},
+{
+  "pk": 142,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.21586",
+    "from_timestamp": "2013-07-08T19:00:00Z",
+    "to_timestamp": "2013-07-08T20:00:00Z"
+  }
+},
+{
+  "pk": 143,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.13661",
+    "from_timestamp": "2013-07-08T20:00:00Z",
+    "to_timestamp": "2013-07-08T21:00:00Z"
+  }
+},
+{
+  "pk": 144,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.07116",
+    "from_timestamp": "2013-07-08T21:00:00Z",
+    "to_timestamp": "2013-07-08T22:00:00Z"
+  }
+},
+{
+  "pk": 145,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.02504",
+    "from_timestamp": "2013-07-08T22:00:00Z",
+    "to_timestamp": "2013-07-08T23:00:00Z"
+  }
+},
+{
+  "pk": 146,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00215",
+    "from_timestamp": "2013-07-08T23:00:00Z",
+    "to_timestamp": "2013-07-09T00:00:00Z"
+  }
+},
+{
+  "pk": 147,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00442",
+    "from_timestamp": "2013-07-09T00:00:00Z",
+    "to_timestamp": "2013-07-09T01:00:00Z"
+  }
+},
+{
+  "pk": 148,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.03165",
+    "from_timestamp": "2013-07-09T01:00:00Z",
+    "to_timestamp": "2013-07-09T02:00:00Z"
+  }
+},
+{
+  "pk": 149,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.08155",
+    "from_timestamp": "2013-07-09T02:00:00Z",
+    "to_timestamp": "2013-07-09T03:00:00Z"
+  }
+},
+{
+  "pk": 150,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.14991",
+    "from_timestamp": "2013-07-09T03:00:00Z",
+    "to_timestamp": "2013-07-09T04:00:00Z"
+  }
+},
+{
+  "pk": 151,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.23094",
+    "from_timestamp": "2013-07-09T04:00:00Z",
+    "to_timestamp": "2013-07-09T05:00:00Z"
+  }
+},
+{
+  "pk": 152,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.31780",
+    "from_timestamp": "2013-07-09T05:00:00Z",
+    "to_timestamp": "2013-07-09T06:00:00Z"
+  }
+},
+{
+  "pk": 153,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.40316",
+    "from_timestamp": "2013-07-09T06:00:00Z",
+    "to_timestamp": "2013-07-09T07:00:00Z"
+  }
+},
+{
+  "pk": 154,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.47981",
+    "from_timestamp": "2013-07-09T07:00:00Z",
+    "to_timestamp": "2013-07-09T08:00:00Z"
+  }
+},
+{
+  "pk": 155,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.54127",
+    "from_timestamp": "2013-07-09T08:00:00Z",
+    "to_timestamp": "2013-07-09T09:00:00Z"
+  }
+},
+{
+  "pk": 156,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.58235",
+    "from_timestamp": "2013-07-09T09:00:00Z",
+    "to_timestamp": "2013-07-09T10:00:00Z"
+  }
+},
+{
+  "pk": 157,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59958",
+    "from_timestamp": "2013-07-09T10:00:00Z",
+    "to_timestamp": "2013-07-09T11:00:00Z"
+  }
+},
+{
+  "pk": 158,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.59150",
+    "from_timestamp": "2013-07-09T11:00:00Z",
+    "to_timestamp": "2013-07-09T12:00:00Z"
+  }
+},
+{
+  "pk": 159,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.55881",
+    "from_timestamp": "2013-07-09T12:00:00Z",
+    "to_timestamp": "2013-07-09T13:00:00Z"
+  }
+},
+{
+  "pk": 160,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.50425",
+    "from_timestamp": "2013-07-09T13:00:00Z",
+    "to_timestamp": "2013-07-09T14:00:00Z"
+  }
+},
+{
+  "pk": 161,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.43244",
+    "from_timestamp": "2013-07-09T14:00:00Z",
+    "to_timestamp": "2013-07-09T15:00:00Z"
+  }
+},
+{
+  "pk": 162,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.34944",
+    "from_timestamp": "2013-07-09T15:00:00Z",
+    "to_timestamp": "2013-07-09T16:00:00Z"
+  }
+},
+{
+  "pk": 163,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.26227",
+    "from_timestamp": "2013-07-09T16:00:00Z",
+    "to_timestamp": "2013-07-09T17:00:00Z"
+  }
+},
+{
+  "pk": 164,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.17828",
+    "from_timestamp": "2013-07-09T17:00:00Z",
+    "to_timestamp": "2013-07-09T18:00:00Z"
+  }
+},
+{
+  "pk": 165,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.10458",
+    "from_timestamp": "2013-07-09T18:00:00Z",
+    "to_timestamp": "2013-07-09T19:00:00Z"
+  }
+},
+{
+  "pk": 166,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.04738",
+    "from_timestamp": "2013-07-09T19:00:00Z",
+    "to_timestamp": "2013-07-09T20:00:00Z"
+  }
+},
+{
+  "pk": 167,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.01152",
+    "from_timestamp": "2013-07-09T20:00:00Z",
+    "to_timestamp": "2013-07-09T21:00:00Z"
+  }
+},
+{
+  "pk": 168,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 11,
+    "value": "0.00003",
+    "from_timestamp": "2013-07-09T21:00:00Z",
+    "to_timestamp": "2013-07-09T22:00:00Z"
+  }
+},
+{
+  "pk": 169,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.15000",
+    "from_timestamp": "2013-07-02T22:00:00Z",
+    "to_timestamp": "2013-07-02T23:00:00Z"
+  }
+},
+{
+  "pk": 170,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.16247",
+    "from_timestamp": "2013-07-02T23:00:00Z",
+    "to_timestamp": "2013-07-03T00:00:00Z"
+  }
+},
+{
+  "pk": 171,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.17474",
+    "from_timestamp": "2013-07-03T00:00:00Z",
+    "to_timestamp": "2013-07-03T01:00:00Z"
+  }
+},
+{
+  "pk": 172,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.18663",
+    "from_timestamp": "2013-07-03T01:00:00Z",
+    "to_timestamp": "2013-07-03T02:00:00Z"
+  }
+},
+{
+  "pk": 173,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.19794",
+    "from_timestamp": "2013-07-03T02:00:00Z",
+    "to_timestamp": "2013-07-03T03:00:00Z"
+  }
+},
+{
+  "pk": 174,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.20851",
+    "from_timestamp": "2013-07-03T03:00:00Z",
+    "to_timestamp": "2013-07-03T04:00:00Z"
+  }
+},
+{
+  "pk": 175,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.21816",
+    "from_timestamp": "2013-07-03T04:00:00Z",
+    "to_timestamp": "2013-07-03T05:00:00Z"
+  }
+},
+{
+  "pk": 176,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22675",
+    "from_timestamp": "2013-07-03T05:00:00Z",
+    "to_timestamp": "2013-07-03T06:00:00Z"
+  }
+},
+{
+  "pk": 177,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23415",
+    "from_timestamp": "2013-07-03T06:00:00Z",
+    "to_timestamp": "2013-07-03T07:00:00Z"
+  }
+},
+{
+  "pk": 178,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24023",
+    "from_timestamp": "2013-07-03T07:00:00Z",
+    "to_timestamp": "2013-07-03T08:00:00Z"
+  }
+},
+{
+  "pk": 179,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24490",
+    "from_timestamp": "2013-07-03T08:00:00Z",
+    "to_timestamp": "2013-07-03T09:00:00Z"
+  }
+},
+{
+  "pk": 180,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24809",
+    "from_timestamp": "2013-07-03T09:00:00Z",
+    "to_timestamp": "2013-07-03T10:00:00Z"
+  }
+},
+{
+  "pk": 181,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24975",
+    "from_timestamp": "2013-07-03T10:00:00Z",
+    "to_timestamp": "2013-07-03T11:00:00Z"
+  }
+},
+{
+  "pk": 182,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24985",
+    "from_timestamp": "2013-07-03T11:00:00Z",
+    "to_timestamp": "2013-07-03T12:00:00Z"
+  }
+},
+{
+  "pk": 183,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24840",
+    "from_timestamp": "2013-07-03T12:00:00Z",
+    "to_timestamp": "2013-07-03T13:00:00Z"
+  }
+},
+{
+  "pk": 184,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24541",
+    "from_timestamp": "2013-07-03T13:00:00Z",
+    "to_timestamp": "2013-07-03T14:00:00Z"
+  }
+},
+{
+  "pk": 185,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24093",
+    "from_timestamp": "2013-07-03T14:00:00Z",
+    "to_timestamp": "2013-07-03T15:00:00Z"
+  }
+},
+{
+  "pk": 186,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23503",
+    "from_timestamp": "2013-07-03T15:00:00Z",
+    "to_timestamp": "2013-07-03T16:00:00Z"
+  }
+},
+{
+  "pk": 187,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22781",
+    "from_timestamp": "2013-07-03T16:00:00Z",
+    "to_timestamp": "2013-07-03T17:00:00Z"
+  }
+},
+{
+  "pk": 188,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.21937",
+    "from_timestamp": "2013-07-03T17:00:00Z",
+    "to_timestamp": "2013-07-03T18:00:00Z"
+  }
+},
+{
+  "pk": 189,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.20985",
+    "from_timestamp": "2013-07-03T18:00:00Z",
+    "to_timestamp": "2013-07-03T19:00:00Z"
+  }
+},
+{
+  "pk": 190,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.19939",
+    "from_timestamp": "2013-07-03T19:00:00Z",
+    "to_timestamp": "2013-07-03T20:00:00Z"
+  }
+},
+{
+  "pk": 191,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.18817",
+    "from_timestamp": "2013-07-03T20:00:00Z",
+    "to_timestamp": "2013-07-03T21:00:00Z"
+  }
+},
+{
+  "pk": 192,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.17634",
+    "from_timestamp": "2013-07-03T21:00:00Z",
+    "to_timestamp": "2013-07-03T22:00:00Z"
+  }
+},
+{
+  "pk": 193,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.16411",
+    "from_timestamp": "2013-07-03T22:00:00Z",
+    "to_timestamp": "2013-07-03T23:00:00Z"
+  }
+},
+{
+  "pk": 194,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.15166",
+    "from_timestamp": "2013-07-03T23:00:00Z",
+    "to_timestamp": "2013-07-04T00:00:00Z"
+  }
+},
+{
+  "pk": 195,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.13918",
+    "from_timestamp": "2013-07-04T00:00:00Z",
+    "to_timestamp": "2013-07-04T01:00:00Z"
+  }
+},
+{
+  "pk": 196,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.12687",
+    "from_timestamp": "2013-07-04T01:00:00Z",
+    "to_timestamp": "2013-07-04T02:00:00Z"
+  }
+},
+{
+  "pk": 197,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.11492",
+    "from_timestamp": "2013-07-04T02:00:00Z",
+    "to_timestamp": "2013-07-04T03:00:00Z"
+  }
+},
+{
+  "pk": 198,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.10352",
+    "from_timestamp": "2013-07-04T03:00:00Z",
+    "to_timestamp": "2013-07-04T04:00:00Z"
+  }
+},
+{
+  "pk": 199,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.09284",
+    "from_timestamp": "2013-07-04T04:00:00Z",
+    "to_timestamp": "2013-07-04T05:00:00Z"
+  }
+},
+{
+  "pk": 200,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.08306",
+    "from_timestamp": "2013-07-04T05:00:00Z",
+    "to_timestamp": "2013-07-04T06:00:00Z"
+  }
+},
+{
+  "pk": 201,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07432",
+    "from_timestamp": "2013-07-04T06:00:00Z",
+    "to_timestamp": "2013-07-04T07:00:00Z"
+  }
+},
+{
+  "pk": 202,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06676",
+    "from_timestamp": "2013-07-04T07:00:00Z",
+    "to_timestamp": "2013-07-04T08:00:00Z"
+  }
+},
+{
+  "pk": 203,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06050",
+    "from_timestamp": "2013-07-04T08:00:00Z",
+    "to_timestamp": "2013-07-04T09:00:00Z"
+  }
+},
+{
+  "pk": 204,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05564",
+    "from_timestamp": "2013-07-04T09:00:00Z",
+    "to_timestamp": "2013-07-04T10:00:00Z"
+  }
+},
+{
+  "pk": 205,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05225",
+    "from_timestamp": "2013-07-04T10:00:00Z",
+    "to_timestamp": "2013-07-04T11:00:00Z"
+  }
+},
+{
+  "pk": 206,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05038",
+    "from_timestamp": "2013-07-04T11:00:00Z",
+    "to_timestamp": "2013-07-04T12:00:00Z"
+  }
+},
+{
+  "pk": 207,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05007",
+    "from_timestamp": "2013-07-04T12:00:00Z",
+    "to_timestamp": "2013-07-04T13:00:00Z"
+  }
+},
+{
+  "pk": 208,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05132",
+    "from_timestamp": "2013-07-04T13:00:00Z",
+    "to_timestamp": "2013-07-04T14:00:00Z"
+  }
+},
+{
+  "pk": 209,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05411",
+    "from_timestamp": "2013-07-04T14:00:00Z",
+    "to_timestamp": "2013-07-04T15:00:00Z"
+  }
+},
+{
+  "pk": 210,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05839",
+    "from_timestamp": "2013-07-04T15:00:00Z",
+    "to_timestamp": "2013-07-04T16:00:00Z"
+  }
+},
+{
+  "pk": 211,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06411",
+    "from_timestamp": "2013-07-04T16:00:00Z",
+    "to_timestamp": "2013-07-04T17:00:00Z"
+  }
+},
+{
+  "pk": 212,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07116",
+    "from_timestamp": "2013-07-04T17:00:00Z",
+    "to_timestamp": "2013-07-04T18:00:00Z"
+  }
+},
+{
+  "pk": 213,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07945",
+    "from_timestamp": "2013-07-04T18:00:00Z",
+    "to_timestamp": "2013-07-04T19:00:00Z"
+  }
+},
+{
+  "pk": 214,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.08883",
+    "from_timestamp": "2013-07-04T19:00:00Z",
+    "to_timestamp": "2013-07-04T20:00:00Z"
+  }
+},
+{
+  "pk": 215,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.09917",
+    "from_timestamp": "2013-07-04T20:00:00Z",
+    "to_timestamp": "2013-07-04T21:00:00Z"
+  }
+},
+{
+  "pk": 216,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.11031",
+    "from_timestamp": "2013-07-04T21:00:00Z",
+    "to_timestamp": "2013-07-04T22:00:00Z"
+  }
+},
+{
+  "pk": 217,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.12206",
+    "from_timestamp": "2013-07-04T22:00:00Z",
+    "to_timestamp": "2013-07-04T23:00:00Z"
+  }
+},
+{
+  "pk": 218,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.13425",
+    "from_timestamp": "2013-07-04T23:00:00Z",
+    "to_timestamp": "2013-07-05T00:00:00Z"
+  }
+},
+{
+  "pk": 219,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.14668",
+    "from_timestamp": "2013-07-05T00:00:00Z",
+    "to_timestamp": "2013-07-05T01:00:00Z"
+  }
+},
+{
+  "pk": 220,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.15917",
+    "from_timestamp": "2013-07-05T01:00:00Z",
+    "to_timestamp": "2013-07-05T02:00:00Z"
+  }
+},
+{
+  "pk": 221,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.17151",
+    "from_timestamp": "2013-07-05T02:00:00Z",
+    "to_timestamp": "2013-07-05T03:00:00Z"
+  }
+},
+{
+  "pk": 222,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.18352",
+    "from_timestamp": "2013-07-05T03:00:00Z",
+    "to_timestamp": "2013-07-05T04:00:00Z"
+  }
+},
+{
+  "pk": 223,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.19500",
+    "from_timestamp": "2013-07-05T04:00:00Z",
+    "to_timestamp": "2013-07-05T05:00:00Z"
+  }
+},
+{
+  "pk": 224,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.20579",
+    "from_timestamp": "2013-07-05T05:00:00Z",
+    "to_timestamp": "2013-07-05T06:00:00Z"
+  }
+},
+{
+  "pk": 225,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.21570",
+    "from_timestamp": "2013-07-05T06:00:00Z",
+    "to_timestamp": "2013-07-05T07:00:00Z"
+  }
+},
+{
+  "pk": 226,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22459",
+    "from_timestamp": "2013-07-05T07:00:00Z",
+    "to_timestamp": "2013-07-05T08:00:00Z"
+  }
+},
+{
+  "pk": 227,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23231",
+    "from_timestamp": "2013-07-05T08:00:00Z",
+    "to_timestamp": "2013-07-05T09:00:00Z"
+  }
+},
+{
+  "pk": 228,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23875",
+    "from_timestamp": "2013-07-05T09:00:00Z",
+    "to_timestamp": "2013-07-05T10:00:00Z"
+  }
+},
+{
+  "pk": 229,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24380",
+    "from_timestamp": "2013-07-05T10:00:00Z",
+    "to_timestamp": "2013-07-05T11:00:00Z"
+  }
+},
+{
+  "pk": 230,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24739",
+    "from_timestamp": "2013-07-05T11:00:00Z",
+    "to_timestamp": "2013-07-05T12:00:00Z"
+  }
+},
+{
+  "pk": 231,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24946",
+    "from_timestamp": "2013-07-05T12:00:00Z",
+    "to_timestamp": "2013-07-05T13:00:00Z"
+  }
+},
+{
+  "pk": 232,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24998",
+    "from_timestamp": "2013-07-05T13:00:00Z",
+    "to_timestamp": "2013-07-05T14:00:00Z"
+  }
+},
+{
+  "pk": 233,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24894",
+    "from_timestamp": "2013-07-05T14:00:00Z",
+    "to_timestamp": "2013-07-05T15:00:00Z"
+  }
+},
+{
+  "pk": 234,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24635",
+    "from_timestamp": "2013-07-05T15:00:00Z",
+    "to_timestamp": "2013-07-05T16:00:00Z"
+  }
+},
+{
+  "pk": 235,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24226",
+    "from_timestamp": "2013-07-05T16:00:00Z",
+    "to_timestamp": "2013-07-05T17:00:00Z"
+  }
+},
+{
+  "pk": 236,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23673",
+    "from_timestamp": "2013-07-05T17:00:00Z",
+    "to_timestamp": "2013-07-05T18:00:00Z"
+  }
+},
+{
+  "pk": 237,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22985",
+    "from_timestamp": "2013-07-05T18:00:00Z",
+    "to_timestamp": "2013-07-05T19:00:00Z"
+  }
+},
+{
+  "pk": 238,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22172",
+    "from_timestamp": "2013-07-05T19:00:00Z",
+    "to_timestamp": "2013-07-05T20:00:00Z"
+  }
+},
+{
+  "pk": 239,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.21247",
+    "from_timestamp": "2013-07-05T20:00:00Z",
+    "to_timestamp": "2013-07-05T21:00:00Z"
+  }
+},
+{
+  "pk": 240,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.20225",
+    "from_timestamp": "2013-07-05T21:00:00Z",
+    "to_timestamp": "2013-07-05T22:00:00Z"
+  }
+},
+{
+  "pk": 241,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.19121",
+    "from_timestamp": "2013-07-05T22:00:00Z",
+    "to_timestamp": "2013-07-05T23:00:00Z"
+  }
+},
+{
+  "pk": 242,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.17953",
+    "from_timestamp": "2013-07-05T23:00:00Z",
+    "to_timestamp": "2013-07-06T00:00:00Z"
+  }
+},
+{
+  "pk": 243,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.16739",
+    "from_timestamp": "2013-07-06T00:00:00Z",
+    "to_timestamp": "2013-07-06T01:00:00Z"
+  }
+},
+{
+  "pk": 244,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.15498",
+    "from_timestamp": "2013-07-06T01:00:00Z",
+    "to_timestamp": "2013-07-06T02:00:00Z"
+  }
+},
+{
+  "pk": 245,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.14248",
+    "from_timestamp": "2013-07-06T02:00:00Z",
+    "to_timestamp": "2013-07-06T03:00:00Z"
+  }
+},
+{
+  "pk": 246,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.13011",
+    "from_timestamp": "2013-07-06T03:00:00Z",
+    "to_timestamp": "2013-07-06T04:00:00Z"
+  }
+},
+{
+  "pk": 247,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.11805",
+    "from_timestamp": "2013-07-06T04:00:00Z",
+    "to_timestamp": "2013-07-06T05:00:00Z"
+  }
+},
+{
+  "pk": 248,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.10648",
+    "from_timestamp": "2013-07-06T05:00:00Z",
+    "to_timestamp": "2013-07-06T06:00:00Z"
+  }
+},
+{
+  "pk": 249,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.09560",
+    "from_timestamp": "2013-07-06T06:00:00Z",
+    "to_timestamp": "2013-07-06T07:00:00Z"
+  }
+},
+{
+  "pk": 250,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.08556",
+    "from_timestamp": "2013-07-06T07:00:00Z",
+    "to_timestamp": "2013-07-06T08:00:00Z"
+  }
+},
+{
+  "pk": 251,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07653",
+    "from_timestamp": "2013-07-06T08:00:00Z",
+    "to_timestamp": "2013-07-06T09:00:00Z"
+  }
+},
+{
+  "pk": 252,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06865",
+    "from_timestamp": "2013-07-06T09:00:00Z",
+    "to_timestamp": "2013-07-06T10:00:00Z"
+  }
+},
+{
+  "pk": 253,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06203",
+    "from_timestamp": "2013-07-06T10:00:00Z",
+    "to_timestamp": "2013-07-06T11:00:00Z"
+  }
+},
+{
+  "pk": 254,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05679",
+    "from_timestamp": "2013-07-06T11:00:00Z",
+    "to_timestamp": "2013-07-06T12:00:00Z"
+  }
+},
+{
+  "pk": 255,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05300",
+    "from_timestamp": "2013-07-06T12:00:00Z",
+    "to_timestamp": "2013-07-06T13:00:00Z"
+  }
+},
+{
+  "pk": 256,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05073",
+    "from_timestamp": "2013-07-06T13:00:00Z",
+    "to_timestamp": "2013-07-06T14:00:00Z"
+  }
+},
+{
+  "pk": 257,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05000",
+    "from_timestamp": "2013-07-06T14:00:00Z",
+    "to_timestamp": "2013-07-06T15:00:00Z"
+  }
+},
+{
+  "pk": 258,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05084",
+    "from_timestamp": "2013-07-06T15:00:00Z",
+    "to_timestamp": "2013-07-06T16:00:00Z"
+  }
+},
+{
+  "pk": 259,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05322",
+    "from_timestamp": "2013-07-06T16:00:00Z",
+    "to_timestamp": "2013-07-06T17:00:00Z"
+  }
+},
+{
+  "pk": 260,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05711",
+    "from_timestamp": "2013-07-06T17:00:00Z",
+    "to_timestamp": "2013-07-06T18:00:00Z"
+  }
+},
+{
+  "pk": 261,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06245",
+    "from_timestamp": "2013-07-06T18:00:00Z",
+    "to_timestamp": "2013-07-06T19:00:00Z"
+  }
+},
+{
+  "pk": 262,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06916",
+    "from_timestamp": "2013-07-06T19:00:00Z",
+    "to_timestamp": "2013-07-06T20:00:00Z"
+  }
+},
+{
+  "pk": 263,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07713",
+    "from_timestamp": "2013-07-06T20:00:00Z",
+    "to_timestamp": "2013-07-06T21:00:00Z"
+  }
+},
+{
+  "pk": 264,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.08624",
+    "from_timestamp": "2013-07-06T21:00:00Z",
+    "to_timestamp": "2013-07-06T22:00:00Z"
+  }
+},
+{
+  "pk": 265,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.09634",
+    "from_timestamp": "2013-07-06T22:00:00Z",
+    "to_timestamp": "2013-07-06T23:00:00Z"
+  }
+},
+{
+  "pk": 266,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.10728",
+    "from_timestamp": "2013-07-06T23:00:00Z",
+    "to_timestamp": "2013-07-07T00:00:00Z"
+  }
+},
+{
+  "pk": 267,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.11889",
+    "from_timestamp": "2013-07-07T00:00:00Z",
+    "to_timestamp": "2013-07-07T01:00:00Z"
+  }
+},
+{
+  "pk": 268,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.13098",
+    "from_timestamp": "2013-07-07T01:00:00Z",
+    "to_timestamp": "2013-07-07T02:00:00Z"
+  }
+},
+{
+  "pk": 269,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.14337",
+    "from_timestamp": "2013-07-07T02:00:00Z",
+    "to_timestamp": "2013-07-07T03:00:00Z"
+  }
+},
+{
+  "pk": 270,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.15586",
+    "from_timestamp": "2013-07-07T03:00:00Z",
+    "to_timestamp": "2013-07-07T04:00:00Z"
+  }
+},
+{
+  "pk": 271,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.16826",
+    "from_timestamp": "2013-07-07T04:00:00Z",
+    "to_timestamp": "2013-07-07T05:00:00Z"
+  }
+},
+{
+  "pk": 272,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.18038",
+    "from_timestamp": "2013-07-07T05:00:00Z",
+    "to_timestamp": "2013-07-07T06:00:00Z"
+  }
+},
+{
+  "pk": 273,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.19202",
+    "from_timestamp": "2013-07-07T06:00:00Z",
+    "to_timestamp": "2013-07-07T07:00:00Z"
+  }
+},
+{
+  "pk": 274,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.20300",
+    "from_timestamp": "2013-07-07T07:00:00Z",
+    "to_timestamp": "2013-07-07T08:00:00Z"
+  }
+},
+{
+  "pk": 275,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.21316",
+    "from_timestamp": "2013-07-07T08:00:00Z",
+    "to_timestamp": "2013-07-07T09:00:00Z"
+  }
+},
+{
+  "pk": 276,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22233",
+    "from_timestamp": "2013-07-07T09:00:00Z",
+    "to_timestamp": "2013-07-07T10:00:00Z"
+  }
+},
+{
+  "pk": 277,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23038",
+    "from_timestamp": "2013-07-07T10:00:00Z",
+    "to_timestamp": "2013-07-07T11:00:00Z"
+  }
+},
+{
+  "pk": 278,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23717",
+    "from_timestamp": "2013-07-07T11:00:00Z",
+    "to_timestamp": "2013-07-07T12:00:00Z"
+  }
+},
+{
+  "pk": 279,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24260",
+    "from_timestamp": "2013-07-07T12:00:00Z",
+    "to_timestamp": "2013-07-07T13:00:00Z"
+  }
+},
+{
+  "pk": 280,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24658",
+    "from_timestamp": "2013-07-07T13:00:00Z",
+    "to_timestamp": "2013-07-07T14:00:00Z"
+  }
+},
+{
+  "pk": 281,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24906",
+    "from_timestamp": "2013-07-07T14:00:00Z",
+    "to_timestamp": "2013-07-07T15:00:00Z"
+  }
+},
+{
+  "pk": 282,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24999",
+    "from_timestamp": "2013-07-07T15:00:00Z",
+    "to_timestamp": "2013-07-07T16:00:00Z"
+  }
+},
+{
+  "pk": 283,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24936",
+    "from_timestamp": "2013-07-07T16:00:00Z",
+    "to_timestamp": "2013-07-07T17:00:00Z"
+  }
+},
+{
+  "pk": 284,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24719",
+    "from_timestamp": "2013-07-07T17:00:00Z",
+    "to_timestamp": "2013-07-07T18:00:00Z"
+  }
+},
+{
+  "pk": 285,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24349",
+    "from_timestamp": "2013-07-07T18:00:00Z",
+    "to_timestamp": "2013-07-07T19:00:00Z"
+  }
+},
+{
+  "pk": 286,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23834",
+    "from_timestamp": "2013-07-07T19:00:00Z",
+    "to_timestamp": "2013-07-07T20:00:00Z"
+  }
+},
+{
+  "pk": 287,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23180",
+    "from_timestamp": "2013-07-07T20:00:00Z",
+    "to_timestamp": "2013-07-07T21:00:00Z"
+  }
+},
+{
+  "pk": 288,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22399",
+    "from_timestamp": "2013-07-07T21:00:00Z",
+    "to_timestamp": "2013-07-07T22:00:00Z"
+  }
+},
+{
+  "pk": 289,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.21503",
+    "from_timestamp": "2013-07-07T22:00:00Z",
+    "to_timestamp": "2013-07-07T23:00:00Z"
+  }
+},
+{
+  "pk": 290,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.20505",
+    "from_timestamp": "2013-07-07T23:00:00Z",
+    "to_timestamp": "2013-07-08T00:00:00Z"
+  }
+},
+{
+  "pk": 291,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.19421",
+    "from_timestamp": "2013-07-08T00:00:00Z",
+    "to_timestamp": "2013-07-08T01:00:00Z"
+  }
+},
+{
+  "pk": 292,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.18268",
+    "from_timestamp": "2013-07-08T01:00:00Z",
+    "to_timestamp": "2013-07-08T02:00:00Z"
+  }
+},
+{
+  "pk": 293,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.17065",
+    "from_timestamp": "2013-07-08T02:00:00Z",
+    "to_timestamp": "2013-07-08T03:00:00Z"
+  }
+},
+{
+  "pk": 294,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.15829",
+    "from_timestamp": "2013-07-08T03:00:00Z",
+    "to_timestamp": "2013-07-08T04:00:00Z"
+  }
+},
+{
+  "pk": 295,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.14580",
+    "from_timestamp": "2013-07-08T04:00:00Z",
+    "to_timestamp": "2013-07-08T05:00:00Z"
+  }
+},
+{
+  "pk": 296,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.13337",
+    "from_timestamp": "2013-07-08T05:00:00Z",
+    "to_timestamp": "2013-07-08T06:00:00Z"
+  }
+},
+{
+  "pk": 297,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.12121",
+    "from_timestamp": "2013-07-08T06:00:00Z",
+    "to_timestamp": "2013-07-08T07:00:00Z"
+  }
+},
+{
+  "pk": 298,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.10949",
+    "from_timestamp": "2013-07-08T07:00:00Z",
+    "to_timestamp": "2013-07-08T08:00:00Z"
+  }
+},
+{
+  "pk": 299,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.09841",
+    "from_timestamp": "2013-07-08T08:00:00Z",
+    "to_timestamp": "2013-07-08T09:00:00Z"
+  }
+},
+{
+  "pk": 300,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.08813",
+    "from_timestamp": "2013-07-08T09:00:00Z",
+    "to_timestamp": "2013-07-08T10:00:00Z"
+  }
+},
+{
+  "pk": 301,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07882",
+    "from_timestamp": "2013-07-08T10:00:00Z",
+    "to_timestamp": "2013-07-08T11:00:00Z"
+  }
+},
+{
+  "pk": 302,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07062",
+    "from_timestamp": "2013-07-08T11:00:00Z",
+    "to_timestamp": "2013-07-08T12:00:00Z"
+  }
+},
+{
+  "pk": 303,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06366",
+    "from_timestamp": "2013-07-08T12:00:00Z",
+    "to_timestamp": "2013-07-08T13:00:00Z"
+  }
+},
+{
+  "pk": 304,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05804",
+    "from_timestamp": "2013-07-08T13:00:00Z",
+    "to_timestamp": "2013-07-08T14:00:00Z"
+  }
+},
+{
+  "pk": 305,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05386",
+    "from_timestamp": "2013-07-08T14:00:00Z",
+    "to_timestamp": "2013-07-08T15:00:00Z"
+  }
+},
+{
+  "pk": 306,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05118",
+    "from_timestamp": "2013-07-08T15:00:00Z",
+    "to_timestamp": "2013-07-08T16:00:00Z"
+  }
+},
+{
+  "pk": 307,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05004",
+    "from_timestamp": "2013-07-08T16:00:00Z",
+    "to_timestamp": "2013-07-08T17:00:00Z"
+  }
+},
+{
+  "pk": 308,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05046",
+    "from_timestamp": "2013-07-08T17:00:00Z",
+    "to_timestamp": "2013-07-08T18:00:00Z"
+  }
+},
+{
+  "pk": 309,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05244",
+    "from_timestamp": "2013-07-08T18:00:00Z",
+    "to_timestamp": "2013-07-08T19:00:00Z"
+  }
+},
+{
+  "pk": 310,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.05593",
+    "from_timestamp": "2013-07-08T19:00:00Z",
+    "to_timestamp": "2013-07-08T20:00:00Z"
+  }
+},
+{
+  "pk": 311,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06090",
+    "from_timestamp": "2013-07-08T20:00:00Z",
+    "to_timestamp": "2013-07-08T21:00:00Z"
+  }
+},
+{
+  "pk": 312,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.06725",
+    "from_timestamp": "2013-07-08T21:00:00Z",
+    "to_timestamp": "2013-07-08T22:00:00Z"
+  }
+},
+{
+  "pk": 313,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.07490",
+    "from_timestamp": "2013-07-08T22:00:00Z",
+    "to_timestamp": "2013-07-08T23:00:00Z"
+  }
+},
+{
+  "pk": 314,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.08372",
+    "from_timestamp": "2013-07-08T23:00:00Z",
+    "to_timestamp": "2013-07-09T00:00:00Z"
+  }
+},
+{
+  "pk": 315,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.09357",
+    "from_timestamp": "2013-07-09T00:00:00Z",
+    "to_timestamp": "2013-07-09T01:00:00Z"
+  }
+},
+{
+  "pk": 316,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.10431",
+    "from_timestamp": "2013-07-09T01:00:00Z",
+    "to_timestamp": "2013-07-09T02:00:00Z"
+  }
+},
+{
+  "pk": 317,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.11575",
+    "from_timestamp": "2013-07-09T02:00:00Z",
+    "to_timestamp": "2013-07-09T03:00:00Z"
+  }
+},
+{
+  "pk": 318,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.12773",
+    "from_timestamp": "2013-07-09T03:00:00Z",
+    "to_timestamp": "2013-07-09T04:00:00Z"
+  }
+},
+{
+  "pk": 319,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.14006",
+    "from_timestamp": "2013-07-09T04:00:00Z",
+    "to_timestamp": "2013-07-09T05:00:00Z"
+  }
+},
+{
+  "pk": 320,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.15254",
+    "from_timestamp": "2013-07-09T05:00:00Z",
+    "to_timestamp": "2013-07-09T06:00:00Z"
+  }
+},
+{
+  "pk": 321,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.16499",
+    "from_timestamp": "2013-07-09T06:00:00Z",
+    "to_timestamp": "2013-07-09T07:00:00Z"
+  }
+},
+{
+  "pk": 322,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.17720",
+    "from_timestamp": "2013-07-09T07:00:00Z",
+    "to_timestamp": "2013-07-09T08:00:00Z"
+  }
+},
+{
+  "pk": 323,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.18898",
+    "from_timestamp": "2013-07-09T08:00:00Z",
+    "to_timestamp": "2013-07-09T09:00:00Z"
+  }
+},
+{
+  "pk": 324,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.20016",
+    "from_timestamp": "2013-07-09T09:00:00Z",
+    "to_timestamp": "2013-07-09T10:00:00Z"
+  }
+},
+{
+  "pk": 325,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.21055",
+    "from_timestamp": "2013-07-09T10:00:00Z",
+    "to_timestamp": "2013-07-09T11:00:00Z"
+  }
+},
+{
+  "pk": 326,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22000",
+    "from_timestamp": "2013-07-09T11:00:00Z",
+    "to_timestamp": "2013-07-09T12:00:00Z"
+  }
+},
+{
+  "pk": 327,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.22836",
+    "from_timestamp": "2013-07-09T12:00:00Z",
+    "to_timestamp": "2013-07-09T13:00:00Z"
+  }
+},
+{
+  "pk": 328,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23549",
+    "from_timestamp": "2013-07-09T13:00:00Z",
+    "to_timestamp": "2013-07-09T14:00:00Z"
+  }
+},
+{
+  "pk": 329,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24129",
+    "from_timestamp": "2013-07-09T14:00:00Z",
+    "to_timestamp": "2013-07-09T15:00:00Z"
+  }
+},
+{
+  "pk": 330,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24567",
+    "from_timestamp": "2013-07-09T15:00:00Z",
+    "to_timestamp": "2013-07-09T16:00:00Z"
+  }
+},
+{
+  "pk": 331,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24855",
+    "from_timestamp": "2013-07-09T16:00:00Z",
+    "to_timestamp": "2013-07-09T17:00:00Z"
+  }
+},
+{
+  "pk": 332,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24990",
+    "from_timestamp": "2013-07-09T17:00:00Z",
+    "to_timestamp": "2013-07-09T18:00:00Z"
+  }
+},
+{
+  "pk": 333,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24968",
+    "from_timestamp": "2013-07-09T18:00:00Z",
+    "to_timestamp": "2013-07-09T19:00:00Z"
+  }
+},
+{
+  "pk": 334,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24791",
+    "from_timestamp": "2013-07-09T19:00:00Z",
+    "to_timestamp": "2013-07-09T20:00:00Z"
+  }
+},
+{
+  "pk": 335,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.24462",
+    "from_timestamp": "2013-07-09T20:00:00Z",
+    "to_timestamp": "2013-07-09T21:00:00Z"
+  }
+},
+{
+  "pk": 336,
+  "model": "indexes.entry",
+  "fields": {
+    "index": 12,
+    "value": "0.23984",
+    "from_timestamp": "2013-07-09T21:00:00Z",
+    "to_timestamp": "2013-07-09T22:00:00Z"
+  }
+},
+{
+  "pk": 1,
+  "model": "indexes.spotmapping",
+  "fields": {
+    "unit": "currency_dkk*megawatt^-1*hour^-1",
+    "index": 1,
+    "timezone": "Europe/Copenhagen",
+    "area": "DK1"
+  }
+},
+{
+  "pk": 2,
+  "model": "indexes.spotmapping",
+  "fields": {
+    "unit": "currency_dkk*megawatt^-1*hour^-1",
+    "index": 2,
+    "timezone": "Europe/Copenhagen",
+    "area": "DK2"
+  }
+},
+{
+  "pk": 3,
+  "model": "indexes.standardmonthindex",
+  "fields": {
+    "february": "480.000",
+    "october": "219.000",
+    "march": "460.000",
+    "august": "0.000",
+    "september": "36.000",
+    "may": "79.000",
+    "january": "525.000",
+    "june": "1.000",
+    "april": "302.000",
+    "december": "455.000",
+    "july": "0.000",
+    "november": "349.000"
+  }
+},
+{
+  "pk": 1,
+  "model": "devices.meter",
+  "fields": {
+    "sw_revision": null,
+    "relay_enabled": false,
+    "agent": 1,
+    "joined": true,
+    "device_type": 0,
+    "hw_major": null,
+    "sw_major": null,
+    "hw_subrevision": "",
+    "connection_type": 4,
+    "location": 1,
+    "online": false,
+    "online_since": null,
+    "manufactoring_id": 155173425101,
+    "sw_minor": null,
+    "hw_revision": null,
+    "customer": 68246232,
+    "relay_on": false,
+    "name": "CYPi4EpW8INdfTlB5DQ=\n",
+    "sw_subrevision": "",
+    "encryption_data_initialization_vector": "V7sh8Sn33q37NwAhPs9Sew==\n",
+    "hw_minor": null,
+    "manual_mode": false,
+    "device_serial": null
+  }
+},
+{
+  "pk": 2,
+  "model": "devices.meter",
+  "fields": {
+    "sw_revision": null,
+    "relay_enabled": false,
+    "agent": 1,
+    "joined": true,
+    "device_type": 0,
+    "hw_major": null,
+    "sw_major": null,
+    "hw_subrevision": "",
+    "connection_type": 3,
+    "location": 1,
+    "online": false,
+    "online_since": null,
+    "manufactoring_id": 1980720117449728,
+    "sw_minor": null,
+    "hw_revision": null,
+    "customer": 68246232,
+    "relay_on": false,
+    "name": "hl2bZRU4uyKwhw==\n",
+    "sw_subrevision": "",
+    "encryption_data_initialization_vector": "BOwax+/5hxFtyGiq6qfNtA==\n",
+    "hw_minor": null,
+    "manual_mode": false,
+    "device_serial": null
+  }
+},
+{
+  "pk": 3,
+  "model": "devices.meter",
+  "fields": {
+    "sw_revision": null,
+    "relay_enabled": false,
+    "agent": 1,
+    "joined": true,
+    "device_type": 0,
+    "hw_major": null,
+    "sw_major": null,
+    "hw_subrevision": "",
+    "connection_type": 1,
+    "location": 1,
+    "online": false,
+    "online_since": null,
+    "manufactoring_id": 456789,
+    "sw_minor": null,
+    "hw_revision": null,
+    "customer": 68246232,
+    "relay_on": false,
+    "name": "uckLEt8cYlG5j915pDlBKKLXknhw0Hs=\n",
+    "sw_subrevision": "",
+    "encryption_data_initialization_vector": "TXnq8rh7PdaahzFRV9WLiA==\n",
+    "hw_minor": null,
+    "manual_mode": false,
+    "device_serial": null
+  }
+},
+{
+  "pk": 4,
+  "model": "devices.meter",
+  "fields": {
+    "sw_revision": null,
+    "relay_enabled": false,
+    "agent": 1,
+    "joined": true,
+    "device_type": 0,
+    "hw_major": null,
+    "sw_major": null,
+    "hw_subrevision": "",
+    "connection_type": 1,
+    "location": 1,
+    "online": false,
+    "online_since": null,
+    "manufactoring_id": 456790,
+    "sw_minor": null,
+    "hw_revision": null,
+    "customer": 68246232,
+    "relay_on": false,
+    "name": "fYsNhai1oy0kBKvyyCXzEA==\n",
+    "sw_subrevision": "",
+    "encryption_data_initialization_vector": "WeNEsKt634wu+izP+ukIJA==\n",
+    "hw_minor": null,
+    "manual_mode": false,
+    "device_serial": null
+  }
+},
+{
+  "pk": 5,
+  "model": "devices.meter",
+  "fields": {
+    "sw_revision": null,
+    "relay_enabled": false,
+    "agent": 1,
+    "joined": true,
+    "device_type": 0,
+    "hw_major": null,
+    "sw_major": null,
+    "hw_subrevision": "",
+    "connection_type": 1,
+    "location": 1,
+    "online": false,
+    "online_since": null,
+    "manufactoring_id": 456791,
+    "sw_minor": null,
+    "hw_revision": null,
+    "customer": 68246232,
+    "relay_on": false,
+    "name": "cmRLVHpKuP8TyX3zlYYEN4c=\n",
+    "sw_subrevision": "",
+    "encryption_data_initialization_vector": "9gt7bQXFuipS3a9vPYqUjg==\n",
+    "hw_minor": null,
+    "manual_mode": false,
+    "device_serial": null
+  }
+},
+{
+  "pk": 6,
+  "model": "devices.meter",
+  "fields": {
+    "sw_revision": null,
+    "relay_enabled": false,
+    "agent": 1,
+    "joined": true,
+    "device_type": 0,
+    "hw_major": null,
+    "sw_major": null,
+    "hw_subrevision": "",
+    "connection_type": 1,
+    "location": 1,
+    "online": false,
+    "online_since": null,
+    "manufactoring_id": 456792,
+    "sw_minor": null,
+    "hw_revision": null,
+    "customer": 68246232,
+    "relay_on": false,
+    "name": "9TwtVbxAhBp2c+JywyPB/Zrl\n",
+    "sw_subrevision": "",
+    "encryption_data_initialization_vector": "B7iIZJgOCG2nwWVRPqS4vA==\n",
+    "hw_minor": null,
+    "manual_mode": false,
+    "device_serial": null
+  }
+},
+{
+  "pk": 7,
+  "model": "devices.meter",
+  "fields": {
+    "sw_revision": null,
+    "relay_enabled": false,
+    "agent": 1,
+    "joined": true,
+    "device_type": 0,
+    "hw_major": null,
+    "sw_major": null,
+    "hw_subrevision": "",
+    "connection_type": 1,
+    "location": 1,
+    "online": false,
+    "online_since": null,
+    "manufactoring_id": 456793,
+    "sw_minor": null,
+    "hw_revision": null,
+    "customer": 68246232,
+    "relay_on": false,
+    "name": "cEDsaewkAOE=\n",
+    "sw_subrevision": "",
+    "encryption_data_initialization_vector": "HO/v/JI6+1Jzp7FYPtnf8Q==\n",
+    "hw_minor": null,
+    "manual_mode": false,
+    "device_serial": null
+  }
+},
+{
+  "pk": 1,
+  "model": "devices.agent",
+  "fields": {
+    "customer": 68246232,
+    "sw_revision": 1,
+    "add_mode": false,
+    "online_since": null,
+    "sw_subrevision": "fixture",
+    "sw_major": 2,
+    "hw_minor": 0,
+    "mac": "08:00:27:03:fe:c7",
+    "location": 1,
+    "device_type": 1,
+    "online": false,
+    "sw_minor": 2,
+    "hw_major": 5,
+    "device_serial": null,
+    "hw_subrevision": "",
+    "hw_revision": 0
+  }
+},
+{
+  "pk": 1,
+  "model": "users.user",
+  "fields": {
+    "customer": null,
+    "name": "7ZD9Tt/aqiahYAEcVFU=\n",
+    "mobile": "",
+    "encryption_data_initialization_vector": "X+QdrOpv4w+dBnjWqOSk8g==\n",
+    "e_mail": "FkREeDhrbZiyQ8AYgfN6GPuTcQ==\n",
+    "encryption_key_initialization_vector": "v1ymMVsNZ+ADlo19uWtvPw==\n",
+    "user_type": 1,
+    "phone": "",
+    "groups": [],
+    "user_permissions": [],
+    "encryption_public_key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBFAWA8y4IVe6ywqHUoAn5/IFfGS/dn9YBuJbD\ncm3rMV+yfpI+AkLywuoJ4Q2u9ub0Sif9emXMEbGHFH+DD7FCnJfoJY+tmxgBBnozN/Q4ecVIoCRX\nWDHKlN+XkwC8l2bTpa8K/dAoAuzOkEeOnlx0166Xn2gv4HuUnqpuSftIZwIDAQAB\n",
+    "encryption_private_key": "nx+5Zv3IGRdGGqT7WbqiWcbymqVVddYxlxhCcBp+ueQZPJhNFGEmBXTjgC/CxXPXVj0YqWwYKrRE\n0zTdhvKUuiascNEbZ9IyGfXVVXUfS8yAohkveV4xbNTEIcaWd94bfn1t9A8jtRkiXr0IJCP6SEBb\nLA4DW1TKgnxbhyJir6OHnAvTHfpNR70dkkovI7CfyiV95FFMb0fZftZTGVwcnuEO0hKyVl/hGxRo\nFFzAAlJ58iCzv6WZoAA6SPwWWAJ37Aw8Vbo7hgaDQvs1GreviNbVCZtfdFkyHWJLhdRyMoAzD3SE\nyLwTZNK5xfIxoq2G106ES/msNU0aBSSIEUs84+M9I8Ct6EsrAgCoU2xwmSXnRICTynhbT8zhYOSS\nEQ96OBoAuZ60rwC6gFOoIJGNS5Mxa8ksaEEPT9t34Kkc6npohxzvJ/jd+hwVDHXuf5HT08asBGCn\npU0uo3pzRAmPhYit3jTizYWrhndMTnrJhq8cH68a6/QGx8kVPFCixHaehSe+lYFXouZGlyVKK/Rx\nHVXXZvlg2xrHJzTEcLIVhAn3nAYbTYo2cOpUhoo0mqs1JMP5FPgw4rVgeoSXTVgoXPyXlWeQVPJv\ntogQUH+WedvtVbUPNS77eMxRTfC4KM+JzdLCAj8oJefJpuHqabzq3VrCkPyzy33pq6AThG2fTfXz\nGAi7+eF89Gz5vmZdGBusjgH2LQiDdoTPx/ES7zxJvbLkZhXQt2pnUdr969/ZyGnzNN00eNia68xZ\ns4LIkJUb/BgT1OK0Z5M/Tj9wYTiAlO5X0BscpPVxwEMRW5hiptU=\n"
+  }
+},
+{
+  "pk": 2,
+  "model": "users.user",
+  "fields": {
+    "customer": 68246232,
+    "name": "6wohfzJtqaUacGGJql5u\n",
+    "mobile": "",
+    "encryption_data_initialization_vector": "oqa/Y6C/96mmPJmlqidfSw==\n",
+    "e_mail": "5m3DUi718+b3nHGUGdReMW5EhP0=\n",
+    "encryption_key_initialization_vector": "eBMafI5ddETAv8nz0ZAnPw==\n",
+    "user_type": 2,
+    "phone": "",
+    "groups": [],
+    "user_permissions": [],
+    "encryption_public_key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEt1IKQ53rPw1VJ7ua2iYOhTrxEnO3U8MYdQ+8\nN9yeuTWvRtBAnoB3B/UcRhul7lG/f0mg5vhYzSaPbMnxPauf8r9XwZco64lP3F6Q4x5PIXydghM/\nrjsrOisX50ZKpk11V+utKBHDMpl0ejDjrfemPkJxgpYhu06Pswxkb8pBSwIDAQAB\n",
+    "encryption_private_key": "c8fxa7JDdVODZSKsLO7GbyjQa+Zn98kK+3ADcDMwXjaq/bSvkAh90Yikf/wMzbp6iWUUBhIyYAYq\nJzxb6VHsiaoDxcN/g2LlCqcqEIS8DUzSz6BasqHlnKuT8FdjOYPC93GiZDlZk4EXxkjcOWcIDLFg\nreqHEKs2722EaK48xuhfihDRhFa1MhFX8guGW95yTTtQYI9A7GSPzZ/GOQkFsUalzPusMs6FEKn4\nBePTrMtdFAUedDkxrHgxLp+kG37jfwp1mjDMEQJV41tOK9N1PPWJ8l0QHa4kN8auX2gbXeit9Xo7\n0WAd+qz3FiWib+oL+aGJPpkOQWEv7i6CtdA3yEl/b/U3TXa8m9A6JWNL9jrpycmeQajf2up6WWGj\nzPBjR06e9Q3OHyNBFDaLA36agMI2xqkrXjwR2sPhNsGfB2KuezAfuun69zAhoqiFqlQhPY83Cc5c\nL4S8PdEOgwVUXaiBTLtZnADW9zMycJMh1zPthGHUK3fjHFcbViqrWUnpOMi1V8SCGWXfOhKfo5J1\n+w+QmpXvu4mB1aj8wEqO4qdCb6/8bcrDMR5IubvYvTh7pSxQnu4OJLpf+dypx4DPpoCEAy7CCoa8\nvKOZLbQsxGMrSC7EjkzpKU8aHglhuiTcWJh8tyxAPuSnz8RBa5eVOlhooDYgPzM9N7PYUCRwB1uY\nNHTZEDZ2B9q7TDiHPJ0ehhdATR1SrYqgvT6H6voO3ZNc0TUsJxScukWMdje0wb3TLFbiZKaUq2VP\nBG7t2E3GwCGazMYyyKQPknKvalZo7Ssag+AUe5i10fJhx81mDKoZ1iA=\n"
+  }
+},
+{
+  "pk": 3,
+  "model": "users.user",
+  "fields": {
+    "customer": 68246232,
+    "name": "pHGzms4CyYV84/Co69I=\n",
+    "mobile": "",
+    "encryption_data_initialization_vector": "W33DnC2UzgQFEFd8v4SsJg==\n",
+    "e_mail": "3SXJy2HvnYtcnx1LQqA4aBu+iQ==\n",
+    "encryption_key_initialization_vector": "WvP3C56SExyZdyXxCKPbhA==\n",
+    "user_type": 3,
+    "phone": "",
+    "groups": [],
+    "user_permissions": [],
+    "encryption_public_key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDG5UQNZdxb/KQ2DjpRYdu1BoRynb4ANDbeqlI\nfTgi/TUYh0I3NTfO5020jGJotVuG0zb962qm1keu/oDgdJVD9XKYHZ2OoLb/3XIYjNTOhOkim0IU\nlF6GhIv2FrqFjmg0ZHZm8t1hnluTUvWxCgh+RoC0BD0jDXn0nZmHOcmQhwIDAQAB\n",
+    "encryption_private_key": "v/MwUPXwNiIMiDjNqvKzdUUf9UqMuFZN0g1TXQX7Xq8qZOqwaO2H22aLFH8qbEUwk9arxD0eOsTw\nN87GiCdXzmQdtno9hm+FM/79YMx7LSBmVsA+ydKedKJAjT6VN4DIe5xeOC7+wXNzan2ypjoe5GVj\nNfWj+jzy0clZhKDy97wBdrLm1gT2jPqIcm/PerbzhKmNmNqGu6N9rdlbCBdekiY7LlxxujH3h7NM\nQsbWzNrO0+XhU4Eel6IbkSyDawX8dcTnuQG2COh+s6NrUbGRkisLMwoYeGay58DT5md90ugdDhTv\nD/Li8vvK7CYHpiAuRuznTVONAlVjd9Waxd7vzqN+f62M2aFCkBZIuMqYOz9VZZdG42SvKQJ7lZVu\n1LxqBLQMBoOAXRr3PEYVMpCY3ohv/yJ+38yNOK55Um5LNxYcm4+iOwKq5mAhBtFc0kc6jrmU5tbf\nMbzPbLenFaogxKOLxGnJ0cZE1pHnC7I6krhy4lkFoTjGhEJ46JIeLYA1pcTTtSDjN1545xS9xFGS\nYOIW/H61+FD8O9ykCevv42sHFNXdUe2BVMMRFIC/kSZJ8yODcXHc3QDgNo9aQI4Sod/DBVPTeA9o\naiVboRuSH0IK86nGYqkjEd2fJz+XDIp9baBP8s/NWdm84icWwt8iDJjtYOFAQ0Gg9L9Y2euILl35\njAMx9Um8aGMlzTG22xjreawRDQkt4HJpDP1/k9zIVu/4yLxnz2OdPlM6pFak2LTinWxFDUvgyr96\nwnmsqdLxC3eZXy9G2Gsq3wpSFGTKuQY7r7eGyFvAxuc523mXgKk=\n"
+  }
+},
+{
+  "pk": 1,
+  "model": "customers.userprofile",
+  "fields": {
+    "user": [
+      "WNPS3VFY7RNCjtNftkTpdaH6it0="
+    ]
+  }
+},
+{
+  "pk": 2,
+  "model": "customers.userprofile",
+  "fields": {
+    "user": [
+      "gCHqRpl1qOLrjv/vIGIPqZX9B7o="
+    ]
+  }
+},
+{
+  "pk": 3,
+  "model": "customers.userprofile",
+  "fields": {
+    "user": [
+      "MMAedSQ6upoBM/cNLxjtFw4LPW8="
+    ]
+  }
+}
+]

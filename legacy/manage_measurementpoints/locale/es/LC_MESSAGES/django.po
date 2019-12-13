@@ -1,0 +1,861 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:12+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: views.py:152
+msgid "The measurement point has been deleted"
+msgstr "El punto de medida ha sido borrado"
+
+#: views.py:264 views.py:282 views.py:300 views.py:318 views.py:485
+msgid "The measurement point has been created"
+msgstr "El punto de medida ha sido creado"
+
+#: views.py:273 views.py:291 views.py:309 views.py:327 views.py:504
+msgid "The measurement point has been updated"
+msgstr "El punto de medida ha sido actualizado"
+
+#: views.py:367
+msgid "Valid-from dates must be unique"
+msgstr ""
+
+#: views.py:575 views.py:621
+msgid "The measurement point has been saved"
+msgstr "El punto de medida ha sido guardado"
+
+#: forms/consumption.py:236
+msgid "Edit Electricity Measurement Point"
+msgstr "Editar Punto de Medida Eléctrico"
+
+#: forms/consumption.py:239
+msgid "Edit Water Measurement Point"
+msgstr "Editar Punto de Medida Agua"
+
+#: forms/consumption.py:242
+msgid "Edit Gas Measurement Point"
+msgstr "Editar Punto de Medida Gas"
+
+#: forms/consumption.py:245
+msgid "Edit Heat Measurement Point"
+msgstr "Editar Punto de Medida Calor"
+
+#: forms/consumption.py:248
+msgid "Edit Oil Measurement Point"
+msgstr "Editar Punto de Medida Gasoil"
+
+#: forms/consumption.py:275
+msgid "New Electricity Measurement Point"
+msgstr "Nuevo Punto de Medida Eléctrico"
+
+#: forms/consumption.py:278
+msgid "New Water Measurement Point"
+msgstr "Nuevo Punto de Medida  Agua"
+
+#: forms/consumption.py:281
+msgid "New Gas Measurement Point"
+msgstr "Nuevo Punto de Medida Gas"
+
+#: forms/consumption.py:284
+msgid "New Heat Measurement Point"
+msgstr "Nuevo Punto de Medida Calor"
+
+#: forms/consumption.py:287
+msgid "New Oil Measurement Point"
+msgstr "Nuevo Punto de Medida Gasoil"
+
+#: forms/consumptionsummation.py:74
+msgid "New Electricity Summation Point"
+msgstr "Nuevo Punto Electrico Sumatorio"
+
+#: forms/consumptionsummation.py:77
+msgid "New Water Summation Point"
+msgstr "Nuevo Punto de Agua Sumatorio"
+
+#: forms/consumptionsummation.py:80
+msgid "New Gas Summation Point"
+msgstr "Nuevo Punto de Gas Sumatorio"
+
+#: forms/consumptionsummation.py:83
+msgid "New Heat Summation Point"
+msgstr "Nuevo Punto de Calor Sumatorio"
+
+#: forms/consumptionsummation.py:86
+msgid "New Oil Summation Point"
+msgstr "Nuevo Punto de Gasoil Sumatorio"
+
+#: forms/consumptionsummation.py:89
+msgid "Edit Electricity Summation Point"
+msgstr "Editar Punto Electrico Sumatorio"
+
+#: forms/consumptionsummation.py:92
+msgid "Edit Water Summation Point"
+msgstr "Editar Punto Agua Sumatorio"
+
+#: forms/consumptionsummation.py:95
+msgid "Edit Gas Summation Point"
+msgstr "Editar Punto Gas Sumatorio"
+
+#: forms/consumptionsummation.py:98
+msgid "Edit Heat Summation Point"
+msgstr "Editar Punto Calor Sumatorio"
+
+#: forms/consumptionsummation.py:101
+msgid "Edit Oil Summation Point"
+msgstr "Editar Punto Gasoil Sumatorio"
+
+#: forms/current.py:38
+#, fuzzy
+msgid "Edit Current Measurement Point"
+msgstr "Editar Punto de Medida Calor"
+
+#: forms/current.py:62
+#, fuzzy
+msgid "New Current Measurement Point"
+msgstr "Nuevo Punto de Medida Calor"
+
+#: forms/districtheatingform.py:44 forms/districtheatingform.py:58
+msgid "New District Heating Measurement Point"
+msgstr "Nuevo Punto de Medida District Heating"
+
+#: forms/districtheatingform.py:47 forms/districtheatingform.py:61
+msgid "Edit District Heating Measurement Point"
+msgstr "Editar Punto de Medida District Heating"
+
+#: forms/imported.py:55
+#, fuzzy
+msgid "New Imported Electricity Measurement Point"
+msgstr "Editar Punto de Medida Eléctrico Importado"
+
+#: forms/imported.py:58
+#, fuzzy
+msgid "New Imported Heat Measurement Point"
+msgstr "Editar Punto de Medida Eléctrico Importado"
+
+#: forms/imported.py:61
+#, fuzzy
+msgid "New Imported Water Measurement Point"
+msgstr "Nuevo Punto de Medida  Agua"
+
+#: forms/imported.py:64
+#, fuzzy
+msgid "New Imported Gas Measurement Point"
+msgstr "Nuevo Punto de Medida Gas"
+
+#: forms/imported.py:67
+#, fuzzy
+msgid "New Imported Oil Measurement Point"
+msgstr "Nuevo Punto de Medida Gasoil"
+
+#: forms/imported.py:72
+msgid "Edit Imported Electricity Measurement Point"
+msgstr "Editar Punto de Medida Eléctrico Importado"
+
+#: forms/measurementpointbase.py:72
+msgid ""
+"Gauge widget is present on the dashboard;                             "
+"corrupting these values are not allowed"
+msgstr ""
+"Widget Medidor representado en el Dashboard;                             No "
+"esta permitido la corrupción de estos datos"
+
+#: forms/measurementpointbase.py:79
+msgid "Maximum value must be above minumum value"
+msgstr "EL valor máximo debe ser superior al valor mínimo"
+
+#: forms/measurementpointbase.py:84
+msgid "Lower threshold must be above minumum value"
+msgstr "El umbral inferior debe estar por encima del valor mínimo"
+
+#: forms/measurementpointbase.py:89
+msgid "Upper threshold must be below maximum value"
+msgstr "El umbral superior debe ser inferior al valor máximo"
+
+#: forms/measurementpointbase.py:94
+msgid "Upper threshold must be above lower threshold"
+msgstr "El umbral superior debe ser mayor que el umbral inferior"
+
+#: forms/multipliedconsumptionform.py:42
+msgid "New Electricity Multiplication Point"
+msgstr "Nuevo Punto Electrico Multiplicación"
+
+#: forms/multipliedconsumptionform.py:45
+msgid "New Water Multiplication Point"
+msgstr "Nuevo Punto Agua Multiplicación"
+
+#: forms/multipliedconsumptionform.py:48
+msgid "New Gas Multiplication Point"
+msgstr "Nuevo Punto Gas Multiplicación"
+
+#: forms/multipliedconsumptionform.py:51
+msgid "New Heat Multiplication Point"
+msgstr "Nuevo Punto Calor Multiplicación"
+
+#: forms/multipliedconsumptionform.py:54
+msgid "New Oil Multiplication Point"
+msgstr "Nuevo Punto Gasoil Multiplicación"
+
+#: forms/multipliedconsumptionform.py:57
+msgid "Edit Electricity Multiplication Point"
+msgstr "Editar Punto Electrico Multiplicación"
+
+#: forms/multipliedconsumptionform.py:60
+msgid "Edit Water Multiplication Point"
+msgstr "Editar Punto Agua Multiplicación"
+
+#: forms/multipliedconsumptionform.py:63
+msgid "Edit Gas Multiplication Point"
+msgstr "Editar Punto Gas Multiplicación"
+
+#: forms/multipliedconsumptionform.py:66
+msgid "Edit Heat Multiplication Point"
+msgstr "Editar Punto Calor Multiplicación"
+
+#: forms/multipliedconsumptionform.py:69
+msgid "Edit Oil Multiplication Point"
+msgstr "Editar Punto Gasoil Multiplicación"
+
+#: forms/power.py:33
+#, fuzzy
+msgid "Edit Power Measurement Point"
+msgstr "Editar Punto de Medida Agua"
+
+#: forms/power.py:52
+#, fuzzy
+msgid "New Power Measurement Point"
+msgstr "Nuevo Punto de Medida  Agua"
+
+#: forms/production.py:38
+#, fuzzy
+msgid "Edit Production Measurement Point"
+msgstr "Editar Punto de Medida Gasoil"
+
+#: forms/production.py:62
+#, fuzzy
+msgid "New Production Measurement Point"
+msgstr "Nuevo Punto de Medida Gasoil"
+
+#: forms/tariff.py:41
+#, fuzzy
+msgid "valid from"
+msgstr "Valido desde:"
+
+#: forms/tariff.py:50
+msgid ""
+"The selected tariff has a different currency than existing cost calculation."
+msgstr ""
+
+#: forms/temperature.py:54
+msgid "Edit Relative Temperature Measurement Point"
+msgstr "Editar Punto de Medida de Temperatura Relativa"
+
+#: forms/temperature.py:56
+msgid "Edit Absolute Temperature Measurement Point"
+msgstr "Editar Punto de Medida de Temperatura Absoluta"
+
+#: forms/temperature.py:81
+msgid "New Temperature Measurement Point"
+msgstr "Nuevo Punto de medida Temperatura"
+
+#: forms/voltage.py:38
+#, fuzzy
+msgid "Edit Voltage Measurement Point"
+msgstr "Editar Punto de Medida Agua"
+
+#: forms/voltage.py:62
+#, fuzzy
+msgid "New Voltage Measurement Point"
+msgstr "Nuevo Punto de Medida  Agua"
+
+#: templates/manage_measurementpoints/base_form.html:23
+#: templates/manage_measurementpoints/temperature_create_form.html:18
+#: templates/manage_measurementpoints/temperature_update_form.html:19
+msgid "Name:"
+msgstr "Nombre:"
+
+#: templates/manage_measurementpoints/base_form.html:28
+#: templates/manage_measurementpoints/block.html:10
+#: templates/manage_measurementpoints/temperature_create_form.html:23
+#: templates/manage_measurementpoints/temperature_update_form.html:24
+msgid "Group:"
+msgstr "Grupo:"
+
+#: templates/manage_measurementpoints/base_form.html:41
+#: templates/manage_measurementpoints/temperature_create_form.html:28
+#: templates/manage_measurementpoints/form_includes/input_form.html:5
+msgid "Input:"
+msgstr "Entrada:"
+
+#: templates/manage_measurementpoints/base_form.html:85
+msgid "Comment:"
+msgstr ""
+
+#: templates/manage_measurementpoints/base_form.html:117
+msgid "Image:"
+msgstr ""
+
+#: templates/manage_measurementpoints/block.html:7
+msgid "Meter no.: "
+msgstr "Nº Medidor:"
+
+#: templates/manage_measurementpoints/block.html:7
+msgid "Installation no.: "
+msgstr "Nº Instalación:"
+
+#: templates/manage_measurementpoints/block.html:15
+msgid "None"
+msgstr "Ninguno"
+
+#: templates/manage_measurementpoints/block.html:21
+msgid "Input configurations:"
+msgstr ""
+
+#: templates/manage_measurementpoints/block.html:33
+msgid "Measurement Point:"
+msgstr "Punto de Medida:"
+
+#: templates/manage_measurementpoints/block.html:36
+#, fuzzy
+msgid "multiplied by"
+msgstr "Multiplicador:"
+
+#: templates/manage_measurementpoints/block.html:43
+#, fuzzy
+msgid "Heat Measurement Point:"
+msgstr "Punto de Medida Calor"
+
+#: templates/manage_measurementpoints/block.html:51
+#: templates/manage_measurementpoints/form_includes/summation_elements.html:5
+msgid "Plus Measurement Points:"
+msgstr "Puntos de Medida Suma:"
+
+#: templates/manage_measurementpoints/block.html:63
+#: templates/manage_measurementpoints/form_includes/summation_elements.html:8
+msgid "Minus Measurement Points:"
+msgstr "Puntos de Medida Resta:"
+
+#: templates/manage_measurementpoints/block.html:76
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/manage_measurementpoints/consumption_measurement_point_summation_form.html:7
+#: templates/manage_measurementpoints/district_heating_measurement_point_form.html:6
+#: templates/manage_measurementpoints/measurementpoint_update_form.html:8
+#: templates/manage_measurementpoints/multiplication_measurement_point_form.html:6
+#: templates/manage_measurementpoints/temperature_update_form.html:50
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/manage_measurementpoints/consumption_measurement_point_summation_form.html:9
+#: templates/manage_measurementpoints/district_heating_measurement_point_form.html:8
+#: templates/manage_measurementpoints/measurementpoint_update_form.html:9
+#: templates/manage_measurementpoints/multiplication_measurement_point_form.html:8
+#: templates/manage_measurementpoints/temperature_update_form.html:53
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/manage_measurementpoints/imported.html:10
+msgid "Data import:"
+msgstr "Importar Datos:"
+
+#: templates/manage_measurementpoints/imported.html:12
+msgid "File:"
+msgstr "Fichero:"
+
+#: templates/manage_measurementpoints/imported.html:17
+msgid "Consumption column:"
+msgstr "Columna Consumo:"
+
+#: templates/manage_measurementpoints/imported.html:22
+msgid "Timezone:"
+msgstr "Zona Horaria:"
+
+#: templates/manage_measurementpoints/imported.html:27
+msgid "Unit:"
+msgstr "Unidad:"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:15
+#: templates/manage_measurementpoints/measurementpoint_list.html:16
+msgid "Settings: Details"
+msgstr "Ajustes: Detalles"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:20
+msgid "Measurement Point"
+msgstr "Punto de Medida"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:25
+msgid "Add"
+msgstr "Suma"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:32
+msgid "Electricity Measurement Point"
+msgstr "Punto de Medida Eléctrico"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:37
+msgid "Gas Measurement Point"
+msgstr "Punto de Medida Gas"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:42
+msgid "Water Measurement Point"
+msgstr "Punto de Medida Agua"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:47
+msgid "Heat Measurement Point"
+msgstr "Punto de Medida Calor"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:52
+msgid "Oil Measurement Point"
+msgstr "Punto de Medida Gasoil"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:57
+msgid "Temperature Measurement Point"
+msgstr "Punto de Medida Temperatura"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:62
+#, fuzzy
+msgid "Production Measurement Point"
+msgstr "Editar Punto de Medida Gasoil"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:67
+#, fuzzy
+msgid "Current Measurement Point"
+msgstr "Punto de Medida Calor"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:72
+#, fuzzy
+msgid "Voltage Measurement Point"
+msgstr "Punto de Medida Volumen:"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:77
+#, fuzzy
+msgid "Power Measurement Point"
+msgstr "Punto de Medida Agua"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:83
+msgid "Electricity Measurement Points Summation"
+msgstr "Punto de Medida Eléctrico Sumatorio"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:88
+msgid "Gas Measurement Points Summation"
+msgstr "Punto de Medida Gas Sumatorio"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:93
+msgid "Water Measurement Points Summation"
+msgstr "Punto de Medida Agua Sumatorio"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:98
+msgid "Heat Measurement Points Summation"
+msgstr "Punto de Medida Calor Sumatorio"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:103
+msgid "Oil Measurement Points Summation"
+msgstr "Punto de Medida Gasoil Sumatorio"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:109
+msgid "Electricity Multiplication Measurement Point"
+msgstr "Punto de Medida Eléctrico Multiplicación"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:114
+msgid "Gas Multiplication Measurement Point"
+msgstr "Punto de Medida Gas Multiplicación"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:119
+msgid "Water Multiplication Measurement Point"
+msgstr "Punto de Medida Agua Multiplicación"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:124
+msgid "Heat Multiplication Measurement Point"
+msgstr "Punto de Medida Calor Multiplicación"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:129
+msgid "Oil Multiplication Measurement Point"
+msgstr "Punto de Medida Gasoil Multiplicación"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:135
+msgid "District Heating Measurement Point"
+msgstr "Punto de Medida District Heating"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:140
+#, fuzzy
+msgid "Imported Electricity Measurement Point"
+msgstr "Editar Punto de Medida Eléctrico Importado"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:145
+#, fuzzy
+msgid "Imported Gas Measurement Point"
+msgstr "Nuevo Punto de Medida Gas"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:150
+#, fuzzy
+msgid "Imported Water Measurement Point"
+msgstr "Nuevo Punto de Medida  Agua"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:155
+#, fuzzy
+msgid "Imported Heat Measurement Point"
+msgstr "Nuevo Punto de Medida Calor"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:160
+#, fuzzy
+msgid "Imported Oil Measurement Point"
+msgstr "Nuevo Punto de Medida Gasoil"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:172
+msgid "Sort by"
+msgstr "Abreviar por"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:173
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:174
+msgid "Group"
+msgstr "Grupo"
+
+#: templates/manage_measurementpoints/measurementpoint_list.html:177
+msgid "Filter"
+msgstr "Filtro"
+
+#: templates/manage_measurementpoints/temperature_create_form.html:33
+#: templates/manage_measurementpoints/temperature_update_form.html:29
+msgid "Relay:"
+msgstr "Relé:"
+
+#: templates/manage_measurementpoints/temperature_create_form.html:38
+#: templates/manage_measurementpoints/temperature_update_form.html:34
+#: templates/manage_measurementpoints/form_includes/options_form.html:16
+msgid "Hidden on details page:"
+msgstr "Ocultar en detalles:"
+
+#: templates/manage_measurementpoints/temperature_create_form.html:43
+#: templates/manage_measurementpoints/temperature_update_form.html:40
+msgid "Define heating degree days:"
+msgstr "Definir grados día calefacción:"
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:4
+msgid "Degree days correction:"
+msgstr "Corrección grados día:"
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:5
+#, fuzzy
+msgid "Calculate the consumption by normalize to historical heating conditions"
+msgstr ""
+"Calcula el consumo <br/>ajustándolo a las condiciones históricas de "
+"calefacción<br/>"
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:7
+msgid "Heating degree days:"
+msgstr "Grados día calefacción:"
+
+#: templates/manage_measurementpoints/form_includes/degree_days_form.html:12
+msgid "Standard heating degree days:"
+msgstr "Grados día estandar calefacción:"
+
+#: templates/manage_measurementpoints/form_includes/district_heating_elements.html:4
+#, fuzzy
+msgid "Volume input:"
+msgstr "Seleciónar datos entrada:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:7
+msgid "Gauge setup"
+msgstr "Ajustes Medidor"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:9
+msgid "Maximum:"
+msgstr "Máximo:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:14
+msgid "Lower threshold:"
+msgstr "Umbral inferior:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:19
+msgid "Upper threshold:"
+msgstr "Umbral superior:"
+
+#: templates/manage_measurementpoints/form_includes/gauge_elements.html:24
+msgid "Gauge colours:"
+msgstr "Colores Medidor:"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:5
+msgid "Indexes:"
+msgstr "Tarifas:"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:6
+#, fuzzy
+msgid "Select one or more indexes to calculate the utilization of resources"
+msgstr ""
+"Seleccione una o más tarifas <br/>para calcular la utilización<br/>de "
+"recursos"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:7
+msgid "Area:"
+msgstr "Área:"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:10
+msgid "Employees:"
+msgstr "Empleados:"
+
+#: templates/manage_measurementpoints/form_includes/indexes_form.html:13
+msgid "CO₂:"
+msgstr "CO₂:"
+
+#: templates/manage_measurementpoints/form_includes/meter_options_form.html:5
+msgid "Meter number:"
+msgstr "Nº Medidor:"
+
+#: templates/manage_measurementpoints/form_includes/meter_options_form.html:10
+msgid "Installation number:"
+msgstr "Nº Installación:"
+
+#: templates/manage_measurementpoints/form_includes/multiplication_elements.html:4
+msgid "Measurement point:"
+msgstr "Punto de Medida:"
+
+#: templates/manage_measurementpoints/form_includes/multiplication_elements.html:9
+msgid "Multiplier:"
+msgstr "Multiplicador:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:8
+msgid "Options:"
+msgstr "Opciones:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:9
+msgid "Relay on detail page:"
+msgstr "Relé en Detalles:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:12
+msgid "Show rate graph:"
+msgstr "Mostrar Grafica:"
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:15
+msgid "Only enable rate graphs if you have a high enough data resolution"
+msgstr ""
+
+#: templates/manage_measurementpoints/form_includes/options_form.html:19
+msgid "Hidden on reports page:"
+msgstr "Ocultar en informes:"
+
+#: templates/manage_measurementpoints/form_includes/summation_elements.html:4
+#, fuzzy
+msgid "Measurement Points:"
+msgstr "Puntos de Medida"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:4
+msgid "Tariffs:"
+msgstr "Tarifas:"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:6
+#, fuzzy
+msgid ""
+"When attaching tariffs to this measurement point the consumption costs will "
+"be calculated"
+msgstr ""
+"Cuando seleccione tarifas para este punto de medida <br/> el coste asociado "
+"al consumo será calculado"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:12
+msgid "Valid from:"
+msgstr "Valido desde:"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:13
+msgid "Tariff:"
+msgstr "Tarifa:"
+
+#: templates/manage_measurementpoints/form_includes/tariff_form.html:14
+msgid "Delete:"
+msgstr "Borrar:"
+
+#~ msgid "The consumption measurement point summation has been saved"
+#~ msgstr "El consumo del punto de medida sumatorio ha sido guardado"
+
+#, fuzzy
+#~ msgid "Volume Input:"
+#~ msgstr "Entrada:"
+
+#~ msgid "All pulse convertion values must be set"
+#~ msgstr "Deben definirse todos los valores de conversión de pulsos"
+
+#~ msgid "New Electricity Pulse Measurement Point"
+#~ msgstr "Nuevo Punto de Medida Eléctrico por Impulsos"
+
+#~ msgid "New Water Pulse Measurement Point"
+#~ msgstr "Nuevo Punto de Medida de Agua por Impulsos"
+
+#~ msgid "New Gas Pulse Measurement Point"
+#~ msgstr "Nuevo Punto de Medida de Gas por Impulsos"
+
+#~ msgid "New Heat Pulse Measurement Point"
+#~ msgstr "Nuevo Punto de Medida Calor por Impulsos"
+
+#~ msgid "New Oil Pulse Measurement Point"
+#~ msgstr "Nuevo Punto de Medida Gasoil por Impulsos"
+
+#~ msgid "Edit Electricity Pulse Measurement Point"
+#~ msgstr "Editar Punto de Medida Eléctrico por impulsos"
+
+#~ msgid "Edit Water Pulse Measurement Point"
+#~ msgstr "Editar Punto de Medida Agua por Impulsos"
+
+#~ msgid "Edit Gas Pulse Measurement Point"
+#~ msgstr "Editar Punto de Medida Gas por Impulsos"
+
+#~ msgid "Edit Heat Pulse Measurement Point"
+#~ msgstr "Editar Punto de Medida Calor por Impulsos"
+
+#~ msgid "Edit Oil Pulse Measurement Point"
+#~ msgstr "Editar Punto de Medida Gas por Impulsos"
+
+#~ msgid "Next"
+#~ msgstr "Siguiente"
+
+#~ msgid "Formula"
+#~ msgstr "Fórmula"
+
+#~ msgid "Input list 1"
+#~ msgstr "Listado de Entrada 1"
+
+#~ msgid "Input list 2"
+#~ msgstr "Listado de Entrada 2"
+
+#~ msgid "Constant 1"
+#~ msgstr "Constante 1"
+
+#~ msgid "Constant 2"
+#~ msgstr "Constante 2"
+
+#~ msgid "Input list 3"
+#~ msgstr "Listado de Entrada 3"
+
+#~ msgid "Input list 4"
+#~ msgstr "Listado de Entrada 4"
+
+#~ msgid "Constant 3"
+#~ msgstr "Constante 3"
+
+#~ msgid "Constant 4"
+#~ msgstr "Constante 4"
+
+#~ msgid "Unit"
+#~ msgstr "Unidad"
+
+#~ msgid "Physical inputs:"
+#~ msgstr "Entradas Físicas"
+
+#~ msgid "Electricity Pulse Measurement Point"
+#~ msgstr "Punto de Medida Electricidad por Impulsos"
+
+#~ msgid "Gas Pulse Measurement Point"
+#~ msgstr "Punto de Medida Gas por Impulsos"
+
+#~ msgid "Water Pulse Measurement Point"
+#~ msgstr "Punto de Medida Agua por Impulsos"
+
+#~ msgid "Heat Pulse Measurement Point"
+#~ msgstr "Punto de Medida Calor por Impulsos"
+
+#~ msgid "Oil Pulse Measurement Point"
+#~ msgstr "Punto de Medida Gasoil por Impulsos"
+
+#~ msgid "Select measurementpoint type:"
+#~ msgstr "Seleccionar tipo de punto de medida:"
+
+#~ msgid "Measurement Point name:"
+#~ msgstr "Nombre de Punto de Medida:"
+
+#~ msgid "Finish"
+#~ msgstr "Finalizar"
+
+#~ msgid "Pulse:"
+#~ msgstr "Pulso:"
+
+#~ msgid "Select relay:"
+#~ msgstr "Seleccionar Relé:"
+
+#~ msgid "Select input(s):"
+#~ msgstr "Selecionar entrada(s):"
+
+#~ msgid "Add another"
+#~ msgstr "Añadir Otro"
+
+#~ msgid "Relative:"
+#~ msgstr "Relativo:"
+
+#~ msgid "Heat measurement point:"
+#~ msgstr "Punto de medida calefacción"
+
+#~ msgid "Volume measurement point:"
+#~ msgstr "Punto de Medida Volumen:"
+
+#, fuzzy
+#~ msgid "Pulse Conversion:"
+#~ msgstr "Conversión impulso"
+
+#~ msgid ""
+#~ "Pulse conversion is done by <i>factor</i> number of <i>output units</i> "
+#~ "per <i>divisor</i> number of pulses."
+#~ msgstr ""
+#~ "La conversión del pulso esta ajustada a <i>factor</i> número de "
+#~ "<i>unidades datos salida </i> por <i>divisisor</i> número de impulsos."
+
+#~ msgid "Divisor:"
+#~ msgstr "Divisor:"
+
+#~ msgid "Factor:"
+#~ msgstr "Factor:"
+
+#~ msgid "Output Unit:"
+#~ msgstr "Unidad datos salida:"
+
+#~ msgid "Set up formula"
+#~ msgstr "Definir formula"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgid "Done"
+#~ msgstr "Realizado"
+
+#~ msgid ""
+#~ "\n"
+#~ "            %(pulses)s pulses correspond to %(value)s %(unit)s\n"
+#~ "          "
+#~ msgstr ""
+#~ "\n"
+#~ "            %(pulses)s pulsos corresponden a %(value)s %(unit)s"
+
+#~ msgid "Specify source type:"
+#~ msgstr "Especificar fuente tipo:"
+
+#~ msgid ""
+#~ "\n"
+#~ "          %(divisor)s pulses correspond to %(factor)s %(unit)s\n"
+#~ "        "
+#~ msgstr ""
+#~ "\n"
+#~ "          %(divisor)s pulsos corresponden a %(factor)s %(unit)s"
+
+#~ msgid "New Historical Electricity Measurement Point"
+#~ msgstr "Nuevo Punto de Medida Eléctrico Histórico"
+
+#~ msgid "Modules"
+#~ msgstr "Modulos"
+
+#~ msgid "Historical Electricity Measurement Point"
+#~ msgstr "Punto de Medida District Heating Histórico"

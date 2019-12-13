@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load l10n %}
+{% load reports %}
+\begin{center}
+\begin{tikzpicture}[scale=3.5]
+  \pgfmathsetmacro{\degreesb}{-30}
+{% for name, previous_value, value, percent, change_percent, has_errors, color in total %}
+{% if percent and percent <= 100 and percent >= 0 %}
+  \let\degreesa\degreesb
+  % 100% -> 360 degrees ...
+  \pgfmathsetmacro{\degreesb}{\degreesb-3.6*{{ percent|stringformat:'f' }}}
+  {% if percent > 1.2 %}%
+  \slice{\degreesa}{\degreesb}{\relax {{ name|texescape }}, {{ percent|floatformat:0 }}\%}{ {{ color }}}
+  {% else %}%
+  \slice{\degreesa}{\degreesb}{}{ {{ color }}}
+  {% endif %}%
+{% endif %}
+{% endfor %}
+\end{tikzpicture}
+\end{center}

@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: views.py:33 templates/start_site/navbar.html:8
+msgid "SmartFlex"
+msgstr "SmartFlex"
+
+#: views.py:37 templates/start_site/navbar.html:10
+msgid "Endesa Energy Portal"
+msgstr "Endesa Energy Portal"
+
+#: views.py:41
+msgid "GridPortal 2.0"
+msgstr "GridPortal 2.0"
+
+#: views.py:49
+msgid "Sales"
+msgstr "Salg"
+
+#: views.py:54
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: views.py:61
+msgid "Product List"
+msgstr "Produktliste"
+
+#: views.py:67
+msgid "System Health"
+msgstr "System Status"
+
+#: views.py:73
+msgid "Administration"
+msgstr "Administration"
+
+#: views.py:79
+msgid "Energy Manager"
+msgstr "Energy Manager"
+
+#: views.py:85
+msgid "Survey"
+msgstr "Teknisk Opmåling"
+
+#: views.py:91
+msgid "Reporting"
+msgstr "Indrapportering"
+
+#: views.py:97
+msgid "Tariff and Compensation"
+msgstr "Tariffer og Afgiftsgodtgørelse"
+
+#: views.py:104
+msgid "Graphs"
+msgstr "Grafer"
+
+#: templates/start_site/apps.html:15
+msgid "Welcome to SmartFlex, choose an app"
+msgstr "Velkommen til SmartFlex, vælg en app"
+
+#: templates/start_site/apps.html:17
+msgid "Welcome to the Endesa Energy Portal, choose an app"
+msgstr "Velkommen til Endesa Energy Portal, vælg en app"
+
+#: templates/start_site/apps.html:19
+msgid "Welcome to GridPortal, choose an app"
+msgstr "Velkommen til GridPortalen, vælg en app"
+
+#: templates/start_site/apps.html:34
+msgid "or"
+msgstr "eller"
+
+#: templates/start_site/apps.html:36
+msgid "Logout"
+msgstr "Log ud"
+
+#: templates/start_site/base.html:13
+msgid "SmartFlex: Login"
+msgstr "SmartFlex: Login"
+
+#: templates/start_site/base.html:15
+msgid "Endesa Energy Portal: Login"
+msgstr "Endesa Energy Portal: Login"
+
+#: templates/start_site/base.html:17
+msgid "GridPortal: Login"
+msgstr "GridPortal: Login"
+
+#: templates/start_site/login.html:16
+msgid "Login to SmartFlex"
+msgstr "Log in på SmartFlex"
+
+#: templates/start_site/login.html:18
+msgid "Login to Endesa Energy Manager"
+msgstr "Login til Endesa Energy Manager"
+
+#: templates/start_site/login.html:20
+msgid "Login to GridPortal"
+msgstr "Log in på GridPortalen"
+
+#: templates/start_site/navbar.html:12
+msgid "GridPortal"
+msgstr "GridPortal"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"

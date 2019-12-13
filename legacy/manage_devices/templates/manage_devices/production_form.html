@@ -1,0 +1,19 @@
+{% extends "manage_devices/input_configuration_form_base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load static from staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}{% trans "Settings: Devices" %}{% endblock title %}
+
+{% block content_heading %}{% trans "Settings: Devices" %}{% endblock %}
+
+{% block form_heading %}
+  <h3 class="left">{% trans "Convert Impulses to Production" %}</h3>
+{% endblock form_heading %}
+
+{% block content %}
+{% with form_template="manage_devices/_production_impulse_form.html" %}
+{{ block.super }}
+{% endwith %}
+{% endblock content %}

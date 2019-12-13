@@ -1,0 +1,24 @@
+{% extends "list_page.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block page_id %}rules-page{% endblock %}
+{% block list_url %}{% url 'manage_rules-list-json' %}{% endblock %}
+{% block default_sort_by %}name{% endblock %}
+
+{% block title %}{% trans "Settings: Rules" %}{% endblock %}
+{% block content_heading %}{% trans "Settings: Rules" %}{% endblock content_heading %}
+{% block list_title %}{% trans "Rules" %}{% endblock %}
+
+{% block sort_by %}
+<span class="sort" data-sort="name">{% trans "Name" %}</span>
+{% endblock %}
+
+{% block add_menu_content %}
+{% if user.is_customer_superuser or user.is_admin %}
+<ul>
+  <li><a href="{% url 'manage_rules-minimizerule_form' %}">{% trans "Minimize rule" %}</a></li>
+  <li><a href="{% url 'manage_rules-triggeredrule_form' %}">{% trans "Triggered rule" %}</li>
+</ul>
+{% endif %}
+{% endblock %}

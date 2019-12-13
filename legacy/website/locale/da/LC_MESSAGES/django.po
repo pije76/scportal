@@ -1,0 +1,379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: templates/admin_menu.html:9
+msgid "Customers"
+msgstr "Kunder"
+
+#: templates/admin_menu.html:16
+msgid "Agents"
+msgstr "Agenter"
+
+#: templates/admin_settings_menu.html:9
+#: templates/customer_superuser_settings_menu.html:59
+#: templates/customer_user_settings_menu.html:9
+msgid "User Profile"
+msgstr "Brugerprofil"
+
+#: templates/admin_superuser_menu_points.html:9
+#: templates/customer_superuser_settings_menu.html:10
+#: templates/customer_user_menu.html:16
+msgid "Details"
+msgstr "Detaljer"
+
+#: templates/admin_superuser_menu_points.html:16
+#: templates/customer_superuser_settings_menu.html:31
+#: templates/customer_user_menu.html:23
+msgid "Indexes"
+msgstr "Indekser"
+
+#: templates/admin_superuser_menu_points.html:23
+#: templates/customer_user_menu.html:30
+msgid "Reports"
+msgstr "Rapporter"
+
+#: templates/admin_superuser_menu_points.html:30
+#: templates/customer_user_menu.html:37
+msgid "Projects"
+msgstr "Projekter"
+
+#: templates/base.html:103 templates/base.html.py:129
+#: templates/overlay_base.html:17
+msgid "Close"
+msgstr "Luk"
+
+#: templates/base.html:104
+msgid "Previous"
+msgstr "Forrige"
+
+#: templates/base.html:105
+msgid "Next"
+msgstr "Næste"
+
+#: templates/base.html:106 templates/base.html.py:128
+msgid "Now"
+msgstr "Nu"
+
+#: templates/base.html:107
+msgid "January"
+msgstr "Januar"
+
+#: templates/base.html:107
+msgid "February"
+msgstr "Februar"
+
+#: templates/base.html:107
+msgid "March"
+msgstr "Marts"
+
+#: templates/base.html:107
+msgid "April"
+msgstr "April"
+
+#: templates/base.html:107 templates/base.html.py:108
+msgid "May"
+msgstr "Maj"
+
+#: templates/base.html:107 templates/base.html.py:108
+msgid "June"
+msgstr "Juni"
+
+#: templates/base.html:107 templates/base.html.py:108
+msgid "July"
+msgstr "Juli"
+
+#: templates/base.html:107
+msgid "August"
+msgstr "August"
+
+#: templates/base.html:107
+msgid "September"
+msgstr "September"
+
+#: templates/base.html:107
+msgid "October"
+msgstr "Oktober"
+
+#: templates/base.html:107
+msgid "November"
+msgstr "November"
+
+#: templates/base.html:107
+msgid "December"
+msgstr "December"
+
+#: templates/base.html:108
+msgid "Jan"
+msgstr "Jan"
+
+#: templates/base.html:108
+msgid "Feb"
+msgstr "Feb"
+
+#: templates/base.html:108
+msgid "Mar"
+msgstr "Mar"
+
+#: templates/base.html:108
+msgid "Apr"
+msgstr "Apr"
+
+#: templates/base.html:108
+msgid "Aug"
+msgstr "Aug"
+
+#: templates/base.html:108
+msgid "Sept"
+msgstr "Sept"
+
+#: templates/base.html:108
+msgid "Oct"
+msgstr "Okt"
+
+#: templates/base.html:108
+msgid "Nov"
+msgstr "Nov"
+
+#: templates/base.html:108
+msgid "Dec"
+msgstr "Dec"
+
+#: templates/base.html:109
+msgid "Sunday"
+msgstr "Søndag"
+
+#: templates/base.html:109
+msgid "Monday"
+msgstr "Mandag"
+
+#: templates/base.html:109
+msgid "Tuesday"
+msgstr "Tirsdag"
+
+#: templates/base.html:109
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: templates/base.html:109
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: templates/base.html:109
+msgid "Friday"
+msgstr "Fredag"
+
+#: templates/base.html:109
+msgid "Saturday"
+msgstr "Lørdag"
+
+#: templates/base.html:110
+msgid "Sun"
+msgstr "Søn"
+
+#: templates/base.html:110
+msgid "Mon"
+msgstr "Man"
+
+#: templates/base.html:110
+msgid "Tue"
+msgstr "Tir"
+
+#: templates/base.html:110
+msgid "Wed"
+msgstr "Ons"
+
+#: templates/base.html:110
+msgid "Thu"
+msgstr "Tor"
+
+#: templates/base.html:110
+msgid "Fri"
+msgstr "Fre"
+
+#: templates/base.html:110
+msgid "Sat"
+msgstr "Lør"
+
+#: templates/base.html:111
+msgid "Su"
+msgstr "Sø"
+
+#: templates/base.html:111
+msgid "Mo"
+msgstr "Ma"
+
+#: templates/base.html:111
+msgid "Tu"
+msgstr "Ti"
+
+#: templates/base.html:111
+msgid "We"
+msgstr "On"
+
+#: templates/base.html:111
+msgid "Th"
+msgstr "To"
+
+#: templates/base.html:111
+msgid "Fr"
+msgstr "Fr"
+
+#: templates/base.html:111
+msgid "Sa"
+msgstr "Lø"
+
+#: templates/base.html:112
+msgctxt "abbreviation for week"
+msgid "Wk"
+msgstr "Uge"
+
+#: templates/base.html:121
+msgid "Choose a time"
+msgstr "Vælg et tidspunkt"
+
+#: templates/base.html:122
+msgid "Time"
+msgstr "Tid"
+
+#: templates/base.html:123
+msgid "Hour"
+msgstr "Time"
+
+#: templates/base.html:124
+msgid "Minute"
+msgstr "Minut"
+
+#: templates/base.html:125
+msgid "Second"
+msgstr "Sekund"
+
+#: templates/base.html:126
+msgid "Millisecond"
+msgstr "Millisekund"
+
+#: templates/base.html:127
+msgid "Timezone"
+msgstr "Tidszone"
+
+#: templates/base.html:158
+msgid "Apps"
+msgstr "Apps"
+
+#: templates/base.html:164
+msgid "Go back to admin mode"
+msgstr "Gå tilbaget til administratortilstand"
+
+#: templates/base.html:166
+msgid "Acting for customer:"
+msgstr "Agerer som kunde:"
+
+#: templates/base.html:195
+msgid "Logout"
+msgstr "Log ud"
+
+#: templates/base.html:237
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: templates/customer_superuser_menu.html:9
+#: templates/customer_user_menu.html:9
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/customer_superuser_settings_menu.html:17
+msgid "Groups"
+msgstr "Grupper"
+
+#: templates/customer_superuser_settings_menu.html:24
+msgid "Rules"
+msgstr "Regler"
+
+#: templates/customer_superuser_settings_menu.html:38
+msgid "Devices"
+msgstr "Enheder"
+
+#: templates/customer_superuser_settings_menu.html:45
+msgid "Locations"
+msgstr "Lokationer"
+
+#: templates/customer_superuser_settings_menu.html:52
+msgid "Users"
+msgstr "Brugere"
+
+#: templates/list_page.html:47
+msgid "Add"
+msgstr "Tilføj"
+
+#: templates/list_page.html:59
+msgid "Sort by"
+msgstr "Sorter efter"
+
+#: templates/list_page.html:63
+msgid "Filter"
+msgstr "Filter"
+
+#: templates/overlay_base.html:11
+msgid "Save"
+msgstr "Gem"
+
+#: templates/website/login.html:5 templates/website/login.html.py:6
+#: templates/website/login.html:23
+msgid "Login"
+msgstr "Log ind"
+
+#: templatetags/version.py:28
+msgid "Version: {}"
+msgstr "Version: {}"
+
+#~ msgid "GridManager admin"
+#~ msgstr "GridManager admin"
+
+#~ msgid "GridManager administration"
+#~ msgstr "GridManager administration"
+
+#~ msgid "App▾"
+#~ msgstr "App▾"
+
+#~ msgid "GridPortal"
+#~ msgstr "GridPortal"
+
+#~ msgid "Sales"
+#~ msgstr "Salg"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfiguration"
+
+#~ msgid "Product List"
+#~ msgstr "Produktliste"
+
+#~ msgid "System Health"
+#~ msgstr "Systemstatus"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid "yy-mm-dd"
+#~ msgstr "yy-mm-dd"
+
+#~ msgid "Version: unknown"
+#~ msgstr "Version: ukendt"
+
+#~ msgid "Collections"
+#~ msgstr "Grupper"

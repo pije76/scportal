@@ -1,0 +1,86 @@
+.in-page-menu {
+    position: absolute;
+    z-index: 1000;
+    .scroller {
+        min-height: 250px;
+        max-height: 400px;
+        overflow-x: hidden;
+        float:left;
+        border: 1px solid #898989;
+        background-color: #FFF;
+        position:relative;
+        top:-1px;
+    }
+    .menu-content {
+        min-height: 250px;
+        a {
+            width: 100%;
+            .right {
+                padding-right: 2px;
+            }
+        }
+        ul {
+            list-style: none;
+            margin:0;
+            li {
+                padding-left: 0px;
+                margin-left: 0;
+                background-repeat: no-repeat;
+                a, a:hover, a:visited, a:active {
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+            .location {
+                background-image: url(images/small-location-icon.png);
+            }
+            .measurement-points {
+                background-image: url(images/small-graph-icon.png);
+            }
+        }
+        li {
+            ul {
+                padding-left: 20px;
+            }
+        }
+        .spacer {
+            margin-left: 5px;
+        }
+    }
+    .menu-btn {
+        border: 1px solid #898989;
+        background-color: #FFF;
+        float:left;
+        height: 170px;
+        width: 25px;
+        position:relative;
+        top:-1px;
+        left: -1px;
+        cursor: pointer;
+
+        .rotate {
+            display:inline-block;
+            position:absolute;
+            left:-62px;
+            top: 70px;
+            width: 150px;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            span {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        }
+        img {
+            position: relative;
+            top: 150px;
+            left: 5px;
+        }
+    }
+}

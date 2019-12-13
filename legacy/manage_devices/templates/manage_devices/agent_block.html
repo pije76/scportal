@@ -1,0 +1,22 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+<div class="clearfix" data-url="{% url 'manage_devices-agent-form' pk=agent.id %}">
+  <h3>{{ agent.mac }}</h3>
+  <dl>
+    <dt>{% trans "Location:" %}</dt>
+    <dd>{{ agent.location }}</dd>
+    {% trans "Online,Offline" as online_offline %}
+    <dt>{% trans "Connection state:" %}</dt>
+    <dd>{{ agent.online|yesno:online_offline }}</dd>
+  </dl>
+  <span class="right">
+    {% if user.is_customer_superuser or user.is_admin %}
+    <a class="open" href="#">
+      <img src="{% static 'images/arrow-left.png' %}" alt="{% trans 'Edit' %}">
+    </a>
+    {% endif %}
+  </span>
+</div>
+{% endspaceless %}

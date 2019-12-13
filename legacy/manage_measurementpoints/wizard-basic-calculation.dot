@@ -1,0 +1,24 @@
+digraph basiccalculation {
+        start[shape=circle, label=""];
+        done[shape=circle, label=""];
+        start -> overview;
+
+        overview -> add_minuend;
+        add_minuend -> overview [label="normal"];
+        add_minuend -> setup_type_minuend [label="pulse; type unknown"];
+        add_minuend -> setup_pulse_minuend [label="pulse; type known"];
+        setup_type_minuend -> setup_pulse_minuend;
+        setup_pulse_minuend -> overview;
+
+        overview -> add_subtrahend;
+        add_subtrahend -> overview [label="normal"];
+        add_subtrahend -> setup_type_subtrahend [label="pulse; type unknown"];
+        add_subtrahend -> setup_pulse_subtrahend [label="pulse; type known"];
+        setup_type_subtrahend -> setup_pulse_subtrahend;
+        setup_pulse_subtrahend -> overview;
+
+        overview -> set_relay;
+        set_relay -> set_name;
+
+        set_name -> done;
+}

@@ -1,0 +1,19 @@
+{% load i18n %}
+
+<div class="box">
+  <div class="box-header">
+    <h2>{{ title }}</h2>
+    <div class="box-icon">
+      {% if search %}
+      <span class="list-search">
+        <input type="text" placeholder="{% trans 'Search' %}">
+        <i class="fa fa-search"></i>
+      </span>
+      {% endif %}
+      {{ buttons }}
+    </div>
+  </div>
+  <div class="box-content">
+    {{ body }}
+  </div>
+</div>

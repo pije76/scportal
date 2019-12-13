@@ -1,0 +1,28 @@
+$footer-background: #680000;
+
+
+#header {
+    height: 40px;
+    .logo {
+        background-image: url('/static/images/dong_logo.png');
+        width: 121px;
+        height: 39px;
+        display: inline-block;
+    }
+}
+
+#menu {
+    background-image: url(images/red-top-gradient.png);
+    .menu-item {
+        background-image: url(images/red-menu-background.png);
+        margin-top: -1px;
+    }
+    .menu-right-border {
+        background-image: url(images/red-menu-right-border.png);
+        margin-top: -1px;
+    }
+}
+
+#settings-menu {
+    top: 40px;
+}

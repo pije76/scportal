@@ -1,0 +1,490 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-29 17:34+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: fields.py:75
+msgid "Consumption"
+msgstr "Consumo"
+
+#: fields.py:76
+msgid "Power"
+msgstr "Potencia"
+
+#: fields.py:77
+msgid "Relative temperature"
+msgstr "Temperatura relativa"
+
+#: fields.py:78
+msgid "Absolute temperature"
+msgstr "Temperatura absoluta"
+
+#: fields.py:79
+msgid "Cost"
+msgstr "Coste"
+
+#: fields.py:80
+msgid "Volume"
+msgstr "Volumen"
+
+#: fields.py:81
+msgid "Volume flow"
+msgstr "Caudal"
+
+#: fields.py:82
+msgid "Voltage"
+msgstr "Tensión"
+
+#: fields.py:83
+msgid "Current"
+msgstr "Corriente"
+
+#: fields.py:84
+msgid "Frequency"
+msgstr "Frecuencia"
+
+#: fields.py:85
+msgid "Mass"
+msgstr "Masa"
+
+#: fields.py:86
+msgid "Pressure"
+msgstr "Presión"
+
+#: fields.py:87
+msgid "Time"
+msgstr "Hora"
+
+#: fields.py:88
+msgid "State"
+msgstr "Estado"
+
+#: fields.py:89
+msgid "Heat tariff"
+msgstr "Tarifa calor"
+
+#: fields.py:90
+msgid "Gas tariff"
+msgstr "Tarifa gas"
+
+#: fields.py:91
+msgid "Electricity tariff"
+msgstr "Tarifa electricidad"
+
+#: fields.py:92
+msgid "Water tariff"
+msgstr "Tarifa agua"
+
+#: fields.py:93
+msgid "CO₂ quotient"
+msgstr "Coeficiente CO₂"
+
+#: fields.py:94
+msgid "Employees"
+msgstr "Empleados"
+
+#: fields.py:95
+msgid "Cached data series"
+msgstr "Series de datos almacenadas"
+
+#: fields.py:96
+msgid "Hidden data series"
+msgstr "Series de datos escondidas"
+
+#: fields.py:97
+msgid "Standard heating degree days"
+msgstr "Grados día calefacción estándar"
+
+#: fields.py:98
+msgid "Heating degree days"
+msgstr "Grados día calefacción"
+
+#: fields.py:100
+msgid "Heating degree days corrected consumption"
+msgstr "Consumo corregido según grados día calefacción"
+
+#: fields.py:101
+msgid "Area"
+msgstr "Zona"
+
+#: fields.py:102
+msgid "CO₂"
+msgstr "CO₂"
+
+#: fields.py:103
+msgid "Hidden electricity tariff"
+msgstr "Tarifa eléctrica oculta"
+
+#: fields.py:104
+msgid "Hidden gas tariff"
+msgstr "Tarifa de gas oculta"
+
+#: fields.py:105
+msgid "Hidden heat tariff"
+msgstr "Tarifa de calor oculta"
+
+#: fields.py:106
+msgid "Hidden water tariff"
+msgstr "Tarifa de agua oculta"
+
+#: fields.py:108
+msgid "Consumption utilisation according to number of employees"
+msgstr "Uso del consumo según el número de empleados"
+
+#: fields.py:110
+msgid "Consumption utilisation according to area"
+msgstr "Uso del consumo según la zona"
+
+#: fields.py:111
+msgid "Production EnPI"
+msgstr ""
+
+#: fields.py:112
+msgid "Mean cool-down temperature"
+msgstr "Temperatura de enfriamiento media"
+
+#: fields.py:113
+msgid "Oil tariff"
+msgstr "Tarifa gasoil"
+
+#: fields.py:114
+msgid "Hidden oil tariff"
+msgstr "Tarifa gasoil oculta"
+
+#: fields.py:115
+msgid "Linear regression"
+msgstr ""
+
+#: fields.py:116
+msgid "Energy driver"
+msgstr ""
+
+#: fields.py:117
+#, fuzzy
+msgid "Production"
+msgstr "Resolución"
+
+#: fields.py:118
+msgid "Heat loss coefficient"
+msgstr ""
+
+#: fields.py:124
+msgid "Role"
+msgstr "Función"
+
+#: models/chain.py:31
+msgid "chain"
+msgstr "enlace"
+
+#: models/chain.py:32
+msgid "chains"
+msgstr "enlaces"
+
+#: models/chain.py:104
+msgid "chain link"
+msgstr "enlace"
+
+#: models/chain.py:105
+msgid "chain links"
+msgstr "enlaces"
+
+#: models/chain.py:124
+msgid "The unit of the selected data series is incompatible with this chain"
+msgstr ""
+
+#: models/co2calculation.py:31
+msgid "CO₂ calculation"
+msgstr "cálculo CO₂"
+
+#: models/co2calculation.py:32
+msgid "CO₂ calculations"
+msgstr "cálculos CO₂"
+
+#: models/costcalculation.py:32
+msgid "cost calculation"
+msgstr "cálculo del coste"
+
+#: models/costcalculation.py:33
+msgid "cost calculations"
+msgstr "cálculos del coste"
+
+#: models/dataseries.py:231
+msgid "utility type"
+msgstr ""
+
+#: models/dataseries.py:241
+msgid "Piecewise constant accumulation"
+msgstr "Acumulación constante lineal a trozos"
+
+#: models/dataseries.py:243
+msgid "Piecewise constant rate"
+msgstr "Ratio constante lineal a trozos"
+
+#: models/dataseries.py:245
+msgid "Continuous accumulation"
+msgstr "Acumulación continua"
+
+#: models/dataseries.py:247
+msgid "Continuous rate"
+msgstr "Ratio continuo"
+
+#: models/dataseries.py:249
+msgid "Interval function"
+msgstr ""
+
+#: models/dataseries.py:253 models/dataseries.py:254
+msgid "dataseries"
+msgstr "Series de datos"
+
+#: models/dataseries.py:1480
+msgid "value"
+msgstr "valor"
+
+#: models/dataseries.py:1481
+msgid "timestamp"
+msgstr "timestamp"
+
+#: models/dataseries.py:1484 models/dataseries.py:1485
+msgid "stored data"
+msgstr "datos almacenados"
+
+#: models/degreedays.py:112
+#, fuzzy
+msgid ""
+"Heating degree days can only be defined in terms of absolute temperatures."
+msgstr ""
+"Aviso: Los Grados día calefacción están solo definidos para días o mayores "
+"intervalos de tiempo."
+
+#: models/degreedays.py:142
+msgid ""
+"Warning: Heating degree days are only defined for days or larger resolutions."
+msgstr ""
+"Aviso: Los Grados día calefacción están solo definidos para días o mayores "
+"intervalos de tiempo."
+
+#: models/graph.py:102
+msgid "Min: {{ min_value }} {{ unit }} | Max: {{ max_value }} {{ unit }}"
+msgstr "Min: {{ min_value }} {{ unit }} | Max: {{ max_value }} {{ unit }}"
+
+#: models/graph.py:109
+msgid ""
+"Avg: {{ avg_value }} {{ unit }} | Min: {{ min_value }} {{ unit }} | Max: "
+"{{ max_value }} {{ unit }}"
+msgstr ""
+"Media: {{ avg_value }} {{ unit }} | Min: {{ min_value }} {{ unit }} | Max: "
+"{{ max_value }} {{ unit }}"
+
+#: models/graph.py:119 models/graph.py:128 models/graph.py:459
+msgid "No values in this range."
+msgstr "No hay valores en este rango."
+
+#: models/graph.py:126
+msgid "Total: {{ total }} {{ unit }}"
+msgstr "Total: {{ total }} {{ unit }}"
+
+#: models/graph.py:139
+msgid "Rightmost sample is incomplete"
+msgstr ""
+
+#: models/graph.py:140 models/graph.py:145
+#, python-brace-format
+msgid "{caption} ({warning})"
+msgstr "{caption} ({warning})"
+
+#: models/graph.py:144
+msgid "Graph is based on incomplete data"
+msgstr ""
+
+#: models/graph.py:443
+#, python-brace-format
+msgid "Avg: {average} {unit}."
+msgstr ""
+
+#: models/graph.py:451
+#, python-brace-format
+msgid "Avg: {average} {unit} (Graph is based on incomplete data)."
+msgstr ""
+
+#: models/graph.py:541
+msgid "graph"
+msgstr "gráfico"
+
+#: models/graph.py:542
+msgid "graphs"
+msgstr "gráficos"
+
+#: models/indexcalculation.py:34
+msgid "index calculation"
+msgstr "cálculo tarifa"
+
+#: models/indexcalculation.py:35
+msgid "index calculations"
+msgstr "cálculo tarifas"
+
+#: models/integral.py:32
+#, fuzzy
+msgid "piecewise constant integral"
+msgstr "Ratio constante lineal a trozos"
+
+#: models/integral.py:33
+#, fuzzy
+msgid "piecewise constant integrals"
+msgstr "Ratio constante lineal a trozos"
+
+#: models/link.py:24 models/link.py:25
+msgid "link"
+msgstr "enlace"
+
+#: models/meantemperaturechange.py:45 models/meantemperaturechange.py:46
+msgid "mean temperature change"
+msgstr "cambio de temperatura media"
+
+#: models/multiplication.py:24
+msgid "mulitplication"
+msgstr "multiplicación"
+
+#: models/multiplication.py:25
+msgid "multiplications"
+msgstr "multiplicaciones"
+
+#: models/rateconversion.py:29
+msgid "rate conversion"
+msgstr "conversión índice"
+
+#: models/rateconversion.py:30
+msgid "rate conversions"
+msgstr "conversión índices"
+
+#: models/simplelinearregression.py:23
+msgid "Simple linear regression"
+msgstr ""
+
+#: models/simplelinearregression.py:24
+msgid "Simple linear regressions"
+msgstr ""
+
+#: models/storeddataseries.py:20 models/storeddataseries.py:21
+#, fuzzy
+msgid "stored data series"
+msgstr "Series de datos almacenadas"
+
+#: models/summation.py:70
+msgid "summation"
+msgstr "suma"
+
+#: models/summation.py:71
+msgid "summations"
+msgstr "sumas"
+
+#: models/utilization.py:44
+msgid "normalization"
+msgstr "normalización"
+
+#: models/utilization.py:45
+msgid "normalizations"
+msgstr "normalizaciones"
+
+#: models/utilization.py:59
+#, python-brace-format
+msgid ""
+"Consumption unit {consumption_unit} and needs unit {needs_unit} are not "
+"compatible with target unit {target_unit}"
+msgstr ""
+"La unidad de consumo {consumption_unit} y necesita unidades {needs_unit} no "
+"son compatibles con la unidad deseada {target_unit}"
+
+#~ msgid "unknown"
+#~ msgstr "desconocido"
+
+#~ msgid "electricity"
+#~ msgstr "electricidad"
+
+#~ msgid "water"
+#~ msgstr "agua"
+
+#~ msgid "gas"
+#~ msgstr "gas"
+
+#~ msgid "heat"
+#~ msgstr "calor"
+
+#~ msgid "oil"
+#~ msgstr "gasoil"
+
+#~ msgid "Minutes"
+#~ msgstr "Minutos"
+
+#, fuzzy
+#~ msgid "5 Minutes"
+#~ msgstr "Minutos"
+
+#~ msgid "Hours"
+#~ msgstr "Horas"
+
+#~ msgid "Days"
+#~ msgstr "Días"
+
+#~ msgid "Weeks"
+#~ msgstr "Semanas"
+
+#~ msgid "Months"
+#~ msgstr "Meses"
+
+#~ msgid "Years"
+#~ msgstr "Años"
+
+#~ msgid "timezone"
+#~ msgstr "zona horaria"
+
+#~ msgid "Resolution"
+#~ msgstr "Resolución"
+
+#, fuzzy
+#~ msgid "cached data"
+#~ msgstr "Series de datos almacenadas"
+
+#~ msgid "New Electricity Consumption Measurement Point"
+#~ msgstr "Nuevo Punto de Medida de Consumo Eléctrico"
+
+#~ msgid "Edit Electricity Consumption Measurement Point"
+#~ msgstr "Editar Punto de Medida de Consumo Eléctrico"
+
+#~ msgid "New Electricity Summation Point"
+#~ msgstr "Nuevo Punto de Suma de Consumo Eléctrico"
+
+#~ msgid "Edit Electricity Summation Point"
+#~ msgstr "Editar Punto de Suma de Consumo Eléctrico"
+
+#~ msgid "Graph has been extrapolated"
+#~ msgstr "La gráfica ha sido extrapolada"
+
+#~ msgid "sequence element"
+#~ msgstr "elemento secuencial"
+
+#~ msgid "sequence inputs"
+#~ msgstr "entradas secuenciales"
+
+#~ msgid "logical input"
+#~ msgstr "entrada lógica"
+
+#~ msgid "logical inputs"
+#~ msgstr "entradas lógicas"
+
+#~ msgid "offset"
+#~ msgstr "offset"

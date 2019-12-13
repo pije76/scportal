@@ -1,0 +1,19 @@
+{% extends "manage_indexes/form_base.html" %}
+
+{% block fields %}
+    {% include "manage_indexes/_index_fields.html" %}
+{% endblock fields %}
+
+{% block formset %}
+{{ formset.management_form }}
+<ul class="index-periods horizontal">
+  {% for period_form in formset %}
+  <li class="clearfix">
+    {% include "manage_indexes/_derived_period_formset.html" with period_form=period_form %}
+  </li>
+  {% endfor %}
+  <li class="empty-form" style="display: none;">
+    {% include "manage_indexes/_derived_period_formset.html" with period_form=formset.empty_form %}
+  </li>
+</ul>
+{% endblock formset %}

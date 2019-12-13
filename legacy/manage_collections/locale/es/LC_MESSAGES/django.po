@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 12:42+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: views.py:41
+msgid "The group has been deleted"
+msgstr "El grupo ha sido borrado"
+
+#: views.py:137
+msgid "The group has been saved"
+msgstr "El grupo ha sido guardado"
+
+#: views.py:200
+msgid "Browse and select an image first"
+msgstr "Navegue y seleccione una imagen primero"
+
+#: templates/manage_collections/group_block.html:22
+#: templates/manage_collections/group_form.html:10
+#: templates/manage_collections/group_normal_block.html:16
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/manage_collections/group_details.html:13
+#: templates/manage_collections/group_details.html:14
+#: templates/manage_collections/group_floorplan.html:149
+#: templates/manage_collections/group_floorplan.html:150
+msgid "Details"
+msgstr "Detalles"
+
+#: templates/manage_collections/group_details.html:18
+#: templates/manage_collections/group_details_tabs.html:4
+#: templates/manage_collections/group_floorplan.html:233
+msgid "Measurement Points"
+msgstr "Punto de Medición"
+
+#: templates/manage_collections/group_details.html:26
+msgid "Sort by"
+msgstr "Abreviar por"
+
+#: templates/manage_collections/group_details.html:27
+#: templates/manage_collections/group_list.html:23
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/manage_collections/group_details.html:28
+msgid "Group"
+msgstr "Grupo"
+
+#: templates/manage_collections/group_details.html:31
+msgid "Filter"
+msgstr "Filtro"
+
+#: templates/manage_collections/group_details_tabs.html:5
+#: templates/manage_collections/group_floorplan.html:155
+msgid "Overview"
+msgstr "Vista General"
+
+#: templates/manage_collections/group_floorplan.html:178
+#: templates/manage_collections/group_floorplan.html:222
+#: templates/manage_collections/group_form.html:44
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/manage_collections/group_floorplan.html:189
+msgid "Upload"
+msgstr "Cargar"
+
+#: templates/manage_collections/group_floorplan.html:218
+msgid "New text box"
+msgstr ""
+
+#: templates/manage_collections/group_form.html:12
+msgid "New Group"
+msgstr "Nuevo Grupo"
+
+#: templates/manage_collections/group_form.html:28
+msgid "Name:"
+msgstr "Nombre:"
+
+#: templates/manage_collections/group_form.html:35
+msgid "Parent:"
+msgstr "Padre:"
+
+#: templates/manage_collections/group_form.html:46
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/manage_collections/group_list.html:9
+#: templates/manage_collections/group_list.html:10
+msgid "Settings: Groups"
+msgstr "Ajustes: Grupos"
+
+#: templates/manage_collections/group_list.html:11
+msgid "Groups"
+msgstr "Grupos"
+
+#: templates/manage_collections/group_list.html:16
+#: templates/manage_collections/group_list.html:17
+msgid "Add group"
+msgstr "Añadir grupo"

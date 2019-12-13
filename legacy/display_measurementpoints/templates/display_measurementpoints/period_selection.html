@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load static from staticfiles %}
+<script type="text/javascript">
+{% include "display_measurementpoints/period_selection.js" %}
+</script>
+<form method="GET" action="" id="period-selection">
+<a href="#" id="period-day" class="btn">{% trans "Day" %}</a>
+<span>&nbsp;</span>
+<a href="#" id="period-week" class="btn">{% trans "Week" %}</a>
+<span>&nbsp;</span>
+<a href="#" id="period-month" class="btn">{% trans "Month" %}</a>
+<span>&nbsp;</span>
+<span>{% trans "From:" %} </span>{{ period_form.from_date }}
+<span>{% trans "To:" %} </span>{{ period_form.to_date }}
+<a href="#" id="period-apply" class="btn">{% trans "Apply" %}&nbsp;<img src="{% static 'images/refresh.png' %}"></a>
+<div >{{ period_form.non_field_errors }}</div>
+</form>

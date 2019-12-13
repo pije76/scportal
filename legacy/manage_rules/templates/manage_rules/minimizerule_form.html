@@ -1,0 +1,424 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load l10n %}
+
+{% block page_id %}rules-page{% endblock %}
+
+{% block page_js %}
+<script>
+/*jslint browser: true, devel: true */
+/*global $, gridportal */
+$(document).ready(function () {
+    'use strict';
+    $('a.add-form').click(function (event) {
+        var parent = $(this).closest('div'),
+            emptyBlock = parent.find('div.empty-form'),
+            emptyForm = emptyBlock.children(),
+            newForm = emptyForm.clone(),
+            totalForms = parent.find('input[name$="TOTAL_FORMS"]'),
+            newId = totalForms.val();
+        newForm.find('input, select, textarea').each(function () {
+            var input = $(this);
+            input.attr('name', input.attr('name').replace('__prefix__', newId));
+        });
+        totalForms.val(parseInt(totalForms.val(), 10) + 1);
+        newForm.insertBefore(emptyBlock);
+        event.preventDefault();
+        newForm.find('select').chosen({enable_split_word_search: true, search_contains: true});
+        newForm.find('.newdate').datepicker();
+    });
+    {% if messages %}
+    {% for message in messages %}
+    gridportal.website.notify('success', '{{ message }}');
+    {% endfor %}
+    {% endif %}
+    $('input[name=delete]').click(function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        gridportal.website.synchroneousDelete(
+            "{% url 'manage_rules-delete' %}",
+            "{{ form.instance.id|unlocalize }}",
+            "{% url 'manage_rules-list' %}"
+        );
+    });
+    $('.date').datepicker();
+    $('.time').timepicker({
+        timeFormat: 'HH:mm',
+        addSliderAccess: true,
+        sliderAccessArgs: { touchonly: false },
+        showSecond: false
+    });//
+    $("input[type=submit]").click(function (e) {
+      e.preventDefault();
+      $("input[type=submit]").attr("disabled", "disabled");
+      if ($(this).attr('name') == 'save_return'){
+        var input = $("<input>").attr("type", "hidden").attr("name", "save_return").val("");
+        $('#ruleform').append($(input));
+      }
+      $('#ruleform').submit();
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block title %}{% trans "Settings: Rules" %}{% endblock title %}
+{% block content_heading %}{% trans "Settings: Rules" %}{% endblock content_heading %}
+
+{%  block left_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{% trans "Minimize Rule" %}</h3>
+  </div>
+  <form method="POST" id="ruleform">
+    {% csrf_token %}
+    <fieldset class="left" id="general-fields">
+      <legend>{% trans "General" %}</legend>
+      <div class="left">
+        <label>{% trans "Name:" %}</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+        {# NOTE: no "errors" for checkbox fields #}
+        <label>{{ form.enabled }} {% trans "Enabled" %}</label>
+        <label>{% trans "Timezone:" %}</label>
+        {{ form.timezone }}
+        {{ form.timezone.errors }}
+        <label>{{ form.monday }} {% trans "Monday" %}</label>
+        <label>{{ form.tuesday }} {% trans "Tuesday" %}</label>
+        <label>{{ form.wednesday }} {% trans "Wednesday" %}</label>
+        <label>{{ form.thursday }} {% trans "Thursday" %}</label>
+        <label>{{ form.friday }} {% trans "Friday" %}</label>
+        <label>{{ form.saturday }} {% trans "Saturday" %}</label>
+        <label>{{ form.sunday }} {% trans "Sunday" %}</label>
+      </div>
+      <div class="right">
+        <label>{% trans "From time:" %}</label>
+        {{ form.from_time|attr:"class:time" }}
+        {{ form.from_time.errors }}
+        <label>{% trans "To time:" %}</label>
+        {{ form.to_time|attr:"class:time" }}
+        {{ form.to_time.errors }}
+        <label>{{ form.consecutive }} {% trans "Consecutive" %}</label>
+        <label>{% trans "Duration of activity:" %}</label>
+        {{ form.activity_duration }}
+        {{ form.activity_duration.errors }}
+        <label>{% trans "Index:" %}</label>
+        {{ form.index }}
+        {{ form.index.errors }}
+      </div>
+    </fieldset>
+    <fieldset class="left">
+      <legend>{% trans "Date Exceptions" %}</legend>
+      <div>
+        {{ formsets.dateexception.management_form }}
+        {% for form in formsets.dateexception %}
+        <div>
+          <div class="left">
+            <label>{% trans "From date:" %}</label>
+            {{ form.from_date|attr:"class:date" }}
+            {{ form.from_date.errors }}
+          </div>
+          <div class="left">
+            <label>{% trans "To date:" %}</label>
+            {{ form.to_date|attr:"class:date" }}
+            {{ form.to_date.errors }}
+          </div>
+          <div class="left checkbox">
+            <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+            {{ form.id|unlocalize }}
+            {{ form.rule }}
+          </div>
+        </div>
+        {% endfor %}
+        <div class="empty-form" style="display: none">
+          {% with form=formsets.dateexception.empty_form %}
+            <div>
+              <div class="left">
+                <label>{% trans "From date:" %}</label>
+                {{ form.from_date|attr:"class:newdate" }}
+                {{ form.from_date.errors }}
+              </div>
+              <div class="left">
+                <label>{% trans "To date:" %}</label>
+                {{ form.to_date|attr:"class:newdate" }}
+                {{ form.to_date.errors }}
+              </div>
+              <div class="left checkbox">
+                <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+                {{ form.id|unlocalize }}
+                {{ form.rule }}
+              </div>
+            </div>
+          {% endwith %}
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="add-form btn">{% trans "Add another" %}</a>
+      </div>
+    </fieldset>
+    <div class="clearfix"></div>
+    <fieldset class="small left">
+      <legend>{% trans "Initial Relay Actions" %}</legend>
+      <div class="left">
+        {{ formsets.relay_initial.management_form }}
+        {% for form in formsets.relay_initial %}
+          <div>
+            <div class="left">
+              <label>{% trans "Meter:" %}</label>
+              {{ form.meter }}
+              {{ form.meter.errors }}
+            </div>
+            <div class="left">
+              <label>{% trans "Relay action:" %}</label>
+              {{ form.relay_action }}
+              {{ form.relay_action.errors }}
+              </div>
+            <div class="left checkbox">
+              <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+              {{ form.id|unlocalize }}
+              {{ form.rule }}
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        {% endfor %}
+        <div class="empty-form" style="display: none">
+          {% with form=formsets.relay_initial.empty_form %}
+            <div>
+              <div class="left">
+                <label>{% trans "Meter:" %}</label>
+                {{ form.meter }}
+                {{ form.meter.errors }}
+              </div>
+              <div class="left">
+                <label>{% trans "Relay action:" %}</label>
+                {{ form.relay_action }}
+                {{ form.relay_action.errors }}
+              </div>
+              <div class="left checkbox">
+                <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+                {{ form.id|unlocalize }}
+                {{ form.rule }}
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          {% endwith %}
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="add-form btn">{% trans "Add another" %}</a>
+      </div>
+    </fieldset>
+    <fieldset class="small left">
+      <legend>{% trans "Initial E-mail Actions" %}</legend>
+      <div>
+        {{ formsets.email_initial.management_form }}
+        {% for form in formsets.email_initial %}
+          <div>
+            <label>{% trans "Recipient:" %}</label>
+            {{ form.recipient }}
+            {{ form.recipient.errors }}
+            <label>{% trans "Message:" %}</label>
+            {{ form.message }}
+            {{ form.message.errors }}
+            <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+            {{ form.id|unlocalize }}
+            {{ form.rule }}
+          </div>
+        {% endfor %}
+        <div class="empty-form" style="display: none">
+          {% with form=formsets.email_initial.empty_form %}
+            <div>
+              <label>{% trans "Recipient:" %}</label>
+              {{ form.recipient }}
+              {{ form.recipient.errors }}
+              <label>{% trans "Message:" %}</label>
+              {{ form.message }}
+              {{ form.message.errors }}
+              <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+              {{ form.id|unlocalize }}
+              {{ form.rule }}
+            </div>
+          {% endwith %}
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="add-form btn">{% trans "Add another" %}</a>
+      </div>
+    </fieldset>
+    <fieldset class="small left">
+      <legend>{% trans "Initial Text Message Actions" %}</legend>
+      <div>
+        {{ formsets.phone_initial.management_form }}
+        {% for form in formsets.phone_initial %}
+          <div>
+            <label>{% trans "Phone number:" %}</label>
+            {{ form.phone_number }}
+            {{ form.phone_number.errors }}
+              <label>{% trans "Message:" %}</label>
+            {{ form.message }}
+            {{ form.message.errors }}
+            <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+            {{ form.id|unlocalize }}
+            {{ form.rule }}
+            <div class="clearfix"></div>
+          </div>
+        {% endfor %}
+        <div class="empty-form" style="display: none">
+          {% with form=formsets.phone_initial.empty_form %}
+            <div>
+              <label>{% trans "Phone number:" %}</label>
+              {{ form.phone_number }}
+              {{ form.phone_number.errors }}
+              <label>{% trans "Message:" %}</label>
+              {{ form.message }}
+              {{ form.message.errors }}
+              <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+              {{ form.id|unlocalize }}
+              {{ form.rule }}
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          {% endwith %}
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="add-form btn">{% trans "Add another" %}</a>
+      </div>
+    </fieldset>
+    <div class="clearfix"></div>
+    <fieldset class="small left">
+      <legend>{% trans "Final Relay Actions" %}</legend>
+      <div>
+        {{ formsets.relay_final.management_form }}
+        {% for form in formsets.relay_final %}
+          <div>
+            <div class="left">
+              <label>{% trans "Meter:" %}</label>
+              {{ form.meter }}
+              {{ form.meter.errors }}
+            </div>
+            <div class="left">
+              <label>{% trans "Relay action:" %}</label>
+              {{ form.relay_action }}
+              {{ form.relay_action.errors }}
+            </div>
+            <div class="left checkbox">
+              <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+              {{ form.id|unlocalize }}
+              {{ form.rule }}
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        {% endfor %}
+        <div class="empty-form" style="display: none">
+          {% with form=formsets.relay_final.empty_form %}
+            <div>
+              <div class="left">
+                <label>{% trans "Meter:" %}</label>
+                {{ form.meter }}
+                {{ form.meter.errors }}
+              </div>
+              <div class="left">
+                <label>{% trans "Relay action:" %}</label>
+                {{ form.relay_action }}
+                {{ form.relay_action.errors }}
+              </div>
+              <div class="left checkbox">
+                <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+                {{ form.id|unlocalize }}
+                {{ form.rule }}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          {% endwith %}
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="add-form btn">{% trans "Add another" %}</a>
+      </div>
+    </fieldset>
+    <fieldset class="small left">
+      <legend>{% trans "Final E-mail Actions" %}</legend>
+      <div>
+        {{ formsets.email_final.management_form }}
+        {% for form in formsets.email_final %}
+          <div>
+            <label>{% trans "Recipient:" %}</label>
+            {{ form.recipient }}
+            {{ form.recipient.errors }}
+            <label>{% trans "Message:" %}</label>
+            {{ form.message }}
+            {{ form.message.errors }}
+            <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+            {{ form.id|unlocalize }}
+            {{ form.rule }}
+            <hr/>
+          </div>
+        {% endfor %}
+        <div class="empty-form" style="display: none">
+          {% with form=formsets.email_final.empty_form %}
+            <div>
+              <label>{% trans "Recipient:" %}</label>
+              {{ form.recipient }}
+              {{ form.recipient.errors }}
+              <label>{% trans "Message:" %}</label>
+              {{ form.message }}
+              {{ form.message.errors }}
+              <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+              {{ form.id|unlocalize }}
+              {{ form.rule }}
+              <hr/>
+            </div>
+          {% endwith %}
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="add-form btn">{% trans "Add another" %}</a>
+      </div>
+    </fieldset>
+    <fieldset class="small left">
+      <legend>{% trans "Final Text Message Actions" %}</legend>
+      <div>
+        {{ formsets.phone_final.management_form }}
+        {% for form in formsets.phone_final %}
+          <div>
+            <label>{% trans "Phone number:" %}</label>
+            {{ form.phone_number }}
+            {{ form.phone_number.errors }}
+              <label>{% trans "Message: (max 180 characters)" %}</label>
+            {{ form.message }}
+            {{ form.message.errors }}
+            <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+            {{ form.id|unlocalize }}
+            {{ form.rule }}
+            <hr/>
+          </div>
+        {% endfor %}
+        <div class="empty-form" style="display: none">
+          {% with form=formsets.phone_final.empty_form %}
+            <div>
+              <label>{% trans "Phone number:" %}</label>
+              {{ form.phone_number }}
+              {{ form.phone_number.errors }}
+              <label>{% trans "Message: (max 180 characters)" %}</label>
+              {{ form.message }}
+              {{ form.message.errors }}
+              <label>{{ form.DELETE }} {% trans "Delete" %}</label>
+              {{ form.id|unlocalize }}
+              {{ form.rule }}
+              <hr/>
+            </div>
+          {% endwith %}
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="add-form btn">{% trans "Add another" %}</a>
+      </div>
+    </fieldset>
+    <div class="clearfix"></div>
+    <div>
+      <input type="submit" name="save" value="{% trans 'Save' %}" />
+      <input type="submit" name="save_return" value="{% trans "Save and return to list" %}" />
+      {% if form.instance.id %}
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <input type="button" name="delete" value="{% trans 'Delete' %}">
+      {% endif %}
+    </div>
+  </form>
+</div>
+{% endblock left_content %}

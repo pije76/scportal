@@ -1,0 +1,3 @@
+#: static/utils/utils.js:100
+msgid "No data for this period"
+msgstr ""

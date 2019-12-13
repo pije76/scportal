@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 12:19+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: views.py:64
+msgid "From date must be before to date"
+msgstr "La fecha de inicio debe ser anterior a la fecha de fin"
+
+#: views.py:70
+#, fuzzy, python-brace-format
+msgid "The selection has exceeded the limit of {limit} months"
+msgstr "La selección excede el límite de {limit} días"
+
+#: views.py:74
+msgid "Selection is too small. It must be at least one hour."
+msgstr ""
+
+#: templates/display_measurementpoints/group_detail.html:63
+msgid "The operation recieved a timeout"
+msgstr "La operación ha superado los tiempos de respuesta"
+
+#: templates/display_measurementpoints/group_detail.html:66
+msgid "Ok"
+msgstr "Ok"
+
+#: templates/display_measurementpoints/group_detail.html:103
+msgid "Yes"
+msgstr "Si"
+
+#: templates/display_measurementpoints/group_detail.html:106
+msgid "No"
+msgstr "No"
+
+#: templates/display_measurementpoints/group_detail.html:120
+msgid "Switch relay to: On?"
+msgstr "Cambiar relé a: ¿Encendido?"
+
+#: templates/display_measurementpoints/group_detail.html:121
+msgid "Switching relay on..."
+msgstr "Cambiando relé a encendido..."
+
+#: templates/display_measurementpoints/group_detail.html:122
+msgid "Switching relay on failed"
+msgstr "Fallo al cambiar relé a encendido"
+
+#: templates/display_measurementpoints/group_detail.html:129
+msgid "Switch relay to: Off?"
+msgstr "Cambiar relé a: ¿Apagado?"
+
+#: templates/display_measurementpoints/group_detail.html:130
+msgid "Switching relay off..."
+msgstr "Cambiando Relé a apagado..."
+
+#: templates/display_measurementpoints/group_detail.html:131
+msgid "Switching relay off failed"
+msgstr "Fallo al cambiar relé a apagado"
+
+#: templates/display_measurementpoints/group_detail.html:218
+msgid "Meter no.: "
+msgstr "Nº Medidor:"
+
+#: templates/display_measurementpoints/group_detail.html:221
+msgid "Installation no.: "
+msgstr "Nº Instalación:"
+
+#: templates/display_measurementpoints/group_detail.html:228
+msgid "Show on dashboard"
+msgstr "Mostrar en Dashboard"
+
+#: templates/display_measurementpoints/group_detail.html:228
+msgid "Add"
+msgstr "Añadir"
+
+#: templates/display_measurementpoints/group_detail.html:234
+msgid "Gauge"
+msgstr "Medidor"
+
+#: templates/display_measurementpoints/group_detail.html:241
+msgid "Consumption Graph"
+msgstr "Grafica de Consumo"
+
+#: templates/display_measurementpoints/group_detail.html:248
+msgid "Rate Graph"
+msgstr "Gráfica de Tarifas"
+
+#: templates/display_measurementpoints/group_detail.html:255
+msgid "Mean Cool-down Temperature Graph"
+msgstr ""
+
+#: templates/display_measurementpoints/group_detail.html:262
+#, fuzzy
+msgid "Production Graph"
+msgstr "Grafica de Consumo"
+
+#: templates/display_measurementpoints/group_detail.html:273
+msgid "Fullscreen"
+msgstr "Pantalla Completa"
+
+#: templates/display_measurementpoints/group_detail.html:286
+msgid "Relay"
+msgstr "Relé"
+
+#: templates/display_measurementpoints/group_detail.html:324
+#: templates/display_measurementpoints/group_detail.html:336
+msgid "Download as CSV"
+msgstr "Descargar como CSV"
+
+#: templates/display_measurementpoints/group_detail.html:327
+#: templates/display_measurementpoints/group_detail.html:344
+msgid "Previous"
+msgstr "Previo"
+
+#: templates/display_measurementpoints/group_detail.html:328
+#: templates/display_measurementpoints/group_detail.html:345
+msgid "Next"
+msgstr "Siguiente"
+
+#: templates/display_measurementpoints/group_detail.html:335
+msgid "Expand"
+msgstr ""
+
+#: templates/display_measurementpoints/group_detail.html:341
+msgid "Not supported for this period."
+msgstr ""
+
+#: templates/display_measurementpoints/index.html:58
+#: templates/display_measurementpoints/index.html:59
+msgid "Details"
+msgstr "Detalles"
+
+#: templates/display_measurementpoints/index.html:63
+msgid "Choose a group or measurement point from the menu to the left"
+msgstr "Elija un grupo o punto de medida del menú de la izquierda"
+
+#: templates/display_measurementpoints/index.html:88
+msgid "Measurement Points"
+msgstr "Puntos de Medición"
+
+#: templates/display_measurementpoints/period_selection.html:7
+msgid "Day"
+msgstr "Día"
+
+#: templates/display_measurementpoints/period_selection.html:9
+msgid "Week"
+msgstr "Semana"
+
+#: templates/display_measurementpoints/period_selection.html:11
+msgid "Month"
+msgstr "Mes"
+
+#: templates/display_measurementpoints/period_selection.html:13
+msgid "From:"
+msgstr "Desde:"
+
+#: templates/display_measurementpoints/period_selection.html:14
+msgid "To:"
+msgstr "Hasta:"
+
+#: templates/display_measurementpoints/period_selection.html:15
+msgid "Apply"
+msgstr "Aplicar"
+
+#: templatetags/display_measurementpoints.py:38
+#, python-brace-format
+msgid "{numeric_quantity} {unit_name}"
+msgstr "{numeric_quantity} {unit_name}"
+
+#~ msgid "Export PDF"
+#~ msgstr "Exportar a PDF"
+
+#~ msgid "Export CSV"
+#~ msgstr "Exportar a CSV"

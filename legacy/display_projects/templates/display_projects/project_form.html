@@ -1,0 +1,370 @@
+{% extends "display_projects/project_base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% block detail_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+
+$(document).ready(function () {
+    $('#id_baseline_from_time, #id_result_from_time').datetimepicker({
+      timeFormat: 'HH:mm:ss',
+      addSliderAccess: true,
+      sliderAccessArgs: { touchonly: false },
+      stepMinute: 5
+    });
+
+    $('#id_baseline_to_time, #id_result_to_time').datetimepicker({
+      timeFormat: 'HH:mm:ss',
+      addSliderAccess: true,
+      sliderAccessArgs: { touchonly: false },
+      hour: 23,
+      minute: 55,
+      stepMinute: 5
+    });
+
+    {% if benchmarkproject.id %}
+    $('input[name=delete]').click(function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        gridportal.website.synchroneousDelete(
+          "{% url 'display_projects-delete' pk=benchmarkproject.id %}",
+          "{{ benchmarkproject.id|unlocalize }}",
+          "{% url 'display_projects-index' %}");
+    });
+    {% endif %}
+    $('button.add-row').click(function (event) {
+        event.preventDefault();
+        var parent = $(this).closest('div'),
+            emptyRow = parent.find('.empty-row'),
+            newRow = emptyRow.clone(),
+            totalForms = parent.find('input[name$="TOTAL_FORMS"]'),
+            newId = totalForms.val();
+        newRow.find('input, select, textarea').each(function () {
+            var input = $(this),
+                newPrefix = input.attr('name').replace('__prefix__', newId);
+            input.attr('name', newPrefix);
+            input.attr('id', newPrefix);
+        });
+        newRow.removeClass('empty-row').show();
+        totalForms.val(parseInt(totalForms.val(), 10) + 1);
+        newRow.insertBefore(emptyRow);
+    });
+    $("input[type=submit]").click(function () {
+      $("input[type=submit]").attr("disabled", "disabled");
+      $('form').submit();
+    });
+});
+</script>
+{% endblock detail_js %}
+
+{% block title %} {% trans "Projects" %} {% endblock title %}
+{% block content_heading %} {% trans "Projects" %} {% endblock content_heading %}
+
+{% block project_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    {% if benchmarkproject.id %}
+      <h3 class="left">{% trans "Edit Project" %}</h3>
+    {% else %}
+      <h3 class="left">{% trans "Create Project" %}</h3>
+    {% endif %}
+  </div>
+  <div>
+    <form method="POST">
+      {% csrf_token %}
+
+      <fieldset>
+    {{ form.name.label_tag }}
+    {{ form.name }}
+    {{ form.name.errors }}
+      </fieldset>
+      <fieldset>
+        {{ form.runtime.label_tag }}
+        {{ form.runtime }} {% trans "months" %}
+        {{ form.runtime.errors }}
+      </fieldset>
+      <fieldset>
+        <h4>{% trans "Background" %}</h4>
+        <fieldset>
+      {{ form.estimated_yearly_consumption_before.label_tag }}
+      {{ form.estimated_yearly_consumption_before }} {{ form.instance.get_consumption_unit_display }}
+      {{ form.estimated_yearly_consumption_before.errors }}
+    </fieldset>
+    <fieldset>
+      {{ form.estimated_yearly_consumption_costs_before.label_tag }}
+      {{ form.estimated_yearly_consumption_costs_before }} {{ form.instance.customer.get_currency_unit_display }}
+      {{ form.estimated_yearly_consumption_costs_before.errors }}
+    </fieldset>
+    {% if not is_water_project %}
+    <fieldset>
+      {{ form.estimated_co2_emissions_before.label_tag }}
+      {{ form.estimated_co2_emissions_before }} {{ form.instance.get_co2_emissions_unit_display }}
+      {{ form.estimated_co2_emissions_before.errors }}
+    </fieldset>
+    {% endif %}
+    <label for="{{ form.background.id_for_label }}">{% trans "Explanation:" %}</label>
+        {{ form.background }}
+        {{ form.background.errors }}
+      </fieldset>
+      <fieldset id="expectations">
+        <h4>{% trans "Expectations" %}</h4>
+            {% trans "Enter the estimated annual consumption and the expected savings. All savings and costs to be included." %}
+    <fieldset>
+      {{ form.expected_savings_in_yearly_consumption_after.label_tag }}
+      {{ form.expected_savings_in_yearly_consumption_after }} {{ form.instance.get_consumption_unit_display }}
+      {{ form.expected_savings_in_yearly_consumption_after.errors }}
+    </fieldset>
+    <fieldset>
+      {{ form.expected_savings_in_yearly_total_costs.label_tag }}
+      {{ form.expected_savings_in_yearly_total_costs }} {{ form.instance.customer.get_currency_unit_display }}
+      {{ form.expected_savings_in_yearly_total_costs.errors }}
+    </fieldset>
+    {% if not is_water_project %}
+    <fieldset>
+      {{ form.expected_reduction_in_yearly_co2_emissions.label_tag }}
+      {{ form.expected_reduction_in_yearly_co2_emissions }} {{ form.instance.get_co2_emissions_unit_display }}
+      {{ form.expected_reduction_in_yearly_co2_emissions.errors }}
+    </fieldset>
+    {% endif %}
+    <fieldset>
+      <label for="{{ form.expectations.id_for_label }}">{% trans "Explanation:" %}</label>
+      {{ form.expectations }}
+      {{ form.expectations.errors }}
+    </fieldset>
+      </fieldset>
+      <fieldset id="actions">
+        <h4>{% trans "Actions" %}</h4>
+    <fieldset>
+      {{ form.subsidy.label_tag }}
+      {{ form.subsidy }} {{ form.instance.customer.get_currency_unit_display }}
+      {{ form.subsidy.errors }}
+    </fieldset>
+    <div>
+      {{ cost.management_form }}
+      <h6>{% trans "Investment Costs" %}</h6>
+      {% blocktrans %}
+      <p>
+        To calculate the payback period correctly, investment costs should
+        be entered here.  These include the costs for Grid Manager
+        solution, installation, replacement of machinery, and so on.
+      </p>
+      <p>
+        Three kinds of investment costs can be entered:
+        <ul>
+          <li>
+        A simple investment where the total cost is just entered
+        in the cost column.
+          </li>
+          <li>
+        A finansed investment with monthly payment and interests
+        compounded every month where the initial principal of the loan
+        is entered in the cost column, the nominal annual rate is
+        entered in the interest rate column and the number of payments
+        is entered in the period column.
+          </li>
+          <li>
+        A leasing agreement with monthly payment and interests
+        compounded every month where the initial principal of the loan
+        is entered in the cost column, the nominal annual rate is
+        entered in the interest rate column, the number of payments is
+        entered in the period column and the scrap value is entered in
+        the scrap value column.
+          </li>
+      </p>
+      {% endblocktrans %}
+          <table class="formTable">
+        <thead>
+          <tr>
+        <td>{% trans "Description" %}</td>
+        <td>{% trans "Cost" %} ({{ currency }})</td>
+        <td>{% trans "Period (Months)" %} </td>
+        <td>{% trans "Interest rate" %} (%) </td>
+        <td>{% trans "Scrap value" %} ({{ currency }})</td>
+        <td>{% trans "Delete" %}</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for formset in cost %}
+        <tr>
+          <td>{{ formset.id|unlocalize }}{{ formset.description }} {{ formset.description.errors }}</td>
+          <td>{{ formset.cost }} {{ formset.cost.errors }}</td>
+          <td>{{ formset.amortization_period }} {{ formset.amortization_period.errors }}</td>
+          <td>{{ formset.interest_rate }} {{ formset.interest_rate.errors }}</td>
+          <td>{{ formset.scrap_value }}{{ formset.scrap_value.errors }}</td>
+          <td>
+            {% if not forloop.last %}
+              {{ formset.DELETE }}
+            {% endif %}
+          </td>
+        </tr>
+          {% endfor %}
+          <tr class="empty-row" style="display: none">
+        {% with form=cost.empty_form %}
+                  <td>{{ form.description }} {{ form.description.errors }}</td>
+          <td>{{ form.cost }} {{ form.cost.errors }}</td>
+          <td>{{ form.amortization_period }} {{ form.amortization_period.errors }}</td>
+          <td>{{ form.interest_rate }} {{ form.interest_rate.errors }}</td>
+          <td>{{ form.scrap_value }}{{ form.scrap_value.errors }}</td>
+                {% endwith %}
+          </tr>
+        </tbody>
+      </table>
+      <button class="add-row"> {% trans "Add another" %}</button>
+    </div>
+    <fieldset>
+      <label for="{{ form.actions.id_for_label }}">{% trans "Explanation:" %}</label>
+        {{ form.actions }}
+        {{ form.actions.errors }}
+      </fieldset>
+      </fieldset>
+      <fieldset>
+    <h4>{% trans "Results" %}</h4>
+
+    {% blocktrans %}
+    <p>
+        Results are documented by benchmarking measurements of a base-line period
+        with measurements of a result period.  Measurements for both periods
+        must be representable for a full year.
+    </p>
+
+    <p>
+    Including cost measured from these periods is optional.  If enabled,
+    the tariffs involved in the base-line period or in the results period
+    must also be representable for a full year.
+    </p>
+
+    <p>
+    For additional savings that cannot be measured this way see <a
+    href="#additional_savings">additional savings</a> further down.
+    </p>
+        {% endblocktrans %}
+    <div>
+      <div class="left stage form-content-left">
+        <fieldset>
+              <label>{% trans "Start of base-line period:" %}</label>
+              {{ form.baseline_from_timestamp|add_class:"datetime" }}
+              {{ form.baseline_from_timestamp.errors }}
+        </fieldset>
+        <fieldset>
+              <label>{% trans "End of base-line period:" %}</label>
+              {{ form.baseline_to_timestamp|add_class:"datetime"  }}
+              {{ form.baseline_to_timestamp.errors }}
+        </fieldset>
+        <fieldset>
+          <label for="{{ form.baseline_measurement_points.id_for_label }}">
+            {% trans "Base-line measurement points:" %}
+          </label>
+          {{ form.baseline_measurement_points }}
+        </fieldset>
+      </div>
+      <div class="left stage form-content-left">
+        <fieldset>
+          <label>{% trans "Start of result period:" %}</label>
+          {{ form.result_from_timestamp|add_class:"datetime"  }}
+          {{ form.result_from_timestamp.errors }}
+        </fieldset>
+        <fieldset>
+          <label>{% trans "End of result period:" %}</label>
+          {{ form.result_to_timestamp|add_class:"datetime"  }}
+          {{ form.result_to_timestamp.errors }}
+        </fieldset>
+        <fieldset>
+          <label for="{{ form.result_measurement_points.id_for_label }}">
+            {% trans "Result measurement points:" %}
+          </label>
+          {{ form.result_measurement_points }}
+        </fieldset>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <fieldset>
+      {{ form.include_measured_costs.label_tag }}
+      {{ form.include_measured_costs }}
+      {{ form.include_measured_costs.errors }}
+    </fieldset>
+        <fieldset id="additional_savings">
+          <div>
+            <h5>{% trans "Additional Savings" %}</h5>
+            {{ additional_saving.management_form }}
+            {% trans "If the project has an impact on other processes leading to additional savings, they can be entered here. In the case of negative impact a negative value is entered. All values must be annual." %}
+            <table class="formTable">
+              <thead>
+                <tr>
+                  <td>{% trans "Description" %}</td>
+                  <td>{% trans "Before (kWh)" %} </td>
+                  <td>{% trans "After (kWh)" %} </td>
+                  <td>{% trans "Before" %} ({{ currency }})</td>
+                  <td>{% trans "After" %} ({{ currency }})</td>
+                  {% if not is_water_project %}
+                  <td>{% trans "Before CO2 (ton)" %}</td> s
+                  <td>{% trans "After CO2 (ton)" %}</td>
+                  {% endif %}
+                  <td>{% trans "Delete" %}</td>
+                </tr>
+              </thead>
+              <tbody>
+                {% for formset in additional_saving %}
+                {{ formset.id|unlocalize }}
+                <tr>
+                  <td>{{ formset.description }} {{ formset.description.errors }}</td>
+                  <td>{{ formset.before_energy }} {{ formset.before_energy.errors }}</td>
+                  <td>{{ formset.after_energy }} {{ formset.after_energy.errors }}</td>
+                  <td>{{ formset.before_cost }} {{ formset.before_cost.errors }}</td>
+                  <td>{{ formset.after_cost }} {{ formset.after_cost.errors }}</td>
+                  {% if not is_water_project %}
+                  <td>{{ formset.before_co2 }} {{ formset.before_co2.errors }}</td>
+                  <td>{{ formset.after_co2 }} {{ formset.after_co2.errors }}</td>
+                  {% endif %}
+                  <td>  {% if not forloop.last %}
+                    {{ formset.DELETE }}
+                    {% endif %}</td>
+                </tr>
+                {% endfor %}
+                <tr class="empty-row" style="display: none">
+                  {% with form=additional_saving.empty_form %}
+                    <td>{{ form.description }} {{ form.description.errors }}</td>
+                    <td>{{ form.before_energy }} {{ form.before_energy.errors }}</td>
+                    <td>{{ form.after_energy }} {{ form.after_energy.errors }}</td>
+                    <td>{{ form.before_cost }} {{ form.before_cost.errors }}</td>
+                    <td>{{ form.after_cost }} {{ form.after_cost.errors }}</td>
+                    {% if not is_water_project %}
+                    <td>{{ form.before_co2 }} {{ form.before_co2.errors }}</td>
+                    <td>{{ form.after_co2 }} {{ form.after_co2.errors }}</td>
+                    {% endif %}
+                  {% endwith %}
+                </tr>
+              </tbody>
+            </table>
+            <button class="add-row">{% trans "Add another" %}</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label>{% trans "Explanation:" %}</label>
+          {{ form.result }}
+          {{ form.result.errors }}
+        </fieldset>
+      </fieldset>
+      <fieldset>
+    <h4>{% trans "Additional Comments" %}</h4>
+    <p>{{ form.comments.help_text }}<p>
+        {{ form.comments }}
+        {{ form.comments.errors }}
+      </fieldset>
+      {{ form.non_field_errors }}
+
+      <div class="clearfix"></div>
+      {% if benchmarkproject.id %}
+        <input type="submit" value="{% trans "Save Project" %}">
+        <input type="hidden" name="item_id" value="{{ project.id|unlocalize }}">
+        <input type="button" name="delete" title="" value="{% trans 'Delete Project' %}" data-message="{% trans "Are you sure you want to delete the project?" %}">
+      {% else %}
+        <input type="submit" value="{% trans "Create Project" %}">
+      {% endif %}
+    </form>
+  </div>
+</div>
+{% endblock project_content %}

@@ -1,0 +1,17 @@
+Visiting:
+{{ location }}
+
+Error on:
+{{ url }}:{{ line }}
+
+Error:
+{{ message }}
+
+Customer:
+{{ customer }}
+
+User:
+{{ user }}
+
+User agent:
+{{ user_agent }}

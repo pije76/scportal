@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load static from staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}{% trans "Settings: Devices" %}{% endblock title %}
+{% block page_id %}devices-page{% endblock %}
+
+{% block content_heading %}{% trans "Settings: Devices" %}{% endblock %}
+{% block page_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+
+$(document).ready(function () {
+    'use strict';
+    $('.datetime:not(.empty-form .datetime)').datetimepicker({
+        timeFormat: 'HH:mm',
+        addSliderAccess: true,
+        showMinute: false,
+        showSecond: false,
+        sliderAccessArgs: { touchonly: false }
+    });
+    $('button.add-form').click(function (event) {
+        event.preventDefault();
+        var parent = $(this).closest('div'),
+            emptyForm = parent.find('.empty-form'),
+            newForm = emptyForm.clone(),
+            totalForms = parent.find('input[name$="TOTAL_FORMS"]'),
+            newId = totalForms.val();
+        newForm.find('div, input, select, li').each(function () {
+            var input = $(this),
+                newPrefix;
+            if (input.attr("name")) {
+                newPrefix = input.attr('name').replace('__prefix__', newId);
+                input.attr('name', newPrefix);
+            }
+            if (input.attr("id")) {
+                newPrefix = input.attr('id').replace('__prefix__', newId);
+                input.attr('id', newPrefix);
+            }
+        });
+        newForm.removeClass('empty-form').show();
+        totalForms.val(parseInt(totalForms.val(), 10) + 1);
+        newForm.insertBefore(emptyForm);
+        newForm.find('.datetime').datetimepicker({
+            timeFormat: 'HH:mm',
+            addSliderAccess: true,
+            showMinute: false,
+            showSecond: false,
+            sliderAccessArgs: { touchonly: false }
+        });
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block content %}
+<div class="grid_24">
+  <div class="content-element">
+    <div class="header clearfix">
+      {% block form_heading %}
+      <h3 class="left">{% trans "Pulse Conversion" %}</h3>
+      {% endblock form_heading %}
+    </div>
+    <div class="input_settings">
+      <form method="post">
+        {% csrf_token %}
+        <fieldset class="form-content-left">
+          <label>{% trans "Name:" %}</label>
+          {{ form.name }}
+          {{ form.name.errors }}
+        </fieldset>
+        <div class="clearfix"></div>
+
+        {% with formset=inlines.0 output_unit_display=form.instance.get_preferred_unit_converter.get_display_unit %}
+          {{ formset.management_form }}
+            <ul>
+              {% for form in formset %}
+              <li class="formset-member">
+		{% include form_template %}
+              </li>
+              {% endfor %}
+              {% with form=formset.empty_form %}
+              <li class="formset-member empty-form" style="display: none">
+		{% include form_template %}
+              </li>
+              {% endwith %}
+            </ul>
+            {{ formset.non_form_errors }}
+            <button class="add-form btn" style="margin-top: 5px">{% trans "Add another period" %}</button>
+            <br>
+        {% endwith %}
+        <input type="submit" value="{% trans "Save" %}">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+
+{% block left_content %}
+<div class="clearfix">
+  <form method="post" action="{{ request.path }}">
+    <div class="overlay-header clearfix">
+      <div class="left"><h4></h4></div>
+      <div class="right">
+        {% block buttons %}
+          <input type="submit" value="{% trans "Save" %}" />
+        {% endblock buttons %}
+      </div>
+    </div>
+    {% csrf_token %}
+    <div class="left">
+
+    </div>
+  </form>
+</div>
+{% endblock left_content %}

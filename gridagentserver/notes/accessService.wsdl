@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Service"
+             targetNamespace="http://www.gridmanager.nu"
+             xmlns:tns="http://www.gridmanager.nu"
+             xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+             xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:ns1="http://www.gridmanager.nu"
+             xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+             xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+             xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema targetNamespace="http://www.gridmanager.nu"
+            xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+            xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns1="http://www.gridmanager.nu"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="unqualified"
+            attributeFormDefault="unqualified">
+      <complexType name="ArrayOfLong">
+        <sequence>
+          <element name="long" type="xsd:long"
+                   minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+      </complexType>
+      <complexType name="agentsUpdated">
+        <sequence>
+          <element name="agentIds" type="ns1:ArrayOfLong"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="agentsUpdatedResponse">
+        <sequence>
+          <element name="status" type="xsd:string"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="switchOn">
+        <sequence>
+          <element name="deviceIds" type="ns1:ArrayOfLong"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="switchOnResponse">
+        <sequence>
+          <element name="status" type="xsd:string"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="switchOff">
+        <sequence>
+          <element name="deviceIds" type="ns1:ArrayOfLong"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="switchOffResponse">
+        <sequence>
+          <element name="status" type="xsd:string"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="switchCancel">
+        <sequence>
+          <element name="deviceIds" type="ns1:ArrayOfLong"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="switchCancelResponse">
+        <sequence>
+          <element name="status" type="xsd:string"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="controlAuto">
+        <sequence>
+          <element name="deviceIds" type="ns1:ArrayOfLong"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="controlAutoResponse">
+        <sequence>
+          <element name="status" type="xsd:string"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="controlManual">
+        <sequence>
+          <element name="deviceIds" type="ns1:ArrayOfLong"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="controlManualResponse">
+        <sequence>
+          <element name="status" type="xsd:string"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="controlCancel">
+        <sequence>
+          <element name="deviceIds" type="ns1:ArrayOfLong"
+                   minOccurs="1" maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <complexType name="controlCancelResponse">
+        <sequence>
+          <element name="status" type="xsd:string" minOccurs="1"
+                   maxOccurs="1" nillable="true"/>
+        </sequence>
+      </complexType>
+      <element name="agentsUpdated" type="ns1:agentsUpdated"/>
+      <element name="switchOn" type="ns1:switchOn"/>
+      <element name="switchOff" type="ns1:switchOff"/>
+      <element name="switchCancel" type="ns1:switchCancel"/>
+      <element name="controlAuto" type="ns1:controlAuto"/>
+      <element name="controlManual" type="ns1:controlManual"/>
+      <element name="controlCancel" type="ns1:controlCancel"/>
+      <!-- operation response element -->
+      <element name="agentsUpdatedResponse" type="ns1:agentsUpdatedResponse"/>
+      <!-- operation response element -->
+      <element name="switchOnResponse" type="ns1:switchOnResponse"/>
+      <!-- operation response element -->
+      <element name="switchOffResponse" type="ns1:switchOffResponse"/>
+      <!-- operation response element -->
+      <element name="switchCancelResponse" type="ns1:switchCancelResponse"/>
+      <!-- operation response element -->
+      <element name="controlAutoResponse" type="ns1:controlAutoResponse"/>
+      <!-- operation response element -->
+      <element name="controlManualResponse" type="ns1:controlManualResponse"/>
+      <!-- operation response element -->
+      <element name="contolCancelResponse" type="ns1:controlCancelResponse"/>
+    </schema>
+  </types>
+  <message name="agentsUpdated">
+    <part name="parameters" element="ns1:agentsUpdated"/>
+  </message>
+  <message name="agentsUpdatedResponse">
+    <part name="parameters" element="ns1:agentsUpdatedResponse"/>
+  </message>
+  <message name="switchOn">
+    <part name="parameters" element="ns1:switchOn"/>
+  </message>
+  <message name="switchOnResponse">
+    <part name="parameters" element="ns1:switchOnResponse"/>
+  </message>
+  <message name="switchOff">
+    <part name="parameters" element="ns1:switchOff"/>
+  </message>
+  <message name="switchOffResponse">
+    <part name="parameters" element="ns1:switchOffResponse"/>
+  </message>
+  <message name="switchCancel">
+    <part name="parameters" element="ns1:switchCancel"/>
+  </message>
+  <message name="switchCancelResponse">
+    <part name="parameters" element="ns1:switchCancelResponse"/>
+  </message>
+  <message name="controlAuto">
+    <part name="parameters" element="ns1:controlAuto"/>
+  </message>
+  <message name="controlAutoResponse">
+    <part name="parameters" element="ns1:controlAutoResponse"/>
+  </message>
+  <message name="controlManual">
+    <part name="parameters" element="ns1:controlManual"/>
+  </message>
+  <message name="controlManualResponse">
+    <part name="parameters" element="ns1:controlManualResponse"/>
+  </message>
+  <message name="controlCancel">
+    <part name="parameters" element="ns1:controlCancel"/>
+  </message>
+  <message name="controlCancelResponse">
+    <part name="parameters" element="ns1:contolCancelResponse"/>
+  </message>
+  <portType name="ServicePortType">
+    <operation name="agentsUpdated">
+      <documentation>Service definition of function __ns1__agentsUpdated</documentation>
+      <input message="tns:agentsUpdated"/>
+      <output message="tns:agentsUpdatedResponse"/>
+    </operation>
+    <operation name="switchOn">
+      <documentation>Service definition of function __ns1__switchOn</documentation>
+      <input message="tns:switchOn"/>
+      <output message="tns:switchOnResponse"/>
+    </operation>
+    <operation name="switchOff">
+      <documentation>Service definition of function __ns1__switchOff</documentation>
+      <input message="tns:switchOff"/>
+      <output message="tns:switchOffResponse"/>
+    </operation>
+    <operation name="switchCancel">
+      <documentation>Service definition of function __ns1__switchCancel</documentation>
+      <input message="tns:switchCancel"/>
+      <output message="tns:switchCancelResponse"/>
+    </operation>
+    <operation name="controlAuto">
+      <documentation>Service definition of function __ns1__controlAuto</documentation>
+      <input message="tns:controlAuto"/>
+      <output message="tns:controlAutoResponse"/>
+    </operation>
+    <operation name="controlManual">
+      <documentation>Service definition of function __ns1__controlManual</documentation>
+      <input message="tns:controlManual"/>
+      <output message="tns:controlManualResponse"/>
+    </operation>
+    <operation name="controlCancel">
+      <documentation>Service definition of function __ns1__controlCancel</documentation>
+      <input message="tns:controlCancel"/>
+      <output message="tns:controlCancelResponse"/>
+    </operation>
+  </portType>
+  <binding name="Service" type="tns:ServicePortType">
+    <SOAP:binding style="document"
+                  transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="agentsUpdated">
+      <SOAP:operation soapAction=""/>
+      <input>
+        <SOAP:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <SOAP:body parts="parameters" use="literal"/>
+      </output>
+    </operation>
+    <operation name="switchOn">
+      <SOAP:operation soapAction=""/>
+      <input>
+        <SOAP:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <SOAP:body parts="parameters" use="literal"/>
+      </output>
+    </operation>
+    <operation name="switchOff">
+      <SOAP:operation soapAction=""/>
+      <input>
+        <SOAP:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <SOAP:body parts="parameters" use="literal"/>
+      </output>
+    </operation>
+    <operation name="switchCancel">
+      <SOAP:operation soapAction=""/>
+      <input>
+        <SOAP:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <SOAP:body parts="parameters" use="literal"/>
+      </output>
+    </operation>
+    <operation name="controlAuto">
+      <SOAP:operation soapAction=""/>
+      <input>
+        <SOAP:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <SOAP:body parts="parameters" use="literal"/>
+      </output>
+    </operation>
+    <operation name="controlManual">
+      <SOAP:operation soapAction=""/>
+      <input>
+        <SOAP:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <SOAP:body parts="parameters" use="literal"/>
+      </output>
+    </operation>
+    <operation name="controlCancel">
+      <SOAP:operation soapAction=""/>
+      <input>
+        <SOAP:body parts="parameters" use="literal"/>
+      </input>
+      <output>
+        <SOAP:body parts="parameters" use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="Service">
+    <documentation>gSOAP 2.7.13 generated service definition</documentation>
+    <port name="Service" binding="tns:Service">
+      <SOAP:address location="http://localhost:8088/"/>
+    </port>
+  </service>
+</definitions>

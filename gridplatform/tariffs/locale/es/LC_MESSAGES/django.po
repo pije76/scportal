@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-23 21:08+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:27
+#: models.py:28
+msgid "tariff"
+msgstr "tarifa"
+
+#: models.py:48
+#: models.py:49
+msgid "energy tariff"
+msgstr "tarifa de energía"
+
+#: models.py:57
+#: models.py:58
+msgid "volume tariff"
+msgstr "tarifa de volumen"
+
+#: models.py:69
+msgid "data sequence"
+msgstr "secuencia de datos"
+
+#: models.py:73
+msgid "tariff period"
+msgstr "periodo tarifario"
+
+#: models.py:74
+msgid "tariff periods"
+msgstr "periodos tarifarios"
+
+#: models.py:95
+msgid "monthly"
+msgstr "mensual"
+
+#: models.py:96
+msgid "quarterly"
+msgstr "trimestral"
+
+#: models.py:97
+msgid "yearly"
+msgstr "anual"
+
+#: models.py:103
+msgid "subscription fee"
+msgstr "pago de suscripción"
+
+#: models.py:105
+msgid "subscription period"
+msgstr "periodo de suscripción"
+
+#: models.py:142
+msgid "value"
+msgstr "valor"
+
+#: models.py:144
+msgid "unit"
+msgstr "unidad"
+
+#: models.py:147
+msgid "fixed price period"
+msgstr "periodo de precio fijo"
+
+#: models.py:148
+msgid "fixed price periods"
+msgstr "periodos de precio fijo"
+
+#: models.py:158
+msgid "Incompatible unit."
+msgstr "Unidad incompatible"
+
+#: models.py:169
+msgid "spot price"
+msgstr "precio al contado"
+
+#: models.py:171
+msgid "coefficient"
+msgstr "coeficiente"
+
+#: models.py:173
+msgid "unit for constant and ceiling"
+msgstr "unidad para constantes y límite"
+
+#: models.py:176
+msgid "constant"
+msgstr "constante"
+
+#: models.py:178
+msgid "ceiling"
+msgstr "valor límite"
+
+#: models.py:189
+msgid "Incompatible unit for constant and ceiling."
+msgstr "Unidad imcompatible para constantes y valores límite"
+
+#: models.py:193
+msgid "Incompatible spot price unit."
+msgstr "Unidad de precios al contado incompatible"
+

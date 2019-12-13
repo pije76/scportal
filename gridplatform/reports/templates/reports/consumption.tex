@@ -1,0 +1,98 @@
+{% extends "reports/report.tex" %}
+
+{% block documentclass %}
+\documentclass[paper=a4,landscape,pagesize,DIV=20,11pt,headinclude,footinclude,parskip=half]{scrartcl}
+{% endblock %}
+
+{% load i18n %}
+{% load reports %}
+
+{% block preamble_extra %}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{seqsplit}
+\renewcommand{\seqinsert}{\ifmmode\allowbreak\else\-\fi}
+{% endblock %}
+
+{% block content %}
+
+\section*{{ '{' }}{% trans "Consumption" %} {{ from_date|date:"SHORT_DATE_FORMAT" }}--{{ to_date|date:"SHORT_DATE_FORMAT" }}}
+
+% \noindent
+% \rule{\textwidth}{2pt}
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+%{% for utility_type, values in data.items %}
+{\huge {{ values.utility_name|texescape }}}
+\begin{longtabu} to \linewidth{@{}
+X% group
+r% id
+X% portal name
+X% resource type
+X[0.7,r]@{~}X[0.3]% consumption
+%{% if include_degree_days_corrected %}
+X[0.7,r]@{~}X[0.3]% degreedays-corrected consumption
+%{% endif %}
+%{% if include_cost %}
+X[0.7,r]@{~}X[0.6]% cost
+%{% endif %}
+X% meter no.
+X% inst no
+@{}}
+\bfseries {% trans "Group" %}&%
+\bfseries {% trans "ID" %}&%
+\bfseries {% trans "Portal Name" %}&%
+\bfseries {% trans "Resource Type" %}&%
+\multicolumn{2}{p{0.12\linewidth}}{\bfseries {% trans "Consumption" %} }&%
+%{% if include_degree_days_corrected %}
+\multicolumn{2}{p{0.12\linewidth}}{\bfseries {% trans "Corrected w.r.t. HDG" %} }&%
+%{% endif %}
+%{% if include_cost %}
+\multicolumn{2}{p{0.12\linewidth}}{\bfseries {% trans "Cost" %} }&%
+%{% endif %}
+\bfseries {% trans "Meter No." %}&%
+\bfseries {% trans "Inst. No." %}\endhead
+\hline%
+%{% for line in values.data %}
+%{% for g in line.group %}
+{{ g|texescape|seqsplit }}{% if not forloop.last %} : {% endif %}%
+%{% endfor %}
+&%
+{{ line.mp_id }}&%
+{{ line.portal_name|texescape|seqsplit }}&%
+{{ line.measurement_type|capfirst|texescape|seqsplit }}&%
+{{ line.consumption|floatformat:2 }}&%
+{{ line.unit|default_if_none:''|texescape }}&%
+%{% if include_degree_days_corrected %}
+{{ line.degreedays_corrected_consumption|floatformat:2 }}&
+%{% if line.degreedays_corrected_consumption != None %}
+{{ line.unit|default_if_none:''|texescape }}%
+%{% endif %}
+&%
+%{% endif %}
+%{% if include_cost %}
+{{ line.cost|floatformat:2 }}&%
+{{ line.cost_unit|default_if_none:''|texescape }}&%
+%{% endif %}
+{{ line.meter_number|texescape }}&%
+{{ line.installation_number|texescape }}\\
+\hline%
+%{% endfor %}
+\end{longtabu}
+%{% endfor %}
+
+% \noindent
+% \rule{\textwidth}{2pt}
+
+{% if errors %}
+\newpage
+\subsection*{ {% trans 'Errors and Warnings' %} }
+\begin{itemize}
+{% for error in errors %}
+\item {{ error|texescape }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+{% endblock %}

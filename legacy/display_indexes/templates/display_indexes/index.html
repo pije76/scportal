@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load mptt_tags %}
+
+{% block page_id %}indexes-page{% endblock %}
+
+{% block page_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gridportal */
+$(document).ready(function () {
+    'use strict';
+    gridportal.website.initInpageMenu('{% static 'images/arrow-right.png' %}', '{% static 'images/arrow-left.png' %}');
+
+    function checkDateRange(start, end) {
+        var from = start.split('-'),
+            to = end.split('-'),
+            startDate = new Date(from[0], from[1] - 1, from[2]).getTime(),
+            endDate = new Date(to[0], to[1] - 1, to[2]).getTime(),
+            difference = (endDate - startDate) / (86400000 * 60);
+
+        if (difference < 1) {
+            return true;
+        }
+        if (difference > 1) {
+            return false;
+        }
+        return true;
+    }
+
+    $('#period-selection').submit(function () {
+        if ($('input:radio[name=period]:checked').val() === 'dates') {
+            var from = $('#id_from_date').val(),
+                to = $('#id_to_date').val(),
+                check = checkDateRange(from, to);
+            if (!check) {
+                gridportal.website.notify(
+                    'error',
+                    'The selected period is longer than 60 days'
+                );
+            }
+            return check;
+        }
+    });
+});
+</script>
+{% block detail_js %}{% endblock detail_js %}
+{% endblock page_js %}
+
+{% block page_css %}
+<style>
+    #content-main {
+        overflow-x: hidden;
+    }
+</style>
+{% endblock %}
+
+{% block title %}{% trans "Indexes" %}{% endblock title %}
+{% block content_heading %}{% trans "Indexes" %}{% endblock content_heading %}
+
+{% block content %}
+<div id="indexes" class="grid_23 prefix_1">
+{% trans "Choose an Index from the menu to the left" %}
+</div>
+{% endblock content %}
+
+{% block in_page_menu %}
+<div class="in-page-menu">
+  <div class="scroller">
+    <div class="menu-content">
+      {% for grouptree in groups %}
+      {% for node, structure in grouptree|tree_info %}
+        {% if structure.new_level %}
+        <ul>
+        {% else %}
+        </li>
+        {% endif %}
+        <li class="group">
+          <span>{{ node }}</span>
+          {% with indexes=node.index_set.all %}
+          {% if indexes %}
+          <ul>
+            {% for index in indexes %}
+            <li>
+              <a href="{% url 'display_indexes-detail' pk=index.id %}">
+                <span>{{ index }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% endwith %}
+          {% for level in structure.closed_levels %}
+          </li></ul>
+        {% endfor %}
+      {% endfor %}
+      {% endfor %}
+      <ul>
+        {% for index in indexes %}
+          <li>
+            <a href="{% url 'display_indexes-detail' pk=index.id %}{% if period_form.from_date.value and period_form.to_date.value %}?from_date={{period_form.from_date.value}}&to_date={{period_form.to_date.value}}{%endif%}">
+              <span>{{ index }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="menu-btn">
+    <div class="rotate">
+      <span>{% trans "Indexes" %}</span>
+    </div>
+    <img src="{% static 'images/arrow-right.png' %}" />
+  </div>
+</div>
+{% endblock %}

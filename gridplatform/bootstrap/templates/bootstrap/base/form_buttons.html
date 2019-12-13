@@ -1,0 +1,18 @@
+{% load bootstrap_tags %}
+{% if layout == 'horizontal' %}
+<div class="form-group">
+  <div class="col-sm-offset-{{ label_columns }} col-sm-{{ input_columns }}">
+{% endif %}
+    <button type="submit" class="btn btn-primary disable-reenable-on-click">{{ submit_label }}</button>
+    {% if cancel_target %}
+    <span>&nbsp;</span>
+    <a class="btn btn-warning" href="{{ cancel_target }}">{{ cancel_label }}</a>
+    {% endif %}
+    {% if delete_target %}
+    <span>&nbsp;</span>
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal" data-url="{{ delete_target }}">{{ delete_label }}</button>
+    {% endif %}
+{% if layout == 'horizontal' %}
+  </div>
+</div>
+{% endif %}

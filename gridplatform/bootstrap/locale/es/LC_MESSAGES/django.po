@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-20 19:50+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/bootstrap/_navbar_base.html:63
+msgid "Profile"
+msgstr "Perfil"
+
+#: templates/bootstrap/_navbar_base.html:64
+msgid "Logout"
+msgstr "Salir"
+
+#: templates/bootstrap/base.html:114
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: templates/bootstrap/base.html:117
+msgid "Are you sure you want to delete this?"
+msgstr "¿Está seguro de que desea borrar este elemento?"
+
+#: templates/bootstrap/base.html:122
+#: templatetags/bootstrap_tags.py:452
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/bootstrap/base.html:123
+#: templatetags/bootstrap_tags.py:453
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates/bootstrap/base/panel.html:8
+#: templates/bootstrap/genius/panel.html:9
+msgid "Search"
+msgstr "Buscar"
+
+#: templatetags/bootstrap_tags.py:451
+msgid "Save"
+msgstr "Guardar"
+

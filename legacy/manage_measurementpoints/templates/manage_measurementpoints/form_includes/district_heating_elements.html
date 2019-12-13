@@ -1,0 +1,7 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<fieldset>
+  <label>{% trans 'Volume input:' %}</label>
+  {{ form.volume_input }}
+  {{ form.volume_input.errors }}
+</fieldset>

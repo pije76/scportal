@@ -1,0 +1,542 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: condense.py:165
+msgid "M. Y"
+msgstr "M. Y"
+
+#: condense.py:167
+#, python-brace-format
+msgid "Q{quarter} Y"
+msgstr "Q{quarter} Y"
+
+#: fields.py:76
+msgid "Invalid MAC address."
+msgstr "Ugyldig MAC-adresse"
+
+#: fields.py:100
+#, python-format
+msgid "not a valid MAC address: %s"
+msgstr "ikke en gyldig MAC-adresse: %s"
+
+#: fields.py:271
+msgid "Select a valid hour."
+msgstr "Vælg en gyldig time."
+
+#: fields.py:272
+msgid "Select a valid minute."
+msgstr "Vælg et gyldigt minut."
+
+#: fields.py:283
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d time"
+msgstr[1] "%d timer"
+
+#: fields.py:287
+#, python-format
+msgid "%02d minute"
+msgid_plural "%02d minutes"
+msgstr[0] "%02d minut"
+msgstr[1] "%02d minutter"
+
+#: fields.py:384
+msgid "The image you have uploaded is corrupted"
+msgstr "Det uploadede billede er beskadiget"
+
+#: fields.py:429
+msgid "This value must be a long integer."
+msgstr "Denne værdi skal være et heltal"
+
+#: format_id.py:32
+msgid "Other"
+msgstr "Andet"
+
+#: format_id.py:33
+msgid "Oil"
+msgstr "Olie"
+
+#: format_id.py:34
+msgid "Electricity"
+msgstr "Elektricitet"
+
+#: format_id.py:35
+msgid "Gas"
+msgstr "Gas"
+
+#: format_id.py:36
+msgid "Heat outlet"
+msgstr "Varmeudledning"
+
+#: format_id.py:37
+msgid "Steam"
+msgstr "Damp"
+
+#: format_id.py:38
+msgid "Hot water"
+msgstr "Varmt vand"
+
+#: format_id.py:39
+msgid "Water"
+msgstr "Vand"
+
+#: format_id.py:40
+msgid "Heat cost allocator"
+msgstr "Varmemåler"
+
+#: format_id.py:41
+msgid "Compressed air"
+msgstr "Trykluft"
+
+#: format_id.py:42
+msgid "Cooling load meter outlet"
+msgstr "Nedkølningsreturløbsvolumen"
+
+#: format_id.py:43
+msgid "Cooling load meter inlet"
+msgstr "Nedkølningsfremløbsvolumen"
+
+#: format_id.py:44
+msgid "Heat inlet"
+msgstr "Varmefremløbsvolumen"
+
+#: format_id.py:45
+msgid "Heat/cooling load meter"
+msgstr "Varme-/nedkølningsmåler"
+
+#: format_id.py:46
+msgid "Bus/system"
+msgstr "Bus/system"
+
+#: format_id.py:47
+msgid "Unknown medium"
+msgstr "Ukendt medium"
+
+#: format_id.py:49
+msgid "Cold water"
+msgstr "Koldt vand"
+
+#: format_id.py:50
+msgid "Dual water"
+msgstr "Koldt- og varmt vand"
+
+#: format_id.py:51
+msgid "Pressure"
+msgstr "Tryk"
+
+#: format_id.py:52
+msgid "A/D converter"
+msgstr "A/D-konverter"
+
+#: format_id.py:58 format_id.py:61
+msgid "Reserved"
+msgstr "Reserveret"
+
+#: format_id.py:66
+#, python-brace-format
+msgid ""
+"{id}, manufacturer: {manufacturer}, generation: {generation}, medium: "
+"{medium}"
+msgstr ""
+"{id}, fabrikant: {manufacturer}, generation: {generation}, medie: {medium}"
+
+#: forms.py:73 forms.py:100
+msgid "From date"
+msgstr "Fra dato"
+
+#: forms.py:75 forms.py:102
+msgid "From hour"
+msgstr "Fra time"
+
+#: forms.py:79 forms.py:106 forms.py:161
+msgid "To date"
+msgstr "Til dato"
+
+#: forms.py:81 forms.py:108
+msgid "To hour"
+msgstr "Til time"
+
+#: forms.py:215
+msgid "Year"
+msgstr "År"
+
+#: forms.py:220
+msgid "Week"
+msgstr "Uge"
+
+#: forms.py:250
+#, python-format
+msgid "There's no week %s in %s"
+msgstr "Der findes ingen uge-%s i %s"
+
+#: models.py:206
+msgid "Changing class is not allowed."
+msgstr "Ændring af klasse er ikke tilladt."
+
+#: models.py:217
+msgid "from date"
+msgstr "fra dato"
+
+#: models.py:218
+msgid "to date"
+msgstr "til dato"
+
+#: models.py:225 models.py:262
+msgid "Period of existense must be non-empty."
+msgstr "Perioden må ikke være tom."
+
+#: models.py:252
+msgid "from time"
+msgstr "fra-tidspunkt"
+
+#: models.py:253
+msgid "to time"
+msgstr "til-tidspunkt"
+
+#: paginator.py:181
+msgid "Page can not be converted to a date."
+msgstr "Sidetal kan ikke konverteres til en dato."
+
+#: preferredunits.py:154
+#, python-brace-format
+msgid "{energy_unit}/person year"
+msgstr "{energy_unit}/personår"
+
+#: preferredunits.py:164
+#, python-brace-format
+msgid "{energy_unit}/m² year"
+msgstr "{energy_unit}/m²-år"
+
+#: preferredunits.py:226
+msgid "efficiency"
+msgstr "effektivitet"
+
+#: units.py:23
+msgid "mW"
+msgstr "mW"
+
+#: units.py:24
+msgid "W"
+msgstr "W"
+
+#: units.py:25
+msgid "kW"
+msgstr "kW"
+
+#: units.py:26
+msgid "MW"
+msgstr "MW"
+
+#: units.py:29
+msgid "mJ/h"
+msgstr "mJ/t"
+
+#: units.py:30
+msgid "J/h"
+msgstr "J/t"
+
+#: units.py:31
+msgid "kJ/h"
+msgstr "kJ/t"
+
+#: units.py:32
+msgid "MJ/h"
+msgstr "MJ/t"
+
+#: units.py:37
+msgid "mWh"
+msgstr "mWh"
+
+#: units.py:38
+msgid "Wh"
+msgstr "Wh"
+
+#: units.py:39
+msgid "kWh"
+msgstr "kWh"
+
+#: units.py:40
+msgid "MWh"
+msgstr "MWh"
+
+#: units.py:43
+msgid "mJ"
+msgstr "mJ"
+
+#: units.py:44
+msgid "J"
+msgstr "J"
+
+#: units.py:45
+msgid "kJ"
+msgstr "kJ"
+
+#: units.py:46
+msgid "MJ"
+msgstr "MJ"
+
+#: units.py:51
+msgid "L"
+msgstr "L"
+
+#: units.py:52
+msgid "mL"
+msgstr "mL"
+
+#: units.py:53
+msgid "m³"
+msgstr "m³"
+
+#: units.py:56
+msgid "L/s"
+msgstr "L/s"
+
+#: units.py:57
+msgid "L/min"
+msgstr "L/min"
+
+#: units.py:58
+msgid "L/h"
+msgstr "L/t"
+
+#: units.py:59
+msgid "mL/h"
+msgstr "mL/t"
+
+#: units.py:60
+msgid "m³/s"
+msgstr "m³/s"
+
+#: units.py:61
+msgid "m³/min"
+msgstr "m³/min"
+
+#: units.py:62
+msgid "m³/h"
+msgstr "m³/t"
+
+#: units.py:79
+msgid "°C"
+msgstr "°C"
+
+#: units.py:80
+msgid "°F"
+msgstr "°F"
+
+#: units.py:81
+msgid "mK"
+msgstr "mK"
+
+#: units.py:82
+msgid "K"
+msgstr "K"
+
+#: units.py:86
+msgid "V"
+msgstr "V"
+
+#: units.py:90
+msgid "A"
+msgstr "A"
+
+#: units.py:94 units.py:110
+msgid "EUR/kWh"
+msgstr "EUR/kWh"
+
+#: units.py:95 units.py:111
+msgid "EUR/MWh"
+msgstr "EUR/MWh"
+
+#: units.py:96 units.py:112
+msgid "DKK/kWh"
+msgstr "DKK/kWh"
+
+#: units.py:97 units.py:113
+msgid "DKK/MWh"
+msgstr "DKK/MWh"
+
+#: units.py:101
+msgid "EUR/l"
+msgstr "EUR/l"
+
+#: units.py:102
+msgid "EUR/m³"
+msgstr "EUR/m³"
+
+#: units.py:103
+msgid "DKK/l"
+msgstr "DKK/l"
+
+#: units.py:104
+msgid "DKK/m³"
+msgstr "DKK/m³"
+
+#: units.py:121
+msgid "degree days"
+msgstr "graddage"
+
+#: units.py:127
+msgid "Person"
+msgstr "Person"
+
+#: units.py:128
+msgid "tonne"
+msgstr "ton"
+
+#: units.py:144
+msgid "tonne/MWh"
+msgstr "ton/MWh"
+
+#: units.py:162
+msgid "kWh/year"
+msgstr "kWh/år"
+
+#: units.py:163
+msgid "kWh/quarter"
+msgstr "kWh/kvartal"
+
+#: units.py:164
+msgid "kWh/month"
+msgstr "kWh/måned"
+
+#: units.py:165
+msgid "kWh/week"
+msgstr "kWh/uge"
+
+#: units.py:166
+msgid "kWh/day"
+msgstr "kWh/dag"
+
+#: units.py:167
+msgid "kWh/hour"
+msgstr "kWh/time"
+
+#: units.py:273
+msgid "impulse"
+msgstr "impuls"
+
+#: utilitytypes.py:28
+msgid "unknown"
+msgstr "ukendt"
+
+#: utilitytypes.py:29
+msgid "temperature"
+msgstr "temperatur"
+
+#: utilitytypes.py:31
+msgid "electricity"
+msgstr "elektricitet"
+
+#: utilitytypes.py:33
+msgid "district heating"
+msgstr "fjernvarme"
+
+#: utilitytypes.py:35
+msgid "fuel"
+msgstr "brændsel"
+
+#: utilitytypes.py:37
+msgid "liquid fuel"
+msgstr "flydende brændsel"
+
+#: utilitytypes.py:38
+msgid "oil"
+msgstr "olie"
+
+#: utilitytypes.py:40
+msgid "solid fuel"
+msgstr "fastbrændsel"
+
+#: utilitytypes.py:44
+msgid "gas"
+msgstr "gas"
+
+#: utilitytypes.py:46
+msgid "water"
+msgstr "vand"
+
+#: validators.py:17
+msgid "Must be non-zero."
+msgstr "Skal være forskellig fra nul."
+
+#: validators.py:22
+msgid "Must be in the past."
+msgstr "Skal være i fortiden."
+
+#: validators.py:31
+msgid "There are overlaps."
+msgstr "Der er overlap."
+
+#: templates/utils/customer_selection_modal.html:8
+msgid "Select customer"
+msgstr "Vælg kunde"
+
+#: templates/utils/customer_selection_modal.html:20
+msgid "Cancel"
+msgstr "Annuller"
+
+#~ msgid "g/kWh"
+#~ msgstr "g/kWh"
+
+#~ msgid "m²"
+#~ msgstr "m²"
+
+#~ msgid "kg"
+#~ msgstr "kg"
+
+#~ msgid "EUR"
+#~ msgstr "EUR"
+
+#~ msgid "DKK"
+#~ msgstr "DKK"
+
+#~ msgid "W/K"
+#~ msgstr "W/K"
+
+#~ msgid "units"
+#~ msgstr "enheder"
+
+#~ msgid "{currency}/kWh"
+#~ msgstr "{currency}/kWh"
+
+#~ msgid "{currency}/MWh"
+#~ msgstr "{currency}/MWh"
+
+#~ msgid "{currency}/l"
+#~ msgstr "{currency}/l"
+
+#~ msgid "{currency}/m³"
+#~ msgstr "{currency}/m³"
+
+#~ msgid "unit"
+#~ msgstr "enhed"
+
+#~ msgid "Save"
+#~ msgstr "Gem"
+
+#~ msgid "{energy_unit}/unit"
+#~ msgstr "{energy_unit}/enhed"
+
+#~ msgid "active"
+#~ msgstr "aktiv"
+
+#~ msgid "degreedays"
+#~ msgstr "graddage"

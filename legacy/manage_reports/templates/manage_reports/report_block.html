@@ -1,0 +1,23 @@
+{% spaceless %}
+{% load i18n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix">
+  {% if object.generation_time %}
+    <a href="{% url 'manage_reports-pdf' report_id=object.id title=object.title %}">
+      <h3>{{ object }}</h3>
+    </a>
+  {% else %}
+    <h3>{{ object }}</h3>
+  {% endif %}
+  <dl>
+    <dt>{% trans "Report type:" %}</dt>
+    <dd>{{ object.report_type }}</dd>
+    <dt>{% trans "Requested:" %} </dt>
+    <dd>{{ object.request_time|date:'Y-m-d\TH:iO' }}</dd>
+    <dt>{% trans "Generated:" %} </dt>
+    <dd>{{ object.generation_time|date:'Y-m-d\TH:iO' }}</dd>
+  </dl>
+</div>
+{% endspaceless %}

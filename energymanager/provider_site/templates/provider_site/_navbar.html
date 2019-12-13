@@ -1,0 +1,5 @@
+{% extends "bootstrap/_navbar_base.html" %}
+{% load i18n %}
+
+{% block home_url %}{% url 'provider_site:home' %}{% endblock %}
+{% block title %}{% trans "Administration" %}{% endblock %}

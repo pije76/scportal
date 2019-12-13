@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:39
+msgid "energy"
+msgstr "energi"
+
+#: models.py:40
+msgid "volume"
+msgstr "volume"
+
+#: models.py:44
+msgid "unit"
+msgstr "enhed"
+
+#: models.py:50
+msgid "volume to energy conversion"
+msgstr "volume-til-energi-konvertering"
+
+#: models.py:54
+msgid "consumption data sequence"
+msgstr "forbrugsdatasekvens"
+
+#: models.py:55
+msgid "consumption data sequences"
+msgstr "forbrugsdatasekvenser"
+
+#: models.py:63
+msgid "Must not be changed"
+msgstr "Må ikke ændres"
+
+#: models.py:71
+msgid "Should only be set for volumeric consumptions."
+msgstr "Må kun sættes for volume-forbrug"
+
+#: models.py:125
+msgid "name"
+msgstr "navn"
+
+#: models.py:126
+msgid "description"
+msgstr "beskrivelse"
+
+#: models.py:130
+msgid "consumptions"
+msgstr "forbrug"
+
+#: models.py:134
+msgid "cost compensation"
+msgstr "afgiftsløft"
+
+#: models.py:155
+msgid "Cost compensation cannot be cleared once selected"
+msgstr "Afgiftsgodtgørelse kan ikke fravælges når først den er valgt"
+
+#: models.py:158
+msgid "Cost compensation cannot be changed once selected"
+msgstr "Afgiftsgodtgørelse kan ikke ændres når først den er valgt"
+
+#: models.py:349
+msgid "utility type"
+msgstr "forsyningstype"
+
+#: models.py:353
+msgid "tariff"
+msgstr "tarif"
+
+#: models.py:359 models.py:483
+msgid "main consumption"
+msgstr "hovedforbrug"
+
+#: models.py:360
+msgid "main consumptions"
+msgstr "hovedforbrug"
+
+#: models.py:386
+msgid "Tariff cannot be cleared once selected."
+msgstr "Tarif kan ikke afvælges når først den er valgt."
+
+#: models.py:389
+msgid "Tariff cannot be changed once selected."
+msgstr "Tarif kan ikke ændres når først den er valgt."
+
+#: models.py:397
+msgid "Tariff unit incompatible with utility unit."
+msgstr "Tarifenhed inkompatibel med forsyningsenhed."
+
+#: models.py:489
+msgid "consumption group"
+msgstr "forbrugsgruppe"
+
+#: models.py:490
+msgid "consumption groups"
+msgstr "forbrugsgrupper"
+
+#: models.py:562
+msgid "data sequence"
+msgstr "datasekvens"
+
+#: models.py:566
+msgid "consumption period"
+msgstr "forbrugsperiode"
+
+#: models.py:567
+msgid "consumption periods"
+msgstr "forbrugsperioder"
+
+#: models.py:575
+msgid "non-pulse consumption period"
+msgstr "ikke-puls-forbrugsperiode"
+
+#: models.py:576
+msgid "non-pulse consumption periods"
+msgstr "ikke-puls-forbrugsperioder"
+
+#: models.py:584
+msgid "pulse consumption period"
+msgstr "puls-forbrugsperiode"
+
+#: models.py:585
+msgid "pulse consumption periods"
+msgstr "puls-forbrugsperioder"
+
+#: models.py:593
+msgid "single value consumption period"
+msgstr "enkeltværdisforbrugsperiode"
+
+#: models.py:594
+msgid "single value consumption periods"
+msgstr "enkeltværdisforbrugsperioder"
+
+#~ msgid "customer"
+#~ msgstr "kunde"
+
+#~ msgid "accumulation"
+#~ msgstr "akkumulering"
+
+#~ msgid "conversion"
+#~ msgstr "konvertering"
+
+#~ msgid "conversion consumption period"
+#~ msgstr "konverteringsforbrugsperiode"
+
+#~ msgid "conversion consumption periods"
+#~ msgstr "konverteringsforbrugsperioder"

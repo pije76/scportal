@@ -1,0 +1,454 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: models.py:56 models.py:266
+msgid "Unknown"
+msgstr "Ukendt"
+
+#: models.py:57
+msgid "GridAgent"
+msgstr "GridAgent"
+
+#: models.py:58
+msgid "1 phase GridPoint"
+msgstr "1-faset GridPoint"
+
+#: models.py:59
+msgid "3 phase GridPoint"
+msgstr "3-faset GridPoint"
+
+#: models.py:60 models.py:269
+msgid "GridLink"
+msgstr "GridLink"
+
+#: models.py:61 models.py:268
+msgid "GridPoint S01 Legacy"
+msgstr "GridPoint S01 Udgået"
+
+#: models.py:62
+msgid "Kamstrup 382"
+msgstr "Kamstrup 382"
+
+#: models.py:63
+msgid "Kamstrup 602"
+msgstr "Kamstrup 602"
+
+#: models.py:64
+msgid "DEIF 4002"
+msgstr "DEIF 4002"
+
+#: models.py:65
+msgid "Schneider PM9C"
+msgstr "Schneider PM9C"
+
+#: models.py:66 models.py:270
+msgid "Mitsubishi FX1S"
+msgstr "Mitsubishi FX1S"
+
+#: models.py:67
+msgid "Temperature Sensor"
+msgstr "Termometer"
+
+#: models.py:68 models.py:273
+msgid "Modbus"
+msgstr "Modbus"
+
+#: models.py:69 models.py:272
+msgid "MBus"
+msgstr "MBus"
+
+#: models.py:70 models.py:276
+msgid "GridRepeater"
+msgstr "GridRepeater"
+
+#: models.py:80 models.py:643
+msgid "Device type"
+msgstr "Enhedstype"
+
+#: models.py:83
+msgid "Device serial number"
+msgstr "Serienummer"
+
+#: models.py:85 models.py:644
+msgid "Hardware major version"
+msgstr "Hardware version (major)"
+
+#: models.py:87 models.py:645
+msgid "Hardware minor version"
+msgstr "Hardware version (minor)"
+
+#: models.py:89 models.py:646
+msgid "Hardware revision"
+msgstr "Hardware revision"
+
+#: models.py:91 models.py:648
+msgid "Hardware extra revision string"
+msgstr "Hardware ekstra revisionsstreng"
+
+#: models.py:93 models.py:649
+msgid "Software major version"
+msgstr "Software version (major)"
+
+#: models.py:95 models.py:650
+msgid "Software minor version"
+msgstr "Software version (minor)"
+
+#: models.py:97 models.py:651
+msgid "Software revision"
+msgstr "Software revision"
+
+#: models.py:99 models.py:653
+msgid "Software extra revision string"
+msgstr "Software ekstra revisionsstreng"
+
+#: models.py:150
+msgid "MAC address"
+msgstr "MAC-adresse"
+
+#: models.py:152 models.py:230 models.py:308 models.py:498
+msgid "online"
+msgstr "online"
+
+#: models.py:154 models.py:310
+msgid "online since"
+msgstr "online siden"
+
+#: models.py:157 models.py:232
+msgid "in add mode"
+msgstr "i Add Mode"
+
+#: models.py:160
+msgid "no longer in use"
+msgstr "ikke længere i brug"
+
+#: models.py:165
+msgid "agent"
+msgstr "agent"
+
+#: models.py:166
+msgid "agents"
+msgstr "agenter"
+
+#: models.py:218
+msgid "Online"
+msgstr "Online"
+
+#: models.py:220
+msgid "Offline"
+msgstr "Offline"
+
+#: models.py:228 models.py:492
+msgid "timestamp"
+msgstr "tidsstempel"
+
+#: models.py:267
+msgid "GridPoint"
+msgstr "GridPoint"
+
+#: models.py:271
+msgid "Reserved"
+msgstr "Reserveret"
+
+#: models.py:274
+msgid "Modbus via Z-wave"
+msgstr "Modbus via Z-wave"
+
+#: models.py:275
+msgid "Temperature sensor"
+msgstr "Termometer"
+
+#: models.py:277
+msgid "GridPoint Level 2"
+msgstr "GridPoint Level 2"
+
+#: models.py:281
+msgid "No measurements ever."
+msgstr "Ingen målinger er nogensinde modtaget."
+
+#: models.py:283
+msgid "No measurements within the last 24 hours or more."
+msgstr "Ingen målinger de sidste 24 timer eller mere."
+
+#: models.py:284
+msgid "Measurements for last 24 hours are all equal."
+msgstr "Alle målinger i de sidste 24 timer har samme værdi."
+
+#: models.py:287
+msgid "Agent offline."
+msgstr "Agent offline."
+
+#: models.py:288
+msgid "Agent online."
+msgstr "Agent online."
+
+#: models.py:300
+msgid "connection type"
+msgstr "forbindelsestype"
+
+#: models.py:304 models.py:494
+msgid "in manual mode"
+msgstr "i manuel tilstand"
+
+#: models.py:306
+msgid "relay on"
+msgstr "relæ tændt"
+
+#: models.py:311
+msgid "joined"
+msgstr "sammenkædet"
+
+#: models.py:315
+msgid "name"
+msgstr "navn"
+
+#: models.py:320
+msgid "meter"
+msgstr "måler"
+
+#: models.py:321
+msgid "meters"
+msgstr "målere"
+
+#: models.py:381
+msgid "Manual"
+msgstr "Manuel"
+
+#: models.py:383
+msgid "Automatic"
+msgstr "Auto"
+
+#: models.py:387
+msgid "On"
+msgstr "Tændt"
+
+#: models.py:389
+msgid "Off"
+msgstr "Slukket"
+
+#: models.py:470
+#, python-format
+msgid "Error: %s %s"
+msgstr "Fejl: %s %s"
+
+#: models.py:474
+#, python-format
+msgid "Warning: %s %s"
+msgstr "Advarsel: %s %s"
+
+#: models.py:496
+msgid "relay"
+msgstr "relæ"
+
+#: models.py:532
+msgid "unknown type"
+msgstr "ukendt type"
+
+#: models.py:533
+msgid "electricity"
+msgstr "elektricitet"
+
+#: models.py:534
+msgid "water"
+msgstr "vand"
+
+#: models.py:535
+msgid "gas"
+msgstr "gas"
+
+#: models.py:536
+msgid "heat"
+msgstr "varme"
+
+#: models.py:537
+msgid "temperature"
+msgstr "temperatur"
+
+#: models.py:538
+msgid "input states"
+msgstr "inputtilstande"
+
+#: models.py:539
+msgid "output states"
+msgstr "outputtilstande"
+
+#: models.py:553
+msgid "physical input"
+msgstr "fysiske input"
+
+#: models.py:554
+msgid "physical inputs"
+msgstr "fysiske inputs"
+
+#: models.py:558
+msgid "Consumption all phases"
+msgstr "Forbrug for alle faser"
+
+#: models.py:559
+msgid "Consumption phase 1"
+msgstr "Forbrug for fase et"
+
+#: models.py:560
+msgid "Consumption phase 2"
+msgstr "Forbrug for fase to"
+
+#: models.py:561
+msgid "Consumption phase 3"
+msgstr "Forbrug for fase tre"
+
+#: models.py:562
+msgid "Power phase 1"
+msgstr "Effekt for fase et"
+
+#: models.py:563
+msgid "Power phase 2"
+msgstr "Effekt for fase to"
+
+#: models.py:564
+msgid "Power phase 3"
+msgstr "Effekt for fase tre"
+
+#: models.py:565
+msgid "Voltage phase 1"
+msgstr "Spænding for fase et"
+
+#: models.py:566
+msgid "Voltage phase 2"
+msgstr "Spænding for fase to"
+
+#: models.py:567
+msgid "Voltage phase 3"
+msgstr "Spænding for fase tre"
+
+#: models.py:568
+msgid "Current phase 1"
+msgstr "Strøm for fase et"
+
+#: models.py:569
+msgid "Current phase 2"
+msgstr "Strøm for fase to"
+
+#: models.py:570
+msgid "Current phase 3"
+msgstr "Strøm for fase tre"
+
+#: models.py:573
+#, python-format
+msgid "%(meter_name)s: %(input_name)s"
+msgstr "%(meter_name)s: %(input_name)s"
+
+#: models.py:582
+#, python-format
+msgid "%(meter_name)s: (%(unit)s #%(order)s)"
+msgstr "%(meter_name)s: (%(unit)s #%(order)s)"
+
+#: models.py:656
+msgid "software image"
+msgstr "software image"
+
+#: models.py:657
+msgid "software images"
+msgstr "sofware images"
+
+#~ msgid "Meter offline on agent."
+#~ msgstr "Agenten har ikke forbindelse til måleren."
+
+#~ msgid "Meter online on agent."
+#~ msgstr "Måleren er online på agenten."
+
+#~ msgid "unknown unit"
+#~ msgstr "ukendt enhed"
+
+#~ msgid "mWh"
+#~ msgstr "mWh"
+
+#~ msgid "mW"
+#~ msgstr "mW"
+
+#~ msgid "impulse count"
+#~ msgstr "impulstal"
+
+#~ msgid "mL"
+#~ msgstr "mL"
+
+#~ msgid "mL/h"
+#~ msgstr "mL/t"
+
+#~ msgid "m°K"
+#~ msgstr "m°K"
+
+#~ msgid "mV"
+#~ msgstr "mV"
+
+#~ msgid "mA"
+#~ msgstr "mA"
+
+#~ msgid "mHz"
+#~ msgstr "mHz"
+
+#~ msgid "g"
+#~ msgstr "g"
+
+#~ msgid "mBar"
+#~ msgstr "mBar"
+
+#~ msgid "s"
+#~ msgstr "s"
+
+#~ msgid "binary"
+#~ msgstr "binær"
+
+#~ msgid "Unit"
+#~ msgstr "Enhed"
+
+#~ msgid "raw data"
+#~ msgstr "rå data"
+
+#~ msgid "This meter cannot be deleted because the following depends on it:"
+#~ msgstr "Denne måler kan ikke slettes, da følgende afhænger af den:"
+
+#~ msgid "All is well."
+#~ msgstr "Alt er vel."
+
+#~ msgid "Mitsubishe FX1S"
+#~ msgstr "Mitsubishi FX1S"
+
+#~ msgid "No data received within last seven days"
+#~ msgstr "Ingen data modtaget inden for de sidste syv dage"
+
+#~ msgid "No data ever received"
+#~ msgstr "Ingen målinger er nogensinde blevet modtaget"
+
+#~ msgid "ZigBee"
+#~ msgstr "ZigBee"
+
+#~ msgid "ModBus basic"
+#~ msgstr "ModBus standard"
+
+#~ msgid "ModBus enhanced"
+#~ msgstr "ModBus udvidet"
+
+#~ msgid "Kamstrup UtiliDriver"
+#~ msgstr "Kamstrup UtiliDriver"
+
+#~ msgid "ModBus"
+#~ msgstr "ModBus"
+
+#~ msgid "Aux Seriel"
+#~ msgstr "Aux Seriel"

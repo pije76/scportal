@@ -1,0 +1,50 @@
+{% load widget_tweaks %}
+{% load i18n %}
+{% load l10n %}
+<div class="impulse-form">
+  <div class="left">
+    {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+    <p>
+      {{ form.from_timestamp.label_tag }}
+      {{ form.from_timestamp|add_class:"datetime" }} {{ form.from_timestamp.errors }}
+    </p>
+    <p>
+      {{ form.to_timestamp.label_tag }}
+      {{ form.to_timestamp|add_class:"datetime" }} {{ form.to_timestamp.errors }}
+    </p>
+  </div>
+  <div class="left impulse-equation">
+    <div class="impulse-equation-content">
+      <fieldset class="left">
+	<div>
+	  {{ form.pulse_quantity }} &times;
+	  {% trans 'impulse' %}
+	</div>
+	<div>
+	  {{ form.pulse_quantity.errors }}
+	</div>
+	</fieldset class="left">
+	<div class="left equals">=</div>
+	{% block impulse_equation_output_side %}
+	  <fieldset class="left">
+	    <div>
+	      {{ form.output_quantity }} &times;
+	    </div>
+	    <div>
+	      {{ form.output_quantity.errors }}
+	    </div>
+	  </fieldset>
+	  <fieldset class="left">
+	    <div>
+	      {{ form.output_unit }}
+	    </div>
+	    <div>
+	      {{ form.output_unit.errors }}
+	    </div>
+	  </fieldset>
+	{% endblock impulse_equation_output_side %}
+    </div>
+  </div>
+  <div class="right">{% trans "Delete:" %}{{ form.DELETE }} {{ form.non_field_errors }}</div>
+</div>
+<div class="clearfix"></div>

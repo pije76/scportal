@@ -1,0 +1,93 @@
+{% extends "fullpage_form_base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+
+{% block page_id %}reports-page{% endblock %}
+{% block title %}{% trans "EnPI Reports" %}{% endblock title %}
+
+{% block content_heading %}{% trans "Reports" %}{% endblock content_heading %}
+
+{% block form_header %}{% trans 'EnPI Report' %}{% endblock%}
+
+{% block delete_url %}{% url 'manage_reports-enpi-delete' %}{% endblock %}
+{% block redirect_url %}{% url 'manage_reports-index' %}{% endblock %}
+
+
+{% block form %}
+<form method="post">
+{% csrf_token %}
+
+<fieldset>
+  <label>{% trans "Title:" %}</label>
+  <div class="name-input">
+    {{ form.title }}
+    {{ form.title.errors }}
+  </div>
+</fieldset>
+
+{% with inlines.0 as formset %}
+<fieldset>
+    {{ formset.management_form }}
+    <h6> {% trans "Areas of Energy Use:" %} </h6>
+    {% for area_form in formset %}
+    {{ area_form.id.as_hidden }}
+    <div class="area-form formset-member">
+      <div class="form-content-left">
+        <label> {% trans "Name:" %} </label>
+        {{ area_form.name }}
+        {{ area_form.name.errors }}
+      </div>
+      <div class="form-content-left">
+        <label> {% trans "Energy driver:" %} </label>
+        {{ area_form.energy_driver }}
+        {{ area_form.energy_driver.errors }}
+        {% if not forloop.last %}
+        <div style="display:inline; float:right">
+          {% trans "Delete:" %}{{ area_form.DELETE }}
+        </div>
+        {% endif %}
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-content-left">
+        <label> {% trans "Measurement Points:" %} </label>
+        {{ area_form.measurement_points }}
+        {{ area_form.measurement_points.errors }}
+      </div>
+      <div class="clearfix"></div>
+      {{ area_form.non_field_errors }}
+    </div>
+    {% endfor %}
+    <div class="empty-form formset-member" style="display: none">
+      <div class="form-content-left">
+        <label> {% trans "Name:" %} </label>
+        {{ formset.empty_form.name }}
+      </div>
+      <div class="form-content-left">
+        <label> {% trans "Energy driver:" %} </label>
+        {{ formset.empty_form.energy_driver }}
+        {{ formset.empty_form.energy_driver.errors }}
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-content-left">
+        <label> {% trans "Measurement Points:" %} </label>
+        {{ formset.empty_form.measurement_points }}
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <button class="add-form" style="margin-top: 5px">{% trans "Add another area" %}</button>
+</fieldset>
+{{ form.non_field_errors }}
+{{ formset.non_form_errors }}
+{% if form.instance.id %}
+  <input type="submit" value="{% trans "Save" %}">
+  <input type="button" name="delete" title="" value="{% trans 'Delete' %}">
+{% else %}
+  <input type="submit" value="{% trans "Create" %}">
+{% endif %}
+{% endwith %}
+
+</form>
+
+{% endblock %}
+

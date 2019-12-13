@@ -1,0 +1,28 @@
+{% if not is_checkbox %}
+  {# normal field #}
+  <div class="form-group{% if field.errors %} has-error{% endif %}">
+    {{ rendered_field_label }}
+    {{ rendered_field_input }}
+  </div>
+{% else %}
+  {% if layout == 'horizontal' %}
+    <div class="form-group">
+    <div class="col-sm-offset-{{ label_columns }} col-sm-{{ input_columns }}">
+  {% endif %}
+  <div class="checkbox">
+    <label{% if label_class %} class="{{ label_class }}"{% endif %}>
+      {{ field }}
+      <span>&nbsp;{{ field.label }}</span>
+    </label>
+    {% if field.help_text %}
+      <span class="help-block">{{ field.help_text }}</span>
+    {% endif %}
+    {% for error in field.errors %}
+      <span class="help-block">{{ error }}</span>
+    {% endfor %}
+  </div>
+  {% if layout == 'horizontal' %}
+    </div>
+    </div>
+  {% endif %}
+{% endif %}

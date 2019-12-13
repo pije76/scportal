@@ -1,0 +1,102 @@
+{% extends "display_indexes/index.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% load dropdown %}
+
+
+{% block detail_js %}
+<script type="text/javascript">
+/*jslint browser: true, devel: true */
+/*global $, jQuery, Flotr, gridportal, gettext */
+
+$(document).ready(function () {
+    'use strict';
+    var period = $('#period-selection').serialize();
+
+    gridportal.website.generateGraphs($(".graph"), function (graphs) {
+        graphs.each(function () {
+            var container = this;
+            jQuery.getJSON($(this).data("src"), period, function (graphData) {
+                var options = graphData.options;
+                options.mouse = {
+                    track: true,
+                    relative: true,
+                    sensibility: 5,
+                    container: $("body"),
+                    trackY: false,
+                    trackFormatter: function (obj) {
+                        var labelData = obj.series.data[obj.index][2],
+                            val,
+                            date,
+                            time;
+                        if (labelData) {
+                            val = labelData[0];
+                            date = labelData[1];
+                            time = labelData[2];
+                            return '<div class="hitValue">' + val + ' ' + options.yaxis.title + '</div><div>' + date + '</div><div>' + time + '</div>';
+                        }
+                        return '<div class="hitValue">' + gettext('No data') + '</div>';
+                    }
+                };
+                Flotr.draw(container, graphData.data, options);
+            });
+        });
+    });
+
+    {% if widgets %}
+        $("#graph-checkbox").prop("checked", true);
+    {%endif%}
+
+    $('#graph-checkbox').slickswitch({
+        toggledOn : function () {
+            jQuery.get('{% url "display_widgets-add-to-dashboard" pk=id widget_type=2 %}');
+        },
+        toggledOff : function () {
+            jQuery.get('{% url "display_widgets-remove-specific-widget" pk=id widget_type=2 %}');
+        }
+    });
+});
+</script>
+{% endblock detail_js %}
+
+
+{% block content %}
+<div id="measurementpoints" class="grid_23 prefix_1">
+  <div class="content-element">
+    <div class="header clearfix">
+      <h3 class="left">{{ name }}</h3>
+      {% if not standart_month %}
+          <div class="right dashboard-link">
+          {% dropdown %}
+            {% anchor %}
+              {% trans 'Show on dashboard' %} <img src="{% static 'images/add-icon.png' %}" alt="{% trans 'Add' %}">
+            {% endanchor %}
+            {% body %}
+                <ul>
+                    <li>
+                      <div class="left">{% trans "Graph" %}</div>
+                      <div class="right"> <input id="graph-checkbox" class="switch" type="checkbox"> </div>
+                      <div class="clearfix"></div>
+                    </li>
+                </ul>
+            {% endbody %}
+          {% enddropdown %}
+          </div>
+      {% endif %}
+    </div>
+{% if not standart_month %}
+{% include "display_measurementpoints/period_selection.html" %}
+{% endif %}
+{% if not period_form.non_field_errors %}
+<div class="graph" style="width: 100%; height: 380px;" data-src="{% url 'display_indexes-graph' pk=id %}"><img src="{% static 'images/ajax-loader.gif' %}"></div>
+{% endif %}
+
+{% if not standart_month %}
+    <a href="#" class="period-previous btn left">{% trans "Previous" %}</a>
+    <a href="#" class="period-next btn right">{% trans "Next" %}</a>
+    <div class="clearfix"></div>
+{% endif %}
+  </div>
+</div>
+{% endblock content %}

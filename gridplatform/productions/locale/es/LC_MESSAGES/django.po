@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-20 21:13+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:36
+msgid "unit"
+msgstr "unidad"
+
+#: models.py:41
+msgid "production"
+msgstr "producción"
+
+#: models.py:42
+#: models.py:71
+msgid "productions"
+msgstr "producciones"
+
+#: models.py:53
+msgid "Cannot be changed."
+msgstr "No puede ser cambiado."
+
+#: models.py:56
+#: models.py:90
+msgid "Invalid choice."
+msgstr "Elección no válida"
+
+#: models.py:63
+msgid "name"
+msgstr "nombre"
+
+#: models.py:64
+msgid "description"
+msgstr "descripción"
+
+#: models.py:76
+msgid "production unit"
+msgstr "unidad productiva"
+
+#: models.py:81
+msgid "production group"
+msgstr "grupo de producción"
+
+#: models.py:82
+msgid "production groups"
+msgstr "grupos de producción"
+
+#: models.py:125
+msgid "data sequence"
+msgstr "secuencia de datos"
+
+#: models.py:129
+msgid "production period"
+msgstr "periodo de producción"
+
+#: models.py:130
+msgid "production periods"
+msgstr "periodos de producción"
+
+#: models.py:138
+msgid "non-pulse production period"
+msgstr "periodo de producción sin pulsos"
+
+#: models.py:139
+msgid "non-pulse production periods"
+msgstr "periodos de producción sin pulsos"
+
+#: models.py:147
+msgid "pulse production period"
+msgstr "periodo de producción con pulsos"
+
+#: models.py:148
+msgid "pulse production periods"
+msgstr "periodos de producción con pulsos"
+
+#: models.py:156
+msgid "single value production period"
+msgstr "periodo de producción con valores singulares"
+
+#: models.py:157
+msgid "single value production periods"
+msgstr "periodos de producción con valores singulares"
+

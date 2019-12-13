@@ -1,0 +1,14 @@
+{% extends "bootstrap/_navbar_base.html" %}
+{% load i18n %}
+
+{% block menu_button %}{% endblock %}
+{% block home_url %}{% url 'start_site:apps' %}{% endblock %}
+{% block title %}
+{% if request.get_host == "portal.smartflex.dk" %}
+  {% trans "SmartFlex" %}
+{% elif request.get_host == "endesa.grid-manager.com" %}
+  {% trans "Endesa Energy Portal" %}
+{% else %}
+  {% trans "SC-Portal" %}
+{% endif %}
+{% endblock %}

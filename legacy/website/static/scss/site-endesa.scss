@@ -1,0 +1,28 @@
+$footer-background: #002261;
+
+
+#header {
+    height: 40px;
+    .logo {
+        background-image: url('/static/images/endesa_logo.png');
+        width: 121px;
+        height: 39px;
+        display: inline-block;
+    }
+}
+
+#menu {
+    background-image: url(images/endesa-top-gradient.png);
+    .menu-item {
+        background-image: url(images/endesa-menu-background.png);
+        margin-top: -1px;
+    }
+    .menu-right-border {
+        background-image: url(images/endesa-menu-right-border.png);
+        margin-top: -1px;
+    }
+}
+
+#settings-menu {
+    top: 40px;
+}

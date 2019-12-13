@@ -1,0 +1,460 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:07+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: views.py:181
+msgid "At least one period must be defined"
+msgstr ""
+
+#: views.py:189
+msgid "No two periods can have the same from date"
+msgstr ""
+
+#: views.py:342
+#, fuzzy
+msgid "Create New Derived Electricity Tariff"
+msgstr "Tarifa eléctrica derivada"
+
+#: views.py:347
+#, fuzzy
+msgid "Create New Derived Gas Tariff"
+msgstr "Tarifa de gas derivada"
+
+#: views.py:352
+#, fuzzy
+msgid "Create New Derived Water Tariff"
+msgstr "Tarifa de agua derivada"
+
+#: views.py:357
+msgid "Create New Derived District Heating Tariff"
+msgstr ""
+
+#: views.py:362
+#, fuzzy
+msgid "Create New Derived Oil Tariff"
+msgstr "Tarifa de gasoil derivada"
+
+#: views.py:371
+#, fuzzy
+msgid "Create New Seasons Electricity Tariff"
+msgstr "Tarifa eléctrica estacional"
+
+#: views.py:376
+#, fuzzy
+msgid "Create New Seasons Gas Tariff"
+msgstr "Tarifa de gas estacional"
+
+#: views.py:381
+#, fuzzy
+msgid "Create New Seasons Water Tariff"
+msgstr "Tarifa de agua estacional"
+
+#: views.py:386
+msgid "Create New Seasons District Heating Tariff"
+msgstr ""
+
+#: views.py:391
+#, fuzzy
+msgid "Create New Seasons Oil Tariff"
+msgstr "Tarifa de gasoil estacional"
+
+#: views.py:396
+msgid "Create New Seasons Employees Index"
+msgstr ""
+
+#: views.py:403
+msgid "Create New Seasons Area Index"
+msgstr ""
+
+#: views.py:430
+#, fuzzy, python-brace-format
+msgid "Update Derived {index_role}"
+msgstr "Derivado {role}"
+
+#: views.py:440
+#, fuzzy, python-brace-format
+msgid "Update Seasons {index_role}"
+msgstr "Estaciones {role}"
+
+#: views.py:462
+msgid "The index has been deleted"
+msgstr "La tarifa ha sido borrada"
+
+#: templates/manage_indexes/_derived_period_formset.html:8
+#: templates/manage_indexes/_seasons_period_formset.html:9
+#: templates/manage_indexes/index_form.html:122
+#: templates/manage_indexes/index_form.html:142
+msgid "From date:"
+msgstr "Desde Fecha:"
+
+#: templates/manage_indexes/_derived_period_formset.html:13
+#, fuzzy
+msgid "Other index:"
+msgstr "Editar tarifa"
+
+#: templates/manage_indexes/_derived_period_formset.html:18
+#: templates/manage_indexes/index_form.html:130
+msgid "Coefficient:"
+msgstr "Coeficiente:"
+
+#: templates/manage_indexes/_derived_period_formset.html:23
+#: templates/manage_indexes/index_form.html:131
+msgid "Constant:"
+msgstr "Constante:"
+
+#: templates/manage_indexes/_derived_period_formset.html:28
+msgid "Roof:"
+msgstr ""
+
+#: templates/manage_indexes/_derived_period_formset.html:33
+#: templates/manage_indexes/_seasons_period_formset.html:5
+#: templates/manage_indexes/index_form.html:117
+msgid "Delete:"
+msgstr "Borrar:"
+
+#: templates/manage_indexes/_index_fields.html:3
+#: templates/manage_indexes/_tariff_fields.html:3
+#: templates/manage_indexes/index_form.html:84
+#, fuzzy
+msgid "Name:"
+msgstr "Nombre"
+
+#: templates/manage_indexes/_index_fields.html:8
+#: templates/manage_indexes/_tariff_fields.html:8
+#: templates/manage_indexes/index_form.html:89
+#, fuzzy
+msgid "Group:"
+msgstr "Grupo"
+
+#: templates/manage_indexes/_index_fields.html:14
+#: templates/manage_indexes/_tariff_fields.html:13
+#: templates/manage_indexes/index_block.html:21
+msgid "Unit:"
+msgstr "Unidad:"
+
+#: templates/manage_indexes/_index_fields.html:20
+#: templates/manage_indexes/_tariff_fields.html:18
+#: templates/manage_indexes/index_form.html:108
+msgid "Timezone:"
+msgstr "Zona horaria:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:15
+#: templates/manage_indexes/index_form.html:148
+msgid "00-01:"
+msgstr "00-01:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:16
+#: templates/manage_indexes/index_form.html:149
+msgid "01-02:"
+msgstr "01-02:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:17
+#: templates/manage_indexes/index_form.html:150
+msgid "02-03:"
+msgstr "02-03:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:18
+#: templates/manage_indexes/index_form.html:151
+msgid "03-04:"
+msgstr "03-04:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:19
+#: templates/manage_indexes/index_form.html:152
+msgid "04-05:"
+msgstr "04-05:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:20
+#: templates/manage_indexes/index_form.html:153
+msgid "05-06:"
+msgstr "05-06:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:21
+#: templates/manage_indexes/index_form.html:154
+msgid "06-07:"
+msgstr "06-07:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:22
+#: templates/manage_indexes/index_form.html:155
+msgid "07-08:"
+msgstr "07-08:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:23
+#: templates/manage_indexes/index_form.html:156
+msgid "08-09:"
+msgstr "08-09:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:24
+#: templates/manage_indexes/index_form.html:157
+msgid "09-10:"
+msgstr "09-10:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:25
+#: templates/manage_indexes/index_form.html:158
+msgid "10-11:"
+msgstr "10-11:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:26
+#: templates/manage_indexes/index_form.html:159
+msgid "11-12:"
+msgstr "11-12:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:37
+#: templates/manage_indexes/index_form.html:170
+msgid "12-13:"
+msgstr "12-13:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:38
+#: templates/manage_indexes/index_form.html:171
+msgid "13-14:"
+msgstr "13-14:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:39
+#: templates/manage_indexes/index_form.html:172
+msgid "14-15:"
+msgstr "14-15:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:40
+#: templates/manage_indexes/index_form.html:173
+msgid "15-16:"
+msgstr "15-16:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:41
+#: templates/manage_indexes/index_form.html:174
+msgid "16-17:"
+msgstr "16-17:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:42
+#: templates/manage_indexes/index_form.html:175
+msgid "17-18:"
+msgstr "17-18:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:43
+#: templates/manage_indexes/index_form.html:176
+msgid "18-19:"
+msgstr "18-19:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:44
+#: templates/manage_indexes/index_form.html:177
+msgid "19-20:"
+msgstr "19-20:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:45
+#: templates/manage_indexes/index_form.html:178
+msgid "20-21:"
+msgstr "20-21:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:46
+#: templates/manage_indexes/index_form.html:179
+msgid "21-22:"
+msgstr "21-22:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:47
+#: templates/manage_indexes/index_form.html:180
+msgid "22-23:"
+msgstr "22-23:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:48
+#: templates/manage_indexes/index_form.html:181
+msgid "23-24:"
+msgstr "23-24:"
+
+#: templates/manage_indexes/_seasons_period_formset.html:62
+#: templates/manage_indexes/index_form.html:195
+msgid ""
+"All fields must be filled out with intergers and only 5 digits per field"
+msgstr ""
+"Todos los campos deben de ser rellenados con números enteros y con solo 5 "
+"digitos por campo"
+
+#: templates/manage_indexes/_seasons_period_formset.html:66
+#: templates/manage_indexes/index_form.html:199
+msgid "Populate empty hours"
+msgstr "horas de no ocupación"
+
+#: templates/manage_indexes/_seasons_period_formset.html:70
+#: templates/manage_indexes/index_form.html:203
+msgid "Clear period"
+msgstr "Borrar periodo"
+
+#: templates/manage_indexes/form_base.html:84
+#: templates/manage_indexes/form_base.html:88
+#: templates/manage_indexes/index_form.html:69
+#: templates/manage_indexes/index_form.html:73
+#: templates/manage_indexes/indexes_list.html:11
+msgid "Settings: Indexes"
+msgstr "Ajustes: Tarifas"
+
+#: templates/manage_indexes/form_base.html:103
+#: templates/manage_indexes/index_form.html:112
+msgid "Periods"
+msgstr "Periodos"
+
+#: templates/manage_indexes/form_base.html:114
+#: templates/manage_indexes/index_form.html:209
+msgid "Save and return to list"
+msgstr "Guardar y volver a listado"
+
+#: templates/manage_indexes/form_base.html:116
+#: templates/manage_indexes/index_form.html:212
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/manage_indexes/index_block.html:11
+msgid "Edit index"
+msgstr "Editar tarifa"
+
+#: templates/manage_indexes/index_block.html:19
+msgid "Data type:"
+msgstr "Tipo de datos:"
+
+#: templates/manage_indexes/index_block.html:29
+msgid "Set for all measurement points"
+msgstr ""
+
+#: templates/manage_indexes/index_form.html:95
+#, fuzzy
+msgid "Currency:"
+msgstr "Moneda/unidad"
+
+#: templates/manage_indexes/index_form.html:122
+msgid "Index:"
+msgstr "Tarifa:"
+
+#: templates/manage_indexes/index_form.html:132
+msgid "Roof (optional):"
+msgstr "Techo (opcional):"
+
+#: templates/manage_indexes/index_form.html:208
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/manage_indexes/indexes_list.html:10
+msgid "Setting: Indexes"
+msgstr "Ajustes: Traifas"
+
+#: templates/manage_indexes/indexes_list.html:12
+msgid "Indexes"
+msgstr "Tarifas"
+
+#: templates/manage_indexes/indexes_list.html:28
+msgid "Derived electricity tariff"
+msgstr "Tarifa eléctrica derivada"
+
+#: templates/manage_indexes/indexes_list.html:29
+msgid "Seasons electricity tariff"
+msgstr "Tarifa eléctrica estacional"
+
+#: templates/manage_indexes/indexes_list.html:31
+msgid "Derived gas tariff"
+msgstr "Tarifa de gas derivada"
+
+#: templates/manage_indexes/indexes_list.html:32
+msgid "Seasons gas tariff"
+msgstr "Tarifa de gas estacional"
+
+#: templates/manage_indexes/indexes_list.html:34
+msgid "Derived water tariff"
+msgstr "Tarifa de agua derivada"
+
+#: templates/manage_indexes/indexes_list.html:35
+msgid "Seasons water tariff"
+msgstr "Tarifa de agua estacional"
+
+#: templates/manage_indexes/indexes_list.html:37
+#, fuzzy
+msgid "Derived district heating tariff"
+msgstr "Tarifa de calor derivada"
+
+#: templates/manage_indexes/indexes_list.html:38
+#, fuzzy
+msgid "Seasons district heating tariff"
+msgstr "Tarifa de calor estacional"
+
+#: templates/manage_indexes/indexes_list.html:40
+msgid "Derived oil tariff"
+msgstr "Tarifa de gasoil derivada"
+
+#: templates/manage_indexes/indexes_list.html:41
+msgid "Seasons oil tariff"
+msgstr "Tarifa de gasoil estacional"
+
+#: templates/manage_indexes/indexes_list.html:43
+msgid "Employees"
+msgstr "Empleados"
+
+#: templates/manage_indexes/indexes_list.html:44
+msgid "Area"
+msgstr "Área"
+
+#: templates/manage_indexes/indexes_list.html:49
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/manage_indexes/indexes_list.html:50
+msgid "Unit"
+msgstr "Unidad"
+
+#~ msgid "electricity tariff"
+#~ msgstr "tarifa eléctrica"
+
+#~ msgid "gas tariff"
+#~ msgstr "tarifa de gas"
+
+#~ msgid "water tariff"
+#~ msgstr "tarifa de agua"
+
+#~ msgid "oil tariff"
+#~ msgstr "tarifa de gasoil"
+
+#~ msgid "heat tariff"
+#~ msgstr "tarifa de calor"
+
+#~ msgid "employees"
+#~ msgstr "empleados"
+
+#~ msgid "area"
+#~ msgstr "área"
+
+#~ msgid ""
+#~ "The index must match the selected currency and unit for the derived index"
+#~ msgstr ""
+#~ "La tarifa debe coincidir con la moneda elegida y la unidad para la tarifa "
+#~ "derivada"
+
+#~ msgid "The index has been saved"
+#~ msgstr "La tarifa ha sido guardada"
+
+#~ msgid "The index has been created"
+#~ msgstr "La tarifa ha sido creada"
+
+#~ msgid "{currency}/kWh"
+#~ msgstr "{currency}/kWh"
+
+#~ msgid "{currency}/l"
+#~ msgstr "{currency}/l"
+
+#, fuzzy
+#~ msgid "{currency}/m³"
+#~ msgstr "{currency}/l"
+
+#~ msgid "Currency/unit"
+#~ msgstr "Moneda/unidad"
+
+#~ msgid "Group"
+#~ msgstr "Grupo"

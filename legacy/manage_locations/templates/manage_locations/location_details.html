@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+
+{% block page_id %}locations-page{% endblock %}
+
+{% block title %}{% trans "Settings: Locations: " %}{{ location.name_plain }}{% endblock title %}
+{% block content_heading %}{% trans "Settings: Locations: " %}{{ location.name_plain }}{% endblock content_heading %}
+{% block left_content %}
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{% trans "Agents" %}</h3>
+  </div>
+  <div id="agents" class="list-block"
+       data-url="{% url 'manage-locations-agent-list-json' location=location.id %}"
+       data-orderby="mac">
+    <div class="header-options clearfix">
+      <div class="left">
+        <span>{% trans "Sort by" %}</span>
+        <span class="sort" data-sort="mac">{% trans "MAC" %}</span>
+      </div>
+      <div class="right">
+        <input type="text" name="search" title="{% trans "Filter" %}" />
+        <span class="clear-search-btn">
+          <img src="{% static 'images/clear.png' %}">
+        </span>
+        <span class="loader">
+          <img src="{% static 'images/ajax-loader.gif' %}">
+        </span>
+      </div>
+    </div>
+    <ul class="model-list" id="agent-list"></ul>
+    <div class="paginator"></div>
+  </div>
+</div>
+
+
+<div class="content-element">
+  <div class="header clearfix">
+    <h3 class="left">{% trans "Meters" %}</h3>
+  </div>
+  <div id="meters" class="list-block"
+       data-url="{% url 'manage-locations-meter-list-json' location=location.id %}"
+       data-orderby="name">
+    <div class="header-options clearfix">
+      <div class="left">
+        <span>{% trans "Sort by" %}</span>
+        <span class="sort" data-sort="name">{% trans "Name" %}</span>
+      </div>
+      <div class="right">
+        <input type="text" name="search" title="{% trans "Filter" %}" />
+        <span class="clear-search-btn">
+          <img src="{% static 'images/clear.png' %}">
+        </span>
+        <span class="loader">
+          <img src="{% static 'images/ajax-loader.gif' %}">
+        </span>
+      </div>
+    </div>
+    <ul class="model-list" id="meter-list"></ul>
+    <div class="paginator"></div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% spaceless %}
+{% load i18n %}
+{% load l10n %}
+{% load url from future %}
+{% load static from staticfiles %}
+
+<div class="clearfix" {% if object.can_be_updated %}data-url="{{ object.get_absolute_url }}"{% endif %}>
+  <h3>
+    {% if object.can_be_updated %}
+      <a href="{{ object.get_absolute_url }}">
+	<img src="{% static 'images/detail.png' %}" alt="{% trans 'Edit index' %}" />
+	{{ object.name_plain }}
+      </a>
+    {% else %}
+      {{ object.name_plain }}
+    {% endif %}
+  </h3>
+  <dl class="left">
+    <dt>{% trans "Data type:" %}</dt>
+    <dd>{{ object.get_role_display }}</dd>
+    <dt>{% trans "Unit:" %} </dt>
+    <dd>{{ object.get_preferred_unit_converter.get_display_unit }}</dd>
+  </dl>
+</div>
+{% endspaceless %}

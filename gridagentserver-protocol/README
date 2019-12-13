@@ -1,0 +1,11 @@
+This is the GridAgent Server communication protocol.
+
+Communication is message-based.
+Messages have a common header with type, length and a field for Boolean where this may simplify the payload.
+Apart from the initial handshake, communication is encrypted.
+We use a pre-shared key, merged with a nonce from the agent to protect against playback attacks (and with the MAC address from the agent for slightly improved obscurity).
+Currently, the set of messages sent by a server is disjoint from the set of messages sent by a client --- though the header is the same, and the type identifiers are global, so this may be changed later.
+
+The protocol has a version number, sent by both sides as part of the handshake.
+At present, the server must handle version discrepencies, i.e. communication takes place with the protocol version specified by the client.
+

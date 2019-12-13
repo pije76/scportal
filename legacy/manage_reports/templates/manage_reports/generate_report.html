@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+{% load utils %}
+{% load mptt_tags %}
+
+{% block page_id %}reports-page{% endblock %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+
+{% block page_js %}
+<script>
+/*jslint browser: true, devel: true */
+/*global $, jQuery, gettext, noty, gridportal */
+$(document).ready(function () {
+    'use strict';
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val(),
+        requestUrl = '{% url "manage_reports-request_consumption_report" %}',
+        statusUrl = '{% url "website-task_status" %}',
+        finalizeUrl = '{% url "manage_reports-finalize_consumption_report" %}',
+        resultElem = $('#generate_report_status'),
+        spinnerUrl = '{% static 'images/ajax-loader.gif' %}',
+        requestReport = function (formData, outputType, noticeField) {
+            gridportal.website.requestReport(csrfToken, requestUrl,
+                statusUrl, finalizeUrl, resultElem, spinnerUrl, formData,
+                outputType, noticeField, $('#pdfReport, #csvReport'));
+        };
+
+    $('#pdfReport').click(function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        var noticeField = $(event.target).closest('form').find(".notice-field");
+        requestReport($('#generate_report_form').serialize(), 'pdf', noticeField);
+    });
+    $('#csvReport').click(function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        var noticeField = $(event.target).closest('form').find(".notice-field");
+        requestReport($('#generate_report_form').serialize(), 'csv', noticeField);
+    });
+    $(".datepicker").datepicker();
+
+    function addToSelectedCollectionList(collection) {
+        if ($('#selected_collections .' + collection.attr('class')).length === 0) {
+            $('#selected_collections').append($('<li></li>', {'class': collection.attr('class')})
+                                      .append('<span>' + collection.find('.label').html() + '</span><a href="# " class="remove-collection"></a>'));
+        }
+    }
+
+    function removeFromSelectedCollectionList(collection) {
+        $('#selected_collections .' + collection.attr('class')).remove();
+    }
+
+    $('.checkall').click(function (e) {
+        var is_checked = ($('#generate_report_form li:visible input[name=collections]:checked').length > 0),
+            collections;
+        e.preventDefault();
+        e.stopPropagation();
+        if (is_checked) {
+            collections = $('#generate_report_form li input[name=collections]:visible');
+            collections.prop('checked', false);
+            collections.each(function () {
+                removeFromSelectedCollectionList($(this).closest('li'));
+            });
+        } else {
+            $('#generate_report_form li input[name=collections]:visible').prop('checked', true);
+            $('#selected_collections li').remove();
+            $('#collections li:visible[data-type=mp]').each(function () {
+                addToSelectedCollectionList($(this));
+            });
+        }
+    });
+
+    $('#filter').keyup(function () {
+        $('#collections li').each(function () {
+            if ($(this).text().toLowerCase().search($('#filter').val().toLowerCase()) > -1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+    $('#filter').labelify({labelledClass: "labelinside"});
+
+
+    $('[name=collections]').click(function () {
+        var checkbox = $(this),
+            collection = checkbox.closest('li');
+
+        if (collection.data('type') === 'collection') {
+            if (checkbox.prop('checked')) {
+                collection.find('input[type=checkbox]:visible').prop('checked', true);
+                collection.find('li[data-type=mp]:visible').each(function () {
+                    addToSelectedCollectionList($(this));
+                });
+            } else {
+                collection.find('input[type=checkbox]:visible').prop('checked', false);
+                collection.find('li[data-type=mp]:visible').each(function () {
+                    removeFromSelectedCollectionList($(this));
+                });
+            }
+        } else {
+            if (checkbox.prop('checked')) {
+                addToSelectedCollectionList($(collection));
+            } else {
+                removeFromSelectedCollectionList(collection);
+                collection.parents('li[data-type=collection]').children('span').find('input[type=checkbox]').prop('checked', false);
+            }
+        }
+    });
+    $('#selected_collections').on('click', '.remove-collection', function (e) {
+        e.preventDefault();
+        var collection = $(this).closest('li');
+        $('#collections .' + collection.attr('class') + ' input').prop('checked', false);
+        $('#collections .' + collection.attr('class')).parents('li[data-type=collection]').children('span').find('input[type=checkbox]').prop('checked', false);
+        collection.remove();
+    });
+});
+
+</script>
+{% endblock page_js %}
+
+{% block content_heading %}{% trans "Reports" %}{% endblock content_heading %}
+{% block content %}
+<div class="grid_24">
+  <div class="content-element">
+    <div class="header clearfix">
+      <h3 class="left">{% trans "Generate Reports" %}</h3>
+    </div>
+    <form id="generate_report_form" method="POST">{% csrf_token %}
+      <div class="left">
+        {{ form.non_field_errors }}
+        <fieldset>
+          <label>{% trans "Measurement points:" %}</label>
+          <a href="#" class="checkall">{% trans "Check/Uncheck All" %}</a><br>
+          <input type="text" id="filter" title="{% trans "Filter" %}"></input>
+          <div id="collections">
+          {% for grouptree in collections %}
+          {% for node, structure in grouptree|tree_info %}
+            {% if structure.new_level %}<ul><li class="collection_{{ node.id|unlocalize }}" data-type="{% if node.role == 0 %}collection{% else %}mp{% endif %}">{% else %}</li><li class="collection_{{ node.id|unlocalize }}" data-type="{% if node.role == 0 %}collection{% else %}mp{% endif %}">{% endif %}
+           <span class="left label">{{ node.name_plain }}</span><span class="right"><input name="collections"
+                    {% if node.id|slugify in selected_collections %}
+                    checked="checked"
+                    {% endif %} value="{{ node.id|unlocalize }}" type="checkbox"></span>
+                    <div class="clearfix"></div>
+              {% for level in structure.closed_levels %}</li></ul>{% endfor %}
+          {% endfor %}
+        {% endfor %}
+        </div>
+          <div id="id_collections"></div>
+        </fieldset>
+      </div>
+      <div class="left">
+        <fieldset>
+          <label>{% trans "Selected measurement points:" %}</label>
+          <ul id="selected_collections">
+          </ul>
+        </fieldset>
+      </div>
+      <div class="left">
+        <fieldset>
+          <label>{% trans "From:" %}</label>
+          {{ form.from_date.errors }}
+          {{ form.from_date|add_class:"datepicker"}}
+        </fieldset>
+        <fieldset>
+          <label>{% trans "To:" %}</label>
+          {{ form.to_date.errors }}
+          {{ form.to_date|add_class:"datepicker" }}
+        </fieldset>
+        <fieldset>
+          <label>{% trans "Include cost:" %}</label>
+          {{ form.include_cost.errors }}
+          {{ form.include_cost }}
+        </fieldset>
+        <div id="id___all__"></div>
+        <fieldset>
+          <input id="pdfReport" type="button"
+            value="{% trans 'Download PDF' %}">
+          <input id="csvReport" type="button"
+            value="{% trans 'Download CSV' %}">
+          <span id="generate_report_status"></span>
+          <div id="progressbar"></div>
+          <div class="notice-field" style="display: none"> {% trans "Please stay on this page while your report is being generated" %}</div>
+        </fieldset>
+      </div>
+      <div class="clearfix"></div>
+    </form>
+  </div>
+</div>
+{% endblock %}

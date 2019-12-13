@@ -1,0 +1,18 @@
+{% extends "provider_site/base.html" %}
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% block content %}
+<ul class="breadcrumb">
+  <li class="active">{% trans "Users" %}</li>
+</ul>
+
+{% panel _("Users") search=False %}
+<a href="{% url 'provider_site:user-create' %}" title="{% trans 'Add' %}">
+  <i class="fa fa-plus"></i>
+</a>
+{% endpanelbuttons %}
+<div class="content-loader" data-url="{% url "provider_site:user-list-content" %}" data-orderby="name_plain"></div>
+{% endpanel %}
+
+{% endblock %}

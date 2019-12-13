@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load widget_tweaks %}
+
+<div>
+  {{ form.gauge_min.as_hidden }}
+  {{ form.gauge_preferred_unit.as_hidden }}
+  <h6>{% trans 'Gauge setup' %} ({{ form.instance.get_gauge_unit_display }}):</h6>
+  <fieldset>
+    <label>{% trans 'Maximum:' %} </label>
+    {{ form.gauge_max }}
+    {{ form.gauge_max.errors }}
+  </fieldset>
+  <fieldset>
+    <label>{% trans 'Lower threshold:' %} </label>
+    {{ form.gauge_lower_threshold }}
+    {{ form.gauge_lower_threshold.errors }}
+  </fieldset>
+  <fieldset>
+    <label>{% trans 'Upper threshold:' %} </label>
+    {{ form.gauge_upper_threshold }}
+    {{ form.gauge_upper_threshold.errors }}
+  </fieldset>
+  <fieldset>
+    <label>{% trans 'Gauge colours:' %}</label>
+    {{ form.gauge_colours }}
+    {{ form.gauge_colours.errors }}
+  </fieldset>
+</div>

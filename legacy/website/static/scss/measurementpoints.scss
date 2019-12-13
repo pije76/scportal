@@ -1,0 +1,36 @@
+#mp-page {
+    th, td {
+        padding-right: 5px;
+    }
+    .header a {
+        position: static;
+    }
+
+    .dashboard-link {
+        line-height: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    .graph-text {
+        text-align: center;
+    }
+
+    .offline .border {
+        background-color: #FFB3B3;
+    }
+    .switch {
+        padding: 0px;
+    }
+
+    .dropdown-menu LI {
+        height: 21px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}
+.hitValue {
+    font-weight: bold;
+    font-size: 14px;
+}

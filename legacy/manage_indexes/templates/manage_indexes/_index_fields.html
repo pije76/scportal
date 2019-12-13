@@ -1,0 +1,24 @@
+{% load i18n %}
+<fieldset>
+  <label>{% trans 'Name:' %}</label>
+  {{ form.name }}
+  {{ form.name.errors }}
+</fieldset>
+<fieldset>
+  <label>{% trans 'Group:' %}</label>
+  {{ form.collection }}
+  {{ form.collection.errors }}
+</fieldset>
+{% if form.instance and form.instance.unit %}
+<fieldset>
+  <label>{% trans "Unit:" %}</label>
+  {{ form.instance.get_preferred_unit_converter.get_display_unit }}
+</fieldset>
+{% endif %}
+{% if form.timezone %}
+<fieldset>
+  <label>{% trans 'Timezone:' %}</label>
+  {{ form.timezone }}
+  {{ form.timezone.errors }}
+</fieldset>
+{% endif %}

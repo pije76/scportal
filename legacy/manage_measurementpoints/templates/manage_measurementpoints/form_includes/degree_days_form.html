@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<div>
+  <h6>{% trans "Degree days correction:" %}</h6>
+  <p> {% trans "Calculate the consumption by normalize to historical heating conditions" %}</p>
+  <fieldset>
+      <label>{% trans 'Heating degree days:' %}</label>
+      {{ form.heating_degree_days}}
+      {{ form.heating_degree_days.errors }}
+  </fieldset>
+  <fieldset>
+      <label>{% trans 'Standard heating degree days:' %}</label>
+      {{ form.standard_heating_degree_days}}
+      {{ form.standard_heating_degree_days.errors }}
+  </fieldset>
+</div>

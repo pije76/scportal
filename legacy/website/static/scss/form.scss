@@ -1,0 +1,492 @@
+input[type=text], input[type=password], input[type=number], textarea, select {
+	border: 1px solid #CCC;
+	margin-left: 2px;
+	height: 20px;
+}
+
+form {
+    .form-content-left, .form-content-center, .form-content-right{
+        float: left;
+        width:450px;
+        select {
+          width:80%;
+        }
+        input[type=text] {
+          width:80%;
+        }
+        p {
+          width: 80%;
+        }
+
+        .units {
+            td {
+                padding-right: 5px;
+            }
+            select {
+                width: 144px;
+            }
+        }
+
+    }
+
+    .projects-select select {
+        width: 60%;
+    }
+
+    .projects-select .chzn-choices{
+        min-height: 100px;
+    }
+
+    .delete {
+        cursor: pointer;
+    }
+    .delete-False {
+        color: #ccc;
+    }
+    label {
+        display: block;
+    }
+    fieldset {
+        min-width: 200px;
+    }
+
+    ul.errorlist {
+        list-style: none;
+        margin: 0px;
+        width: 200px;
+        li {
+            color: #FF0000;
+            border: none;
+            margin: 0px;
+            padding: 0px;
+            padding-left: 5px;
+        }
+    }
+    .show-password {
+        margin-top: 22px;
+        label {
+            display: inline;
+        }
+    }
+
+    .underline {
+      border-bottom: 1px solid #000;
+    }
+
+    .data-period {
+      td, th {
+        border: 1px solid #ccc;
+      }
+      td, th {
+        padding: 4px;
+      }
+    }
+    .puls {
+      input[type="text"] {
+        width: 60px;
+      }
+      input[type="text"].datetime {
+        width: 120px;
+      }
+      span {
+        float: left;
+        margin-right: 5px;
+      }
+    }
+    .notice-field {
+    width: 200px;
+    color: #FF0000;
+    }
+
+    .impulse-form {
+        .errorlist {
+            width: auto;
+	    max-width: 150px;
+        }
+    }
+
+    .impulse-equation {
+        padding-top: 30px;
+        padding-left: 50px;
+
+	.impulse-equation-content {
+            padding-top: 0px;
+            padding-left: 0px;
+
+	    fieldset {
+                min-width: 80px;
+            }
+
+            .equals {
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.ui-progressbar {
+    margin-top: 5px;
+    width: 204px;
+    height: 10px;
+  }
+
+#reports-page {
+  #collections ul{
+    list-style: none;
+    display: block;
+    li {
+      margin: auto;
+      clear: both;
+      margin-right: 20px;
+      display: block;
+      ul {
+        margin-left: 10px;
+        li {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  ul#selected_collections {
+    list-style: none;
+    width: 200px;
+    li {
+      float: left;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      background-color: #e4e4e4;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+      background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      -webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+      -moz-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+      box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+      color: #333;
+      border: 1px solid #aaaaaa;
+      line-height: 13px;
+      padding: 3px 20px 3px 5px;
+      margin: 1px;
+      position: relative;
+      cursor: default;
+      .remove-collection {
+        display: block;
+        position: absolute;
+        right: 3px;
+        top: 4px;
+        width: 12px;
+        height: 13px;
+        font-size: 1px;
+        background: url('chosen/chosen-sprite.png') right top no-repeat;
+      }
+      .remove-collection:hover {
+        background-position: right -11px;
+      }
+    }
+  }
+}
+#rules-page {
+  ul.errorlist {
+        width: auto;
+    }
+}
+#mps-page dd ul, #devices-page dd ul {
+  margin-top: 0px;
+  margin-left: 0px;
+  li {
+    margin-bottom: 0px;
+  }
+}
+#content-main label {
+    display: block;
+}
+
+#projects-page {
+  textarea {
+    height: 130px;
+    width: 80%;
+  }
+  #id_name {
+    width: 80%;
+  }
+  input[type=text]{
+    width: 120px;
+  }
+  #aditionalsavings input[type=text]{
+    width: 10em;
+  }
+}
+
+#measurementpoints{
+    .input-column{
+      width: 75px;
+    }
+    .meter-column{
+      width: 175px;
+    }
+    .physical-input-column{
+      width: 175px;
+    }
+    #id_meter, #id_input{
+      width: 98%;
+    }
+    textarea[name=comment] {
+      width: 364px;
+      height: 100px;
+    }
+    .image a{
+      display: block;
+    }
+    .image [name=image-clear] {
+      float: left;
+    }
+}
+
+.meter_settings {
+  .input_list ul {
+    list-style: none;
+    li {
+      margin: 0;
+      width: 490px;
+    }
+  }
+}
+.input_settings {
+  .formset_header {
+    display: inline-block;
+    width: 150px;
+    vertical-align:text-top;
+  }
+  ul {
+    list-style: none;
+    li {
+      margin-left: 0;
+    }
+  }
+}
+
+.btn {
+    margin-top: 2px;
+    text-decoration: none;
+}
+.ui-state-focus, .ui-widget-content .ui-state-focus {
+    background: none;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #e6e6e6;
+}
+input[type=button], input[type=submit], .btn {
+  display: inline-block;
+  *display: inline;
+    padding: 2px 5px;
+
+  *zoom: 1;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  *line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+
+input[type=button]:hover,
+input[type=button]:active,
+input[type=button].active,
+input[type=button].disabled,
+input[type=button][disabled],
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit].active,
+input[type=submit].disabled,
+input[type=submit][disabled],
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+input[type=button]:active,
+input[type=button].active,
+input[type=submit]:active,
+input[type=submit].active,
+.btn:active,
+.btn.active {
+  background-color: #cccccc \9;
+}
+
+input[type=submit]:first-child,
+input[type=button]:first-child,
+.btn:first-child {
+  *margin-left: 0;
+}
+input[type=button]:hover,
+input[type=submit]:hover,
+.btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+input[type=submit]:focus,
+input[type=button]:focus,
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+input[type=button].active,
+input[type=button]:active,
+input[type=submit].active,
+input[type=submit]:active,
+.btn.active,
+.btn:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+}
+input[type=button][disabled],
+input[type=button].disabled,
+input[type=submit][disabled],
+input[type=submit].disabled,
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  background-color: #e6e6e6;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+button,
+input[type="submit"].btn {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+button::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+select {
+    width: 144px;
+}
+
+// The following rules targets specific forms
+
+#users.list select[name="locations"] {
+    height: 100px;
+    width: 155px;
+}
+
+#users.list select[name="groups"] {
+    height: 100px;
+    width: 155px;
+}
+
+#customers.list .units td{
+  padding: 3px;
+}
+
+#rules-page {
+  .operator, .unit{
+    width: 72px;
+  }
+}
+
+.formset-member {
+  border: 1px solid #aaaaaa;
+  margin-top:-1px;
+  padding:5px;
+
+}
+
+/* These classes are intenden to be used when user selects */
+/* elements where the elements name ares provided by the user. */
+/* Therefore we need some extra space, because users might */
+/* use very long names. */
+.name-container {
+  width:400px;
+  select {
+    width:80%;
+  }
+  input {
+    width:80%
+  }
+}
+.name-select {
+  select {
+    width:40%;
+  }
+}
+.name-select-multiple {
+  select {
+    width:80%;
+  }
+}
+.name-input {
+  input {
+    width:40%;
+  }
+}
+

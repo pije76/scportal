@@ -1,0 +1,14 @@
+{{ rendered_non_field_errors }}
+{% for hidden in rendered_hidden_fields %}
+  {{ hidden }}
+{% endfor %}
+{% if layout == 'inline' %}
+  {% for visible in rendered_visible_fields %}
+    {{ visible }}
+    <span>&#32;</span>
+  {% endfor %}
+{% else %}
+  {% for visible in rendered_visible_fields %}
+    {{ visible }}
+  {% endfor %}
+{% endif %}

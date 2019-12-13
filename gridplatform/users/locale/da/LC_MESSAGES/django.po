@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: admin.py:23
+msgid "Password"
+msgstr "Kodeord"
+
+#: admin.py:26
+msgid "Password confirmation"
+msgstr "Bekræftelse af kodeord"
+
+#: admin.py:28
+msgid "Enter the same password as above, for verification."
+msgstr "Indtast ovenstående kodeord til verifikation."
+
+#: admin.py:31
+msgid "Provider"
+msgstr "Energiserviceleverandør"
+
+#: admin.py:70
+msgid "Personal info"
+msgstr "Personlige oplysninger"
+
+#: admin.py:73
+msgid "Permissions"
+msgstr "Tilladelser"
+
+#: admin.py:79
+msgid "Important dates"
+msgstr "Vigtige datoer"
+
+#: models.py:47
+msgid "Admin"
+msgstr "Admin"
+
+#: models.py:48
+msgid "Super User"
+msgstr "Superbruger"
+
+#: models.py:49
+msgid "User"
+msgstr "Bruger"
+
+#: models.py:50
+msgid "Api User"
+msgstr "API Bruger"
+
+#: models.py:56
+msgid "e-mail address"
+msgstr "e-mail"
+
+#: models.py:57
+msgid "phone"
+msgstr "telefon"
+
+#: models.py:58
+msgid "mobile"
+msgstr "mobil"
+
+#: models.py:60
+msgid "name"
+msgstr "navn"
+
+#: models.py:63
+msgid "customer"
+msgstr "kunde"
+
+#: models.py:66
+msgid "provider"
+msgstr "energiserviceleverandør"
+
+#: models.py:73
+msgid "user"
+msgstr "bruger"
+
+#: models.py:74
+msgid "users"
+msgstr "brugere"
+
+#: models.py:78
+msgid "Can access the sales site"
+msgstr "Kan tilgå salgsside"
+
+#: models.py:80
+msgid "Can access the product list site"
+msgstr "Kan tilgå produktlistesiden"
+
+#: models.py:82
+msgid "Can access the configuration site"
+msgstr "Kan tilgå konfigurationssiden"
+
+#: models.py:84
+msgid "Can access the system health site"
+msgstr "Kan tilgå systemstatussiden"
+
+#: models.py:86
+msgid "Can access the provider site"
+msgstr "Kan tilgå administrationssiden for energiservice-leverandører"
+
+#: models.py:88
+msgid "Can access the energy manager site"
+msgstr "Kan tilgå energy manager siden"
+
+#: models.py:90
+msgid "Can access the survey site"
+msgstr "Kan tilgå siden for tekniske opmålere"
+
+#: models.py:92
+msgid "Can access the reporting site"
+msgstr "Kan tilgå indberetningssiden"
+
+#: models.py:94
+msgid "Can access the tariff and compensation site"
+msgstr "Kan tilgå siden for tariffer og afgiftsløft"
+
+#: models.py:96
+msgid "Can access the graph site"
+msgstr "Kan tilgå grafside"
+
+#: views.py:53
+msgid "password"
+msgstr "kodeord"
+
+#: views.py:55
+msgid "new password"
+msgstr "nyt koderd"
+
+#: views.py:58
+msgid "new password again"
+msgstr "new kodeord (igen)"
+
+#: views.py:73
+msgid "Please provide your password"
+msgstr "Venligst indtast dit kodeord"
+
+#: views.py:80
+msgid "The password is not correct"
+msgstr "Dit kodeord er ikke korrekt"
+
+#: views.py:84
+msgid "The passwords doesn't match"
+msgstr "Kodeordene er ikke ens"
+
+#: templates/users/_user_profile_modal.html:8
+msgid "User Profile"
+msgstr "Brugerprofil"

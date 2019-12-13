@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% if object_list %}
+<table class="table table-striped table-bordered sorted" data-provides="rowlink">
+  <thead>
+    <th class="sorting" data-orderby="e_mail_plain">{% trans "Username" %}</th>
+    <th>{% trans "Groups" %}</th>
+    <th class="sorting" data-orderby="customer__name_plain">{% trans "Customer" %}</th>
+    <th>{% trans "Active" %}</th>
+  </thead>
+  <tbody>
+    {% for object in object_list %}
+    <tr>
+      <td><a href="{% url 'provider_site:apiuser-update' pk=object.id %}">{{ object.e_mail_plain }}</a></td>
+      <td>{% for group in object.groups.all %}{{ group }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+      <td>{% if object.customer %}{{ object.customer }}{% endif %}</td>
+      <td>{% if object.is_active %}{% icon 'check-square-o' %}{% else %}{% icon 'square-o' %}{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include "bootstrap/_pagination.html" %}
+{% else %}
+<span class="no-data">{% trans "No API users present." %}</span>
+{% endif %}

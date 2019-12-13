@@ -1,0 +1,26 @@
+$footer-background: #0e3112;
+
+
+#header {
+    height: 20px;
+    .logo {
+        background-image: url('/static/images/logo.png');
+        width: 166px;
+        height: 17px;
+        display: inline-block;
+    }
+}
+
+#menu {
+    background-image: url(images/top-gradient2.png);
+    .menu-item {
+        background-image: url(images/green-menu-background.png);
+    }
+    .menu-right-border {
+        background-image: url(images/green-menu-right-border.png);
+    }
+}
+
+#settings-menu {
+    top: 20px;
+}

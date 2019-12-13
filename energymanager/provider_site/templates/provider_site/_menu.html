@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+<ul class="nav main-menu">
+  <li>
+    <a href="{% url 'provider_site:customer-list' %}">
+      {% icon "caret-right" %}<span class="hidden-sm text">{% trans 'Customers' %}</span>
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'provider_site:user-list' %}">
+      {% icon "users" %}<span class="hidden-sm text">{% trans 'Users' %}</span>
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'provider_site:apiuser-list' %}">
+      {% icon 'keyboard-o' %}<span class="hidden-sm text">{% trans 'API Users' %}</span>
+    </a>
+  </li>
+
+</ul>

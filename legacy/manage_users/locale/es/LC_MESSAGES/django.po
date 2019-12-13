@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION ESP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-01-28 13:19+0100\n"
+"Last-Translator: Andrés Monge <andres.monge@efirenova.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: views.py:70
+msgid "User"
+msgstr "Usuario"
+
+#: views.py:71
+msgid "Superuser"
+msgstr "Superusuario"
+
+#: views.py:77 views.py:94
+#, fuzzy
+msgid "A user with that e-mail already exists"
+msgstr "Ya existe un usuario con esa dirección de e-mail"
+
+#: views.py:159 views.py:242
+msgid "It is not allowed to delete yourself"
+msgstr "No esta permitido borrarse a uno mismo"
+
+#: views.py:198 views.py:280
+#, python-format
+msgid "%(site_name)s user information"
+msgstr "%(site_name)s Información de usuario"
+
+#: views.py:201 views.py:284
+#, python-format
+msgid ""
+"Username: %(username)s\n"
+"Password: %(password)s"
+msgstr ""
+"Usuario: %(username)s\n"
+"Contraseña: %(password)s"
+
+#: views.py:228
+msgid "The user has been deleted"
+msgstr "El usuario ha sido borrado"
+
+#: views.py:297
+msgid "The user has been updated"
+msgstr "El usuario ha sido actualizado"
+
+#: views.py:304
+msgid "The user has been created"
+msgstr "El usuario ha sido creado"
+
+#: templates/manage_users/list.html:21
+msgid "Error adding api key"
+msgstr ""
+
+#: templates/manage_users/list.html:33
+msgid "Token removed"
+msgstr ""
+
+#: templates/manage_users/list.html:47 templates/manage_users/list.html:48
+msgid "Settings: User Administration"
+msgstr "Ajustes: Administrador de Usuarios"
+
+#: templates/manage_users/list.html:49
+msgid "Users"
+msgstr "Usuario"
+
+#: templates/manage_users/list.html:54 templates/manage_users/list.html:55
+msgid "Add user"
+msgstr "Añadir usuario"
+
+#: templates/manage_users/list.html:61
+msgid "Username"
+msgstr "Usuario"
+
+#: templates/manage_users/list.html:62
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/manage_users/user_block.html:9
+msgid "Username:"
+msgstr "Usuario:"
+
+#: templates/manage_users/user_block.html:14
+msgid "Password:"
+msgstr "Clave"
+
+#: templates/manage_users/user_block.html:21
+#: templates/manage_users/user_form.html:10
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/manage_users/user_form.html:12
+msgid "New User"
+msgstr "Nuevo Usuario"
+
+#: templates/manage_users/user_form.html:26
+msgid "Name:"
+msgstr "Nombre"
+
+#: templates/manage_users/user_form.html:31
+msgid "E-mail:"
+msgstr "E-mail:"
+
+#: templates/manage_users/user_form.html:39
+msgid "User type:"
+msgstr "Tipo de usuario:"
+
+#: templates/manage_users/user_form.html:46
+msgid "Send password:"
+msgstr "Enviar contraseña:"
+
+#: templates/manage_users/user_form.html:52
+msgid "Send new password"
+msgstr "Enviar nueva contraseña"
+
+#: templates/manage_users/user_form.html:58
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#: templates/manage_users/user_form.html:63
+msgid "Mobile:"
+msgstr "Móvil:"
+
+#: templates/manage_users/user_form.html:68
+msgid "Groups:"
+msgstr "Grupos:"
+
+#: templates/manage_users/user_form.html:78
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/manage_users/user_form.html:79
+msgid "Delete"
+msgstr "Borrar"
+
+#: templates/manage_users/user_form.html:81
+msgid "Create"
+msgstr "Crear"
+
+#~ msgid ""
+#~ "Username: %(username)s\n"
+#~ "    Password: %(password)s"
+#~ msgstr ""
+#~ "Usuario: %(username)s\n"
+#~ "    Contraseña: %(password)s"

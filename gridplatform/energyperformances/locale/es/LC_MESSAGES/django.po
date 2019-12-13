@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-15 13:43+0200\n"
+"PO-Revision-Date: 2014-09-20 20:56+0100\n"
+"Last-Translator: GMI <alberto.escalera@gridmanageriberia.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:32
+msgid "name"
+msgstr "nombre"
+
+#: models.py:33
+msgid "description"
+msgstr "descripción"
+
+#: models.py:38
+msgid "energy performance"
+msgstr "funcionamiento energía"
+
+#: models.py:39
+msgid "energy performances"
+msgstr "funcionamientos energía"
+
+#: models.py:63
+msgid "production unit"
+msgstr "unidad de producción"
+
+#: models.py:65
+#: models.py:118
+msgid "consumption groups"
+msgstr "grupos de consumo"
+
+#: models.py:68
+msgid "production groups"
+msgstr "grupos de producción"
+
+#: models.py:72
+msgid "production energy performance"
+msgstr "funcionamiento de la producción de energía"
+
+#: models.py:73
+msgid "production energy performances"
+msgstr "funcionamiento de las producciones de energía"
+
+#: models.py:80
+msgid "Illegal choice"
+msgstr "Selección ilegal"
+
+#: models.py:119
+msgid "unit"
+msgstr "unidad"
+
+#: models.py:122
+msgid "consumption performance"
+msgstr "funcionamiento del consumo"
+
+#: models.py:123
+msgid "consumption performances"
+msgstr "funcionamiento de los consumos"
+
+#: templates/energyperformances/_energyperformances_table.html:11
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/energyperformances/_energyperformances_table.html:12
+msgid "Value"
+msgstr "Valor"
+

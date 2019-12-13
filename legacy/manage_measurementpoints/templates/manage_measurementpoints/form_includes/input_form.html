@@ -1,0 +1,8 @@
+{% load i18n %}
+{% load widget_tweaks %}
+
+<fieldset>
+  <label>{% trans 'Input:' %}</label>
+  {{ form.consumption_input }}
+  {{ form.consumption_input.errors }}
+</fieldset>

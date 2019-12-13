@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:32
+msgid "name"
+msgstr "navn"
+
+#: models.py:33
+msgid "description"
+msgstr "beskrivelse"
+
+#: models.py:38
+msgid "energy performance"
+msgstr "energipræstation"
+
+#: models.py:39
+msgid "energy performances"
+msgstr "energipræstationer"
+
+#: models.py:63
+msgid "production unit"
+msgstr "produktionsenhed"
+
+#: models.py:65 models.py:118
+msgid "consumption groups"
+msgstr "forbrugsgrupper"
+
+#: models.py:68
+msgid "production groups"
+msgstr "produktionsgrupper"
+
+#: models.py:72
+msgid "production energy performance"
+msgstr "produktions-energipræstation"
+
+#: models.py:73
+msgid "production energy performances"
+msgstr "produktions-energipræstationer"
+
+#: models.py:80
+msgid "Illegal choice"
+msgstr "Ugyldig valg"
+
+#: models.py:119
+msgid "unit"
+msgstr "enhed"
+
+#: models.py:122
+msgid "consumption performance"
+msgstr "forbrugspræstation"
+
+#: models.py:123
+msgid "consumption performances"
+msgstr "forbrugspræstationer"
+
+#: templates/energyperformances/_energyperformances_table.html:11
+msgid "Name"
+msgstr "Navn"
+
+#: templates/energyperformances/_energyperformances_table.html:12
+msgid "Value"
+msgstr "Værdi"
+
+#~ msgid "customer"
+#~ msgstr "kunde"
+
+#~ msgid "energy uses"
+#~ msgstr "energianvelser"
+
+#~ msgid "production"
+#~ msgstr "produktion"
+
+#~ msgid "production for {production_enpi}"
+#~ msgstr "produktion for {production_enpi}"
+
+#~ msgid "historical production"
+#~ msgstr "historisk produktion"
+
+#~ msgid "Historical production for {productionenergyperformance}"
+#~ msgstr "Historisk produktion for {productionenergyperformance}"
+
+#~ msgid "Unused historical production"
+#~ msgstr "Ikke anvendt historisk produktion"
+
+#~ msgid "baseline from"
+#~ msgstr "baseline fra"
+
+#~ msgid "baseline to"
+#~ msgstr "baseline til"
+
+#~ msgid "reduction (%)"
+#~ msgstr "reducering (%)"
+
+#~ msgid "goal"
+#~ msgstr "mål"
+
+#~ msgid "goals"
+#~ msgstr "mål"
+
+#~ msgid "Goal for %s"
+#~ msgstr "Mål for %s"
+
+#~ msgid "\"From date\" can not be after \"to date\""
+#~ msgstr "\"Fra dato\" skal komme før \"til dato\""
+
+#~ msgid "No energy performances to be listed here."
+#~ msgstr "Ingen energipræstationer er tilgængelige."

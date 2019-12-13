@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load l10n %}
+{% load widget_tweaks %}
+{% load static from staticfiles %}
+
+{% block page_id %}dashboard-page{% endblock %}
+
+{% block page_js %}
+<script type="text/javascript" src="{% static 'dashboard.js' %}"></script>
+<script type="text/javascript">
+/*jslint browser: true, devel: true, nomen: true */
+/*global gridportal, $, jQuery */
+jQuery(function () {
+    'use strict';
+    gridportal.widgets.dashboard('{% url 'display_widgets-update-order' %}', false);
+
+    gridportal.widgets.drawGraphs();
+
+    $('.remove-btn').click(function () {
+        var widget = $(this).closest('.widget'),
+          removeButton = $(this);
+        $("#dialog-confirm").dialog({
+            resizable: false,
+            modal: true,
+            buttons: {
+                "{% trans "Remove widget" %}": function () {
+                    removeButton.replaceWith("<img src={% static 'images/ajax-loader.gif' %}>");
+                    removeButton.removeClass('remove-btn');
+                    jQuery.getJSON('{% url 'display_widgets-remove-from-dashboard' %}', {id: widget.data('id')}, function (data) {
+                        widget.remove();
+                    });
+                    $(this).dialog("close");
+                },
+                "{% trans "Cancel" %}": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+});
+</script>
+{% endblock page_js %}
+
+{% block title %}{% trans "Dashboard" %}{% endblock title %}
+{% block content_heading %}{% trans "Dashboard" %}{% endblock content_heading %}
+{% block content %}
+
+<input type="hidden" id="spinnerUrl" value="{% static 'images/ajax-loader.gif' %}">
+<input type="hidden" id="statusUrl" value="{% url "website-task_status" %}">
+<input type="hidden" id="jsonResultUrl" value="{% url "website-json_task_result" %}">
+<div id="dashboard" class="container_24">
+  <a href="{% url 'display_widgets-dashboard-fullscreen' %}" target="_blank" class="right fullscreen-link"> {% trans "Fullscreen" %} <img src="{% static 'images/fullscreen.png' %}"></a>
+  <div class="clearfix"></div>
+  <ul id="left_column" class="grid_12 column">
+    {% if not left_widgets and not right_widgets %}
+    <span class="dashboardempty">{% trans "Your dashboard is empty. To add widgets, go to Details, choose a measurement point and then click the Show on Dashboard button" %} </span>
+    {% endif %}
+    {% for widget in left_widgets %}
+      <li>{{ widget.widget }}</li>
+    {% endfor %}
+  </ul>
+  <ul id="right_column" class="grid_12 column">
+    {% for widget in right_widgets %}
+      <li>{{ widget.widget }}</li>
+    {% endfor %}
+  </ul>
+</div>
+<div id="dialog-confirm" title="Remove widget?" style="display:none;">
+  <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>{% trans "Are you sure that you want to remove this widget?" %}</p>
+</div>
+{% endblock %}

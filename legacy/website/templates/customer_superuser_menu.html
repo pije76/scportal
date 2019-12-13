@@ -1,0 +1,16 @@
+{% spaceless %}
+{% load static from staticfiles %}
+{% load url from future %}
+{% load i18n %}
+
+<div class="menu-item dashboard">
+  <a href="{% url 'display_widgets-dashboard' %}">
+    <div class="icon"></div>
+    <span>{% trans "Dashboard" %}</span>
+  </a>
+</div>
+
+{% include "admin_superuser_menu_points.html" %}
+
+<div class="menu-right-border"></div>
+{% endspaceless %}

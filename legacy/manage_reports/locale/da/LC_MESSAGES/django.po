@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-23 14:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: tasks.py:74
+#, python-brace-format
+msgid "Data series for {data_series_name}"
+msgstr "Dataserien for {data_series_name}"
+
+#: tasks.py:134
+#, python-brace-format
+msgid "Consumption for {measurement_point} is calculated from incomplete data."
+msgstr "Forbrug for {measurement_point} er beregnet med ufuldstændig data."
+
+#: tasks.py:142
+#, python-brace-format
+msgid ""
+"Consumption and therefore also cost is undefined for {measurement_point}"
+msgstr ""
+"Forbrug og derfor også omkostninger er ikke defineret for {measurement_point}"
+
+#: tasks.py:155
+#, python-brace-format
+msgid ""
+"Heating degree days corrected consumption for {measurement_point} is "
+"calculated from incomplete data"
+msgstr ""
+"Varmegraddagskorregeret forbrug for {measurement_point} er beregnet med "
+"ufuldstændig data."
+
+#: tasks.py:166
+#, python-brace-format
+msgid ""
+"Heating degree days corrected consumption undefined for {measurement_point}"
+msgstr ""
+"Varmegraddagskorregeret forbrug er ikke defineret for {measurement_point}"
+
+#: tasks.py:191
+#, python-brace-format
+msgid "Cost for {measurement_point} is calculated from incomplete data"
+msgstr "Omkostninger for {measurement_point} er beregnet af ufuldstændige data"
+
+#: tasks.py:198
+#, python-brace-format
+msgid "Cost undefined for {measurement_point}"
+msgstr "Omkostninger er ikke defineret for {measurement_point}"
+
+#: tasks.py:205
+#, python-brace-format
+msgid ""
+"Unable to calculate cost for {measurement_point} because it has no tariff "
+"attached."
+msgstr ""
+"Omkostninger for {measurement_point} kan ikke beregnes da ingen tariff er "
+"tilknyttet."
+
+#: views.py:114
+msgid "From time should be before to time"
+msgstr "Fra-tid skal være mindre end til-tid"
+
+#: views.py:117
+msgid "Select at least one measurement point"
+msgstr "Vælgt mindst ét målepunkt"
+
+#: views.py:186 views.py:194
+msgid "Consumption report"
+msgstr "Forbrugsrapport"
+
+#: views.py:375
+msgid "Include at least one area of energy use"
+msgstr "Inkludér mindst ét energiforbrugsområde"
+
+#: views.py:387
+#, python-brace-format
+msgid ""
+"The following measurement points can only be included once: "
+"{measurement_points}"
+msgstr "Følgende målepunkter må kun inkluderes én gang: {measurement_points}"
+
+#: views.py:457 views.py:476
+msgid "The report has been deleted"
+msgstr "Rapporten er slettet"
+
+#: templates/enpi_reports/enpireport_form.html:7
+msgid "EnPI Reports"
+msgstr "Energinøgletalsrapporter (EnPI-rapporter)"
+
+#: templates/enpi_reports/enpireport_form.html:9
+#: templates/manage_reports/energy_use_report_form.html:50
+#: templates/manage_reports/energy_use_report_form.html:53
+#: templates/manage_reports/generate_report.html:11
+#: templates/manage_reports/generate_report.html:127
+#: templates/manage_reports/index.html:72
+#: templates/manage_reports/index.html:73
+msgid "Reports"
+msgstr "Rapporter"
+
+#: templates/enpi_reports/enpireport_form.html:11
+msgid "EnPI Report"
+msgstr "Energinøgletalsrapport (EnPI-rapport)"
+
+#: templates/enpi_reports/enpireport_form.html:22
+#: templates/manage_reports/energy_use_report_form.html:64
+msgid "Title:"
+msgstr "Titel:"
+
+#: templates/enpi_reports/enpireport_form.html:32
+#: templates/manage_reports/energy_use_report_form.html:80
+#: templates/manage_reports/index.html:138
+#: templates/manage_reports/index.html:226
+msgid "Areas of Energy Use:"
+msgstr "Energianvendelser"
+
+#: templates/enpi_reports/enpireport_form.html:37
+#: templates/enpi_reports/enpireport_form.html:63
+#: templates/manage_reports/energy_use_report_form.html:85
+#: templates/manage_reports/energy_use_report_form.html:106
+msgid "Name:"
+msgstr "Navn:"
+
+#: templates/enpi_reports/enpireport_form.html:42
+#: templates/enpi_reports/enpireport_form.html:67
+msgid "Energy driver:"
+msgstr "Ydelse:"
+
+#: templates/enpi_reports/enpireport_form.html:47
+#: templates/manage_reports/energy_use_report_form.html:96
+msgid "Delete:"
+msgstr "Slet:"
+
+#: templates/enpi_reports/enpireport_form.html:53
+#: templates/enpi_reports/enpireport_form.html:73
+#: templates/manage_reports/energy_use_report_form.html:90
+#: templates/manage_reports/energy_use_report_form.html:110
+msgid "Measurement Points:"
+msgstr "Målepunkter:"
+
+#: templates/enpi_reports/enpireport_form.html:78
+#: templates/manage_reports/energy_use_report_form.html:115
+msgid "Add another area"
+msgstr "Tilføj endnu et område"
+
+#: templates/enpi_reports/enpireport_form.html:83
+#: templates/manage_reports/energy_use_report_form.html:120
+msgid "Save"
+msgstr "Gem"
+
+#: templates/enpi_reports/enpireport_form.html:84
+#: templates/manage_reports/energy_use_report_form.html:121
+msgid "Delete"
+msgstr "Slet"
+
+#: templates/enpi_reports/enpireport_form.html:86
+#: templates/manage_reports/energy_use_report_form.html:123
+msgid "Create"
+msgstr "Opret"
+
+#: templates/manage_reports/energy_use_report_form.html:58
+msgid "Energy Use Report"
+msgstr "Energianvendelsesrapport"
+
+#: templates/manage_reports/energy_use_report_form.html:69
+#: templates/manage_reports/index.html:128
+msgid "Main Measurement Points:"
+msgstr "Hovedmålepunkter:"
+
+#: templates/manage_reports/energy_use_report_form.html:74
+msgid "Currency:"
+msgstr "Møntfod:"
+
+#: templates/manage_reports/generate_report.html:132
+msgid "Generate Reports"
+msgstr "Generer Rapporter"
+
+#: templates/manage_reports/generate_report.html:138
+msgid "Measurement points:"
+msgstr "Målepunkter:"
+
+#: templates/manage_reports/generate_report.html:139
+msgid "Check/Uncheck All"
+msgstr "Markér/Afmarkér Alle"
+
+#: templates/manage_reports/generate_report.html:140
+msgid "Filter"
+msgstr "Filter"
+
+#: templates/manage_reports/generate_report.html:159
+msgid "Selected measurement points:"
+msgstr "Valgte målepunkter:"
+
+#: templates/manage_reports/generate_report.html:166
+msgid "From:"
+msgstr "Fra:"
+
+#: templates/manage_reports/generate_report.html:171
+msgid "To:"
+msgstr "Til:"
+
+#: templates/manage_reports/generate_report.html:176
+msgid "Include cost:"
+msgstr "Inkludér omkostninger:"
+
+#: templates/manage_reports/generate_report.html:183
+msgid "Download PDF"
+msgstr "Hent PDF"
+
+#: templates/manage_reports/generate_report.html:185
+msgid "Download CSV"
+msgstr "Hent CSV"
+
+#: templates/manage_reports/generate_report.html:188
+#: templates/manage_reports/index.html:202
+#: templates/manage_reports/index.html:259
+msgid "Please stay on this page while your report is being generated"
+msgstr "Venligst ikke forlad siden mens din rapport genereres"
+
+#: templates/manage_reports/index.html:78
+msgid "Overview"
+msgstr "Oversigt"
+
+#: templates/manage_reports/index.html:82
+msgid "Add"
+msgstr "Tilføj"
+
+#: templates/manage_reports/index.html:87
+msgid "Electricity Use Report"
+msgstr "Elektricitetsanvendelsesrapport"
+
+#: templates/manage_reports/index.html:88
+msgid "Gas Use Report"
+msgstr "Gasanvendelsesrapport"
+
+#: templates/manage_reports/index.html:89
+msgid "Water Use Report"
+msgstr "Vandanvendelsesrapport"
+
+#: templates/manage_reports/index.html:90
+msgid "Heat Use Report"
+msgstr "Varmeanvendelsesrapport"
+
+#: templates/manage_reports/index.html:91
+msgid "Oil Use Report"
+msgstr "Olieanvendelsesrapport"
+
+#: templates/manage_reports/index.html:95
+#, python-format
+msgid "Energy Performance Indicator Report (%(enpi_report_type)s)"
+msgstr "Energi Performance Indicator Rapport (%(enpi_report_type)s)"
+
+#: templates/manage_reports/index.html:99
+msgid "Consumption Report"
+msgstr "Forbrugsrapport"
+
+#: templates/manage_reports/index.html:135
+#: templates/manage_reports/index.html:145
+#: templates/manage_reports/index.html:233
+msgid "None"
+msgstr "Ingen"
+
+#: templates/manage_reports/index.html:154
+msgid "Include cost"
+msgstr "Inkludér omkostninger"
+
+#: templates/manage_reports/index.html:159
+msgid "Include CO<sub>2</sub> emissions"
+msgstr "Inkludér CO<sub>2</sub>-udledninger"
+
+#: templates/manage_reports/index.html:165
+#: templates/manage_reports/index.html:239
+msgid "From date:"
+msgstr "Fra dato:"
+
+#: templates/manage_reports/index.html:172
+#: templates/manage_reports/index.html:246
+msgid "To date:"
+msgstr "Til dato:"
+
+#: templates/manage_reports/index.html:182
+msgid "From date of previous period:"
+msgstr "Fra-dato for forrige periode:"
+
+#: templates/manage_reports/index.html:189
+msgid "To date of previous period:"
+msgstr "Til-dato for forrige periode:"
+
+#: templates/manage_reports/index.html:198
+#: templates/manage_reports/index.html:255
+msgid "Download"
+msgstr "Hent"
+
+#: templates/manage_reports/index.html:199
+#: templates/manage_reports/index.html:256
+msgid "Cancel"
+msgstr "Annullér"
+
+#: templates/manage_reports/index.html:273
+msgid "You currently have no reports.  Click <i>Add</i> to add a new report."
+msgstr ""
+"Der er endnu ikke oprettet nogen rapporter.  Klik <i>Tilføj</i> for at "
+"tilføje en ny rapport."
+
+#: templates/manage_reports/report_block.html:15
+msgid "Report type:"
+msgstr "Rapporttype:"
+
+#: templates/manage_reports/report_block.html:17
+msgid "Requested:"
+msgstr "Forespurgt:"
+
+#: templates/manage_reports/report_block.html:19
+msgid "Generated:"
+msgstr "Genereret:"
+
+#~ msgid "Generate Energy Use Report"
+#~ msgstr "Generér Energianvendelsesrapport"
+
+#~ msgid "Request report"
+#~ msgstr "Anmod om rapport"
+
+#~ msgid "Format:"
+#~ msgstr "Format:"
+
+#~ msgid "Sort by"
+#~ msgstr "Sortér efter"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Date"
+#~ msgstr "Dato"
