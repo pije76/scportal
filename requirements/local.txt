@@ -2,7 +2,7 @@
 -r base.txt
 
 coverage==3.7.1  # a tool for measuring code coverage of Python programs
-django-debug-toolbar==1.2.1  # debug toolbar; show SQL, template context, ++
+django-debug-toolbar==1.11.1  # debug toolbar; show SQL, template context, ++
 django-debug-panel==0.8.0  # debug toolbar for non-HTML/AJAX requests
 mock==1.0.1  # backport of Python3.3 unittest.mock
 django-juno-testrunner==0.2.5
