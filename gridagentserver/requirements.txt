@@ -1,4 +1,4 @@
-Django==1.6.5 # high-level Python Web framework
+Django==4.2.17 # high-level Python Web framework
 django-configurations==0.1 # more flexible settings.py configuration
 django-durationfield==0.4.0 # field type representing datetime.timedelta
 django-historicalrecords==1.0 # generic history for Django models.
