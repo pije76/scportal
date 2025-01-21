@@ -1,4 +1,4 @@
-Django==1.6.5  # high-level Python Web framework
+Django==4.2.18  # high-level Python Web framework
 Pillow==2.4.0  # Python Image Library distribution; may require libjpeg-dev for JPEG support
 kombu==3.0.30  # AMQP/MQ abstraction lib used by Celery
 celery==3.1.8  # Python background task queue/runner
