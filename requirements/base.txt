@@ -29,7 +29,7 @@ pytz==2013b # brings the Olson timezone database into Python
 south==0.8.4 # database migrations
 unicodecsv==0.9.4 # csv module which supports unicode
 Markdown==2.4.1  # Use by djangorestframework for API documentation
-djangorestframework==2.3.14 # Django REST framework
+djangorestframework==3.9.1 # Django REST framework
 djangorestframework-camel-case==0.2.0
 django-filter==0.7 # Practical generic filters
 dj-database-url==0.2.2  # DB config as URL string
